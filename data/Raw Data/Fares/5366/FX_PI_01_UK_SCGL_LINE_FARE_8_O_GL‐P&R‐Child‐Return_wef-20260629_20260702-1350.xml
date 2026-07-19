@@ -1,0 +1,2432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PublicationDelivery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" version="1.1" xsi:schemaLocation="http://www.netex.org.uk/netex http://netex.uk/netex/schema/1.10/xsd/NeTEx_publication.xsd" xmlns="http://www.netex.org.uk/netex">
+  <PublicationTimestamp>2026-07-02T13:50:18.8698434Z</PublicationTimestamp>
+  <ParticipantRef>SCGL</ParticipantRef>
+  <PublicationRequest version="1.0">
+    <RequestTimestamp>2026-07-02T13:50:18.780111Z</RequestTimestamp>
+    <Description>Request for SCGL bus fares for line 8</Description>
+    <topics>
+      <NetworkFrameTopic>
+        <selectionValidityConditions>
+          <AvailabilityCondition version="1.0" id="r1">
+            <FromDate>2026-06-29T02:35:00Z</FromDate>
+          </AvailabilityCondition>
+        </selectionValidityConditions>
+        <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_LINE_FARE_OFFER:FXCP" />
+        <NetworkFilterByValue>
+          <objectReferences>
+            <OperatorRef versionRef="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+            <LineRef versionRef="1.0" ref="SCGL:PH0005031:176:8" />
+            <BrandingRef versionRef="1.0" ref="op:SCGL@brand" />
+          </objectReferences>
+        </NetworkFilterByValue>
+      </NetworkFrameTopic>
+    </topics>
+    <RequestPolicy>
+      <RequestDetail>AllWithXref</RequestDetail>
+    </RequestPolicy>
+  </PublicationRequest>
+  <Description>SCGL bus fares for line 8</Description>
+  <dataObjects>
+    <CompositeFrame version="1.1" id="epd:UK:SCGL:CompositeFrame_UK_PI_LINE_FARE_OFFER:trip@SCGL:PH0005031:176:8:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+      <ValidBetween>
+        <FromDate>2026-06-29T02:35:00Z</FromDate>
+      </ValidBetween>
+      <Name>Fares for SCGL SCGL:PH0005031:176:8</Name>
+      <Description>SCGL SCGL:PH0005031:176:8 is accessible as a single trip fare. Prices are given zone to zone, where each zone is a linear group of stops, i.e. fare stage.</Description>
+      <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_LINE_FARE_OFFER:FXCP" />
+      <codespaces>
+        <CodespaceRef ref="epd_data" />
+        <CodespaceRef ref="fxc_metadata" />
+        <CodespaceRef ref="naptStop_data" />
+        <CodespaceRef ref="nptgLocality_data" />
+        <CodespaceRef ref="noc_data" />
+        <CodespaceRef ref="op_data" />
+      </codespaces>
+      <FrameDefaults>
+        <DefaultCodespaceRef ref="op_data" />
+        <DefaultDataSourceRef version="1.0" ref="op:src" />
+        <DefaultResponsibilitySetRef version="1.0" ref="op:tariff_data" />
+        <DefaultCurrency>GBP</DefaultCurrency>
+      </FrameDefaults>
+      <prerequisites>
+        <CompositeFrameRef versionRef="1.0" ref="epd:UK:SCGL:CompositeFrame_UK_PI_METADATA::op" />
+      </prerequisites>
+      <frames>
+        <ResourceFrame version="1.0" id="epd:UK:SCGL:ResourceFrame_UK_PI_COMMON:SCGL:PH0005031:176:8:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+          <Name>Operator specific common resources</Name>
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_COMMON:FXCP" />
+          <codespaces>
+            <Codespace id="epd_data">
+              <Xmlns>epd</Xmlns>
+              <XmlnsUrl>http://fnetex-cen.eu/epd</XmlnsUrl>
+              <Description>European Passenger Information profile data -use for UK frame names</Description>
+            </Codespace>
+            <Codespace id="fxc_metadata">
+              <Xmlns>fxc_metadata</Xmlns>
+              <XmlnsUrl>netex.org.uk/fxc</XmlnsUrl>
+              <Description>UK FareXChange Profile metadata</Description>
+            </Codespace>
+            <Codespace id="naptStop_data">
+              <Xmlns>naptStop</Xmlns>
+              <XmlnsUrl>http://www.naptan.org.uk/stops</XmlnsUrl>
+              <Description>UK National Public Transport Access Nodes: Stops.</Description>
+            </Codespace>
+            <Codespace id="noc_data">
+              <Xmlns>noc</Xmlns>
+              <XmlnsUrl>http://www.traveline.co.uk/noc</XmlnsUrl>
+              <Description>UK national operator codes</Description>
+            </Codespace>
+            <Codespace id="op_data">
+              <Xmlns>op</Xmlns>
+              <XmlnsUrl>https://www.stagecoachbus.com/regional-help-and-contact/west</XmlnsUrl>
+              <Description>Operator Data</Description>
+            </Codespace>
+            <Codespace id="nptgLocality_data">
+              <Xmlns>nptgLocality</Xmlns>
+              <XmlnsUrl>http://nptg.org.uk/locations</XmlnsUrl>
+              <Description>National Public Transport gazetteer locations</Description>
+            </Codespace>
+          </codespaces>
+          <dataSources>
+            <DataSource version="1.0" id="op:src">
+              <Email>west.enquiries@stagecoachbus.com</Email>
+            </DataSource>
+          </dataSources>
+          <responsibilitySets>
+            <ResponsibilitySet version="1.0" id="op:tariff_data">
+              <Name>Operator Tariffs</Name>
+              <roles>
+                <ResponsibilityRoleAssignment version="1.0" id="op:tariff_data@creates">
+                  <DataRoleType>creates</DataRoleType>
+                  <StakeholderRoleType>FareManagement</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="1.0" ref="noc:SCGL" />
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+            <ResponsibilitySet version="1.0" id="op:network_data">
+              <Name>Operator Network data</Name>
+              <roles>
+                <ResponsibilityRoleAssignment version="1.0" id="op:network_data@creates">
+                  <DataRoleType>creates</DataRoleType>
+                  <StakeholderRoleType>Planning</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="1.0" ref="noc:SCGL" />
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+            <ResponsibilitySet version="1.0" id="op:metadata">
+              <Name>Operator Metadata</Name>
+              <roles>
+                <ResponsibilityRoleAssignment version="1.0" id="op:metadata@creates">
+                  <DataRoleType>creates</DataRoleType>
+                  <StakeholderRoleType>Planning</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="1.0" ref="noc:SCGL" />
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+          </responsibilitySets>
+          <typesOfValue>
+            <ValueSet version="1.0" id="op:Branding" classOfValues="Branding">
+              <Name>Operator Branding</Name>
+              <values>
+                <Branding version="1.0" id="op:SCGL@brand">
+                  <Name>Stagecoach West</Name>
+                  <Url>https://www.stagecoachbus.com/regional-help-and-contact/west</Url>
+                </Branding>
+              </values>
+            </ValueSet>
+          </typesOfValue>
+          <organisations>
+            <Operator version="1.0" id="noc:SCGL">
+              <PublicCode>SCGL</PublicCode>
+              <PrivateCode>135902</PrivateCode>
+              <Name>Stagecoach West</Name>
+              <ShortName>Stagecoach West</ShortName>
+              <TradingName>Cheltenham &amp; Gloucester Omnibus Co Ltd</TradingName>
+              <ContactDetails>
+                <Phone>03452418000</Phone>
+                <Url>https://www.stagecoachbus.com/regional-help-and-contact/west</Url>
+              </ContactDetails>
+              <OrganisationType>operator</OrganisationType>
+              <Address>
+                <Street>Stagecoach West 3rd Floor, 65 London Rd, Gloucester GL1 3HF</Street>
+              </Address>
+              <PrimaryMode>bus</PrimaryMode>
+              <CustomerServiceContactDetails>
+                <Email>west.enquiries@stagecoachbus.com</Email>
+              </CustomerServiceContactDetails>
+            </Operator>
+          </organisations>
+        </ResourceFrame>
+        <ServiceFrame version="1.0" id="epd:UK:SCGL:ServiceFrame_UK_PI_NETWORK:SCGL:PH0005031:176:8:op" dataSourceRef="op:src" responsibilitySetRef="op:network_data">
+          <Description>This frame contains the stop and line definitions for the service. It could also be exchanged separately.</Description>
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_NETWORK:FXCP" />
+          <lines>
+            <Line version="1.0" id="SCGL:PH0005031:176:8">
+              <Name>Quedgeley Hunts Grove Primary Academy - Brockworth Whittle Inn</Name>
+              <PublicCode>8</PublicCode>
+              <PrivateCode type="txc:Line@id">8</PrivateCode>
+              <OperatorRef versionRef="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+            </Line>
+          </lines>
+          <scheduledStopPoints>
+            <ScheduledStopPoint version="1.0" id="atco:1600G0791">
+              <Name>Hunts Grove Primary Academy</Name>
+              <NameSuffix>o/s</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046594" />
+                <Name>Quedgeley</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600G0789">
+              <Name>Lime Tree Avenue</Name>
+              <NameSuffix>after</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046594" />
+                <Name>Quedgeley</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600G0787">
+              <Name>Jessop Court</Name>
+              <NameSuffix>before</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046594" />
+                <Name>Quedgeley</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA36668">
+              <Name>Business Park</Name>
+              <NameSuffix>nr</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046594" />
+                <Name>Quedgeley</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600G0785">
+              <Name>Baird Road</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046594" />
+                <Name>Quedgeley</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600G0786">
+              <Name>Tri Services Centre</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046594" />
+                <Name>Quedgeley</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLB504">
+              <Name>Waterwells Park &amp; Ride Site</Name>
+              <NameSuffix>inside</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046594" />
+                <Name>Quedgeley</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:160000368">
+              <Name>Kingsway Health Centre</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046594" />
+                <Name>Quedgeley</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:160000366">
+              <Name>Saint Mawgan Street</Name>
+              <NameSuffix>after</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077977" />
+                <Name>Kingsway</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:160000349">
+              <Name>Primary School</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077977" />
+                <Name>Kingsway</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:160000108">
+              <Name>Playground</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077977" />
+                <Name>Kingsway</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:160000222">
+              <Name>Thatcham Avenue</Name>
+              <NameSuffix>by</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077977" />
+                <Name>Kingsway</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:160000221">
+              <Name>Chivenor Way</Name>
+              <NameSuffix>after</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077977" />
+                <Name>Kingsway</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:160000218">
+              <Name>Watermint Drive</Name>
+              <NameSuffix>before</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0012116" />
+                <Name>Copeland Park</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:160000216">
+              <Name>The Warren</Name>
+              <NameSuffix>nr</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0012116" />
+                <Name>Copeland Park</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA36814">
+              <Name>Daniels Meadow</Name>
+              <NameSuffix>after</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0012116" />
+                <Name>Copeland Park</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA06395">
+              <Name>Barn Owl Centre</Name>
+              <NameSuffix>by</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0012120" />
+                <Name>Hempsted</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLB466">
+              <Name>The Forge</Name>
+              <NameSuffix>nr</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0012120" />
+                <Name>Hempsted</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLB536">
+              <Name>Soren Larsen Way</Name>
+              <NameSuffix>after</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0012120" />
+                <Name>Hempsted</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA06106">
+              <Name>Monk Meadow Trading Estate</Name>
+              <NameSuffix>by</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0012120" />
+                <Name>Hempsted</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:160000384">
+              <Name>Sainsbury's Supermarket</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0012120" />
+                <Name>Hempsted</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA06423">
+              <Name>Gloucester Quays</Name>
+              <NameSuffix>o/s</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055873" />
+                <Name>Gloucester</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLB048">
+              <Name>Spa Road</Name>
+              <NameSuffix>before</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055873" />
+                <Name>Gloucester</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLB046">
+              <Name>The Docks</Name>
+              <NameSuffix>by</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055873" />
+                <Name>Gloucester</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLB114">
+              <Name>The Warehouse</Name>
+              <NameSuffix>o/s</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055873" />
+                <Name>Gloucester</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLB160">
+              <Name>St Michael's Square</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055873" />
+                <Name>Gloucester</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA57074">
+              <Name>Clarence Street</Name>
+              <NameSuffix>Stand S</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055873" />
+                <Name>Gloucester</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:160000734">
+              <Name>Gloucester Railway Station</Name>
+              <NameSuffix>o/s</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055873" />
+                <Name>Gloucester</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:160000228">
+              <Name>Morrison's Supermarket</Name>
+              <NameSuffix>by</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055873" />
+                <Name>Gloucester</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLB547">
+              <Name>Eastbrook Trading Estate</Name>
+              <NameSuffix>by</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055873" />
+                <Name>Gloucester</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLB515">
+              <Name>St Lawrence Road</Name>
+              <NameSuffix>after</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0012117" />
+                <Name>Barnwood</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL17">
+              <Name>Coney Hill Road</Name>
+              <NameSuffix>by</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0012118" />
+                <Name>Coney Hill</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL23">
+              <Name>North Upton Lane</Name>
+              <NameSuffix>before</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077080" />
+                <Name>Abbeymead</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL13">
+              <Name>Roman Road</Name>
+              <NameSuffix>before</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077080" />
+                <Name>Abbeymead</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL19">
+              <Name>Bishops Road</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077080" />
+                <Name>Abbeymead</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL9">
+              <Name>The Turmut-Hoer</Name>
+              <NameSuffix>o/s</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077080" />
+                <Name>Abbeymead</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA26338">
+              <Name>Brome Road</Name>
+              <NameSuffix>before</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077080" />
+                <Name>Abbeymead</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA26340">
+              <Name>Cox's Way</Name>
+              <NameSuffix>before</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077080" />
+                <Name>Abbeymead</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:160000062">
+              <Name>Yewtree Road</Name>
+              <NameSuffix>before</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0012122" />
+                <Name>Hucclecote</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA51584">
+              <Name>Lobley's Estate</Name>
+              <NameSuffix>on</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0012122" />
+                <Name>Hucclecote</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:160000232">
+              <Name>Sapphire Way</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0012122" />
+                <Name>Hucclecote</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:160000342">
+              <Name>Coopers Edge School</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0012122" />
+                <Name>Hucclecote</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:160000475">
+              <Name>Grebe Gardens</Name>
+              <NameSuffix>nr</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046653" />
+                <Name>Brockworth</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:160000476">
+              <Name>Beaumont Walk</Name>
+              <NameSuffix>by</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046653" />
+                <Name>Brockworth</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA51583">
+              <Name>Direct Wines</Name>
+              <NameSuffix>by</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046653" />
+                <Name>Brockworth</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:160000252">
+              <Name>Gloucester Business Park</Name>
+              <NameSuffix>inside</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046653" />
+                <Name>Brockworth</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+          </scheduledStopPoints>
+        </ServiceFrame>
+        <ServiceCalendarFrame version="1.0" id="epd:UK:SCGL:ServiceCalendarFrame_UK_PI_CALENDAR:SCGL:PH0005031:176:8:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+          <dayTypes>
+            <DayType version="1.0" id="day_type@Public_Holiday">
+              <Name>Public Holiday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <HolidayTypes>AnyHoliday</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@#SCH">
+              <Name>#SCH</Name>
+              <properties>
+                <PropertyOfDay>
+                  <HolidayTypes>AnyHoliday</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@SCH">
+              <Name>SCH</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                  <HolidayTypes>WorkingDay</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@Saturday">
+              <Name>Saturday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Saturday</DaysOfWeek>
+                  <HolidayTypes>NotWorkingDay</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@Sunday">
+              <Name>Sunday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Sunday</DaysOfWeek>
+                  <HolidayTypes>NotWorkingDay</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+          </dayTypes>
+          <dayTypeAssignments>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@01/02/2025@2025-01-02" order="1">
+              <Name>01/02/2025</Name>
+              <Date>2025-01-02</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@01/03/2025@2025-01-03" order="1">
+              <Name>01/03/2025</Name>
+              <Date>2025-01-03</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/17/2025@2025-02-17" order="1">
+              <Name>02/17/2025</Name>
+              <Date>2025-02-17</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/18/2025@2025-02-18" order="1">
+              <Name>02/18/2025</Name>
+              <Date>2025-02-18</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/19/2025@2025-02-19" order="1">
+              <Name>02/19/2025</Name>
+              <Date>2025-02-19</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/20/2025@2025-02-20" order="1">
+              <Name>02/20/2025</Name>
+              <Date>2025-02-20</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/21/2025@2025-02-21" order="1">
+              <Name>02/21/2025</Name>
+              <Date>2025-02-21</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/07/2025@2025-04-07" order="1">
+              <Name>04/07/2025</Name>
+              <Date>2025-04-07</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/08/2025@2025-04-08" order="1">
+              <Name>04/08/2025</Name>
+              <Date>2025-04-08</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/09/2025@2025-04-09" order="1">
+              <Name>04/09/2025</Name>
+              <Date>2025-04-09</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/10/2025@2025-04-10" order="1">
+              <Name>04/10/2025</Name>
+              <Date>2025-04-10</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/11/2025@2025-04-11" order="1">
+              <Name>04/11/2025</Name>
+              <Date>2025-04-11</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/14/2025@2025-04-14" order="1">
+              <Name>04/14/2025</Name>
+              <Date>2025-04-14</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/15/2025@2025-04-15" order="1">
+              <Name>04/15/2025</Name>
+              <Date>2025-04-15</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/16/2025@2025-04-16" order="1">
+              <Name>04/16/2025</Name>
+              <Date>2025-04-16</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/17/2025@2025-04-17" order="1">
+              <Name>04/17/2025</Name>
+              <Date>2025-04-17</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@05/27/2025@2025-05-27" order="1">
+              <Name>05/27/2025</Name>
+              <Date>2025-05-27</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@05/28/2025@2025-05-28" order="1">
+              <Name>05/28/2025</Name>
+              <Date>2025-05-28</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@05/29/2025@2025-05-29" order="1">
+              <Name>05/29/2025</Name>
+              <Date>2025-05-29</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@05/30/2025@2025-05-30" order="1">
+              <Name>05/30/2025</Name>
+              <Date>2025-05-30</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/25/2025@2025-07-25" order="1">
+              <Name>07/25/2025</Name>
+              <Date>2025-07-25</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/28/2025@2025-07-28" order="1">
+              <Name>07/28/2025</Name>
+              <Date>2025-07-28</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/29/2025@2025-07-29" order="1">
+              <Name>07/29/2025</Name>
+              <Date>2025-07-29</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/30/2025@2025-07-30" order="1">
+              <Name>07/30/2025</Name>
+              <Date>2025-07-30</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/31/2025@2025-07-31" order="1">
+              <Name>07/31/2025</Name>
+              <Date>2025-07-31</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/01/2025@2025-08-01" order="1">
+              <Name>08/01/2025</Name>
+              <Date>2025-08-01</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/04/2025@2025-08-04" order="1">
+              <Name>08/04/2025</Name>
+              <Date>2025-08-04</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/05/2025@2025-08-05" order="1">
+              <Name>08/05/2025</Name>
+              <Date>2025-08-05</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/06/2025@2025-08-06" order="1">
+              <Name>08/06/2025</Name>
+              <Date>2025-08-06</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/07/2025@2025-08-07" order="1">
+              <Name>08/07/2025</Name>
+              <Date>2025-08-07</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/08/2025@2025-08-08" order="1">
+              <Name>08/08/2025</Name>
+              <Date>2025-08-08</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/11/2025@2025-08-11" order="1">
+              <Name>08/11/2025</Name>
+              <Date>2025-08-11</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/12/2025@2025-08-12" order="1">
+              <Name>08/12/2025</Name>
+              <Date>2025-08-12</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/13/2025@2025-08-13" order="1">
+              <Name>08/13/2025</Name>
+              <Date>2025-08-13</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/14/2025@2025-08-14" order="1">
+              <Name>08/14/2025</Name>
+              <Date>2025-08-14</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/15/2025@2025-08-15" order="1">
+              <Name>08/15/2025</Name>
+              <Date>2025-08-15</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/18/2025@2025-08-18" order="1">
+              <Name>08/18/2025</Name>
+              <Date>2025-08-18</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/19/2025@2025-08-19" order="1">
+              <Name>08/19/2025</Name>
+              <Date>2025-08-19</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/20/2025@2025-08-20" order="1">
+              <Name>08/20/2025</Name>
+              <Date>2025-08-20</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/21/2025@2025-08-21" order="1">
+              <Name>08/21/2025</Name>
+              <Date>2025-08-21</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/22/2025@2025-08-22" order="1">
+              <Name>08/22/2025</Name>
+              <Date>2025-08-22</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/26/2025@2025-08-26" order="1">
+              <Name>08/26/2025</Name>
+              <Date>2025-08-26</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/27/2025@2025-08-27" order="1">
+              <Name>08/27/2025</Name>
+              <Date>2025-08-27</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/28/2025@2025-08-28" order="1">
+              <Name>08/28/2025</Name>
+              <Date>2025-08-28</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/29/2025@2025-08-29" order="1">
+              <Name>08/29/2025</Name>
+              <Date>2025-08-29</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/27/2025@2025-10-27" order="1">
+              <Name>10/27/2025</Name>
+              <Date>2025-10-27</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/28/2025@2025-10-28" order="1">
+              <Name>10/28/2025</Name>
+              <Date>2025-10-28</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/29/2025@2025-10-29" order="1">
+              <Name>10/29/2025</Name>
+              <Date>2025-10-29</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/30/2025@2025-10-30" order="1">
+              <Name>10/30/2025</Name>
+              <Date>2025-10-30</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/31/2025@2025-10-31" order="1">
+              <Name>10/31/2025</Name>
+              <Date>2025-10-31</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/22/2025@2025-12-22" order="1">
+              <Name>12/22/2025</Name>
+              <Date>2025-12-22</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/23/2025@2025-12-23" order="1">
+              <Name>12/23/2025</Name>
+              <Date>2025-12-23</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/24/2025@2025-12-24" order="1">
+              <Name>12/24/2025</Name>
+              <Date>2025-12-24</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/29/2025@2025-12-29" order="1">
+              <Name>12/29/2025</Name>
+              <Date>2025-12-29</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/30/2025@2025-12-30" order="1">
+              <Name>12/30/2025</Name>
+              <Date>2025-12-30</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/31/2025@2025-12-31" order="1">
+              <Name>12/31/2025</Name>
+              <Date>2025-12-31</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@01/02/2026@2026-01-02" order="1">
+              <Name>01/02/2026</Name>
+              <Date>2026-01-02</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@01/05/2026@2026-01-05" order="1">
+              <Name>01/05/2026</Name>
+              <Date>2026-01-05</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/16/2026@2026-02-16" order="1">
+              <Name>02/16/2026</Name>
+              <Date>2026-02-16</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/17/2026@2026-02-17" order="1">
+              <Name>02/17/2026</Name>
+              <Date>2026-02-17</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/18/2026@2026-02-18" order="1">
+              <Name>02/18/2026</Name>
+              <Date>2026-02-18</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/19/2026@2026-02-19" order="1">
+              <Name>02/19/2026</Name>
+              <Date>2026-02-19</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/20/2026@2026-02-20" order="1">
+              <Name>02/20/2026</Name>
+              <Date>2026-02-20</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@03/30/2026@2026-03-30" order="1">
+              <Name>03/30/2026</Name>
+              <Date>2026-03-30</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@03/31/2026@2026-03-31" order="1">
+              <Name>03/31/2026</Name>
+              <Date>2026-03-31</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/01/2026@2026-04-01" order="1">
+              <Name>04/01/2026</Name>
+              <Date>2026-04-01</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/02/2026@2026-04-02" order="1">
+              <Name>04/02/2026</Name>
+              <Date>2026-04-02</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/07/2026@2026-04-07" order="1">
+              <Name>04/07/2026</Name>
+              <Date>2026-04-07</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/08/2026@2026-04-08" order="1">
+              <Name>04/08/2026</Name>
+              <Date>2026-04-08</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/09/2026@2026-04-09" order="1">
+              <Name>04/09/2026</Name>
+              <Date>2026-04-09</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/10/2026@2026-04-10" order="1">
+              <Name>04/10/2026</Name>
+              <Date>2026-04-10</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@05/26/2026@2026-05-26" order="1">
+              <Name>05/26/2026</Name>
+              <Date>2026-05-26</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@05/27/2026@2026-05-27" order="1">
+              <Name>05/27/2026</Name>
+              <Date>2026-05-27</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@05/28/2026@2026-05-28" order="1">
+              <Name>05/28/2026</Name>
+              <Date>2026-05-28</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@05/29/2026@2026-05-29" order="1">
+              <Name>05/29/2026</Name>
+              <Date>2026-05-29</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/21/2026@2026-07-21" order="1">
+              <Name>07/21/2026</Name>
+              <Date>2026-07-21</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/22/2026@2026-07-22" order="1">
+              <Name>07/22/2026</Name>
+              <Date>2026-07-22</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/23/2026@2026-07-23" order="1">
+              <Name>07/23/2026</Name>
+              <Date>2026-07-23</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/24/2026@2026-07-24" order="1">
+              <Name>07/24/2026</Name>
+              <Date>2026-07-24</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/27/2026@2026-07-27" order="1">
+              <Name>07/27/2026</Name>
+              <Date>2026-07-27</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/28/2026@2026-07-28" order="1">
+              <Name>07/28/2026</Name>
+              <Date>2026-07-28</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/29/2026@2026-07-29" order="1">
+              <Name>07/29/2026</Name>
+              <Date>2026-07-29</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/30/2026@2026-07-30" order="1">
+              <Name>07/30/2026</Name>
+              <Date>2026-07-30</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/31/2026@2026-07-31" order="1">
+              <Name>07/31/2026</Name>
+              <Date>2026-07-31</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/03/2026@2026-08-03" order="1">
+              <Name>08/03/2026</Name>
+              <Date>2026-08-03</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/04/2026@2026-08-04" order="1">
+              <Name>08/04/2026</Name>
+              <Date>2026-08-04</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/05/2026@2026-08-05" order="1">
+              <Name>08/05/2026</Name>
+              <Date>2026-08-05</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/06/2026@2026-08-06" order="1">
+              <Name>08/06/2026</Name>
+              <Date>2026-08-06</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/07/2026@2026-08-07" order="1">
+              <Name>08/07/2026</Name>
+              <Date>2026-08-07</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/10/2026@2026-08-10" order="1">
+              <Name>08/10/2026</Name>
+              <Date>2026-08-10</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/11/2026@2026-08-11" order="1">
+              <Name>08/11/2026</Name>
+              <Date>2026-08-11</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/12/2026@2026-08-12" order="1">
+              <Name>08/12/2026</Name>
+              <Date>2026-08-12</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/13/2026@2026-08-13" order="1">
+              <Name>08/13/2026</Name>
+              <Date>2026-08-13</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/14/2026@2026-08-14" order="1">
+              <Name>08/14/2026</Name>
+              <Date>2026-08-14</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/17/2026@2026-08-17" order="1">
+              <Name>08/17/2026</Name>
+              <Date>2026-08-17</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/18/2026@2026-08-18" order="1">
+              <Name>08/18/2026</Name>
+              <Date>2026-08-18</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/19/2026@2026-08-19" order="1">
+              <Name>08/19/2026</Name>
+              <Date>2026-08-19</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/20/2026@2026-08-20" order="1">
+              <Name>08/20/2026</Name>
+              <Date>2026-08-20</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/21/2026@2026-08-21" order="1">
+              <Name>08/21/2026</Name>
+              <Date>2026-08-21</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/24/2026@2026-08-24" order="1">
+              <Name>08/24/2026</Name>
+              <Date>2026-08-24</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/25/2026@2026-08-25" order="1">
+              <Name>08/25/2026</Name>
+              <Date>2026-08-25</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/26/2026@2026-08-26" order="1">
+              <Name>08/26/2026</Name>
+              <Date>2026-08-26</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/27/2026@2026-08-27" order="1">
+              <Name>08/27/2026</Name>
+              <Date>2026-08-27</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/28/2026@2026-08-28" order="1">
+              <Name>08/28/2026</Name>
+              <Date>2026-08-28</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/26/2026@2026-10-26" order="1">
+              <Name>10/26/2026</Name>
+              <Date>2026-10-26</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/27/2026@2026-10-27" order="1">
+              <Name>10/27/2026</Name>
+              <Date>2026-10-27</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/28/2026@2026-10-28" order="1">
+              <Name>10/28/2026</Name>
+              <Date>2026-10-28</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/29/2026@2026-10-29" order="1">
+              <Name>10/29/2026</Name>
+              <Date>2026-10-29</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/30/2026@2026-10-30" order="1">
+              <Name>10/30/2026</Name>
+              <Date>2026-10-30</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/21/2026@2026-12-21" order="1">
+              <Name>12/21/2026</Name>
+              <Date>2026-12-21</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/22/2026@2026-12-22" order="1">
+              <Name>12/22/2026</Name>
+              <Date>2026-12-22</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/23/2026@2026-12-23" order="1">
+              <Name>12/23/2026</Name>
+              <Date>2026-12-23</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/24/2026@2026-12-24" order="1">
+              <Name>12/24/2026</Name>
+              <Date>2026-12-24</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/29/2026@2026-12-29" order="1">
+              <Name>12/29/2026</Name>
+              <Date>2026-12-29</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/30/2026@2026-12-30" order="1">
+              <Name>12/30/2026</Name>
+              <Date>2026-12-30</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/31/2026@2026-12-31" order="1">
+              <Name>12/31/2026</Name>
+              <Date>2026-12-31</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+          </dayTypeAssignments>
+        </ServiceCalendarFrame>
+        <FareFrame version="1.0" id="epd:UK:SCGL:FareFrame_UK_PI_FARE_NETWORK:SCGL:PH0005031:176:8:op" dataSourceRef="op:src" responsibilitySetRef="op:network_data">
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_FARE_NETWORK:FXCP" />
+          <fareZones>
+            <FareZone version="1.0" id="zone@99@0@boarding">
+              <Name>Hunts Grove</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0791">Hunts Grove Primary Academy</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0789">Lime Tree Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0787">Jessop Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36668">Business Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0785">Baird Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0786">Tri Services Centre</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@99@0@alighting">
+              <Name>Hunts Grove</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0791">Hunts Grove Primary Academy</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0791">Hunts Grove Primary Academy</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0791">Hunts Grove Primary Academy</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0791">Hunts Grove Primary Academy</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0791">Hunts Grove Primary Academy</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@100@1@boarding">
+              <Name>Waterwells P&amp;R</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB504">Waterwells Park &amp; Ride Site</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@100@1@alighting">
+              <Name>Waterwells P&amp;R</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0789">Lime Tree Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0787">Jessop Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36668">Business Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0785">Baird Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0786">Tri Services Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB504">Waterwells Park &amp; Ride Site</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0789">Lime Tree Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0787">Jessop Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36668">Business Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0785">Baird Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0786">Tri Services Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB504">Waterwells Park &amp; Ride Site</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0789">Lime Tree Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0787">Jessop Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36668">Business Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0785">Baird Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0786">Tri Services Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB504">Waterwells Park &amp; Ride Site</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0789">Lime Tree Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0787">Jessop Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36668">Business Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0785">Baird Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0786">Tri Services Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB504">Waterwells Park &amp; Ride Site</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0789">Lime Tree Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0787">Jessop Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36668">Business Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0785">Baird Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600G0786">Tri Services Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB504">Waterwells Park &amp; Ride Site</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@102@3@boarding">
+              <Name>Kingsway</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000368">Kingsway Health Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000366">Saint Mawgan Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000349">Primary School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000108">Playground</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000222">Thatcham Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000221">Chivenor Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000218">Watermint Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000216">The Warren</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36814">Daniels Meadow</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA06395">Barn Owl Centre</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@102@3@alighting">
+              <Name>Kingsway</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000368">Kingsway Health Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000366">Saint Mawgan Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000349">Primary School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000108">Playground</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000222">Thatcham Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000221">Chivenor Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000218">Watermint Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000216">The Warren</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36814">Daniels Meadow</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000368">Kingsway Health Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000366">Saint Mawgan Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000349">Primary School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000108">Playground</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000222">Thatcham Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000221">Chivenor Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000218">Watermint Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000216">The Warren</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36814">Daniels Meadow</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000368">Kingsway Health Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000366">Saint Mawgan Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000349">Primary School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000108">Playground</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000222">Thatcham Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000221">Chivenor Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000218">Watermint Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000216">The Warren</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36814">Daniels Meadow</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000368">Kingsway Health Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000366">Saint Mawgan Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000349">Primary School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000108">Playground</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000222">Thatcham Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000221">Chivenor Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000218">Watermint Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000216">The Warren</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36814">Daniels Meadow</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000368">Kingsway Health Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000366">Saint Mawgan Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000349">Primary School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000108">Playground</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000222">Thatcham Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000221">Chivenor Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000218">Watermint Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000216">The Warren</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36814">Daniels Meadow</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@103@4@boarding">
+              <Name>Hempsted</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB466">The Forge</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB536">Soren Larsen Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA06106">Monk Meadow Trading Estate</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000384">Sainsbury's Supermarket</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@103@4@alighting">
+              <Name>Hempsted</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA06395">Barn Owl Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB466">The Forge</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB536">Soren Larsen Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA06106">Monk Meadow Trading Estate</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA06395">Barn Owl Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB466">The Forge</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB536">Soren Larsen Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA06106">Monk Meadow Trading Estate</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA06395">Barn Owl Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB466">The Forge</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB536">Soren Larsen Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA06106">Monk Meadow Trading Estate</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA06395">Barn Owl Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB466">The Forge</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB536">Soren Larsen Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA06106">Monk Meadow Trading Estate</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA06395">Barn Owl Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB466">The Forge</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB536">Soren Larsen Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA06106">Monk Meadow Trading Estate</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@104@5@boarding">
+              <Name>Gloucester Quays</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA06423">Gloucester Quays</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB048">Spa Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB046">The Docks</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB114">The Warehouse</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB160">St Michael's Square</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@104@5@alighting">
+              <Name>Gloucester Quays</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000384">Sainsbury's Supermarket</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA06423">Gloucester Quays</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000384">Sainsbury's Supermarket</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA06423">Gloucester Quays</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000384">Sainsbury's Supermarket</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA06423">Gloucester Quays</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000384">Sainsbury's Supermarket</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA06423">Gloucester Quays</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000384">Sainsbury's Supermarket</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA06423">Gloucester Quays</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@105@6@boarding">
+              <Name>Gloucester Centre</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA57074">Clarence Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000734">Gloucester Railway Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000228">Morrison's Supermarket</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@105@6@alighting">
+              <Name>Gloucester Centre</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB048">Spa Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB046">The Docks</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB114">The Warehouse</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB160">St Michael's Square</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA57074">Clarence Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB048">Spa Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB046">The Docks</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB114">The Warehouse</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB160">St Michael's Square</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA57074">Clarence Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB048">Spa Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB046">The Docks</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB114">The Warehouse</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB160">St Michael's Square</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA57074">Clarence Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB048">Spa Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB046">The Docks</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB114">The Warehouse</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB160">St Michael's Square</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA57074">Clarence Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB048">Spa Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB046">The Docks</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB114">The Warehouse</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB160">St Michael's Square</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA57074">Clarence Street</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@106@7@alighting">
+              <Name>Metz Way,Asda</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000734">Gloucester Railway Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000228">Morrison's Supermarket</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000734">Gloucester Railway Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000228">Morrison's Supermarket</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000734">Gloucester Railway Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000228">Morrison's Supermarket</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000734">Gloucester Railway Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000228">Morrison's Supermarket</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000734">Gloucester Railway Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000228">Morrison's Supermarket</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@107@8@boarding">
+              <Name>Homebase</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB547">Eastbrook Trading Estate</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@107@8@alighting">
+              <Name>Homebase</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB547">Eastbrook Trading Estate</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB547">Eastbrook Trading Estate</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB547">Eastbrook Trading Estate</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB547">Eastbrook Trading Estate</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB547">Eastbrook Trading Estate</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@108@9@boarding">
+              <Name>Hailes Road</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB515">St Lawrence Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL17">Coney Hill Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL23">North Upton Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL13">Roman Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL19">Bishops Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL9">The Turmut-Hoer</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA26338">Brome Road</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@108@9@alighting">
+              <Name>Hailes Road</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB515">St Lawrence Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB515">St Lawrence Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB515">St Lawrence Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB515">St Lawrence Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLB515">St Lawrence Road</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@109@10@boarding">
+              <Name>Cox's way</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA26340">Cox's Way</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@109@10@alighting">
+              <Name>Cox's way</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL17">Coney Hill Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL23">North Upton Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL13">Roman Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL19">Bishops Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL9">The Turmut-Hoer</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA26338">Brome Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA26340">Cox's Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL17">Coney Hill Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL23">North Upton Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL13">Roman Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL19">Bishops Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL9">The Turmut-Hoer</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA26338">Brome Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA26340">Cox's Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL17">Coney Hill Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL23">North Upton Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL13">Roman Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL19">Bishops Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL9">The Turmut-Hoer</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA26338">Brome Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA26340">Cox's Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL17">Coney Hill Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL23">North Upton Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL13">Roman Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL19">Bishops Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL9">The Turmut-Hoer</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA26338">Brome Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA26340">Cox's Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL17">Coney Hill Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL23">North Upton Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL13">Roman Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL19">Bishops Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL9">The Turmut-Hoer</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA26338">Brome Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA26340">Cox's Way</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@110@11@boarding">
+              <Name>Cooper's Edge</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000062">Yewtree Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA51584">Lobley's Estate</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000232">Sapphire Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000342">Coopers Edge School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000475">Grebe Gardens</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000476">Beaumont Walk</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA51583">Direct Wines</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@110@11@alighting">
+              <Name>Cooper's Edge</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000062">Yewtree Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA51584">Lobley's Estate</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000232">Sapphire Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000342">Coopers Edge School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000475">Grebe Gardens</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000476">Beaumont Walk</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA51583">Direct Wines</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000062">Yewtree Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA51584">Lobley's Estate</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000232">Sapphire Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000342">Coopers Edge School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000475">Grebe Gardens</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000476">Beaumont Walk</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA51583">Direct Wines</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000062">Yewtree Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA51584">Lobley's Estate</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000232">Sapphire Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000342">Coopers Edge School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000475">Grebe Gardens</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000476">Beaumont Walk</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA51583">Direct Wines</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000062">Yewtree Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA51584">Lobley's Estate</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000232">Sapphire Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000342">Coopers Edge School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000475">Grebe Gardens</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000476">Beaumont Walk</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA51583">Direct Wines</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000062">Yewtree Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA51584">Lobley's Estate</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000232">Sapphire Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000342">Coopers Edge School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000475">Grebe Gardens</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000476">Beaumont Walk</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA51583">Direct Wines</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@111@13@boarding">
+              <Name>Whittle Inn</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000252">Gloucester Business Park</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@111@13@alighting">
+              <Name>Whittle Inn</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000252">Gloucester Business Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000252">Gloucester Business Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000252">Gloucester Business Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000252">Gloucester Business Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000252">Gloucester Business Park</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+          </fareZones>
+        </FareFrame>
+        <FareFrame version="1.0" id="epd:UK:SCGL:FareFrame_UK_PI_FARE_PRODUCT:SCGL:PH0005031:176:8:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+          <Name>Fare products</Name>
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_FARE_PRODUCT:FXCP" />
+          <tariffs>
+            <Tariff version="1.0" id="Tariff@GL_P&amp;R_Child_Return">
+              <validityConditions>
+                <ValidBetween>
+                  <FromDate>2026-06-29T02:35:00Z</FromDate>
+                </ValidBetween>
+              </validityConditions>
+              <Name>Tariff for Return</Name>
+              <OperatorRef versionRef="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+              <LineRef versionRef="1.0" ref="SCGL:PH0005031:176:8" />
+              <TypeOfTariffRef versionRef="fxc:v1.0" ref="fxc:zone_to_zone" />
+              <TariffBasis>zoneToZone</TariffBasis>
+              <fareStructureElements>
+                <FareStructureElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Conditions_of_travel@Outbound">
+                  <Name>Conditions of travel</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:travel_conditions" />
+                  <GenericParameterAssignment version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Conditions_of_travel@Outbound" order="1">
+                    <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:condition_of_use" />
+                    <LimitationGroupingType>AND</LimitationGroupingType>
+                    <limitations>
+                      <Transferability version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Conditions_of_travel@Outbound@Transferability">
+                        <Name>Ticket is not transferable</Name>
+                        <CanTransfer>false</CanTransfer>
+                      </Transferability>
+                      <RoundTrip version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Conditions_of_travel@Outbound@Trip">
+                        <Name>Return Trip</Name>
+                        <TripType>returnOut</TripType>
+                      </RoundTrip>
+                      <FrequencyOfUse version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Conditions_of_travel@Outbound@Frequency">
+                        <Name>One trip no transfers</Name>
+                        <FrequencyOfUseType>none</FrequencyOfUseType>
+                      </FrequencyOfUse>
+                      <UsageValidityPeriod version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Conditions_of_travel@Outbound@Validity">
+                        <UsageTrigger>startOutboundRide</UsageTrigger>
+                        <UsageEnd>endOfRide</UsageEnd>
+                      </UsageValidityPeriod>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Conditions_of_travel@Inbound">
+                  <Name>Conditions of travel</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:travel_conditions" />
+                  <GenericParameterAssignment version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Conditions_of_travel@Inbound" order="1">
+                    <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:condition_of_use" />
+                    <LimitationGroupingType>AND</LimitationGroupingType>
+                    <limitations>
+                      <Transferability version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Conditions_of_travel@Inbound@Transferability">
+                        <Name>Ticket is not transferable</Name>
+                        <CanTransfer>false</CanTransfer>
+                      </Transferability>
+                      <RoundTrip version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Conditions_of_travel@Inbound@Trip">
+                        <Name>Return Trip</Name>
+                        <TripType>returnBack</TripType>
+                      </RoundTrip>
+                      <FrequencyOfUse version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Conditions_of_travel@Inbound@Frequency">
+                        <Name>One trip no transfers</Name>
+                        <FrequencyOfUseType>none</FrequencyOfUseType>
+                      </FrequencyOfUse>
+                      <UsageValidityPeriod version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Conditions_of_travel@Inbound@Validity">
+                        <UsageTrigger>startOutboundRide</UsageTrigger>
+                        <UsageEnd>endOfFareDay</UsageEnd>
+                        <EndTime>03:59:59</EndTime>
+                      </UsageValidityPeriod>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Eligibility">
+                  <Name>Eligible user types</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:eligibility" />
+                  <GenericParameterAssignment version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Eligibility" order="1">
+                    <Name>Eligibility to purchase</Name>
+                    <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:eligible" />
+                    <limitations>
+                      <UserProfile version="1.0" id="Tariff@GL_P&amp;R_Child_Return@UP@child">
+                        <Name>Child</Name>
+                        <TypeOfConcessionRef versionRef="fxc:v1.0" ref="fxc:child" />
+                        <UserType>child</UserType>
+                      </UserProfile>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Access_Lines">
+                  <Name>Available lines</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:access" />
+                  <distanceMatrixElements>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@99@0+99@0">
+                      <Name>Hunts Grove to Hunts Grove</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@99@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@99@0@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@99@0+100@1">
+                      <Name>Hunts Grove to Waterwells P&amp;R</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@99@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@100@1@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@99@0+102@3">
+                      <Name>Hunts Grove to Kingsway</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@99@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@102@3@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@99@0+103@4">
+                      <Name>Hunts Grove to Hempsted</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@99@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@103@4@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@99@0+104@5">
+                      <Name>Hunts Grove to Gloucester Quays</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@99@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@104@5@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@99@0+105@6">
+                      <Name>Hunts Grove to Gloucester Centre</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@99@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@105@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@99@0+106@7">
+                      <Name>Hunts Grove to Metz Way,Asda</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@99@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@106@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@99@0+107@8">
+                      <Name>Hunts Grove to Homebase</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@99@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@107@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@99@0+108@9">
+                      <Name>Hunts Grove to Hailes Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@99@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@108@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@99@0+109@10">
+                      <Name>Hunts Grove to Cox's way</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@99@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@109@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@99@0+110@11">
+                      <Name>Hunts Grove to Cooper's Edge</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@99@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@110@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@99@0+111@13">
+                      <Name>Hunts Grove to Whittle Inn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@99@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@111@13@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@100@1+100@1">
+                      <Name>Waterwells P&amp;R to Waterwells P&amp;R</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@100@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@100@1@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@100@1+102@3">
+                      <Name>Waterwells P&amp;R to Kingsway</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@100@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@102@3@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@100@1+103@4">
+                      <Name>Waterwells P&amp;R to Hempsted</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@100@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@103@4@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@100@1+104@5">
+                      <Name>Waterwells P&amp;R to Gloucester Quays</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@100@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@104@5@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@100@1+105@6">
+                      <Name>Waterwells P&amp;R to Gloucester Centre</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@100@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@105@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@100@1+106@7">
+                      <Name>Waterwells P&amp;R to Metz Way,Asda</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@100@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@106@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@100@1+107@8">
+                      <Name>Waterwells P&amp;R to Homebase</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@100@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@107@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@100@1+108@9">
+                      <Name>Waterwells P&amp;R to Hailes Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@100@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@108@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@100@1+109@10">
+                      <Name>Waterwells P&amp;R to Cox's way</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@100@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@109@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@100@1+110@11">
+                      <Name>Waterwells P&amp;R to Cooper's Edge</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@100@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@110@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@100@1+111@13">
+                      <Name>Waterwells P&amp;R to Whittle Inn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@100@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@111@13@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@102@3+102@3">
+                      <Name>Kingsway to Kingsway</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@102@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@102@3@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@102@3+103@4">
+                      <Name>Kingsway to Hempsted</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@102@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@103@4@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@102@3+104@5">
+                      <Name>Kingsway to Gloucester Quays</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@102@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@104@5@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@102@3+105@6">
+                      <Name>Kingsway to Gloucester Centre</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@102@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@105@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@102@3+106@7">
+                      <Name>Kingsway to Metz Way,Asda</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@102@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@106@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@102@3+107@8">
+                      <Name>Kingsway to Homebase</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@102@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@107@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@102@3+108@9">
+                      <Name>Kingsway to Hailes Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@102@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@108@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@102@3+109@10">
+                      <Name>Kingsway to Cox's way</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@102@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@109@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@102@3+110@11">
+                      <Name>Kingsway to Cooper's Edge</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@102@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@110@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@102@3+111@13">
+                      <Name>Kingsway to Whittle Inn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@102@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@111@13@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@103@4+103@4">
+                      <Name>Hempsted to Hempsted</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@103@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@103@4@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@103@4+104@5">
+                      <Name>Hempsted to Gloucester Quays</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@103@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@104@5@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@103@4+105@6">
+                      <Name>Hempsted to Gloucester Centre</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@103@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@105@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@103@4+106@7">
+                      <Name>Hempsted to Metz Way,Asda</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@103@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@106@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@103@4+107@8">
+                      <Name>Hempsted to Homebase</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@103@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@107@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@103@4+108@9">
+                      <Name>Hempsted to Hailes Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@103@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@108@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@103@4+109@10">
+                      <Name>Hempsted to Cox's way</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@103@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@109@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@103@4+110@11">
+                      <Name>Hempsted to Cooper's Edge</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@103@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@110@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@103@4+111@13">
+                      <Name>Hempsted to Whittle Inn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@103@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@111@13@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@104@5+104@5">
+                      <Name>Gloucester Quays to Gloucester Quays</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@104@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@104@5@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@104@5+105@6">
+                      <Name>Gloucester Quays to Gloucester Centre</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@104@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@105@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@104@5+106@7">
+                      <Name>Gloucester Quays to Metz Way,Asda</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@104@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@106@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@104@5+107@8">
+                      <Name>Gloucester Quays to Homebase</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@104@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@107@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@104@5+108@9">
+                      <Name>Gloucester Quays to Hailes Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@104@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@108@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@104@5+109@10">
+                      <Name>Gloucester Quays to Cox's way</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@104@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@109@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@104@5+110@11">
+                      <Name>Gloucester Quays to Cooper's Edge</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@104@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@110@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@104@5+111@13">
+                      <Name>Gloucester Quays to Whittle Inn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@104@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@111@13@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@105@6+105@6">
+                      <Name>Gloucester Centre to Gloucester Centre</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@105@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@105@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@105@6+106@7">
+                      <Name>Gloucester Centre to Metz Way,Asda</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@105@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@106@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@105@6+107@8">
+                      <Name>Gloucester Centre to Homebase</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@105@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@107@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@105@6+108@9">
+                      <Name>Gloucester Centre to Hailes Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@105@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@108@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@105@6+109@10">
+                      <Name>Gloucester Centre to Cox's way</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@105@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@109@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@105@6+110@11">
+                      <Name>Gloucester Centre to Cooper's Edge</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@105@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@110@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@105@6+111@13">
+                      <Name>Gloucester Centre to Whittle Inn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@105@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@111@13@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@107@8+107@8">
+                      <Name>Homebase to Homebase</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@107@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@107@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@107@8+108@9">
+                      <Name>Homebase to Hailes Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@107@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@108@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@107@8+109@10">
+                      <Name>Homebase to Cox's way</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@107@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@109@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@107@8+110@11">
+                      <Name>Homebase to Cooper's Edge</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@107@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@110@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@107@8+111@13">
+                      <Name>Homebase to Whittle Inn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@107@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@111@13@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@108@9+108@9">
+                      <Name>Hailes Road to Hailes Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@108@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@108@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@108@9+109@10">
+                      <Name>Hailes Road to Cox's way</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@108@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@109@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@108@9+110@11">
+                      <Name>Hailes Road to Cooper's Edge</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@108@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@110@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@108@9+111@13">
+                      <Name>Hailes Road to Whittle Inn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@108@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@111@13@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@109@10+109@10">
+                      <Name>Cox's way to Cox's way</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@109@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@109@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@109@10+110@11">
+                      <Name>Cox's way to Cooper's Edge</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@109@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@110@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@109@10+111@13">
+                      <Name>Cox's way to Whittle Inn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@109@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@111@13@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@110@11+110@11">
+                      <Name>Cooper's Edge to Cooper's Edge</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@110@11@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@110@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@110@11+111@13">
+                      <Name>Cooper's Edge to Whittle Inn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@110@11@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@111@13@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Distance@111@13+111@13">
+                      <Name>Whittle Inn to Whittle Inn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@111@13@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@111@13@alighting" />
+                    </DistanceMatrixElement>
+                  </distanceMatrixElements>
+                  <GenericParameterAssignment version="1.0" id="Tariff@GL_P&amp;R_Child_Return@Access_Lines" order="1">
+                    <Name>Lines</Name>
+                    <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:can_access" />
+                    <ValidityParameterAssignmentType>EQ</ValidityParameterAssignmentType>
+                    <validityParameters>
+                      <LineRef versionRef="1.0" ref="SCGL:PH0005031:176:8" />
+                    </validityParameters>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+              </fareStructureElements>
+            </Tariff>
+          </tariffs>
+          <fareProducts>
+            <PreassignedFareProduct version="1.0" id="trip@GL_P&amp;R_Child_Return">
+              <Name>Return</Name>
+              <Description>A return journey on a Stagecoach bus, on the same day</Description>
+              <ChargingMomentRef versionRef="fxc:v1.0" ref="fxc:prepayment" />
+              <ChargingMomentType>beforeTravel</ChargingMomentType>
+              <TypeOfFareProductRef versionRef="fxc:v1.0" ref="fxc:standard_product@trip@day_return" />
+              <OperatorRef version="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+              <validableElements>
+                <ValidableElement version="1.0" id="trip@GL_P&amp;R_Child_Return@Access@Outbound">
+                  <Name>Outbound Ride</Name>
+                  <fareStructureElements>
+                    <FareStructureElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Eligibility" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Conditions_of_travel@Outbound" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Access_Lines" />
+                  </fareStructureElements>
+                </ValidableElement>
+                <ValidableElement version="1.0" id="trip@GL_P&amp;R_Child_Return@Access@Inbound">
+                  <Name>Return Ride</Name>
+                  <fareStructureElements>
+                    <FareStructureElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Eligibility" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Conditions_of_travel@Inbound" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Access_Lines" />
+                  </fareStructureElements>
+                </ValidableElement>
+              </validableElements>
+              <accessRightsInProduct>
+                <AccessRightInProduct version="1.0" id="trip@GL_P&amp;R_Child_Return@Outbound" order="1">
+                  <ValidableElementRef version="1.0" ref="trip@GL_P&amp;R_Child_Return@Access@Outbound" />
+                </AccessRightInProduct>
+                <AccessRightInProduct version="1.0" id="trip@GL_P&amp;R_Child_Return@Inbound" order="2">
+                  <ValidableElementRef version="1.0" ref="trip@GL_P&amp;R_Child_Return@Access@Inbound" />
+                </AccessRightInProduct>
+              </accessRightsInProduct>
+              <ProductType>dayReturnTrip</ProductType>
+            </PreassignedFareProduct>
+          </fareProducts>
+          <salesOfferPackages>
+            <SalesOfferPackage version="1.0" id="SOP@trip@GL_P&amp;R_Child_Return@paperOnBus">
+              <Name>Return - Onboard (paper ticket)</Name>
+              <distributionAssignments>
+                <DistributionAssignment version="1.0" id="SOP@trip@GL_P&amp;R_Child_Return@paperOnBus@onBoard" order="1">
+                  <DistributionChannelType>onBoard</DistributionChannelType>
+                  <PaymentMethods>cash contactlessPaymentCard</PaymentMethods>
+                  <FulfilmentMethodRef version="1.0" ref="Fulfilment@collectOnBoard" />
+                </DistributionAssignment>
+              </distributionAssignments>
+              <salesOfferPackageElements>
+                <SalesOfferPackageElement version="1.0" id="SOP@trip@GL_P&amp;R_Child_Return@paperOnBus@paperTicket" order="1">
+                  <TypeOfTravelDocumentRef version="1.0" ref="TravelDocument@paperTicket" />
+                  <PreassignedFareProductRef version="1.0" ref="trip@GL_P&amp;R_Child_Return" />
+                </SalesOfferPackageElement>
+              </salesOfferPackageElements>
+            </SalesOfferPackage>
+          </salesOfferPackages>
+        </FareFrame>
+        <FareFrame version="1.0" id="epd:UK:SCGL:FareFrame_UK_PI_FARE_NETWORK_PRICE:SCGL:PH0005031:176:8:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+          <Name>Prices for GL P&amp;R Child Return</Name>
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_PRICE:FXCP" />
+          <FrameDefaults>
+            <DefaultCurrency>GBP</DefaultCurrency>
+          </FrameDefaults>
+          <prerequisites>
+            <FareFrameRef versionRef="1.0" ref="epd:UK:SCGL:FareFrame_UK_PI_FARE_PRODUCT:SCGL:PH0005031:176:8:op" />
+          </prerequisites>
+          <fareTables>
+            <FareTable version="1.0" id="fareTable@SCGL:PH0005031:176:8@trip@GL_P&amp;R_Child_Return">
+              <Name>Hunts - Brockworth - GL P&amp;R Child Return</Name>
+              <pricesFor>
+                <PreassignedFareProductRef version="1.0" ref="trip@GL_P&amp;R_Child_Return" />
+                <SalesOfferPackageRef version="1.0" ref="SOP@trip@GL_P&amp;R_Child_Return@paperOnBus" />
+                <UserProfileRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@UP@child" />
+              </pricesFor>
+              <specifics>
+                <LineRef versionRef="1.0" ref="SCGL:PH0005031:176:8" />
+              </specifics>
+              <prices>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@99@0+99@0@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@99@0+99@0" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@99@0+100@1@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@99@0+100@1" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@99@0+102@3@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@99@0+102@3" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@99@0+103@4@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@99@0+103@4" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@99@0+104@5@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@99@0+104@5" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@99@0+105@6@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@99@0+105@6" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@99@0+106@7@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@99@0+106@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@99@0+107@8@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@99@0+107@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@99@0+108@9@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@99@0+108@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@99@0+109@10@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@99@0+109@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@99@0+110@11@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@99@0+110@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@99@0+111@13@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@99@0+111@13" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@100@1+100@1@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@100@1+100@1" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@100@1+102@3@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@100@1+102@3" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@100@1+103@4@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@100@1+103@4" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@100@1+104@5@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@100@1+104@5" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@100@1+105@6@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@100@1+105@6" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@100@1+106@7@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@100@1+106@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@100@1+107@8@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@100@1+107@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@100@1+108@9@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@100@1+108@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@100@1+109@10@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@100@1+109@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@100@1+110@11@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@100@1+110@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@100@1+111@13@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@100@1+111@13" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@102@3+102@3@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@102@3+102@3" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@102@3+103@4@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@102@3+103@4" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@102@3+104@5@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@102@3+104@5" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@102@3+105@6@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@102@3+105@6" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@102@3+106@7@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@102@3+106@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@102@3+107@8@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@102@3+107@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@102@3+108@9@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@102@3+108@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@102@3+109@10@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@102@3+109@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@102@3+110@11@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@102@3+110@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@102@3+111@13@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@102@3+111@13" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@103@4+103@4@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@103@4+103@4" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@103@4+104@5@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@103@4+104@5" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@103@4+105@6@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@103@4+105@6" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@103@4+106@7@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@103@4+106@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@103@4+107@8@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@103@4+107@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@103@4+108@9@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@103@4+108@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@103@4+109@10@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@103@4+109@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@103@4+110@11@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@103@4+110@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@103@4+111@13@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@103@4+111@13" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@104@5+105@6@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@104@5+105@6" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@104@5+106@7@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@104@5+106@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@104@5+107@8@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@104@5+107@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@104@5+108@9@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@104@5+108@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@104@5+109@10@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@104@5+109@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@104@5+110@11@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@104@5+110@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@104@5+111@13@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@104@5+111@13" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@105@6+105@6@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@105@6+105@6" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@105@6+106@7@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@105@6+106@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@105@6+107@8@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@105@6+107@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@105@6+108@9@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@105@6+108@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@105@6+109@10@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@105@6+109@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@105@6+110@11@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@105@6+110@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@105@6+111@13@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@105@6+111@13" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@107@8+108@9@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@107@8+108@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@107@8+109@10@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@107@8+109@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@107@8+110@11@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@107@8+110@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@107@8+111@13@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@107@8+111@13" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@108@9+109@10@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@108@9+109@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@108@9+110@11@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@108@9+110@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@108@9+111@13@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@108@9+111@13" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@109@10+110@11@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@109@10+110@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@109@10+111@13@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@109@10+111@13" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@110@11+110@11@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@110@11+110@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@110@11+111@13@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@110@11+111@13" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@GL_P&amp;R_Child_Return@Distance@111@13+111@13@trip@GL_P&amp;R_Child_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@GL_P&amp;R_Child_Return@Distance@111@13+111@13" />
+                </DistanceMatrixElementPrice>
+              </prices>
+            </FareTable>
+          </fareTables>
+        </FareFrame>
+      </frames>
+    </CompositeFrame>
+    <CompositeFrame version="1.0" id="epd:UK:SCGL:CompositeFrame_UK_PI_METADATA_OFFER::op" dataSourceRef="op:src" responsibilitySetRef="op:metadata">
+      <Name>Common resources for SCGL</Name>
+      <Description>Set of SCGL profile metadata.</Description>
+      <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_METADATA_OFFER:FXCP" />
+      <frames>
+        <FareFrame version="1.0" id="epd:UK:SCGL:FareFrame_UK_PI_METADATA:SCGL:PH0005031:176:8:op" dataSourceRef="op:src" responsibilitySetRef="op:metadata">
+          <fulfilmentMethods>
+            <FulfilmentMethod version="1.0" id="Fulfilment@mobileApp">
+              <Name>Mobile App</Name>
+              <FulfilmentMethodType>mobileApp</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod version="1.0" id="Fulfilment@onlinePropagation">
+              <Name>Online propagation</Name>
+              <FulfilmentMethodType>validator</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod version="1.0" id="Fulfilment@post">
+              <Name>Send ticket by post</Name>
+              <FulfilmentMethodType>post</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod version="1.0" id="Fulfilment@collectAtCounter">
+              <Name>Collect at counter</Name>
+              <FulfilmentMethodType>ticketOffice</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod version="1.0" id="Fulfilment@collectOnBoard">
+              <Name>Collect on board</Name>
+              <FulfilmentMethodType>conductor</FulfilmentMethodType>
+            </FulfilmentMethod>
+          </fulfilmentMethods>
+          <typesOfTravelDocuments>
+            <TypeOfTravelDocument version="1.0" id="TravelDocument@mobileApp">
+              <Name>Stored on your mobile phone as m-tickets</Name>
+              <MediaType>mobileApp</MediaType>
+              <MachineReadable>barCode</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument version="1.0" id="TravelDocument@smartCard">
+              <Name>Smart_Card_Ticket</Name>
+              <MediaType>smartCard</MediaType>
+              <MachineReadable>nfc</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument version="1.0" id="TravelDocument@paperTicket">
+              <Name>Printed Ticket</Name>
+              <MediaType>paperTicket</MediaType>
+            </TypeOfTravelDocument>
+          </typesOfTravelDocuments>
+        </FareFrame>
+      </frames>
+    </CompositeFrame>
+  </dataObjects>
+</PublicationDelivery>

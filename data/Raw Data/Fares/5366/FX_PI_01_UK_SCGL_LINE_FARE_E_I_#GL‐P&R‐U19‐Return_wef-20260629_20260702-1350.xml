@@ -1,0 +1,2697 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PublicationDelivery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" version="1.1" xsi:schemaLocation="http://www.netex.org.uk/netex http://netex.uk/netex/schema/1.10/xsd/NeTEx_publication.xsd" xmlns="http://www.netex.org.uk/netex">
+  <PublicationTimestamp>2026-07-02T13:50:18.8698434Z</PublicationTimestamp>
+  <ParticipantRef>SCGL</ParticipantRef>
+  <PublicationRequest version="1.0">
+    <RequestTimestamp>2026-07-02T13:50:18.780111Z</RequestTimestamp>
+    <Description>Request for SCGL bus fares for line E</Description>
+    <topics>
+      <NetworkFrameTopic>
+        <selectionValidityConditions>
+          <AvailabilityCondition version="1.0" id="r1">
+            <FromDate>2026-06-29T02:35:00Z</FromDate>
+          </AvailabilityCondition>
+        </selectionValidityConditions>
+        <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_LINE_FARE_OFFER:FXCP" />
+        <NetworkFilterByValue>
+          <objectReferences>
+            <OperatorRef versionRef="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+            <LineRef versionRef="1.0" ref="SCGL:PH0005031:183:E" />
+            <BrandingRef versionRef="1.0" ref="op:SCGL@brand" />
+          </objectReferences>
+        </NetworkFilterByValue>
+      </NetworkFrameTopic>
+    </topics>
+    <RequestPolicy>
+      <RequestDetail>AllWithXref</RequestDetail>
+    </RequestPolicy>
+  </PublicationRequest>
+  <Description>SCGL bus fares for line E</Description>
+  <dataObjects>
+    <CompositeFrame version="1.1" id="epd:UK:SCGL:CompositeFrame_UK_PI_LINE_FARE_OFFER:trip@SCGL:PH0005031:183:E:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+      <ValidBetween>
+        <FromDate>2026-06-29T02:35:00Z</FromDate>
+      </ValidBetween>
+      <Name>Fares for SCGL SCGL:PH0005031:183:E</Name>
+      <Description>SCGL SCGL:PH0005031:183:E is accessible as a single trip fare. Prices are given zone to zone, where each zone is a linear group of stops, i.e. fare stage.</Description>
+      <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_LINE_FARE_OFFER:FXCP" />
+      <codespaces>
+        <CodespaceRef ref="epd_data" />
+        <CodespaceRef ref="fxc_metadata" />
+        <CodespaceRef ref="naptStop_data" />
+        <CodespaceRef ref="nptgLocality_data" />
+        <CodespaceRef ref="noc_data" />
+        <CodespaceRef ref="op_data" />
+      </codespaces>
+      <FrameDefaults>
+        <DefaultCodespaceRef ref="op_data" />
+        <DefaultDataSourceRef version="1.0" ref="op:src" />
+        <DefaultResponsibilitySetRef version="1.0" ref="op:tariff_data" />
+        <DefaultCurrency>GBP</DefaultCurrency>
+      </FrameDefaults>
+      <prerequisites>
+        <CompositeFrameRef versionRef="1.0" ref="epd:UK:SCGL:CompositeFrame_UK_PI_METADATA::op" />
+      </prerequisites>
+      <frames>
+        <ResourceFrame version="1.0" id="epd:UK:SCGL:ResourceFrame_UK_PI_COMMON:SCGL:PH0005031:183:E:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+          <Name>Operator specific common resources</Name>
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_COMMON:FXCP" />
+          <codespaces>
+            <Codespace id="epd_data">
+              <Xmlns>epd</Xmlns>
+              <XmlnsUrl>http://fnetex-cen.eu/epd</XmlnsUrl>
+              <Description>European Passenger Information profile data -use for UK frame names</Description>
+            </Codespace>
+            <Codespace id="fxc_metadata">
+              <Xmlns>fxc_metadata</Xmlns>
+              <XmlnsUrl>netex.org.uk/fxc</XmlnsUrl>
+              <Description>UK FareXChange Profile metadata</Description>
+            </Codespace>
+            <Codespace id="naptStop_data">
+              <Xmlns>naptStop</Xmlns>
+              <XmlnsUrl>http://www.naptan.org.uk/stops</XmlnsUrl>
+              <Description>UK National Public Transport Access Nodes: Stops.</Description>
+            </Codespace>
+            <Codespace id="noc_data">
+              <Xmlns>noc</Xmlns>
+              <XmlnsUrl>http://www.traveline.co.uk/noc</XmlnsUrl>
+              <Description>UK national operator codes</Description>
+            </Codespace>
+            <Codespace id="op_data">
+              <Xmlns>op</Xmlns>
+              <XmlnsUrl>https://www.stagecoachbus.com/regional-help-and-contact/west</XmlnsUrl>
+              <Description>Operator Data</Description>
+            </Codespace>
+            <Codespace id="nptgLocality_data">
+              <Xmlns>nptgLocality</Xmlns>
+              <XmlnsUrl>http://nptg.org.uk/locations</XmlnsUrl>
+              <Description>National Public Transport gazetteer locations</Description>
+            </Codespace>
+          </codespaces>
+          <dataSources>
+            <DataSource version="1.0" id="op:src">
+              <Email>west.enquiries@stagecoachbus.com</Email>
+            </DataSource>
+          </dataSources>
+          <responsibilitySets>
+            <ResponsibilitySet version="1.0" id="op:tariff_data">
+              <Name>Operator Tariffs</Name>
+              <roles>
+                <ResponsibilityRoleAssignment version="1.0" id="op:tariff_data@creates">
+                  <DataRoleType>creates</DataRoleType>
+                  <StakeholderRoleType>FareManagement</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="1.0" ref="noc:SCGL" />
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+            <ResponsibilitySet version="1.0" id="op:network_data">
+              <Name>Operator Network data</Name>
+              <roles>
+                <ResponsibilityRoleAssignment version="1.0" id="op:network_data@creates">
+                  <DataRoleType>creates</DataRoleType>
+                  <StakeholderRoleType>Planning</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="1.0" ref="noc:SCGL" />
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+            <ResponsibilitySet version="1.0" id="op:metadata">
+              <Name>Operator Metadata</Name>
+              <roles>
+                <ResponsibilityRoleAssignment version="1.0" id="op:metadata@creates">
+                  <DataRoleType>creates</DataRoleType>
+                  <StakeholderRoleType>Planning</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="1.0" ref="noc:SCGL" />
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+          </responsibilitySets>
+          <typesOfValue>
+            <ValueSet version="1.0" id="op:Branding" classOfValues="Branding">
+              <Name>Operator Branding</Name>
+              <values>
+                <Branding version="1.0" id="op:SCGL@brand">
+                  <Name>Stagecoach West</Name>
+                  <Url>https://www.stagecoachbus.com/regional-help-and-contact/west</Url>
+                </Branding>
+              </values>
+            </ValueSet>
+          </typesOfValue>
+          <organisations>
+            <Operator version="1.0" id="noc:SCGL">
+              <PublicCode>SCGL</PublicCode>
+              <PrivateCode>135902</PrivateCode>
+              <Name>Stagecoach West</Name>
+              <ShortName>Stagecoach West</ShortName>
+              <TradingName>Cheltenham &amp; Gloucester Omnibus Co Ltd</TradingName>
+              <ContactDetails>
+                <Phone>03452418000</Phone>
+                <Url>https://www.stagecoachbus.com/regional-help-and-contact/west</Url>
+              </ContactDetails>
+              <OrganisationType>operator</OrganisationType>
+              <Address>
+                <Street>Stagecoach West 3rd Floor, 65 London Rd, Gloucester GL1 3HF</Street>
+              </Address>
+              <PrimaryMode>bus</PrimaryMode>
+              <CustomerServiceContactDetails>
+                <Email>west.enquiries@stagecoachbus.com</Email>
+              </CustomerServiceContactDetails>
+            </Operator>
+          </organisations>
+        </ResourceFrame>
+        <ServiceFrame version="1.0" id="epd:UK:SCGL:ServiceFrame_UK_PI_NETWORK:SCGL:PH0005031:183:E:op" dataSourceRef="op:src" responsibilitySetRef="op:network_data">
+          <Description>This frame contains the stop and line definitions for the service. It could also be exchanged separately.</Description>
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_NETWORK:FXCP" />
+          <lines>
+            <Line version="1.0" id="SCGL:PH0005031:183:E">
+              <Name>Bishop's Cleeve Mill Parade - Arle Court Park &amp; Ride</Name>
+              <PublicCode>E</PublicCode>
+              <PrivateCode type="txc:Line@id">E</PrivateCode>
+              <OperatorRef versionRef="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+            </Line>
+          </lines>
+          <scheduledStopPoints>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL428">
+              <Name>Mill Parade</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046651" />
+                <Name>Bishops Cleeve</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL426">
+              <Name>War Memorial</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046651" />
+                <Name>Bishops Cleeve</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL3766">
+              <Name>Cleevecroft Avenue</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046651" />
+                <Name>Bishops Cleeve</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL456">
+              <Name>The Swallow</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046651" />
+                <Name>Bishops Cleeve</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA312">
+              <Name>Woodmans Way</Name>
+              <NameSuffix>after</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046651" />
+                <Name>Bishops Cleeve</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL5045">
+              <Name>The Highgrove</Name>
+              <NameSuffix>after</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046651" />
+                <Name>Bishops Cleeve</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA597">
+              <Name>Haycroft Close</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046651" />
+                <Name>Bishops Cleeve</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA599">
+              <Name>Sweetbriar Close</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046651" />
+                <Name>Bishops Cleeve</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL1740">
+              <Name>The Grange Zurich Grounds</Name>
+              <NameSuffix>inside</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046651" />
+                <Name>Bishops Cleeve</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA308">
+              <Name>Minetts Avenue</Name>
+              <NameSuffix>before</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046651" />
+                <Name>Bishops Cleeve</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL438">
+              <Name>Cleeve School</Name>
+              <NameSuffix>o/s</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046651" />
+                <Name>Bishops Cleeve</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA814">
+              <Name>Dale Walk North</Name>
+              <NameSuffix>on</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046651" />
+                <Name>Bishops Cleeve</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA596">
+              <Name>The Nurseries</Name>
+              <NameSuffix>after</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046651" />
+                <Name>Bishops Cleeve</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL442">
+              <Name>Petrol Station</Name>
+              <NameSuffix>after</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046651" />
+                <Name>Bishops Cleeve</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA594">
+              <Name>Sports Field</Name>
+              <NameSuffix>o/s</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046651" />
+                <Name>Bishops Cleeve</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA610">
+              <Name>Miles Road</Name>
+              <NameSuffix>after</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046651" />
+                <Name>Bishops Cleeve</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA592">
+              <Name>Southam Lane</Name>
+              <NameSuffix>before</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046651" />
+                <Name>Bishops Cleeve</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL1078">
+              <Name>Racecourse Park &amp; Ride</Name>
+              <NameSuffix>Stop 1</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0057404" />
+                <Name>Cheltenham</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA590">
+              <Name>Racecourse Roundabout</Name>
+              <NameSuffix>after</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0057404" />
+                <Name>Cheltenham</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL1884">
+              <Name>Pittville Pump Room</Name>
+              <NameSuffix>before</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0057404" />
+                <Name>Cheltenham</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA052">
+              <Name>Pittville Park</Name>
+              <NameSuffix>o/s</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0057404" />
+                <Name>Cheltenham</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA588">
+              <Name>Wellington Road</Name>
+              <NameSuffix>after</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0057404" />
+                <Name>Cheltenham</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA454">
+              <Name>Holy Trinity Church</Name>
+              <NameSuffix>after</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0057404" />
+                <Name>Cheltenham</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA36710">
+              <Name>Pittville Street</Name>
+              <NameSuffix>Stop 15</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0057404" />
+                <Name>Cheltenham</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA36706">
+              <Name>High Street</Name>
+              <NameSuffix>Stop 13</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0057404" />
+                <Name>Cheltenham</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA450">
+              <Name>Ambrose Street</Name>
+              <NameSuffix>on</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0057404" />
+                <Name>Cheltenham</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA025">
+              <Name>St James's House</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0057404" />
+                <Name>Cheltenham</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:160000611">
+              <Name>Lansdown Walk</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0057404" />
+                <Name>Cheltenham</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA236">
+              <Name>Texaco Garage</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0057404" />
+                <Name>Cheltenham</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA060">
+              <Name>Queens Court</Name>
+              <NameSuffix>after</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0011703" />
+                <Name>Lansdown</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL9052">
+              <Name>Cheltenham Spa Rail Stn</Name>
+              <NameSuffix>entrance</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0011703" />
+                <Name>Lansdown</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL3959">
+              <Name>Cheltenham Spa Rail Stn</Name>
+              <NameSuffix>after</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0011703" />
+                <Name>Lansdown</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA36661">
+              <Name>Church Road</Name>
+              <NameSuffix>before</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0011703" />
+                <Name>Lansdown</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA242">
+              <Name>Granley Road</Name>
+              <NameSuffix>after</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0011689" />
+                <Name>Benhall</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA244">
+              <Name>Tennyson Road</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0011689" />
+                <Name>Benhall</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA246">
+              <Name>GCHQ</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0011689" />
+                <Name>Benhall</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL2140">
+              <Name>Arle Court</Name>
+              <NameSuffix>by</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0011722" />
+                <Name>Arle Court</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL134">
+              <Name>Arle Court Park &amp; Ride</Name>
+              <NameSuffix>inside</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0011722" />
+                <Name>Arle Court</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+          </scheduledStopPoints>
+        </ServiceFrame>
+        <ServiceCalendarFrame version="1.0" id="epd:UK:SCGL:ServiceCalendarFrame_UK_PI_CALENDAR:SCGL:PH0005031:183:E:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+          <dayTypes>
+            <DayType version="1.0" id="day_type@Public_Holiday">
+              <Name>Public Holiday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <HolidayTypes>AnyHoliday</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@#SCH">
+              <Name>#SCH</Name>
+              <properties>
+                <PropertyOfDay>
+                  <HolidayTypes>AnyHoliday</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@SCH">
+              <Name>SCH</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                  <HolidayTypes>WorkingDay</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@Saturday">
+              <Name>Saturday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Saturday</DaysOfWeek>
+                  <HolidayTypes>NotWorkingDay</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@Sunday">
+              <Name>Sunday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Sunday</DaysOfWeek>
+                  <HolidayTypes>NotWorkingDay</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+          </dayTypes>
+          <dayTypeAssignments>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@01/02/2025@2025-01-02" order="1">
+              <Name>01/02/2025</Name>
+              <Date>2025-01-02</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@01/03/2025@2025-01-03" order="1">
+              <Name>01/03/2025</Name>
+              <Date>2025-01-03</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/17/2025@2025-02-17" order="1">
+              <Name>02/17/2025</Name>
+              <Date>2025-02-17</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/18/2025@2025-02-18" order="1">
+              <Name>02/18/2025</Name>
+              <Date>2025-02-18</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/19/2025@2025-02-19" order="1">
+              <Name>02/19/2025</Name>
+              <Date>2025-02-19</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/20/2025@2025-02-20" order="1">
+              <Name>02/20/2025</Name>
+              <Date>2025-02-20</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/21/2025@2025-02-21" order="1">
+              <Name>02/21/2025</Name>
+              <Date>2025-02-21</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/07/2025@2025-04-07" order="1">
+              <Name>04/07/2025</Name>
+              <Date>2025-04-07</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/08/2025@2025-04-08" order="1">
+              <Name>04/08/2025</Name>
+              <Date>2025-04-08</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/09/2025@2025-04-09" order="1">
+              <Name>04/09/2025</Name>
+              <Date>2025-04-09</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/10/2025@2025-04-10" order="1">
+              <Name>04/10/2025</Name>
+              <Date>2025-04-10</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/11/2025@2025-04-11" order="1">
+              <Name>04/11/2025</Name>
+              <Date>2025-04-11</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/14/2025@2025-04-14" order="1">
+              <Name>04/14/2025</Name>
+              <Date>2025-04-14</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/15/2025@2025-04-15" order="1">
+              <Name>04/15/2025</Name>
+              <Date>2025-04-15</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/16/2025@2025-04-16" order="1">
+              <Name>04/16/2025</Name>
+              <Date>2025-04-16</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/17/2025@2025-04-17" order="1">
+              <Name>04/17/2025</Name>
+              <Date>2025-04-17</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@05/27/2025@2025-05-27" order="1">
+              <Name>05/27/2025</Name>
+              <Date>2025-05-27</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@05/28/2025@2025-05-28" order="1">
+              <Name>05/28/2025</Name>
+              <Date>2025-05-28</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@05/29/2025@2025-05-29" order="1">
+              <Name>05/29/2025</Name>
+              <Date>2025-05-29</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@05/30/2025@2025-05-30" order="1">
+              <Name>05/30/2025</Name>
+              <Date>2025-05-30</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/25/2025@2025-07-25" order="1">
+              <Name>07/25/2025</Name>
+              <Date>2025-07-25</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/28/2025@2025-07-28" order="1">
+              <Name>07/28/2025</Name>
+              <Date>2025-07-28</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/29/2025@2025-07-29" order="1">
+              <Name>07/29/2025</Name>
+              <Date>2025-07-29</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/30/2025@2025-07-30" order="1">
+              <Name>07/30/2025</Name>
+              <Date>2025-07-30</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/31/2025@2025-07-31" order="1">
+              <Name>07/31/2025</Name>
+              <Date>2025-07-31</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/01/2025@2025-08-01" order="1">
+              <Name>08/01/2025</Name>
+              <Date>2025-08-01</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/04/2025@2025-08-04" order="1">
+              <Name>08/04/2025</Name>
+              <Date>2025-08-04</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/05/2025@2025-08-05" order="1">
+              <Name>08/05/2025</Name>
+              <Date>2025-08-05</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/06/2025@2025-08-06" order="1">
+              <Name>08/06/2025</Name>
+              <Date>2025-08-06</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/07/2025@2025-08-07" order="1">
+              <Name>08/07/2025</Name>
+              <Date>2025-08-07</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/08/2025@2025-08-08" order="1">
+              <Name>08/08/2025</Name>
+              <Date>2025-08-08</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/11/2025@2025-08-11" order="1">
+              <Name>08/11/2025</Name>
+              <Date>2025-08-11</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/12/2025@2025-08-12" order="1">
+              <Name>08/12/2025</Name>
+              <Date>2025-08-12</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/13/2025@2025-08-13" order="1">
+              <Name>08/13/2025</Name>
+              <Date>2025-08-13</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/14/2025@2025-08-14" order="1">
+              <Name>08/14/2025</Name>
+              <Date>2025-08-14</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/15/2025@2025-08-15" order="1">
+              <Name>08/15/2025</Name>
+              <Date>2025-08-15</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/18/2025@2025-08-18" order="1">
+              <Name>08/18/2025</Name>
+              <Date>2025-08-18</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/19/2025@2025-08-19" order="1">
+              <Name>08/19/2025</Name>
+              <Date>2025-08-19</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/20/2025@2025-08-20" order="1">
+              <Name>08/20/2025</Name>
+              <Date>2025-08-20</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/21/2025@2025-08-21" order="1">
+              <Name>08/21/2025</Name>
+              <Date>2025-08-21</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/22/2025@2025-08-22" order="1">
+              <Name>08/22/2025</Name>
+              <Date>2025-08-22</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/26/2025@2025-08-26" order="1">
+              <Name>08/26/2025</Name>
+              <Date>2025-08-26</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/27/2025@2025-08-27" order="1">
+              <Name>08/27/2025</Name>
+              <Date>2025-08-27</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/28/2025@2025-08-28" order="1">
+              <Name>08/28/2025</Name>
+              <Date>2025-08-28</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/29/2025@2025-08-29" order="1">
+              <Name>08/29/2025</Name>
+              <Date>2025-08-29</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/27/2025@2025-10-27" order="1">
+              <Name>10/27/2025</Name>
+              <Date>2025-10-27</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/28/2025@2025-10-28" order="1">
+              <Name>10/28/2025</Name>
+              <Date>2025-10-28</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/29/2025@2025-10-29" order="1">
+              <Name>10/29/2025</Name>
+              <Date>2025-10-29</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/30/2025@2025-10-30" order="1">
+              <Name>10/30/2025</Name>
+              <Date>2025-10-30</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/31/2025@2025-10-31" order="1">
+              <Name>10/31/2025</Name>
+              <Date>2025-10-31</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/22/2025@2025-12-22" order="1">
+              <Name>12/22/2025</Name>
+              <Date>2025-12-22</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/23/2025@2025-12-23" order="1">
+              <Name>12/23/2025</Name>
+              <Date>2025-12-23</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/24/2025@2025-12-24" order="1">
+              <Name>12/24/2025</Name>
+              <Date>2025-12-24</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/29/2025@2025-12-29" order="1">
+              <Name>12/29/2025</Name>
+              <Date>2025-12-29</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/30/2025@2025-12-30" order="1">
+              <Name>12/30/2025</Name>
+              <Date>2025-12-30</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/31/2025@2025-12-31" order="1">
+              <Name>12/31/2025</Name>
+              <Date>2025-12-31</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@01/02/2026@2026-01-02" order="1">
+              <Name>01/02/2026</Name>
+              <Date>2026-01-02</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@01/05/2026@2026-01-05" order="1">
+              <Name>01/05/2026</Name>
+              <Date>2026-01-05</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/16/2026@2026-02-16" order="1">
+              <Name>02/16/2026</Name>
+              <Date>2026-02-16</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/17/2026@2026-02-17" order="1">
+              <Name>02/17/2026</Name>
+              <Date>2026-02-17</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/18/2026@2026-02-18" order="1">
+              <Name>02/18/2026</Name>
+              <Date>2026-02-18</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/19/2026@2026-02-19" order="1">
+              <Name>02/19/2026</Name>
+              <Date>2026-02-19</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/20/2026@2026-02-20" order="1">
+              <Name>02/20/2026</Name>
+              <Date>2026-02-20</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@03/30/2026@2026-03-30" order="1">
+              <Name>03/30/2026</Name>
+              <Date>2026-03-30</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@03/31/2026@2026-03-31" order="1">
+              <Name>03/31/2026</Name>
+              <Date>2026-03-31</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/01/2026@2026-04-01" order="1">
+              <Name>04/01/2026</Name>
+              <Date>2026-04-01</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/02/2026@2026-04-02" order="1">
+              <Name>04/02/2026</Name>
+              <Date>2026-04-02</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/07/2026@2026-04-07" order="1">
+              <Name>04/07/2026</Name>
+              <Date>2026-04-07</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/08/2026@2026-04-08" order="1">
+              <Name>04/08/2026</Name>
+              <Date>2026-04-08</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/09/2026@2026-04-09" order="1">
+              <Name>04/09/2026</Name>
+              <Date>2026-04-09</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/10/2026@2026-04-10" order="1">
+              <Name>04/10/2026</Name>
+              <Date>2026-04-10</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@05/26/2026@2026-05-26" order="1">
+              <Name>05/26/2026</Name>
+              <Date>2026-05-26</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@05/27/2026@2026-05-27" order="1">
+              <Name>05/27/2026</Name>
+              <Date>2026-05-27</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@05/28/2026@2026-05-28" order="1">
+              <Name>05/28/2026</Name>
+              <Date>2026-05-28</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@05/29/2026@2026-05-29" order="1">
+              <Name>05/29/2026</Name>
+              <Date>2026-05-29</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/21/2026@2026-07-21" order="1">
+              <Name>07/21/2026</Name>
+              <Date>2026-07-21</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/22/2026@2026-07-22" order="1">
+              <Name>07/22/2026</Name>
+              <Date>2026-07-22</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/23/2026@2026-07-23" order="1">
+              <Name>07/23/2026</Name>
+              <Date>2026-07-23</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/24/2026@2026-07-24" order="1">
+              <Name>07/24/2026</Name>
+              <Date>2026-07-24</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/27/2026@2026-07-27" order="1">
+              <Name>07/27/2026</Name>
+              <Date>2026-07-27</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/28/2026@2026-07-28" order="1">
+              <Name>07/28/2026</Name>
+              <Date>2026-07-28</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/29/2026@2026-07-29" order="1">
+              <Name>07/29/2026</Name>
+              <Date>2026-07-29</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/30/2026@2026-07-30" order="1">
+              <Name>07/30/2026</Name>
+              <Date>2026-07-30</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/31/2026@2026-07-31" order="1">
+              <Name>07/31/2026</Name>
+              <Date>2026-07-31</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/03/2026@2026-08-03" order="1">
+              <Name>08/03/2026</Name>
+              <Date>2026-08-03</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/04/2026@2026-08-04" order="1">
+              <Name>08/04/2026</Name>
+              <Date>2026-08-04</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/05/2026@2026-08-05" order="1">
+              <Name>08/05/2026</Name>
+              <Date>2026-08-05</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/06/2026@2026-08-06" order="1">
+              <Name>08/06/2026</Name>
+              <Date>2026-08-06</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/07/2026@2026-08-07" order="1">
+              <Name>08/07/2026</Name>
+              <Date>2026-08-07</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/10/2026@2026-08-10" order="1">
+              <Name>08/10/2026</Name>
+              <Date>2026-08-10</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/11/2026@2026-08-11" order="1">
+              <Name>08/11/2026</Name>
+              <Date>2026-08-11</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/12/2026@2026-08-12" order="1">
+              <Name>08/12/2026</Name>
+              <Date>2026-08-12</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/13/2026@2026-08-13" order="1">
+              <Name>08/13/2026</Name>
+              <Date>2026-08-13</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/14/2026@2026-08-14" order="1">
+              <Name>08/14/2026</Name>
+              <Date>2026-08-14</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/17/2026@2026-08-17" order="1">
+              <Name>08/17/2026</Name>
+              <Date>2026-08-17</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/18/2026@2026-08-18" order="1">
+              <Name>08/18/2026</Name>
+              <Date>2026-08-18</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/19/2026@2026-08-19" order="1">
+              <Name>08/19/2026</Name>
+              <Date>2026-08-19</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/20/2026@2026-08-20" order="1">
+              <Name>08/20/2026</Name>
+              <Date>2026-08-20</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/21/2026@2026-08-21" order="1">
+              <Name>08/21/2026</Name>
+              <Date>2026-08-21</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/24/2026@2026-08-24" order="1">
+              <Name>08/24/2026</Name>
+              <Date>2026-08-24</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/25/2026@2026-08-25" order="1">
+              <Name>08/25/2026</Name>
+              <Date>2026-08-25</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/26/2026@2026-08-26" order="1">
+              <Name>08/26/2026</Name>
+              <Date>2026-08-26</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/27/2026@2026-08-27" order="1">
+              <Name>08/27/2026</Name>
+              <Date>2026-08-27</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/28/2026@2026-08-28" order="1">
+              <Name>08/28/2026</Name>
+              <Date>2026-08-28</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/26/2026@2026-10-26" order="1">
+              <Name>10/26/2026</Name>
+              <Date>2026-10-26</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/27/2026@2026-10-27" order="1">
+              <Name>10/27/2026</Name>
+              <Date>2026-10-27</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/28/2026@2026-10-28" order="1">
+              <Name>10/28/2026</Name>
+              <Date>2026-10-28</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/29/2026@2026-10-29" order="1">
+              <Name>10/29/2026</Name>
+              <Date>2026-10-29</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/30/2026@2026-10-30" order="1">
+              <Name>10/30/2026</Name>
+              <Date>2026-10-30</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/21/2026@2026-12-21" order="1">
+              <Name>12/21/2026</Name>
+              <Date>2026-12-21</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/22/2026@2026-12-22" order="1">
+              <Name>12/22/2026</Name>
+              <Date>2026-12-22</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/23/2026@2026-12-23" order="1">
+              <Name>12/23/2026</Name>
+              <Date>2026-12-23</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/24/2026@2026-12-24" order="1">
+              <Name>12/24/2026</Name>
+              <Date>2026-12-24</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/29/2026@2026-12-29" order="1">
+              <Name>12/29/2026</Name>
+              <Date>2026-12-29</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/30/2026@2026-12-30" order="1">
+              <Name>12/30/2026</Name>
+              <Date>2026-12-30</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/31/2026@2026-12-31" order="1">
+              <Name>12/31/2026</Name>
+              <Date>2026-12-31</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+          </dayTypeAssignments>
+        </ServiceCalendarFrame>
+        <FareFrame version="1.0" id="epd:UK:SCGL:FareFrame_UK_PI_FARE_NETWORK:SCGL:PH0005031:183:E:op" dataSourceRef="op:src" responsibilitySetRef="op:network_data">
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_FARE_NETWORK:FXCP" />
+          <fareZones>
+            <FareZone version="1.0" id="zone@14@0@boarding">
+              <Name>Bishop's Cleeve</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL428">Mill Parade</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL426">War Memorial</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL3766">Cleevecroft Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL456">The Swallow</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA312">Woodmans Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL5045">The Highgrove</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA597">Haycroft Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA599">Sweetbriar Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1740">The Grange Zurich Grounds</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@14@0@alighting">
+              <Name>Bishop's Cleeve</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL428">Mill Parade</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL426">War Memorial</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL3766">Cleevecroft Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL456">The Swallow</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL428">Mill Parade</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL426">War Memorial</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL3766">Cleevecroft Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL456">The Swallow</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL428">Mill Parade</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL426">War Memorial</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL3766">Cleevecroft Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL456">The Swallow</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL428">Mill Parade</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL426">War Memorial</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL3766">Cleevecroft Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL456">The Swallow</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL428">Mill Parade</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL426">War Memorial</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL3766">Cleevecroft Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL456">The Swallow</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL428">Mill Parade</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL426">War Memorial</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL3766">Cleevecroft Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL456">The Swallow</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL428">Mill Parade</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL426">War Memorial</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL3766">Cleevecroft Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL456">The Swallow</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL428">Mill Parade</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL426">War Memorial</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL3766">Cleevecroft Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL456">The Swallow</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL428">Mill Parade</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL426">War Memorial</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL3766">Cleevecroft Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL456">The Swallow</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL428">Mill Parade</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL426">War Memorial</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL3766">Cleevecroft Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL456">The Swallow</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL428">Mill Parade</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL426">War Memorial</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL3766">Cleevecroft Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL456">The Swallow</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@13@1@boarding">
+              <Name>Woodmancote</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA308">Minetts Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL438">Cleeve School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA814">Dale Walk North</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@13@1@alighting">
+              <Name>Woodmancote</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA312">Woodmans Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL5045">The Highgrove</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA597">Haycroft Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA599">Sweetbriar Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1740">The Grange Zurich Grounds</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA308">Minetts Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL438">Cleeve School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA312">Woodmans Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL5045">The Highgrove</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA597">Haycroft Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA599">Sweetbriar Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1740">The Grange Zurich Grounds</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA308">Minetts Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL438">Cleeve School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA312">Woodmans Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL5045">The Highgrove</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA597">Haycroft Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA599">Sweetbriar Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1740">The Grange Zurich Grounds</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA308">Minetts Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL438">Cleeve School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA312">Woodmans Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL5045">The Highgrove</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA597">Haycroft Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA599">Sweetbriar Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1740">The Grange Zurich Grounds</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA308">Minetts Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL438">Cleeve School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA312">Woodmans Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL5045">The Highgrove</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA597">Haycroft Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA599">Sweetbriar Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1740">The Grange Zurich Grounds</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA308">Minetts Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL438">Cleeve School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA312">Woodmans Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL5045">The Highgrove</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA597">Haycroft Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA599">Sweetbriar Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1740">The Grange Zurich Grounds</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA308">Minetts Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL438">Cleeve School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA312">Woodmans Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL5045">The Highgrove</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA597">Haycroft Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA599">Sweetbriar Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1740">The Grange Zurich Grounds</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA308">Minetts Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL438">Cleeve School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA312">Woodmans Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL5045">The Highgrove</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA597">Haycroft Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA599">Sweetbriar Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1740">The Grange Zurich Grounds</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA308">Minetts Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL438">Cleeve School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA312">Woodmans Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL5045">The Highgrove</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA597">Haycroft Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA599">Sweetbriar Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1740">The Grange Zurich Grounds</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA308">Minetts Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL438">Cleeve School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA312">Woodmans Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL5045">The Highgrove</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA597">Haycroft Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA599">Sweetbriar Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1740">The Grange Zurich Grounds</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA308">Minetts Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL438">Cleeve School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA312">Woodmans Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL5045">The Highgrove</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA597">Haycroft Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA599">Sweetbriar Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1740">The Grange Zurich Grounds</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA308">Minetts Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL438">Cleeve School</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@12@2@alighting">
+              <Name>Bishop's Cleeve</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA814">Dale Walk North</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA814">Dale Walk North</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA814">Dale Walk North</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA814">Dale Walk North</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA814">Dale Walk North</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA814">Dale Walk North</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA814">Dale Walk North</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA814">Dale Walk North</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA814">Dale Walk North</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA814">Dale Walk North</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA814">Dale Walk North</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@11@3@boarding">
+              <Name>Newland Crossroads</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA596">The Nurseries</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL442">Petrol Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA594">Sports Field</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA610">Miles Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA592">Southam Lane</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@11@3@alighting">
+              <Name>Newland Crossroads</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA596">The Nurseries</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA596">The Nurseries</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA596">The Nurseries</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA596">The Nurseries</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA596">The Nurseries</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA596">The Nurseries</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA596">The Nurseries</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA596">The Nurseries</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA596">The Nurseries</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA596">The Nurseries</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA596">The Nurseries</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@10@4@boarding">
+              <Name>Racecourse P&amp;R</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1078">Racecourse Park &amp; Ride</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@10@4@alighting">
+              <Name>Racecourse P&amp;R</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL442">Petrol Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA594">Sports Field</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA610">Miles Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA592">Southam Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1078">Racecourse Park &amp; Ride</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL442">Petrol Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA594">Sports Field</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA610">Miles Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA592">Southam Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1078">Racecourse Park &amp; Ride</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL442">Petrol Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA594">Sports Field</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA610">Miles Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA592">Southam Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1078">Racecourse Park &amp; Ride</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL442">Petrol Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA594">Sports Field</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA610">Miles Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA592">Southam Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1078">Racecourse Park &amp; Ride</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL442">Petrol Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA594">Sports Field</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA610">Miles Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA592">Southam Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1078">Racecourse Park &amp; Ride</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL442">Petrol Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA594">Sports Field</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA610">Miles Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA592">Southam Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1078">Racecourse Park &amp; Ride</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL442">Petrol Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA594">Sports Field</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA610">Miles Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA592">Southam Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1078">Racecourse Park &amp; Ride</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL442">Petrol Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA594">Sports Field</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA610">Miles Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA592">Southam Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1078">Racecourse Park &amp; Ride</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL442">Petrol Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA594">Sports Field</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA610">Miles Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA592">Southam Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1078">Racecourse Park &amp; Ride</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL442">Petrol Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA594">Sports Field</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA610">Miles Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA592">Southam Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1078">Racecourse Park &amp; Ride</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL442">Petrol Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA594">Sports Field</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA610">Miles Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA592">Southam Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1078">Racecourse Park &amp; Ride</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@9@5@boarding">
+              <Name>Racecourse R'about</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA590">Racecourse Roundabout</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1884">Pittville Pump Room</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA052">Pittville Park</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@9@5@alighting">
+              <Name>Racecourse R'about</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA590">Racecourse Roundabout</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA590">Racecourse Roundabout</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA590">Racecourse Roundabout</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA590">Racecourse Roundabout</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA590">Racecourse Roundabout</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA590">Racecourse Roundabout</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA590">Racecourse Roundabout</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA590">Racecourse Roundabout</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA590">Racecourse Roundabout</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA590">Racecourse Roundabout</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA590">Racecourse Roundabout</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@8@6@boarding">
+              <Name>Wellington Road</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA588">Wellington Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA454">Holy Trinity Church</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@8@6@alighting">
+              <Name>Wellington Road</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1884">Pittville Pump Room</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA052">Pittville Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA588">Wellington Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1884">Pittville Pump Room</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA052">Pittville Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA588">Wellington Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1884">Pittville Pump Room</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA052">Pittville Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA588">Wellington Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1884">Pittville Pump Room</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA052">Pittville Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA588">Wellington Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1884">Pittville Pump Room</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA052">Pittville Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA588">Wellington Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1884">Pittville Pump Room</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA052">Pittville Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA588">Wellington Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1884">Pittville Pump Room</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA052">Pittville Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA588">Wellington Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1884">Pittville Pump Room</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA052">Pittville Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA588">Wellington Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1884">Pittville Pump Room</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA052">Pittville Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA588">Wellington Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1884">Pittville Pump Room</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA052">Pittville Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA588">Wellington Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1884">Pittville Pump Room</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA052">Pittville Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA588">Wellington Road</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@7@7@boarding">
+              <Name>Cheltenham</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36710">Pittville Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36706">High Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA450">Ambrose Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA025">St James's House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000611">Lansdown Walk</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA236">Texaco Garage</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA060">Queens Court</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@7@7@alighting">
+              <Name>Cheltenham</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA454">Holy Trinity Church</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36710">Pittville Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36706">High Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA454">Holy Trinity Church</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36710">Pittville Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36706">High Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA454">Holy Trinity Church</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36710">Pittville Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36706">High Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA454">Holy Trinity Church</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36710">Pittville Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36706">High Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA454">Holy Trinity Church</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36710">Pittville Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36706">High Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA454">Holy Trinity Church</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36710">Pittville Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36706">High Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA454">Holy Trinity Church</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36710">Pittville Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36706">High Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA454">Holy Trinity Church</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36710">Pittville Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36706">High Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA454">Holy Trinity Church</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36710">Pittville Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36706">High Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA454">Holy Trinity Church</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36710">Pittville Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36706">High Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA454">Holy Trinity Church</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36710">Pittville Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36706">High Street</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@5@8@alighting">
+              <Name>Montpellier Gdns</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA450">Ambrose Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA025">St James's House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000611">Lansdown Walk</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA236">Texaco Garage</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA060">Queens Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA450">Ambrose Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA025">St James's House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000611">Lansdown Walk</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA236">Texaco Garage</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA060">Queens Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA450">Ambrose Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA025">St James's House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000611">Lansdown Walk</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA236">Texaco Garage</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA060">Queens Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA450">Ambrose Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA025">St James's House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000611">Lansdown Walk</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA236">Texaco Garage</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA060">Queens Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA450">Ambrose Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA025">St James's House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000611">Lansdown Walk</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA236">Texaco Garage</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA060">Queens Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA450">Ambrose Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA025">St James's House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000611">Lansdown Walk</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA236">Texaco Garage</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA060">Queens Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA450">Ambrose Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA025">St James's House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000611">Lansdown Walk</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA236">Texaco Garage</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA060">Queens Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA450">Ambrose Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA025">St James's House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000611">Lansdown Walk</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA236">Texaco Garage</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA060">Queens Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA450">Ambrose Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA025">St James's House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000611">Lansdown Walk</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA236">Texaco Garage</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA060">Queens Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA450">Ambrose Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA025">St James's House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000611">Lansdown Walk</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA236">Texaco Garage</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA060">Queens Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA450">Ambrose Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA025">St James's House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000611">Lansdown Walk</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA236">Texaco Garage</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA060">Queens Court</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@4@9@boarding">
+              <Name>Chelt Rail Station</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL9052">Cheltenham Spa Rail Stn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL3959">Cheltenham Spa Rail Stn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36661">Church Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA242">Granley Road</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@4@9@alighting">
+              <Name>Chelt Rail Station</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL9052">Cheltenham Spa Rail Stn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL9052">Cheltenham Spa Rail Stn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL9052">Cheltenham Spa Rail Stn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL9052">Cheltenham Spa Rail Stn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL9052">Cheltenham Spa Rail Stn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL9052">Cheltenham Spa Rail Stn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL9052">Cheltenham Spa Rail Stn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL9052">Cheltenham Spa Rail Stn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL9052">Cheltenham Spa Rail Stn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL9052">Cheltenham Spa Rail Stn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL9052">Cheltenham Spa Rail Stn</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@3@10@boarding">
+              <Name>Tennyson Road</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA244">Tennyson Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA246">GCHQ</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@3@10@alighting">
+              <Name>Tennyson Road</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL3959">Cheltenham Spa Rail Stn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36661">Church Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA242">Granley Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA244">Tennyson Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL3959">Cheltenham Spa Rail Stn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36661">Church Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA242">Granley Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA244">Tennyson Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL3959">Cheltenham Spa Rail Stn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36661">Church Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA242">Granley Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA244">Tennyson Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL3959">Cheltenham Spa Rail Stn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36661">Church Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA242">Granley Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA244">Tennyson Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL3959">Cheltenham Spa Rail Stn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36661">Church Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA242">Granley Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA244">Tennyson Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL3959">Cheltenham Spa Rail Stn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36661">Church Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA242">Granley Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA244">Tennyson Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL3959">Cheltenham Spa Rail Stn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36661">Church Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA242">Granley Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA244">Tennyson Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL3959">Cheltenham Spa Rail Stn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36661">Church Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA242">Granley Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA244">Tennyson Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL3959">Cheltenham Spa Rail Stn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36661">Church Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA242">Granley Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA244">Tennyson Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL3959">Cheltenham Spa Rail Stn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36661">Church Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA242">Granley Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA244">Tennyson Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL3959">Cheltenham Spa Rail Stn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36661">Church Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA242">Granley Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA244">Tennyson Road</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@2@11@boarding">
+              <Name>Badgeworth,Arle Ct</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL2140">Arle Court</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@2@11@alighting">
+              <Name>Badgeworth,Arle Ct</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA246">GCHQ</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL2140">Arle Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA246">GCHQ</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL2140">Arle Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA246">GCHQ</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL2140">Arle Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA246">GCHQ</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL2140">Arle Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA246">GCHQ</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL2140">Arle Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA246">GCHQ</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL2140">Arle Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA246">GCHQ</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL2140">Arle Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA246">GCHQ</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL2140">Arle Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA246">GCHQ</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL2140">Arle Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA246">GCHQ</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL2140">Arle Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA246">GCHQ</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL2140">Arle Court</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@1@12@boarding">
+              <Name>Arle Court P&amp;R</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL134">Arle Court Park &amp; Ride</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@1@12@alighting">
+              <Name>Arle Court P&amp;R</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL134">Arle Court Park &amp; Ride</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL134">Arle Court Park &amp; Ride</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL134">Arle Court Park &amp; Ride</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL134">Arle Court Park &amp; Ride</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL134">Arle Court Park &amp; Ride</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL134">Arle Court Park &amp; Ride</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL134">Arle Court Park &amp; Ride</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL134">Arle Court Park &amp; Ride</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL134">Arle Court Park &amp; Ride</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL134">Arle Court Park &amp; Ride</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL134">Arle Court Park &amp; Ride</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+          </fareZones>
+        </FareFrame>
+        <FareFrame version="1.0" id="epd:UK:SCGL:FareFrame_UK_PI_FARE_PRODUCT:SCGL:PH0005031:183:E:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+          <Name>Fare products</Name>
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_FARE_PRODUCT:FXCP" />
+          <tariffs>
+            <Tariff version="1.0" id="Tariff@#GL_P&amp;R_U19_Return">
+              <validityConditions>
+                <ValidBetween>
+                  <FromDate>2026-06-29T02:35:00Z</FromDate>
+                </ValidBetween>
+              </validityConditions>
+              <Name>Tariff for Return</Name>
+              <OperatorRef versionRef="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+              <LineRef versionRef="1.0" ref="SCGL:PH0005031:183:E" />
+              <TypeOfTariffRef versionRef="fxc:v1.0" ref="fxc:zone_to_zone" />
+              <TariffBasis>zoneToZone</TariffBasis>
+              <qualityStructureFactors>
+                <FareDemandFactor version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Demand">
+                  <validityConditions>
+                    <AvailabilityCondition version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Condition@day_type@SCH">
+                      <IsAvailable>true</IsAvailable>
+                      <dayTypes>
+                        <DayTypeRef version="1.0" ref="day_type@SCH" />
+                      </dayTypes>
+                      <timebands>
+                        <Timeband version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@day_type@SCH@00:00:00-00:59:59">
+                          <Name>00:00:00-00:59:59</Name>
+                          <StartTime>00:00:00</StartTime>
+                          <EndTime>00:59:59</EndTime>
+                        </Timeband>
+                        <Timeband version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@day_type@SCH@03:55:00-08:54:59">
+                          <Name>03:55:00-08:54:59</Name>
+                          <StartTime>03:55:00</StartTime>
+                          <EndTime>08:54:59</EndTime>
+                        </Timeband>
+                        <Timeband version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@day_type@SCH@08:55:00-09:24:59">
+                          <Name>08:55:00-09:24:59</Name>
+                          <StartTime>08:55:00</StartTime>
+                          <EndTime>09:24:59</EndTime>
+                        </Timeband>
+                        <Timeband version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@day_type@SCH@09:25:00-17:54:59">
+                          <Name>09:25:00-17:54:59</Name>
+                          <StartTime>09:25:00</StartTime>
+                          <EndTime>17:54:59</EndTime>
+                        </Timeband>
+                        <Timeband version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@day_type@SCH@17:55:00-18:54:59">
+                          <Name>17:55:00-18:54:59</Name>
+                          <StartTime>17:55:00</StartTime>
+                          <EndTime>18:54:59</EndTime>
+                        </Timeband>
+                        <Timeband version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@day_type@SCH@18:55:00-23:04:59">
+                          <Name>18:55:00-23:04:59</Name>
+                          <StartTime>18:55:00</StartTime>
+                          <EndTime>23:04:59</EndTime>
+                        </Timeband>
+                        <Timeband version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@day_type@SCH@23:05:00-23:59:59">
+                          <Name>23:05:00-23:59:59</Name>
+                          <StartTime>23:05:00</StartTime>
+                          <EndTime>23:59:59</EndTime>
+                        </Timeband>
+                      </timebands>
+                    </AvailabilityCondition>
+                    <AvailabilityCondition version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Condition@day_type@#SCH">
+                      <IsAvailable>true</IsAvailable>
+                      <dayTypes>
+                        <DayTypeRef version="1.0" ref="day_type@#SCH" />
+                      </dayTypes>
+                      <timebands>
+                        <Timeband version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@day_type@#SCH@00:00:00-00:59:59">
+                          <Name>00:00:00-00:59:59</Name>
+                          <StartTime>00:00:00</StartTime>
+                          <EndTime>00:59:59</EndTime>
+                        </Timeband>
+                        <Timeband version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@day_type@#SCH@03:55:00-08:54:59">
+                          <Name>03:55:00-08:54:59</Name>
+                          <StartTime>03:55:00</StartTime>
+                          <EndTime>08:54:59</EndTime>
+                        </Timeband>
+                        <Timeband version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@day_type@#SCH@08:55:00-09:24:59">
+                          <Name>08:55:00-09:24:59</Name>
+                          <StartTime>08:55:00</StartTime>
+                          <EndTime>09:24:59</EndTime>
+                        </Timeband>
+                        <Timeband version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@day_type@#SCH@09:25:00-17:54:59">
+                          <Name>09:25:00-17:54:59</Name>
+                          <StartTime>09:25:00</StartTime>
+                          <EndTime>17:54:59</EndTime>
+                        </Timeband>
+                        <Timeband version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@day_type@#SCH@17:55:00-18:54:59">
+                          <Name>17:55:00-18:54:59</Name>
+                          <StartTime>17:55:00</StartTime>
+                          <EndTime>18:54:59</EndTime>
+                        </Timeband>
+                        <Timeband version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@day_type@#SCH@18:55:00-23:04:59">
+                          <Name>18:55:00-23:04:59</Name>
+                          <StartTime>18:55:00</StartTime>
+                          <EndTime>23:04:59</EndTime>
+                        </Timeband>
+                        <Timeband version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@day_type@#SCH@23:05:00-23:59:59">
+                          <Name>23:05:00-23:59:59</Name>
+                          <StartTime>23:05:00</StartTime>
+                          <EndTime>23:59:59</EndTime>
+                        </Timeband>
+                      </timebands>
+                    </AvailabilityCondition>
+                    <AvailabilityCondition version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Condition@day_type@Sunday">
+                      <IsAvailable>true</IsAvailable>
+                      <dayTypes>
+                        <DayTypeRef version="1.0" ref="day_type@Sunday" />
+                      </dayTypes>
+                      <timebands>
+                        <Timeband version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@day_type@Sunday@00:00:00-00:59:59">
+                          <Name>00:00:00-00:59:59</Name>
+                          <StartTime>00:00:00</StartTime>
+                          <EndTime>00:59:59</EndTime>
+                        </Timeband>
+                        <Timeband version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@day_type@Sunday@03:55:00-17:54:59">
+                          <Name>03:55:00-17:54:59</Name>
+                          <StartTime>03:55:00</StartTime>
+                          <EndTime>17:54:59</EndTime>
+                        </Timeband>
+                        <Timeband version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@day_type@Sunday@17:55:00-18:54:59">
+                          <Name>17:55:00-18:54:59</Name>
+                          <StartTime>17:55:00</StartTime>
+                          <EndTime>18:54:59</EndTime>
+                        </Timeband>
+                        <Timeband version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@day_type@Sunday@18:55:00-23:59:59">
+                          <Name>18:55:00-23:59:59</Name>
+                          <StartTime>18:55:00</StartTime>
+                          <EndTime>23:59:59</EndTime>
+                        </Timeband>
+                      </timebands>
+                    </AvailabilityCondition>
+                    <AvailabilityCondition version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Condition@day_type@Public_Holiday">
+                      <IsAvailable>true</IsAvailable>
+                      <dayTypes>
+                        <DayTypeRef version="1.0" ref="day_type@Public_Holiday" />
+                      </dayTypes>
+                    </AvailabilityCondition>
+                    <AvailabilityCondition version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Condition@day_type@Saturday">
+                      <IsAvailable>true</IsAvailable>
+                      <dayTypes>
+                        <DayTypeRef version="1.0" ref="day_type@Saturday" />
+                      </dayTypes>
+                    </AvailabilityCondition>
+                  </validityConditions>
+                </FareDemandFactor>
+              </qualityStructureFactors>
+              <fareStructureElements>
+                <FareStructureElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Conditions_of_travel@Outbound">
+                  <Name>Conditions of travel</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:travel_conditions" />
+                  <GenericParameterAssignment version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Conditions_of_travel@Outbound" order="1">
+                    <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:condition_of_use" />
+                    <LimitationGroupingType>AND</LimitationGroupingType>
+                    <limitations>
+                      <Transferability version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Conditions_of_travel@Outbound@Transferability">
+                        <Name>Ticket is not transferable</Name>
+                        <CanTransfer>false</CanTransfer>
+                      </Transferability>
+                      <RoundTrip version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Conditions_of_travel@Outbound@Trip">
+                        <Name>Return Trip</Name>
+                        <TripType>returnOut</TripType>
+                      </RoundTrip>
+                      <FrequencyOfUse version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Conditions_of_travel@Outbound@Frequency">
+                        <Name>One trip no transfers</Name>
+                        <FrequencyOfUseType>none</FrequencyOfUseType>
+                      </FrequencyOfUse>
+                      <UsageValidityPeriod version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Conditions_of_travel@Outbound@Validity">
+                        <UsageTrigger>startOutboundRide</UsageTrigger>
+                        <UsageEnd>endOfRide</UsageEnd>
+                      </UsageValidityPeriod>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Conditions_of_travel@Inbound">
+                  <Name>Conditions of travel</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:travel_conditions" />
+                  <GenericParameterAssignment version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Conditions_of_travel@Inbound" order="1">
+                    <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:condition_of_use" />
+                    <LimitationGroupingType>AND</LimitationGroupingType>
+                    <limitations>
+                      <Transferability version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Conditions_of_travel@Inbound@Transferability">
+                        <Name>Ticket is not transferable</Name>
+                        <CanTransfer>false</CanTransfer>
+                      </Transferability>
+                      <RoundTrip version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Conditions_of_travel@Inbound@Trip">
+                        <Name>Return Trip</Name>
+                        <TripType>returnBack</TripType>
+                      </RoundTrip>
+                      <FrequencyOfUse version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Conditions_of_travel@Inbound@Frequency">
+                        <Name>One trip no transfers</Name>
+                        <FrequencyOfUseType>none</FrequencyOfUseType>
+                      </FrequencyOfUse>
+                      <UsageValidityPeriod version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Conditions_of_travel@Inbound@Validity">
+                        <UsageTrigger>startOutboundRide</UsageTrigger>
+                        <UsageEnd>endOfFareDay</UsageEnd>
+                        <EndTime>03:59:59</EndTime>
+                      </UsageValidityPeriod>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Availability">
+                  <Name>Timebands for travel</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:access_when" />
+                  <qualityStructureFactors>
+                    <FareDemandFactorRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Demand" />
+                  </qualityStructureFactors>
+                </FareStructureElement>
+                <FareStructureElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Eligibility">
+                  <Name>Eligible user types</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:eligibility" />
+                  <GenericParameterAssignment version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Eligibility" order="1">
+                    <Name>Eligibility to purchase</Name>
+                    <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:eligible" />
+                    <limitations>
+                      <UserProfile version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@UP@youngPerson">
+                        <Name>Young person</Name>
+                        <TypeOfConcessionRef versionRef="fxc:v1.0" ref="fxc:youngPerson" />
+                        <UserType>youngPerson</UserType>
+                      </UserProfile>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Access_Lines">
+                  <Name>Available lines</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:access" />
+                  <distanceMatrixElements>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+14@0">
+                      <Name>Bishop's Cleeve to Bishop's Cleeve</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@14@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@14@0@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+13@1">
+                      <Name>Bishop's Cleeve to Woodmancote</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@14@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@13@1@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+12@2">
+                      <Name>Bishop's Cleeve to Bishop's Cleeve</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@14@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@12@2@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+11@3">
+                      <Name>Bishop's Cleeve to Newland Crossroads</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@14@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@11@3@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+10@4">
+                      <Name>Bishop's Cleeve to Racecourse P&amp;R</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@14@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@10@4@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+9@5">
+                      <Name>Bishop's Cleeve to Racecourse R'about</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@14@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@9@5@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+8@6">
+                      <Name>Bishop's Cleeve to Wellington Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@14@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@8@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+7@7">
+                      <Name>Bishop's Cleeve to Cheltenham</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@14@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@7@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+5@8">
+                      <Name>Bishop's Cleeve to Montpellier Gdns</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@14@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@5@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+4@9">
+                      <Name>Bishop's Cleeve to Chelt Rail Station</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@14@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@4@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+3@10">
+                      <Name>Bishop's Cleeve to Tennyson Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@14@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@3@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+2@11">
+                      <Name>Bishop's Cleeve to Badgeworth,Arle Ct</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@14@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@2@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+1@12">
+                      <Name>Bishop's Cleeve to Arle Court P&amp;R</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@14@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@1@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+13@1">
+                      <Name>Woodmancote to Woodmancote</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@13@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@13@1@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+12@2">
+                      <Name>Woodmancote to Bishop's Cleeve</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@13@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@12@2@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+11@3">
+                      <Name>Woodmancote to Newland Crossroads</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@13@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@11@3@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+10@4">
+                      <Name>Woodmancote to Racecourse P&amp;R</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@13@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@10@4@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+9@5">
+                      <Name>Woodmancote to Racecourse R'about</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@13@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@9@5@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+8@6">
+                      <Name>Woodmancote to Wellington Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@13@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@8@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+7@7">
+                      <Name>Woodmancote to Cheltenham</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@13@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@7@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+5@8">
+                      <Name>Woodmancote to Montpellier Gdns</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@13@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@5@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+4@9">
+                      <Name>Woodmancote to Chelt Rail Station</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@13@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@4@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+3@10">
+                      <Name>Woodmancote to Tennyson Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@13@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@3@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+2@11">
+                      <Name>Woodmancote to Badgeworth,Arle Ct</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@13@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@2@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+1@12">
+                      <Name>Woodmancote to Arle Court P&amp;R</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@13@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@1@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@11@3+11@3">
+                      <Name>Newland Crossroads to Newland Crossroads</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@11@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@11@3@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@11@3+10@4">
+                      <Name>Newland Crossroads to Racecourse P&amp;R</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@11@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@10@4@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@11@3+9@5">
+                      <Name>Newland Crossroads to Racecourse R'about</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@11@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@9@5@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@11@3+8@6">
+                      <Name>Newland Crossroads to Wellington Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@11@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@8@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@11@3+7@7">
+                      <Name>Newland Crossroads to Cheltenham</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@11@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@7@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@11@3+5@8">
+                      <Name>Newland Crossroads to Montpellier Gdns</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@11@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@5@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@11@3+4@9">
+                      <Name>Newland Crossroads to Chelt Rail Station</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@11@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@4@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@11@3+3@10">
+                      <Name>Newland Crossroads to Tennyson Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@11@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@3@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@11@3+2@11">
+                      <Name>Newland Crossroads to Badgeworth,Arle Ct</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@11@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@2@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@11@3+1@12">
+                      <Name>Newland Crossroads to Arle Court P&amp;R</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@11@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@1@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@10@4+10@4">
+                      <Name>Racecourse P&amp;R to Racecourse P&amp;R</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@10@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@10@4@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@10@4+9@5">
+                      <Name>Racecourse P&amp;R to Racecourse R'about</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@10@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@9@5@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@10@4+8@6">
+                      <Name>Racecourse P&amp;R to Wellington Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@10@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@8@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@10@4+7@7">
+                      <Name>Racecourse P&amp;R to Cheltenham</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@10@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@7@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@10@4+5@8">
+                      <Name>Racecourse P&amp;R to Montpellier Gdns</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@10@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@5@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@10@4+4@9">
+                      <Name>Racecourse P&amp;R to Chelt Rail Station</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@10@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@4@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@10@4+3@10">
+                      <Name>Racecourse P&amp;R to Tennyson Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@10@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@3@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@10@4+2@11">
+                      <Name>Racecourse P&amp;R to Badgeworth,Arle Ct</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@10@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@2@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@10@4+1@12">
+                      <Name>Racecourse P&amp;R to Arle Court P&amp;R</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@10@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@1@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@9@5+9@5">
+                      <Name>Racecourse R'about to Racecourse R'about</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@9@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@9@5@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@9@5+8@6">
+                      <Name>Racecourse R'about to Wellington Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@9@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@8@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@9@5+7@7">
+                      <Name>Racecourse R'about to Cheltenham</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@9@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@7@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@9@5+5@8">
+                      <Name>Racecourse R'about to Montpellier Gdns</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@9@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@5@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@9@5+4@9">
+                      <Name>Racecourse R'about to Chelt Rail Station</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@9@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@4@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@9@5+3@10">
+                      <Name>Racecourse R'about to Tennyson Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@9@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@3@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@9@5+2@11">
+                      <Name>Racecourse R'about to Badgeworth,Arle Ct</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@9@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@2@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@9@5+1@12">
+                      <Name>Racecourse R'about to Arle Court P&amp;R</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@9@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@1@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@8@6+8@6">
+                      <Name>Wellington Road to Wellington Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@8@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@8@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@8@6+7@7">
+                      <Name>Wellington Road to Cheltenham</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@8@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@7@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@8@6+5@8">
+                      <Name>Wellington Road to Montpellier Gdns</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@8@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@5@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@8@6+4@9">
+                      <Name>Wellington Road to Chelt Rail Station</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@8@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@4@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@8@6+3@10">
+                      <Name>Wellington Road to Tennyson Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@8@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@3@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@8@6+2@11">
+                      <Name>Wellington Road to Badgeworth,Arle Ct</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@8@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@2@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@8@6+1@12">
+                      <Name>Wellington Road to Arle Court P&amp;R</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@8@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@1@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@7@7+7@7">
+                      <Name>Cheltenham to Cheltenham</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@7@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@7@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@7@7+5@8">
+                      <Name>Cheltenham to Montpellier Gdns</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@7@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@5@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@7@7+4@9">
+                      <Name>Cheltenham to Chelt Rail Station</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@7@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@4@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@7@7+3@10">
+                      <Name>Cheltenham to Tennyson Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@7@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@3@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@7@7+2@11">
+                      <Name>Cheltenham to Badgeworth,Arle Ct</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@7@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@2@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@7@7+1@12">
+                      <Name>Cheltenham to Arle Court P&amp;R</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@7@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@1@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@4@9+4@9">
+                      <Name>Chelt Rail Station to Chelt Rail Station</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@4@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@4@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@4@9+3@10">
+                      <Name>Chelt Rail Station to Tennyson Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@4@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@3@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@4@9+2@11">
+                      <Name>Chelt Rail Station to Badgeworth,Arle Ct</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@4@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@2@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@4@9+1@12">
+                      <Name>Chelt Rail Station to Arle Court P&amp;R</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@4@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@1@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@3@10+3@10">
+                      <Name>Tennyson Road to Tennyson Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@3@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@3@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@3@10+2@11">
+                      <Name>Tennyson Road to Badgeworth,Arle Ct</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@3@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@2@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@3@10+1@12">
+                      <Name>Tennyson Road to Arle Court P&amp;R</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@3@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@1@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@2@11+2@11">
+                      <Name>Badgeworth,Arle Ct to Badgeworth,Arle Ct</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@2@11@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@2@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@2@11+1@12">
+                      <Name>Badgeworth,Arle Ct to Arle Court P&amp;R</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@2@11@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@1@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Distance@1@12+1@12">
+                      <Name>Arle Court P&amp;R to Arle Court P&amp;R</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@1@12@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@1@12@alighting" />
+                    </DistanceMatrixElement>
+                  </distanceMatrixElements>
+                  <GenericParameterAssignment version="1.0" id="Tariff@#GL_P&amp;R_U19_Return@Access_Lines" order="1">
+                    <Name>Lines</Name>
+                    <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:can_access" />
+                    <ValidityParameterAssignmentType>EQ</ValidityParameterAssignmentType>
+                    <validityParameters>
+                      <LineRef versionRef="1.0" ref="SCGL:PH0005031:183:E" />
+                    </validityParameters>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+              </fareStructureElements>
+            </Tariff>
+          </tariffs>
+          <fareProducts>
+            <PreassignedFareProduct version="1.0" id="trip@#GL_P&amp;R_U19_Return">
+              <Name>Return</Name>
+              <Description>A return journey on a Stagecoach bus, on the same day</Description>
+              <ChargingMomentRef versionRef="fxc:v1.0" ref="fxc:prepayment" />
+              <ChargingMomentType>beforeTravel</ChargingMomentType>
+              <TypeOfFareProductRef versionRef="fxc:v1.0" ref="fxc:standard_product@trip@day_return" />
+              <OperatorRef version="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+              <validableElements>
+                <ValidableElement version="1.0" id="trip@#GL_P&amp;R_U19_Return@Access@Outbound">
+                  <Name>Outbound Ride</Name>
+                  <fareStructureElements>
+                    <FareStructureElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Eligibility" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Conditions_of_travel@Outbound" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Access_Lines" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Availability" />
+                  </fareStructureElements>
+                </ValidableElement>
+                <ValidableElement version="1.0" id="trip@#GL_P&amp;R_U19_Return@Access@Inbound">
+                  <Name>Return Ride</Name>
+                  <fareStructureElements>
+                    <FareStructureElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Eligibility" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Conditions_of_travel@Inbound" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Access_Lines" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Availability" />
+                  </fareStructureElements>
+                </ValidableElement>
+              </validableElements>
+              <accessRightsInProduct>
+                <AccessRightInProduct version="1.0" id="trip@#GL_P&amp;R_U19_Return@Outbound" order="1">
+                  <ValidableElementRef version="1.0" ref="trip@#GL_P&amp;R_U19_Return@Access@Outbound" />
+                </AccessRightInProduct>
+                <AccessRightInProduct version="1.0" id="trip@#GL_P&amp;R_U19_Return@Inbound" order="2">
+                  <ValidableElementRef version="1.0" ref="trip@#GL_P&amp;R_U19_Return@Access@Inbound" />
+                </AccessRightInProduct>
+              </accessRightsInProduct>
+              <ProductType>dayReturnTrip</ProductType>
+            </PreassignedFareProduct>
+          </fareProducts>
+          <salesOfferPackages>
+            <SalesOfferPackage version="1.0" id="SOP@trip@#GL_P&amp;R_U19_Return@paperOnBus">
+              <Name>Return - Onboard (paper ticket)</Name>
+              <distributionAssignments>
+                <DistributionAssignment version="1.0" id="SOP@trip@#GL_P&amp;R_U19_Return@paperOnBus@onBoard" order="1">
+                  <DistributionChannelType>onBoard</DistributionChannelType>
+                  <PaymentMethods>cash contactlessPaymentCard</PaymentMethods>
+                  <FulfilmentMethodRef version="1.0" ref="Fulfilment@collectOnBoard" />
+                </DistributionAssignment>
+              </distributionAssignments>
+              <salesOfferPackageElements>
+                <SalesOfferPackageElement version="1.0" id="SOP@trip@#GL_P&amp;R_U19_Return@paperOnBus@paperTicket" order="1">
+                  <TypeOfTravelDocumentRef version="1.0" ref="TravelDocument@paperTicket" />
+                  <PreassignedFareProductRef version="1.0" ref="trip@#GL_P&amp;R_U19_Return" />
+                </SalesOfferPackageElement>
+              </salesOfferPackageElements>
+            </SalesOfferPackage>
+          </salesOfferPackages>
+        </FareFrame>
+        <FareFrame version="1.0" id="epd:UK:SCGL:FareFrame_UK_PI_FARE_NETWORK_PRICE:SCGL:PH0005031:183:E:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+          <Name>Prices for #GL P&amp;R U19 Return</Name>
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_PRICE:FXCP" />
+          <FrameDefaults>
+            <DefaultCurrency>GBP</DefaultCurrency>
+          </FrameDefaults>
+          <prerequisites>
+            <FareFrameRef versionRef="1.0" ref="epd:UK:SCGL:FareFrame_UK_PI_FARE_PRODUCT:SCGL:PH0005031:183:E:op" />
+          </prerequisites>
+          <fareTables>
+            <FareTable version="1.0" id="fareTable@SCGL:PH0005031:183:E@trip@#GL_P&amp;R_U19_Return">
+              <Name>Rail Stn-Cleeve - #GL P&amp;R U19 Return</Name>
+              <pricesFor>
+                <PreassignedFareProductRef version="1.0" ref="trip@#GL_P&amp;R_U19_Return" />
+                <SalesOfferPackageRef version="1.0" ref="SOP@trip@#GL_P&amp;R_U19_Return@paperOnBus" />
+                <UserProfileRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@UP@youngPerson" />
+              </pricesFor>
+              <specifics>
+                <LineRef versionRef="1.0" ref="SCGL:PH0005031:183:E" />
+              </specifics>
+              <prices>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+14@0@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+14@0" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+13@1@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+13@1" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+12@2@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+12@2" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+11@3@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+11@3" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+10@4@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+10@4" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+9@5@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+9@5" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+8@6@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+8@6" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+7@7@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+7@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+5@8@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+5@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+4@9@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+4@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+3@10@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+3@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+2@11@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+2@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+1@12@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@14@0+1@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+12@2@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+12@2" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+11@3@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+11@3" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+10@4@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+10@4" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+9@5@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+9@5" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+8@6@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+8@6" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+7@7@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+7@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+5@8@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+5@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+4@9@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+4@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+3@10@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+3@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+2@11@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+2@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+1@12@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@13@1+1@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@11@3+10@4@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@11@3+10@4" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@11@3+9@5@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@11@3+9@5" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@11@3+8@6@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@11@3+8@6" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@11@3+7@7@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@11@3+7@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@11@3+5@8@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@11@3+5@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@11@3+4@9@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@11@3+4@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@11@3+3@10@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@11@3+3@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@11@3+2@11@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@11@3+2@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@11@3+1@12@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@11@3+1@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@10@4+9@5@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@10@4+9@5" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@10@4+8@6@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@10@4+8@6" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@10@4+7@7@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@10@4+7@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@10@4+5@8@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@10@4+5@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@10@4+4@9@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@10@4+4@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@10@4+3@10@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@10@4+3@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@10@4+2@11@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@10@4+2@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@10@4+1@12@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@10@4+1@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@9@5+8@6@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@9@5+8@6" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@9@5+7@7@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@9@5+7@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@9@5+5@8@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@9@5+5@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@9@5+4@9@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@9@5+4@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@9@5+3@10@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@9@5+3@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@9@5+2@11@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@9@5+2@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@9@5+1@12@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@9@5+1@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@8@6+7@7@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@8@6+7@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@8@6+5@8@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@8@6+5@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@8@6+4@9@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@8@6+4@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@8@6+3@10@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@8@6+3@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@8@6+2@11@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@8@6+2@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@8@6+1@12@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@8@6+1@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@7@7+5@8@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@7@7+5@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@7@7+4@9@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@7@7+4@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@7@7+3@10@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@7@7+3@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@7@7+2@11@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@7@7+2@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@7@7+1@12@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@7@7+1@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@4@9+3@10@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@4@9+3@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@4@9+2@11@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@4@9+2@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@4@9+1@12@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@4@9+1@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@3@10+2@11@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@3@10+2@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@3@10+1@12@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@3@10+1@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@#GL_P&amp;R_U19_Return@Distance@2@11+1@12@trip@#GL_P&amp;R_U19_Return">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@#GL_P&amp;R_U19_Return@Distance@2@11+1@12" />
+                </DistanceMatrixElementPrice>
+              </prices>
+            </FareTable>
+          </fareTables>
+        </FareFrame>
+      </frames>
+    </CompositeFrame>
+    <CompositeFrame version="1.0" id="epd:UK:SCGL:CompositeFrame_UK_PI_METADATA_OFFER::op" dataSourceRef="op:src" responsibilitySetRef="op:metadata">
+      <Name>Common resources for SCGL</Name>
+      <Description>Set of SCGL profile metadata.</Description>
+      <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_METADATA_OFFER:FXCP" />
+      <frames>
+        <FareFrame version="1.0" id="epd:UK:SCGL:FareFrame_UK_PI_METADATA:SCGL:PH0005031:183:E:op" dataSourceRef="op:src" responsibilitySetRef="op:metadata">
+          <fulfilmentMethods>
+            <FulfilmentMethod version="1.0" id="Fulfilment@mobileApp">
+              <Name>Mobile App</Name>
+              <FulfilmentMethodType>mobileApp</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod version="1.0" id="Fulfilment@onlinePropagation">
+              <Name>Online propagation</Name>
+              <FulfilmentMethodType>validator</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod version="1.0" id="Fulfilment@post">
+              <Name>Send ticket by post</Name>
+              <FulfilmentMethodType>post</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod version="1.0" id="Fulfilment@collectAtCounter">
+              <Name>Collect at counter</Name>
+              <FulfilmentMethodType>ticketOffice</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod version="1.0" id="Fulfilment@collectOnBoard">
+              <Name>Collect on board</Name>
+              <FulfilmentMethodType>conductor</FulfilmentMethodType>
+            </FulfilmentMethod>
+          </fulfilmentMethods>
+          <typesOfTravelDocuments>
+            <TypeOfTravelDocument version="1.0" id="TravelDocument@mobileApp">
+              <Name>Stored on your mobile phone as m-tickets</Name>
+              <MediaType>mobileApp</MediaType>
+              <MachineReadable>barCode</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument version="1.0" id="TravelDocument@smartCard">
+              <Name>Smart_Card_Ticket</Name>
+              <MediaType>smartCard</MediaType>
+              <MachineReadable>nfc</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument version="1.0" id="TravelDocument@paperTicket">
+              <Name>Printed Ticket</Name>
+              <MediaType>paperTicket</MediaType>
+            </TypeOfTravelDocument>
+          </typesOfTravelDocuments>
+        </FareFrame>
+      </frames>
+    </CompositeFrame>
+  </dataObjects>
+</PublicationDelivery>

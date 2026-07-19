@@ -1,0 +1,3103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PublicationDelivery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" version="1.1" xsi:schemaLocation="http://www.netex.org.uk/netex http://netex.uk/netex/schema/1.10/xsd/NeTEx_publication.xsd" xmlns="http://www.netex.org.uk/netex">
+  <PublicationTimestamp>2026-07-02T13:50:18.8698434Z</PublicationTimestamp>
+  <ParticipantRef>SCGL</ParticipantRef>
+  <PublicationRequest version="1.0">
+    <RequestTimestamp>2026-07-02T13:50:18.780111Z</RequestTimestamp>
+    <Description>Request for SCGL bus pass fares</Description>
+    <topics>
+      <NetworkFrameTopic>
+        <selectionValidityConditions>
+          <AvailabilityCondition version="1.0" id="r1">
+            <FromDate>2026-06-29T02:35:00Z</FromDate>
+          </AvailabilityCondition>
+        </selectionValidityConditions>
+        <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_NETWORK_FARE_OFFER:FXCP" />
+        <NetworkFilterByValue>
+          <objectReferences>
+            <OperatorRef versionRef="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+            <GroupOfLinesRef versionRef="1.0" ref="SCGL@groupOfLines" />
+            <TypeOfFareProductRef versionRef="fxc:v1.0" ref="fxc:standard_product@pass@period" />
+            <PreassignedFareProductRef version="1.0" ref="pass@S_South_Glos_MR_2@s.glos_1_OA_U19" />
+            <BrandingRef versionRef="1.0" ref="op:SCGL@brand" />
+          </objectReferences>
+        </NetworkFilterByValue>
+      </NetworkFrameTopic>
+    </topics>
+    <RequestPolicy>
+      <RequestDetail>AllWithXref</RequestDetail>
+    </RequestPolicy>
+  </PublicationRequest>
+  <Description>SCGL bus fares</Description>
+  <dataObjects>
+    <CompositeFrame version="1.1" id="epd:UK:SCGL:CompositeFrame_UK_PI_NETWORK_FARE_OFFER:pass@SCGL_products:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+      <ValidBetween>
+        <FromDate>2026-06-29T02:35:00Z</FromDate>
+      </ValidBetween>
+      <Name>Fares for SCGL pass</Name>
+      <Description>pass ticket for SCGL</Description>
+      <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_NETWORK_FARE_OFFER:FXCP" />
+      <codespaces>
+        <CodespaceRef ref="epd_data" />
+        <CodespaceRef ref="fxc_metadata" />
+        <CodespaceRef ref="naptStop_data" />
+        <CodespaceRef ref="nptgLocality_data" />
+        <CodespaceRef ref="noc_data" />
+        <CodespaceRef ref="op_data" />
+      </codespaces>
+      <FrameDefaults>
+        <DefaultCodespaceRef ref="op_data" />
+        <DefaultDataSourceRef version="1.0" ref="op:src" />
+        <DefaultResponsibilitySetRef version="1.0" ref="op:tariff_data" />
+        <DefaultCurrency>GBP</DefaultCurrency>
+      </FrameDefaults>
+      <prerequisites>
+        <CompositeFrameRef versionRef="1.0" ref="epd:UK:SCGL:CompositeFrame_UK_PI_METADATA::op" />
+      </prerequisites>
+      <frames>
+        <ResourceFrame version="1.0" id="epd:UK:SCGL:ResourceFrame_UK_PI_COMMON:SCGL_products:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+          <Name>Operator specific common resources</Name>
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_COMMON:FXCP" />
+          <codespaces>
+            <Codespace id="epd_data">
+              <Xmlns>epd</Xmlns>
+              <XmlnsUrl>http://fnetex-cen.eu/epd</XmlnsUrl>
+              <Description>European Passenger Information profile data -use for UK frame names</Description>
+            </Codespace>
+            <Codespace id="fxc_metadata">
+              <Xmlns>fxc_metadata</Xmlns>
+              <XmlnsUrl>netex.org.uk/fxc</XmlnsUrl>
+              <Description>UK FareXChange Profile metadata</Description>
+            </Codespace>
+            <Codespace id="naptStop_data">
+              <Xmlns>naptStop</Xmlns>
+              <XmlnsUrl>http://www.naptan.org.uk/stops</XmlnsUrl>
+              <Description>UK National Public Transport Access Nodes: Stops.</Description>
+            </Codespace>
+            <Codespace id="noc_data">
+              <Xmlns>noc</Xmlns>
+              <XmlnsUrl>http://www.traveline.co.uk/noc</XmlnsUrl>
+              <Description>UK national operator codes</Description>
+            </Codespace>
+            <Codespace id="op_data">
+              <Xmlns>op</Xmlns>
+              <XmlnsUrl>https://www.stagecoachbus.com/regional-help-and-contact/west</XmlnsUrl>
+              <Description>Operator Data</Description>
+            </Codespace>
+            <Codespace id="nptgLocality_data">
+              <Xmlns>nptgLocality</Xmlns>
+              <XmlnsUrl>http://nptg.org.uk/locations</XmlnsUrl>
+              <Description>National Public Transport gazetteer locations</Description>
+            </Codespace>
+          </codespaces>
+          <dataSources>
+            <DataSource version="1.0" id="op:src">
+              <Email>west.enquiries@stagecoachbus.com</Email>
+            </DataSource>
+          </dataSources>
+          <responsibilitySets>
+            <ResponsibilitySet version="1.0" id="op:tariff_data">
+              <Name>Operator Tariffs</Name>
+              <roles>
+                <ResponsibilityRoleAssignment version="1.0" id="op:tariff_data@creates">
+                  <DataRoleType>creates</DataRoleType>
+                  <StakeholderRoleType>FareManagement</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="1.0" ref="noc:SCGL" />
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+            <ResponsibilitySet version="1.0" id="op:network_data">
+              <Name>Operator Network data</Name>
+              <roles>
+                <ResponsibilityRoleAssignment version="1.0" id="op:network_data@creates">
+                  <DataRoleType>creates</DataRoleType>
+                  <StakeholderRoleType>Planning</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="1.0" ref="noc:SCGL" />
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+            <ResponsibilitySet version="1.0" id="op:metadata">
+              <Name>Operator Metadata</Name>
+              <roles>
+                <ResponsibilityRoleAssignment version="1.0" id="op:metadata@creates">
+                  <DataRoleType>creates</DataRoleType>
+                  <StakeholderRoleType>Planning</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="1.0" ref="noc:SCGL" />
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+          </responsibilitySets>
+          <typesOfValue>
+            <ValueSet version="1.0" id="op:Branding" classOfValues="Branding">
+              <Name>Operator Branding</Name>
+              <values>
+                <Branding version="1.0" id="op:SCGL@brand">
+                  <Name>Stagecoach West</Name>
+                  <Url>https://www.stagecoachbus.com/regional-help-and-contact/west</Url>
+                </Branding>
+              </values>
+            </ValueSet>
+          </typesOfValue>
+          <organisations>
+            <Operator version="1.0" id="noc:SCGL">
+              <PublicCode>SCGL</PublicCode>
+              <PrivateCode>135902</PrivateCode>
+              <Name>Stagecoach West</Name>
+              <ShortName>Stagecoach West</ShortName>
+              <TradingName>Cheltenham &amp; Gloucester Omnibus Co Ltd</TradingName>
+              <ContactDetails>
+                <Phone>03452418000</Phone>
+                <Url>https://www.stagecoachbus.com/regional-help-and-contact/west</Url>
+              </ContactDetails>
+              <OrganisationType>operator</OrganisationType>
+              <Address>
+                <Street>Stagecoach West 3rd Floor, 65 London Rd, Gloucester GL1 3HF</Street>
+              </Address>
+              <PrimaryMode>bus</PrimaryMode>
+              <CustomerServiceContactDetails>
+                <Email>west.enquiries@stagecoachbus.com</Email>
+              </CustomerServiceContactDetails>
+            </Operator>
+          </organisations>
+        </ResourceFrame>
+        <ServiceFrame version="1.0" id="epd:UK:SCGL:ServiceFrame_UK_PI_NETWORK:SCGL_products:op" dataSourceRef="op:src" responsibilitySetRef="op:network_data">
+          <Description>This frame contains the line definitions for pass ticket. It could also be exchanged separately.</Description>
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_NETWORK:FXCP" />
+          <lines>
+            <Line version="1.0" id="SCGL:PH0005031:229:165">
+              <Name>Coaley Betworthy Estate - Stroud Merrywalks A</Name>
+              <PublicCode>165</PublicCode>
+              <PrivateCode type="txc:Line@id">165</PrivateCode>
+              <OperatorRef versionRef="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+            </Line>
+            <Line version="1.0" id="SCGL:PH0005031:380:166">
+              <Name>Cheltenham Promenade - Eastcombe Thomas Keble School Grounds</Name>
+              <PublicCode>166</PublicCode>
+              <PrivateCode type="txc:Line@id">166</PrivateCode>
+              <OperatorRef versionRef="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+            </Line>
+            <Line version="1.0" id="SCGL:PH0005031:411:207">
+              <Name>The Plain - Dursley May Lane Bus Station</Name>
+              <PublicCode>207</PublicCode>
+              <PrivateCode type="txc:Line@id">207</PrivateCode>
+              <OperatorRef versionRef="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+            </Line>
+            <Line version="1.0" id="SCGL:PH0005031:401:60">
+              <Name>Thornbury Rock Street - Dursley May Lane Bus Station</Name>
+              <PublicCode>60</PublicCode>
+              <PrivateCode type="txc:Line@id">60B</PrivateCode>
+              <OperatorRef versionRef="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+            </Line>
+            <Line version="1.0" id="SCGL:PH0005031:379:62">
+              <Name>Stonehouse Horsemarling Lane - Gloucester Transport Hub arrival</Name>
+              <PublicCode>62</PublicCode>
+              <PrivateCode type="txc:Line@id">62</PrivateCode>
+              <OperatorRef versionRef="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+            </Line>
+            <Line version="1.0" id="SCGL:PH0005031:01010234:620">
+              <Name>Bath City Centre Bus Station - Old Sodbury The Cross Hands</Name>
+              <PublicCode>620</PublicCode>
+              <PrivateCode type="txc:Line@id">620</PrivateCode>
+              <OperatorRef versionRef="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+            </Line>
+            <Line version="1.0" id="SCGL:PH0005031:217:63">
+              <Name>Forest Green Colliers Wood - Gloucester Transport Hub arrival</Name>
+              <PublicCode>63</PublicCode>
+              <PrivateCode type="txc:Line@id">63</PrivateCode>
+              <OperatorRef versionRef="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+            </Line>
+            <Line version="1.0" id="SCGL:PH0005031:291:64">
+              <Name>Stroud Merrywalks L - Gloucester Transport Hub arrival</Name>
+              <PublicCode>64</PublicCode>
+              <PrivateCode type="txc:Line@id">64</PrivateCode>
+              <OperatorRef versionRef="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+            </Line>
+            <Line version="1.0" id="SCGL:PH0005031:229:65">
+              <Name>Dursley Sainsbury's - Stroud Merrywalks A</Name>
+              <PublicCode>65</PublicCode>
+              <PrivateCode type="txc:Line@id">65A</PrivateCode>
+              <OperatorRef versionRef="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+            </Line>
+            <Line version="1.0" id="SCGL:PH0005031:262:65">
+              <Name>Gloucester Transport Hub - Elmore Village Hall</Name>
+              <PublicCode>65</PublicCode>
+              <PrivateCode type="txc:Line@id">65B</PrivateCode>
+              <OperatorRef versionRef="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+            </Line>
+            <Line version="1.0" id="SCGL:PH0005031:229:65X">
+              <Name>Dursley Sainsbury's - Stroud Merrywalks A</Name>
+              <PublicCode>65X</PublicCode>
+              <PrivateCode type="txc:Line@id">65XA</PrivateCode>
+              <OperatorRef versionRef="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+            </Line>
+            <Line version="1.0" id="SCGL:PH0005031:262:65X">
+              <Name>Gloucester Transport Hub - Dursley Sainsbury's</Name>
+              <PublicCode>65X</PublicCode>
+              <PrivateCode type="txc:Line@id">65XB</PrivateCode>
+              <OperatorRef versionRef="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+            </Line>
+            <Line version="1.0" id="SCGL:PH0005031:258:66">
+              <Name>Cheltenham Promenade - Stroud Merrywalks D</Name>
+              <PublicCode>66</PublicCode>
+              <PrivateCode type="txc:Line@id">66</PrivateCode>
+              <OperatorRef versionRef="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+            </Line>
+            <Line version="1.0" id="SCGL:PH0005031:220:67">
+              <Name>Cashes Green The Beagles - Bussage Dorington Court</Name>
+              <PublicCode>67</PublicCode>
+              <PrivateCode type="txc:Line@id">67</PrivateCode>
+              <OperatorRef versionRef="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+            </Line>
+            <Line version="1.0" id="SCGL:PH0005031:220:67A">
+              <Name>Eastcombe Thomas Keble School Grounds - Cashes Green The Beagles</Name>
+              <PublicCode>67A</PublicCode>
+              <PrivateCode type="txc:Line@id">67A</PrivateCode>
+              <OperatorRef versionRef="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+            </Line>
+            <Line version="1.0" id="SCGL:PH0005031:230:620">
+              <Name>Old Sodbury The Cross Hands - Stroud Merrywalks A</Name>
+              <PublicCode>620</PublicCode>
+              <PrivateCode type="txc:Line@id">69</PrivateCode>
+              <OperatorRef versionRef="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+            </Line>
+            <Line version="1.0" id="SCGL:PH0005031:358:882">
+              <Name>Cirencester The Forum - Gloucester Transport Hub arrival</Name>
+              <PublicCode>882</PublicCode>
+              <PrivateCode type="txc:Line@id">882A</PrivateCode>
+              <OperatorRef versionRef="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+            </Line>
+            <Line version="1.0" id="SCGL:PH0005031:359:882">
+              <Name>The Ormond at Tetbury - Cirencester The Forum</Name>
+              <PublicCode>882</PublicCode>
+              <PrivateCode type="txc:Line@id">882B</PrivateCode>
+              <OperatorRef versionRef="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+            </Line>
+          </lines>
+          <groupsOfLines>
+            <GroupOfLines version="1.0" id="SCGL@groupOfLines">
+              <Name>A group of available services.</Name>
+              <members>
+                <LineRef versionRef="1.0" ref="SCGL:PH0005031:229:165" />
+                <LineRef versionRef="1.0" ref="SCGL:PH0005031:380:166" />
+                <LineRef versionRef="1.0" ref="SCGL:PH0005031:411:207" />
+                <LineRef versionRef="1.0" ref="SCGL:PH0005031:401:60" />
+                <LineRef versionRef="1.0" ref="SCGL:PH0005031:379:62" />
+                <LineRef versionRef="1.0" ref="SCGL:PH0005031:01010234:620" />
+                <LineRef versionRef="1.0" ref="SCGL:PH0005031:217:63" />
+                <LineRef versionRef="1.0" ref="SCGL:PH0005031:291:64" />
+                <LineRef versionRef="1.0" ref="SCGL:PH0005031:229:65" />
+                <LineRef versionRef="1.0" ref="SCGL:PH0005031:262:65" />
+                <LineRef versionRef="1.0" ref="SCGL:PH0005031:229:65X" />
+                <LineRef versionRef="1.0" ref="SCGL:PH0005031:262:65X" />
+                <LineRef versionRef="1.0" ref="SCGL:PH0005031:258:66" />
+                <LineRef versionRef="1.0" ref="SCGL:PH0005031:220:67" />
+                <LineRef versionRef="1.0" ref="SCGL:PH0005031:220:67A" />
+                <LineRef versionRef="1.0" ref="SCGL:PH0005031:230:620" />
+                <LineRef versionRef="1.0" ref="SCGL:PH0005031:358:882" />
+                <LineRef versionRef="1.0" ref="SCGL:PH0005031:359:882" />
+              </members>
+            </GroupOfLines>
+          </groupsOfLines>
+          <scheduledStopPoints>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90441">
+              <Name>Abbotswood</Name>
+              <NameSuffix>W-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053734" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90442">
+              <Name>Abbotswood</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053734" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20501">
+              <Name>Abson Road</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0064862" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20502">
+              <Name>Abson Road</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0064862" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20671">
+              <Name>Alexandra Way</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20670">
+              <Name>Alexandra Way</Name>
+              <NameSuffix>NE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLC341">
+              <Name>Amberley Park</Name>
+              <NameSuffix>nr</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046538" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:017000090">
+              <Name>Ashgrove</Name>
+              <NameSuffix>NE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL4640">
+              <Name>Bank</Name>
+              <NameSuffix>nr</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046538" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS459">
+              <Name>Bath Bridge</Name>
+              <NameSuffix>after</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046538" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGX38452">
+              <Name>Beach Farm Turn</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041761" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS155">
+              <Name>Bear Street</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055882" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS156">
+              <Name>Bear Street</Name>
+              <NameSuffix>after</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055882" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90963">
+              <Name>Beechacres</Name>
+              <NameSuffix>W-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS460">
+              <Name>Berrells Road</Name>
+              <NameSuffix>after</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046538" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGZ01453">
+              <Name>Bowling Hill</Name>
+              <NameSuffix>NW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041783" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGZ01452">
+              <Name>Bowling Hill</Name>
+              <NameSuffix>SE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041783" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS041">
+              <Name>Bradley Green Turn</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055882" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS042">
+              <Name>Bradley Green Turn</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055882" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90439">
+              <Name>Bredon</Name>
+              <NameSuffix>W-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053734" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90440">
+              <Name>Bredon</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053734" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20462">
+              <Name>Broad Lane</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053730" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20461">
+              <Name>Broad Lane</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053730" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20818">
+              <Name>Camers</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041889" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20817">
+              <Name>Camers</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041889" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20355">
+              <Name>Castle Road</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053720" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20356">
+              <Name>Castle Road</Name>
+              <NameSuffix>NE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053720" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90976">
+              <Name>Chapel Street</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20750">
+              <Name>Charfield Hill Crossroads</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055152" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20749">
+              <Name>Charfield Hill Crossroads</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055152" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20751">
+              <Name>Charfield Primary School</Name>
+              <NameSuffix>W-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055152" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20752">
+              <Name>Charfield Primary School</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055152" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS463">
+              <Name>Charfield Road</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046621" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS464">
+              <Name>Charfield Road</Name>
+              <NameSuffix>by</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046621" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS640">
+              <Name>Chavenage Green Turn</Name>
+              <NameSuffix>by</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046539" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS211">
+              <Name>Chavenage Lane</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046538" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS212">
+              <Name>Chavenage Lane</Name>
+              <NameSuffix>after</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046538" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGY38497">
+              <Name>Chipping Sodbury School</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041783" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90973">
+              <Name>Church Road</Name>
+              <NameSuffix>NE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20508">
+              <Name>Church Road</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055158" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20507">
+              <Name>Church Road</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055158" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90936">
+              <Name>Coln Square</Name>
+              <NameSuffix>W-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20812">
+              <Name>Colts Green</Name>
+              <NameSuffix>W-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041783" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20811">
+              <Name>Colts Green</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041783" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20814">
+              <Name>Commonmead Lane</Name>
+              <NameSuffix>W-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041889" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20813">
+              <Name>Commonmead Lane</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041889" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL5002">
+              <Name>Coronation Road</Name>
+              <NameSuffix>after</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046538" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL5001">
+              <Name>Coronation Road</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046538" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90966">
+              <Name>Dean Avenue</Name>
+              <NameSuffix>NE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90436">
+              <Name>Dovecote</Name>
+              <NameSuffix>W-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053734" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90437">
+              <Name>Dovecote</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053734" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20834">
+              <Name>Dunkirk Crossroads</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041804" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20835">
+              <Name>Dunkirk Crossroads</Name>
+              <NameSuffix>NE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041804" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90965">
+              <Name>Eastland Road</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90964">
+              <Name>Eastland Road</Name>
+              <NameSuffix>NE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90958">
+              <Name>Easton Hill Road School</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20732">
+              <Name>Eastwood Lodge</Name>
+              <NameSuffix>NW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041956" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20730">
+              <Name>Eastwood Lodge</Name>
+              <NameSuffix>SE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041956" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20748">
+              <Name>Elmtree Farm</Name>
+              <NameSuffix>NW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055152" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20747">
+              <Name>Elmtree Farm</Name>
+              <NameSuffix>SE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055152" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90971">
+              <Name>Falcon Way</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGY43140">
+              <Name>Folly Farm</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041804" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGY43141">
+              <Name>Folly Farm</Name>
+              <NameSuffix>NE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041804" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL5389">
+              <Name>Garage</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055882" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL5390">
+              <Name>Garage</Name>
+              <NameSuffix>by</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055882" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGZ01515">
+              <Name>Gillingstool</Name>
+              <NameSuffix>W-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90929">
+              <Name>Gillingstool</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS047">
+              <Name>Gloucester House Mews</Name>
+              <NameSuffix>by</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055882" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS048">
+              <Name>Gloucester House Mews</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055882" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS043">
+              <Name>Gloucester Row</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055882" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS044">
+              <Name>Gloucester Row</Name>
+              <NameSuffix>by</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055882" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90435">
+              <Name>Goldcrest Road</Name>
+              <NameSuffix>W-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041783" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90434">
+              <Name>Goldcrest Road</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041783" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20499">
+              <Name>Goldfinch Way</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053720" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20500">
+              <Name>Goldfinch Way</Name>
+              <NameSuffix>W-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053720" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA06406">
+              <Name>Hampton Street</Name>
+              <NameSuffix>nr</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046538" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA06405">
+              <Name>Hampton Street</Name>
+              <NameSuffix>before</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046538" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL5117">
+              <Name>Hare and Hounds Hotel</Name>
+              <NameSuffix>before</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046545" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL5118">
+              <Name>Hare and Hounds Hotel</Name>
+              <NameSuffix>after</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046545" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90962">
+              <Name>Health Centre</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90961">
+              <Name>Health Centre</Name>
+              <NameSuffix>W-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:160000663">
+              <Name>Highfields</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046538" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS917">
+              <Name>Highgrove Cottages</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0011764" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS918">
+              <Name>Highgrove Cottages</Name>
+              <NameSuffix>by</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0011764" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20829">
+              <Name>Horton Turn</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041899" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20830">
+              <Name>Horton Turn</Name>
+              <NameSuffix>NE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041899" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20673">
+              <Name>Howard Road</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20672">
+              <Name>Howard Road</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLC350">
+              <Name>Ilsom House</Name>
+              <NameSuffix>nr</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046538" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL2667">
+              <Name>Katharine Lady Berkeley's School</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046621" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA36744">
+              <Name>Katharine Lady Berkeley's School</Name>
+              <NameSuffix>inside</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046621" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL2668">
+              <Name>Katharine Lady Berkeley's School</Name>
+              <NameSuffix>o/s</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046621" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS050">
+              <Name>Keeper's Cottage</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0012160" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20497">
+              <Name>Kestrel Drive</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053720" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20498">
+              <Name>Kestrel Drive</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053720" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20460">
+              <Name>Kidney Hill</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053730" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20459">
+              <Name>Kidney Hill</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053730" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL1607">
+              <Name>King's Arms</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046479" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL1608">
+              <Name>King's Arms</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046479" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGA01608">
+              <Name>Kingrove Crescent</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041783" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90932">
+              <Name>Knapp Road</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGA56550">
+              <Name>Laurel Farm</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053720" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS213">
+              <Name>Lowfield Road</Name>
+              <NameSuffix>before</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046538" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS214">
+              <Name>Lowfield Road</Name>
+              <NameSuffix>after</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046538" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS642">
+              <Name>Main Street Turn</Name>
+              <NameSuffix>by</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046539" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90433">
+              <Name>Mallard Close</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041783" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90432">
+              <Name>Mallard Close</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041783" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20495">
+              <Name>Maple Walk</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053720" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20496">
+              <Name>Maple Walk</Name>
+              <NameSuffix>NE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053720" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20505">
+              <Name>Mendip View</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055158" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20506">
+              <Name>Mendip View</Name>
+              <NameSuffix>NE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055158" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20734">
+              <Name>Meriden Cottage</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041956" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20733">
+              <Name>Meriden Cottage</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041956" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20464">
+              <Name>Mill Crescent</Name>
+              <NameSuffix>W-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053730" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20463">
+              <Name>Mill Crescent</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053730" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20674">
+              <Name>Morton Bridge</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20729">
+              <Name>Morton Farm</Name>
+              <NameSuffix>W-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20728">
+              <Name>Morton Farm</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20358">
+              <Name>Motorway Bridge</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053720" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20357">
+              <Name>Motorway Bridge</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053720" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20738">
+              <Name>Mount Pleasant</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053704" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20737">
+              <Name>Mount Pleasant</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053704" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20503">
+              <Name>Naishcombe Hill</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055158" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20504">
+              <Name>Naishcombe Hill</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055158" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS472">
+              <Name>New Mills Roundabout</Name>
+              <NameSuffix>after</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046621" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS471">
+              <Name>New Mills Roundabout</Name>
+              <NameSuffix>before</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046621" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20469">
+              <Name>Nibley Turn</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053730" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20470">
+              <Name>Nibley Turn</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053730" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20513">
+              <Name>Oldbury Lane</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055158" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20514">
+              <Name>Oldbury Lane</Name>
+              <NameSuffix>W-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055158" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90960">
+              <Name>Park View Ave</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA57090">
+              <Name>Pennwood Lodge</Name>
+              <NameSuffix>by</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046621" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20833">
+              <Name>Petty France Hotel</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041899" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20832">
+              <Name>Petty France Hotel</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041899" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90444">
+              <Name>Pitchcombe</Name>
+              <NameSuffix>W-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053734" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90443">
+              <Name>Pitchcombe</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053734" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLC358">
+              <Name>Priory Inn</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046538" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20492">
+              <Name>Pucklechurch Village Hall</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053720" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20684">
+              <Name>Raglan Place</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20754">
+              <Name>Railway Tavern</Name>
+              <NameSuffix>W-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055152" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20753">
+              <Name>Railway Tavern</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055152" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90927">
+              <Name>Rock Street</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90463">
+              <Name>Rodborough</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053734" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90464">
+              <Name>Rodborough</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053734" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGX38435">
+              <Name>Rose Cottage</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053704" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLC138">
+              <Name>Royal Oak</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046538" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90970">
+              <Name>Severn View Road</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90497">
+              <Name>Shopping Centre</Name>
+              <NameSuffix>Stop A</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053734" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90496">
+              <Name>Shopping Centre</Name>
+              <NameSuffix>Stop B</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053734" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20555">
+              <Name>Shorthill Road</Name>
+              <NameSuffix>SE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053730" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20554">
+              <Name>Shorthill Road</Name>
+              <NameSuffix>NW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053730" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA90906">
+              <Name>Sir William Romney's</Name>
+              <NameSuffix>inside</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046538" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL1605">
+              <Name>Sopworth Turn</Name>
+              <NameSuffix>nr</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046479" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL1606">
+              <Name>Sopworth Turn</Name>
+              <NameSuffix>by</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046479" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS052">
+              <Name>Southend Farm</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0012344" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLC346">
+              <Name>Springfields</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046538" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90969">
+              <Name>Squire Leaze</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGA19689">
+              <Name>Stafford Crescent</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:017000007">
+              <Name>Stafford Crescent</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20682">
+              <Name>Stokefield Close</Name>
+              <NameSuffix>SE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20683">
+              <Name>Stokefield Close</Name>
+              <NameSuffix>NW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90934">
+              <Name>Streamleaze</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90926">
+              <Name>Streamleaze Court</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90500">
+              <Name>Sunningdale</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053734" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90501">
+              <Name>Sunningdale</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053734" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGA56549">
+              <Name>Sunnybank</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053730" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS461">
+              <Name>Symn Lane</Name>
+              <NameSuffix>before</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055882" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL2789">
+              <Name>Tennis Court</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046621" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL2790">
+              <Name>Tennis Court</Name>
+              <NameSuffix>o/s</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046621" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90925">
+              <Name>Tesco</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:160000260">
+              <Name>Tesco</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046538" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLC343">
+              <Name>Tesco</Name>
+              <NameSuffix>before</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046538" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90967">
+              <Name>The Anchor</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20809">
+              <Name>The Bell Hotel</Name>
+              <NameSuffix>W-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041783" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20810">
+              <Name>The Bell Hotel</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041783" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90427">
+              <Name>The Boot</Name>
+              <NameSuffix>NW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041783" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90428">
+              <Name>The Boot</Name>
+              <NameSuffix>SE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041783" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20509">
+              <Name>The Carpenters Arms</Name>
+              <NameSuffix>SE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055158" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20510">
+              <Name>The Carpenters Arms</Name>
+              <NameSuffix>W-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055158" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20669">
+              <Name>The Castle School</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20668">
+              <Name>The Castle School</Name>
+              <NameSuffix>NE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90415">
+              <Name>The Clock</Name>
+              <NameSuffix>W-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041783" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90416">
+              <Name>The Clock</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041783" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20820">
+              <Name>The Cross Hands</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041889" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20819">
+              <Name>The Cross Hands</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041889" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20816">
+              <Name>The Dog Inn</Name>
+              <NameSuffix>W-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041889" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20815">
+              <Name>The Dog Inn</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041889" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20491">
+              <Name>The Fleur De Lys</Name>
+              <NameSuffix>W-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053720" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20741">
+              <Name>The Gables Hotel</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053704" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGX38436">
+              <Name>The Gables Hotel</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053704" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS919">
+              <Name>The Holford Arms</Name>
+              <NameSuffix>by</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0011800" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS920">
+              <Name>The Holford Arms</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0011800" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20740">
+              <Name>The Huntsman</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053704" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20739">
+              <Name>The Huntsman</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053704" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:01700SG033">
+              <Name>The Limes</Name>
+              <NameSuffix>W-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055152" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:01700SG034">
+              <Name>The Limes</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055152" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL1556">
+              <Name>The Old Post Office</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0011760" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL4639">
+              <Name>The Ormond at Tetbury</Name>
+              <NameSuffix>o/s</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046538" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90975">
+              <Name>The Plain</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055157" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90412">
+              <Name>The Ridge</Name>
+              <NameSuffix>NW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053734" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90411">
+              <Name>The Ridge</Name>
+              <NameSuffix>SE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053734" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20512">
+              <Name>The Rose and Crown</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055158" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20511">
+              <Name>The Rose and Crown</Name>
+              <NameSuffix>W-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055158" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20746">
+              <Name>Tortworth Green</Name>
+              <NameSuffix>NW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053728" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20745">
+              <Name>Tortworth Green</Name>
+              <NameSuffix>SE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053728" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20744">
+              <Name>Tortworth Primary School</Name>
+              <NameSuffix>NW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053728" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20743">
+              <Name>Tortworth Primary School</Name>
+              <NameSuffix>SE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053728" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGX38438">
+              <Name>Tortworth Road</Name>
+              <NameSuffix>SE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053704" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGY43147">
+              <Name>Tracy Park</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055158" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLC348">
+              <Name>Trouble House Inn</Name>
+              <NameSuffix>nr</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046538" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS1108">
+              <Name>Upton Gables</Name>
+              <NameSuffix>by</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046539" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS296">
+              <Name>Upton Gardens</Name>
+              <NameSuffix>by</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046538" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS295">
+              <Name>Upton Gardens</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046538" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20468">
+              <Name>Wapley Turn</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053730" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20467">
+              <Name>Wapley Turn</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053730" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20465">
+              <Name>War Memorial</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053730" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20466">
+              <Name>War Memorial</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053730" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL5391">
+              <Name>War Memorial</Name>
+              <NameSuffix>before</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055882" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL5392">
+              <Name>War Memorial</Name>
+              <NameSuffix>after</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055882" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90499">
+              <Name>Wentworth</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053734" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGP90498">
+              <Name>Wentworth</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053734" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGX38425">
+              <Name>Westerleigh Crematorium</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053730" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20359">
+              <Name>Westerleigh Crematorium</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053730" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGY43258">
+              <Name>Westerleigh Hill Crossroads</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053730" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGY43259">
+              <Name>Westerleigh Hill Crossroads</Name>
+              <NameSuffix>W-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0053730" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLS462">
+              <Name>Westfields</Name>
+              <NameSuffix>after</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0055882" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL5847">
+              <Name>Westonbirt Arboretum</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046545" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GL5848">
+              <Name>Westonbirt Arboretum</Name>
+              <NameSuffix>o/s</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046545" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20736">
+              <Name>Whitfieldgate Farm</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041956" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20735">
+              <Name>Whitfieldgate Farm</Name>
+              <NameSuffix>NE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041956" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA36737">
+              <Name>Willesley Turn</Name>
+              <NameSuffix>by</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046545" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:1600GLA36738">
+              <Name>Willesley Turn</Name>
+              <NameSuffix>nr</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0046545" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20727">
+              <Name>Willow Tree Cottage</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041935" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20725">
+              <Name>Willow Tree Cottage</Name>
+              <NameSuffix>NE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041935" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGY43145">
+              <Name>Woodside Farm</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0064862" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGY43146">
+              <Name>Woodside Farm</Name>
+              <NameSuffix>N-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0064862" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20724">
+              <Name>Yewtree Farm</Name>
+              <NameSuffix>W-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041942" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:0170SGB20723">
+              <Name>Yewtree Farm</Name>
+              <NameSuffix>E-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0041942" />
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+          </scheduledStopPoints>
+        </ServiceFrame>
+        <ServiceCalendarFrame version="1.0" id="epd:UK:SCGL:ServiceCalendarFrame_UK_PI_CALENDAR:SCGL_products:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+          <dayTypes>
+            <DayType version="1.0" id="day_type@Public_Holiday">
+              <Name>Public Holiday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <HolidayTypes>AnyHoliday</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@#SCH">
+              <Name>#SCH</Name>
+              <properties>
+                <PropertyOfDay>
+                  <HolidayTypes>AnyHoliday</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@SCH">
+              <Name>SCH</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Monday Tuesday Wednesday Thursday Friday</DaysOfWeek>
+                  <HolidayTypes>WorkingDay</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@Saturday">
+              <Name>Saturday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Saturday</DaysOfWeek>
+                  <HolidayTypes>NotWorkingDay</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@Sunday">
+              <Name>Sunday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Sunday</DaysOfWeek>
+                  <HolidayTypes>NotWorkingDay</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+          </dayTypes>
+          <dayTypeAssignments>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@01/02/2025@2025-01-02" order="1">
+              <Name>01/02/2025</Name>
+              <Date>2025-01-02</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@01/03/2025@2025-01-03" order="1">
+              <Name>01/03/2025</Name>
+              <Date>2025-01-03</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/17/2025@2025-02-17" order="1">
+              <Name>02/17/2025</Name>
+              <Date>2025-02-17</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/18/2025@2025-02-18" order="1">
+              <Name>02/18/2025</Name>
+              <Date>2025-02-18</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/19/2025@2025-02-19" order="1">
+              <Name>02/19/2025</Name>
+              <Date>2025-02-19</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/20/2025@2025-02-20" order="1">
+              <Name>02/20/2025</Name>
+              <Date>2025-02-20</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/21/2025@2025-02-21" order="1">
+              <Name>02/21/2025</Name>
+              <Date>2025-02-21</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/07/2025@2025-04-07" order="1">
+              <Name>04/07/2025</Name>
+              <Date>2025-04-07</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/08/2025@2025-04-08" order="1">
+              <Name>04/08/2025</Name>
+              <Date>2025-04-08</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/09/2025@2025-04-09" order="1">
+              <Name>04/09/2025</Name>
+              <Date>2025-04-09</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/10/2025@2025-04-10" order="1">
+              <Name>04/10/2025</Name>
+              <Date>2025-04-10</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/11/2025@2025-04-11" order="1">
+              <Name>04/11/2025</Name>
+              <Date>2025-04-11</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/14/2025@2025-04-14" order="1">
+              <Name>04/14/2025</Name>
+              <Date>2025-04-14</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/15/2025@2025-04-15" order="1">
+              <Name>04/15/2025</Name>
+              <Date>2025-04-15</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/16/2025@2025-04-16" order="1">
+              <Name>04/16/2025</Name>
+              <Date>2025-04-16</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/17/2025@2025-04-17" order="1">
+              <Name>04/17/2025</Name>
+              <Date>2025-04-17</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@05/27/2025@2025-05-27" order="1">
+              <Name>05/27/2025</Name>
+              <Date>2025-05-27</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@05/28/2025@2025-05-28" order="1">
+              <Name>05/28/2025</Name>
+              <Date>2025-05-28</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@05/29/2025@2025-05-29" order="1">
+              <Name>05/29/2025</Name>
+              <Date>2025-05-29</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@05/30/2025@2025-05-30" order="1">
+              <Name>05/30/2025</Name>
+              <Date>2025-05-30</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/25/2025@2025-07-25" order="1">
+              <Name>07/25/2025</Name>
+              <Date>2025-07-25</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/28/2025@2025-07-28" order="1">
+              <Name>07/28/2025</Name>
+              <Date>2025-07-28</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/29/2025@2025-07-29" order="1">
+              <Name>07/29/2025</Name>
+              <Date>2025-07-29</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/30/2025@2025-07-30" order="1">
+              <Name>07/30/2025</Name>
+              <Date>2025-07-30</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/31/2025@2025-07-31" order="1">
+              <Name>07/31/2025</Name>
+              <Date>2025-07-31</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/01/2025@2025-08-01" order="1">
+              <Name>08/01/2025</Name>
+              <Date>2025-08-01</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/04/2025@2025-08-04" order="1">
+              <Name>08/04/2025</Name>
+              <Date>2025-08-04</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/05/2025@2025-08-05" order="1">
+              <Name>08/05/2025</Name>
+              <Date>2025-08-05</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/06/2025@2025-08-06" order="1">
+              <Name>08/06/2025</Name>
+              <Date>2025-08-06</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/07/2025@2025-08-07" order="1">
+              <Name>08/07/2025</Name>
+              <Date>2025-08-07</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/08/2025@2025-08-08" order="1">
+              <Name>08/08/2025</Name>
+              <Date>2025-08-08</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/11/2025@2025-08-11" order="1">
+              <Name>08/11/2025</Name>
+              <Date>2025-08-11</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/12/2025@2025-08-12" order="1">
+              <Name>08/12/2025</Name>
+              <Date>2025-08-12</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/13/2025@2025-08-13" order="1">
+              <Name>08/13/2025</Name>
+              <Date>2025-08-13</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/14/2025@2025-08-14" order="1">
+              <Name>08/14/2025</Name>
+              <Date>2025-08-14</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/15/2025@2025-08-15" order="1">
+              <Name>08/15/2025</Name>
+              <Date>2025-08-15</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/18/2025@2025-08-18" order="1">
+              <Name>08/18/2025</Name>
+              <Date>2025-08-18</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/19/2025@2025-08-19" order="1">
+              <Name>08/19/2025</Name>
+              <Date>2025-08-19</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/20/2025@2025-08-20" order="1">
+              <Name>08/20/2025</Name>
+              <Date>2025-08-20</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/21/2025@2025-08-21" order="1">
+              <Name>08/21/2025</Name>
+              <Date>2025-08-21</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/22/2025@2025-08-22" order="1">
+              <Name>08/22/2025</Name>
+              <Date>2025-08-22</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/26/2025@2025-08-26" order="1">
+              <Name>08/26/2025</Name>
+              <Date>2025-08-26</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/27/2025@2025-08-27" order="1">
+              <Name>08/27/2025</Name>
+              <Date>2025-08-27</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/28/2025@2025-08-28" order="1">
+              <Name>08/28/2025</Name>
+              <Date>2025-08-28</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/29/2025@2025-08-29" order="1">
+              <Name>08/29/2025</Name>
+              <Date>2025-08-29</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/27/2025@2025-10-27" order="1">
+              <Name>10/27/2025</Name>
+              <Date>2025-10-27</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/28/2025@2025-10-28" order="1">
+              <Name>10/28/2025</Name>
+              <Date>2025-10-28</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/29/2025@2025-10-29" order="1">
+              <Name>10/29/2025</Name>
+              <Date>2025-10-29</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/30/2025@2025-10-30" order="1">
+              <Name>10/30/2025</Name>
+              <Date>2025-10-30</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/31/2025@2025-10-31" order="1">
+              <Name>10/31/2025</Name>
+              <Date>2025-10-31</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/22/2025@2025-12-22" order="1">
+              <Name>12/22/2025</Name>
+              <Date>2025-12-22</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/23/2025@2025-12-23" order="1">
+              <Name>12/23/2025</Name>
+              <Date>2025-12-23</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/24/2025@2025-12-24" order="1">
+              <Name>12/24/2025</Name>
+              <Date>2025-12-24</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/29/2025@2025-12-29" order="1">
+              <Name>12/29/2025</Name>
+              <Date>2025-12-29</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/30/2025@2025-12-30" order="1">
+              <Name>12/30/2025</Name>
+              <Date>2025-12-30</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/31/2025@2025-12-31" order="1">
+              <Name>12/31/2025</Name>
+              <Date>2025-12-31</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@01/02/2026@2026-01-02" order="1">
+              <Name>01/02/2026</Name>
+              <Date>2026-01-02</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@01/05/2026@2026-01-05" order="1">
+              <Name>01/05/2026</Name>
+              <Date>2026-01-05</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/16/2026@2026-02-16" order="1">
+              <Name>02/16/2026</Name>
+              <Date>2026-02-16</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/17/2026@2026-02-17" order="1">
+              <Name>02/17/2026</Name>
+              <Date>2026-02-17</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/18/2026@2026-02-18" order="1">
+              <Name>02/18/2026</Name>
+              <Date>2026-02-18</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/19/2026@2026-02-19" order="1">
+              <Name>02/19/2026</Name>
+              <Date>2026-02-19</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@02/20/2026@2026-02-20" order="1">
+              <Name>02/20/2026</Name>
+              <Date>2026-02-20</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@03/30/2026@2026-03-30" order="1">
+              <Name>03/30/2026</Name>
+              <Date>2026-03-30</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@03/31/2026@2026-03-31" order="1">
+              <Name>03/31/2026</Name>
+              <Date>2026-03-31</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/01/2026@2026-04-01" order="1">
+              <Name>04/01/2026</Name>
+              <Date>2026-04-01</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/02/2026@2026-04-02" order="1">
+              <Name>04/02/2026</Name>
+              <Date>2026-04-02</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/07/2026@2026-04-07" order="1">
+              <Name>04/07/2026</Name>
+              <Date>2026-04-07</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/08/2026@2026-04-08" order="1">
+              <Name>04/08/2026</Name>
+              <Date>2026-04-08</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/09/2026@2026-04-09" order="1">
+              <Name>04/09/2026</Name>
+              <Date>2026-04-09</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@04/10/2026@2026-04-10" order="1">
+              <Name>04/10/2026</Name>
+              <Date>2026-04-10</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@05/26/2026@2026-05-26" order="1">
+              <Name>05/26/2026</Name>
+              <Date>2026-05-26</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@05/27/2026@2026-05-27" order="1">
+              <Name>05/27/2026</Name>
+              <Date>2026-05-27</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@05/28/2026@2026-05-28" order="1">
+              <Name>05/28/2026</Name>
+              <Date>2026-05-28</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@05/29/2026@2026-05-29" order="1">
+              <Name>05/29/2026</Name>
+              <Date>2026-05-29</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/21/2026@2026-07-21" order="1">
+              <Name>07/21/2026</Name>
+              <Date>2026-07-21</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/22/2026@2026-07-22" order="1">
+              <Name>07/22/2026</Name>
+              <Date>2026-07-22</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/23/2026@2026-07-23" order="1">
+              <Name>07/23/2026</Name>
+              <Date>2026-07-23</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/24/2026@2026-07-24" order="1">
+              <Name>07/24/2026</Name>
+              <Date>2026-07-24</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/27/2026@2026-07-27" order="1">
+              <Name>07/27/2026</Name>
+              <Date>2026-07-27</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/28/2026@2026-07-28" order="1">
+              <Name>07/28/2026</Name>
+              <Date>2026-07-28</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/29/2026@2026-07-29" order="1">
+              <Name>07/29/2026</Name>
+              <Date>2026-07-29</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/30/2026@2026-07-30" order="1">
+              <Name>07/30/2026</Name>
+              <Date>2026-07-30</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@07/31/2026@2026-07-31" order="1">
+              <Name>07/31/2026</Name>
+              <Date>2026-07-31</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/03/2026@2026-08-03" order="1">
+              <Name>08/03/2026</Name>
+              <Date>2026-08-03</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/04/2026@2026-08-04" order="1">
+              <Name>08/04/2026</Name>
+              <Date>2026-08-04</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/05/2026@2026-08-05" order="1">
+              <Name>08/05/2026</Name>
+              <Date>2026-08-05</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/06/2026@2026-08-06" order="1">
+              <Name>08/06/2026</Name>
+              <Date>2026-08-06</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/07/2026@2026-08-07" order="1">
+              <Name>08/07/2026</Name>
+              <Date>2026-08-07</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/10/2026@2026-08-10" order="1">
+              <Name>08/10/2026</Name>
+              <Date>2026-08-10</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/11/2026@2026-08-11" order="1">
+              <Name>08/11/2026</Name>
+              <Date>2026-08-11</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/12/2026@2026-08-12" order="1">
+              <Name>08/12/2026</Name>
+              <Date>2026-08-12</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/13/2026@2026-08-13" order="1">
+              <Name>08/13/2026</Name>
+              <Date>2026-08-13</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/14/2026@2026-08-14" order="1">
+              <Name>08/14/2026</Name>
+              <Date>2026-08-14</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/17/2026@2026-08-17" order="1">
+              <Name>08/17/2026</Name>
+              <Date>2026-08-17</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/18/2026@2026-08-18" order="1">
+              <Name>08/18/2026</Name>
+              <Date>2026-08-18</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/19/2026@2026-08-19" order="1">
+              <Name>08/19/2026</Name>
+              <Date>2026-08-19</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/20/2026@2026-08-20" order="1">
+              <Name>08/20/2026</Name>
+              <Date>2026-08-20</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/21/2026@2026-08-21" order="1">
+              <Name>08/21/2026</Name>
+              <Date>2026-08-21</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/24/2026@2026-08-24" order="1">
+              <Name>08/24/2026</Name>
+              <Date>2026-08-24</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/25/2026@2026-08-25" order="1">
+              <Name>08/25/2026</Name>
+              <Date>2026-08-25</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/26/2026@2026-08-26" order="1">
+              <Name>08/26/2026</Name>
+              <Date>2026-08-26</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/27/2026@2026-08-27" order="1">
+              <Name>08/27/2026</Name>
+              <Date>2026-08-27</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@08/28/2026@2026-08-28" order="1">
+              <Name>08/28/2026</Name>
+              <Date>2026-08-28</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/26/2026@2026-10-26" order="1">
+              <Name>10/26/2026</Name>
+              <Date>2026-10-26</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/27/2026@2026-10-27" order="1">
+              <Name>10/27/2026</Name>
+              <Date>2026-10-27</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/28/2026@2026-10-28" order="1">
+              <Name>10/28/2026</Name>
+              <Date>2026-10-28</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/29/2026@2026-10-29" order="1">
+              <Name>10/29/2026</Name>
+              <Date>2026-10-29</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@10/30/2026@2026-10-30" order="1">
+              <Name>10/30/2026</Name>
+              <Date>2026-10-30</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/21/2026@2026-12-21" order="1">
+              <Name>12/21/2026</Name>
+              <Date>2026-12-21</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/22/2026@2026-12-22" order="1">
+              <Name>12/22/2026</Name>
+              <Date>2026-12-22</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/23/2026@2026-12-23" order="1">
+              <Name>12/23/2026</Name>
+              <Date>2026-12-23</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/24/2026@2026-12-24" order="1">
+              <Name>12/24/2026</Name>
+              <Date>2026-12-24</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/29/2026@2026-12-29" order="1">
+              <Name>12/29/2026</Name>
+              <Date>2026-12-29</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/30/2026@2026-12-30" order="1">
+              <Name>12/30/2026</Name>
+              <Date>2026-12-30</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+            <DayTypeAssignment version="1.0" id="day_type@#SCH@12/31/2026@2026-12-31" order="1">
+              <Name>12/31/2026</Name>
+              <Date>2026-12-31</Date>
+              <DayTypeRef version="1.0" ref="day_type@#SCH" />
+            </DayTypeAssignment>
+          </dayTypeAssignments>
+        </ServiceCalendarFrame>
+        <FareFrame version="1.0" id="epd:UK:SCGL:FareFrame_UK_PI_FARE_NETWORK:SCGL_products:op" dataSourceRef="op:src" responsibilitySetRef="op:network_data">
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_FARE_NETWORK:FXCP" />
+          <fareZones>
+            <FareZone version="1.0" id="zone@South_Glos">
+              <Name>South Glos</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90441">Abbotswood</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90442">Abbotswood</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20501">Abson Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20502">Abson Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20671">Alexandra Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20670">Alexandra Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:017000090">Ashgrove</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGX38452">Beach Farm Turn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90963">Beechacres</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGZ01453">Bowling Hill</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGZ01452">Bowling Hill</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90439">Bredon</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90440">Bredon</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20462">Broad Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20461">Broad Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20818">Camers</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20817">Camers</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20355">Castle Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20356">Castle Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90976">Chapel Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20750">Charfield Hill Crossroads</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20749">Charfield Hill Crossroads</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20751">Charfield Primary School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20752">Charfield Primary School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGY38497">Chipping Sodbury School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90973">Church Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20508">Church Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20507">Church Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90936">Coln Square</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20812">Colts Green</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20811">Colts Green</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20814">Commonmead Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20813">Commonmead Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90966">Dean Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90436">Dovecote</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90437">Dovecote</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20834">Dunkirk Crossroads</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20835">Dunkirk Crossroads</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90965">Eastland Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90964">Eastland Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90958">Easton Hill Road School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20732">Eastwood Lodge</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20730">Eastwood Lodge</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20748">Elmtree Farm</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20747">Elmtree Farm</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90971">Falcon Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGY43140">Folly Farm</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGY43141">Folly Farm</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGZ01515">Gillingstool</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90929">Gillingstool</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90435">Goldcrest Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90434">Goldcrest Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20499">Goldfinch Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20500">Goldfinch Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90962">Health Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90961">Health Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20829">Horton Turn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20830">Horton Turn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20673">Howard Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20672">Howard Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20497">Kestrel Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20498">Kestrel Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20460">Kidney Hill</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20459">Kidney Hill</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGA01608">Kingrove Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90932">Knapp Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGA56550">Laurel Farm</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90433">Mallard Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90432">Mallard Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20495">Maple Walk</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20496">Maple Walk</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20505">Mendip View</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20506">Mendip View</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20734">Meriden Cottage</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20733">Meriden Cottage</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20464">Mill Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20463">Mill Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20674">Morton Bridge</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20729">Morton Farm</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20728">Morton Farm</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20358">Motorway Bridge</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20357">Motorway Bridge</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20738">Mount Pleasant</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20737">Mount Pleasant</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20503">Naishcombe Hill</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20504">Naishcombe Hill</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS472">New Mills Roundabout</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20469">Nibley Turn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20470">Nibley Turn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20513">Oldbury Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20514">Oldbury Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90960">Park View Ave</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20833">Petty France Hotel</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20832">Petty France Hotel</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90444">Pitchcombe</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90443">Pitchcombe</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20492">Pucklechurch Village Hall</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20684">Raglan Place</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20754">Railway Tavern</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20753">Railway Tavern</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90927">Rock Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90463">Rodborough</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90464">Rodborough</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGX38435">Rose Cottage</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90970">Severn View Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90497">Shopping Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90496">Shopping Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20555">Shorthill Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20554">Shorthill Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90969">Squire Leaze</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGA19689">Stafford Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:017000007">Stafford Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20682">Stokefield Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20683">Stokefield Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90934">Streamleaze</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90926">Streamleaze Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90500">Sunningdale</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90501">Sunningdale</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGA56549">Sunnybank</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90925">Tesco</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90967">The Anchor</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20809">The Bell Hotel</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20810">The Bell Hotel</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90427">The Boot</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90428">The Boot</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20509">The Carpenters Arms</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20510">The Carpenters Arms</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20669">The Castle School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20668">The Castle School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90415">The Clock</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90416">The Clock</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20820">The Cross Hands</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20819">The Cross Hands</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20816">The Dog Inn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20815">The Dog Inn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20491">The Fleur De Lys</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20741">The Gables Hotel</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGX38436">The Gables Hotel</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20740">The Huntsman</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20739">The Huntsman</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:01700SG033">The Limes</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:01700SG034">The Limes</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90975">The Plain</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90412">The Ridge</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90411">The Ridge</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20512">The Rose and Crown</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20511">The Rose and Crown</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20746">Tortworth Green</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20745">Tortworth Green</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20744">Tortworth Primary School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20743">Tortworth Primary School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGX38438">Tortworth Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGY43147">Tracy Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20468">Wapley Turn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20467">Wapley Turn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20465">War Memorial</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20466">War Memorial</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90499">Wentworth</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGP90498">Wentworth</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGX38425">Westerleigh Crematorium</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20359">Westerleigh Crematorium</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGY43258">Westerleigh Hill Crossroads</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGY43259">Westerleigh Hill Crossroads</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20736">Whitfieldgate Farm</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20735">Whitfieldgate Farm</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20727">Willow Tree Cottage</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20725">Willow Tree Cottage</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGY43145">Woodside Farm</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGY43146">Woodside Farm</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20724">Yewtree Farm</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:0170SGB20723">Yewtree Farm</ScheduledStopPointRef>
+              </members>
+              <types>
+                <TypeOfZoneRef versionRef="fxc:v1.0" ref="fxc:fare_zone" />
+              </types>
+            </FareZone>
+            <FareZone version="1.0" id="zone@South_Glos_-_In_Gloucestershire">
+              <Name>South Glos - In Gloucestershire</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLC341">Amberley Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL4640">Bank</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS459">Bath Bridge</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS155">Bear Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS156">Bear Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS460">Berrells Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS041">Bradley Green Turn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS042">Bradley Green Turn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS463">Charfield Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS464">Charfield Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS640">Chavenage Green Turn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS211">Chavenage Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS212">Chavenage Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL5002">Coronation Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL5001">Coronation Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL5389">Garage</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL5390">Garage</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS047">Gloucester House Mews</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS048">Gloucester House Mews</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS043">Gloucester Row</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS044">Gloucester Row</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA06406">Hampton Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA06405">Hampton Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL5117">Hare and Hounds Hotel</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL5118">Hare and Hounds Hotel</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000663">Highfields</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS917">Highgrove Cottages</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS918">Highgrove Cottages</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLC350">Ilsom House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL2667">Katharine Lady Berkeley's School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36744">Katharine Lady Berkeley's School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL2668">Katharine Lady Berkeley's School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS050">Keeper's Cottage</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1607">King's Arms</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1608">King's Arms</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS213">Lowfield Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS214">Lowfield Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS642">Main Street Turn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS471">New Mills Roundabout</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA57090">Pennwood Lodge</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLC358">Priory Inn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLC138">Royal Oak</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA90906">Sir William Romney's</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1605">Sopworth Turn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1606">Sopworth Turn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS052">Southend Farm</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLC346">Springfields</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS461">Symn Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL2789">Tennis Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL2790">Tennis Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:160000260">Tesco</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLC343">Tesco</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS919">The Holford Arms</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS920">The Holford Arms</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL1556">The Old Post Office</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL4639">The Ormond at Tetbury</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLC348">Trouble House Inn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS1108">Upton Gables</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS296">Upton Gardens</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS295">Upton Gardens</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL5391">War Memorial</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL5392">War Memorial</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLS462">Westfields</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL5847">Westonbirt Arboretum</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GL5848">Westonbirt Arboretum</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36737">Willesley Turn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:1600GLA36738">Willesley Turn</ScheduledStopPointRef>
+              </members>
+              <types>
+                <TypeOfZoneRef versionRef="fxc:v1.0" ref="fxc:fare_zone" />
+              </types>
+            </FareZone>
+          </fareZones>
+        </FareFrame>
+        <FareFrame version="1.0" id="epd:UK:SCGL:FareFrame_UK_PI_FARE_PRODUCT:SCGL_products:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+          <Name>Fare products</Name>
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_FARE_PRODUCT:FXCP" />
+          <tariffs>
+            <Tariff version="1.0" id="Tariff@S_South_Glos_MR_2@s.glos_1_OA_U19">
+              <validityConditions>
+                <ValidBetween>
+                  <FromDate>2026-06-29T02:35:00Z</FromDate>
+                </ValidBetween>
+              </validityConditions>
+              <Name>Tariff for Bristol &amp; South Glos 7 Day MegaRider</Name>
+              <OperatorRef versionRef="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+              <GroupOfLinesRef versionRef="1.0" ref="SCGL@groupOfLines" />
+              <TypeOfTariffRef versionRef="fxc:v1.0" ref="fxc:zonal" />
+              <TariffBasis>zone</TariffBasis>
+              <timeIntervals>
+                <TimeInterval version="1.0" id="Tariff@S_South_Glos_MR_2@s.glos_1_OA_U19@Pass@1_Week">
+                  <Name>1 Week</Name>
+                  <EndTime>03:59:59</EndTime>
+                  <DayOffset>1</DayOffset>
+                  <Duration>P7D</Duration>
+                </TimeInterval>
+              </timeIntervals>
+              <fareStructureElements>
+                <FareStructureElement version="1.0" id="Tariff@S_South_Glos_MR_2@s.glos_1_OA_U19@Conditions_of_travel">
+                  <Name>Conditions of travel</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:travel_conditions" />
+                  <GenericParameterAssignment version="1.0" id="Tariff@S_South_Glos_MR_2@s.glos_1_OA_U19@Conditions_of_travel" order="1">
+                    <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:condition_of_use" />
+                    <LimitationGroupingType>AND</LimitationGroupingType>
+                    <limitations>
+                      <Transferability version="1.0" id="Tariff@S_South_Glos_MR_2@s.glos_1_OA_U19@Conditions_of_travel@Transferability">
+                        <Name>Ticket is not transferable</Name>
+                        <CanTransfer>false</CanTransfer>
+                      </Transferability>
+                      <FrequencyOfUse version="1.0" id="Tariff@S_South_Glos_MR_2@s.glos_1_OA_U19@Conditions_of_travel@Frequency">
+                        <FrequencyOfUseType>unlimited</FrequencyOfUseType>
+                      </FrequencyOfUse>
+                      <UsageValidityPeriod version="1.0" id="Tariff@S_South_Glos_MR_2@s.glos_1_OA_U19@Conditions_of_travel@Validity">
+                        <UsageEnd>endOfFareDay</UsageEnd>
+                        <EndTime>03:59:59</EndTime>
+                      </UsageValidityPeriod>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement version="1.0" id="Tariff@S_South_Glos_MR_2@s.glos_1_OA_U19@Durations">
+                  <Name>Pass durations</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:durations" />
+                  <timeIntervals>
+                    <TimeIntervalRef version="1.0" ref="Tariff@S_South_Glos_MR_2@s.glos_1_OA_U19@Pass@1_Week" />
+                  </timeIntervals>
+                </FareStructureElement>
+                <FareStructureElement version="1.0" id="Tariff@S_South_Glos_MR_2@s.glos_1_OA_U19@Eligibility">
+                  <Name>Eligible user types</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:eligibility" />
+                  <GenericParameterAssignment version="1.0" id="Tariff@S_South_Glos_MR_2@s.glos_1_OA_U19@Eligibility" order="1">
+                    <Name>Eligibility to purchase</Name>
+                    <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:eligible" />
+                    <limitations>
+                      <UserProfile version="1.0" id="Tariff@S_South_Glos_MR_2@s.glos_1_OA_U19@UP@youngPerson">
+                        <Name>Young person</Name>
+                        <TypeOfConcessionRef versionRef="fxc:v1.0" ref="fxc:youngPerson" />
+                        <UserType>youngPerson</UserType>
+                      </UserProfile>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement version="1.0" id="Tariff@S_South_Glos_MR_2@s.glos_1_OA_U19@Access_Zones">
+                  <Name>Available zones</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:access" />
+                  <GenericParameterAssignment version="1.0" id="Tariff@S_South_Glos_MR_2@s.glos_1_OA_U19@Access_Zones" order="1">
+                    <Name>Zones</Name>
+                    <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:can_access" />
+                    <ValidityParameterAssignmentType>EQ</ValidityParameterAssignmentType>
+                    <ValidityParameterGroupingType>OR</ValidityParameterGroupingType>
+                    <validityParameters>
+                      <FareZoneRef versionRef="1.0" ref="zone@South_Glos" />
+                      <FareZoneRef versionRef="1.0" ref="zone@South_Glos_-_In_Gloucestershire" />
+                    </validityParameters>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+              </fareStructureElements>
+            </Tariff>
+          </tariffs>
+          <fareProducts>
+            <PreassignedFareProduct version="1.0" id="pass@S_South_Glos_MR_2@s.glos_1_OA_U19">
+              <Name>Bristol &amp; South Glos 7 Day MegaRider</Name>
+              <Description>Valid for 7 days travel from the date of activation</Description>
+              <ChargingMomentRef versionRef="fxc:v1.0" ref="fxc:prepayment" />
+              <ChargingMomentType>beforeTravel</ChargingMomentType>
+              <TypeOfFareProductRef versionRef="fxc:v1.0" ref="fxc:standard_product@pass@period" />
+              <OperatorRef version="1.0" ref="noc:SCGL">noc:135902</OperatorRef>
+              <validableElements>
+                <ValidableElement version="1.0" id="pass@S_South_Glos_MR_2@s.glos_1_OA_U19@Access">
+                  <Name>Pass</Name>
+                  <fareStructureElements>
+                    <FareStructureElementRef version="1.0" ref="Tariff@S_South_Glos_MR_2@s.glos_1_OA_U19@Eligibility" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@S_South_Glos_MR_2@s.glos_1_OA_U19@Conditions_of_travel" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@S_South_Glos_MR_2@s.glos_1_OA_U19@Access_Zones" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@S_South_Glos_MR_2@s.glos_1_OA_U19@Durations" />
+                  </fareStructureElements>
+                </ValidableElement>
+              </validableElements>
+              <accessRightsInProduct>
+                <AccessRightInProduct version="1.0" id="pass@S_South_Glos_MR_2@s.glos_1_OA_U19" order="1">
+                  <ValidableElementRef version="1.0" ref="pass@S_South_Glos_MR_2@s.glos_1_OA_U19@Access" />
+                </AccessRightInProduct>
+              </accessRightsInProduct>
+              <ProductType>periodPass</ProductType>
+            </PreassignedFareProduct>
+          </fareProducts>
+          <salesOfferPackages>
+            <SalesOfferPackage version="1.0" id="SOP@pass@S_South_Glos_MR_2@s.glos_1_OA_U19@smartOnWeb">
+              <Name>Bristol &amp; South Glos 7 Day MegaRider - Online (smart)</Name>
+              <distributionAssignments>
+                <DistributionAssignment version="1.0" id="SOP@pass@S_South_Glos_MR_2@s.glos_1_OA_U19@smartOnWeb@online" order="1">
+                  <DistributionChannelType>online</DistributionChannelType>
+                  <PaymentMethods>creditCard debitCard</PaymentMethods>
+                  <FulfilmentMethodRef version="1.0" ref="Fulfilment@onlinePropagation" />
+                </DistributionAssignment>
+              </distributionAssignments>
+              <salesOfferPackageElements>
+                <SalesOfferPackageElement version="1.0" id="SOP@pass@S_South_Glos_MR_2@s.glos_1_OA_U19@smartOnWeb@smartCard" order="1">
+                  <TypeOfTravelDocumentRef version="1.0" ref="TravelDocument@smartCard" />
+                  <PreassignedFareProductRef version="1.0" ref="pass@S_South_Glos_MR_2@s.glos_1_OA_U19" />
+                  <validityParameterAssignments>
+                    <GenericParameterAssignment version="1.0" id="SOP@pass@S_South_Glos_MR_2@s.glos_1_OA_U19@smartOnWeb@smartCard" order="1">
+                      <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:can_purchase_when" />
+                      <limitations>
+                        <PurchaseWindow version="1.0" id="SOP@pass@S_South_Glos_MR_2@s.glos_1_OA_U19@smartOnWeb@smartCard@purchase_window">
+                          <MinimumPeriodBeforeDeparture>P2D</MinimumPeriodBeforeDeparture>
+                        </PurchaseWindow>
+                      </limitations>
+                    </GenericParameterAssignment>
+                  </validityParameterAssignments>
+                </SalesOfferPackageElement>
+              </salesOfferPackageElements>
+            </SalesOfferPackage>
+            <SalesOfferPackage version="1.0" id="SOP@pass@S_South_Glos_MR_2@s.glos_1_OA_U19@mobileApp">
+              <Name>Bristol &amp; South Glos 7 Day MegaRider - Mobile App</Name>
+              <distributionAssignments>
+                <DistributionAssignment version="1.0" id="SOP@pass@S_South_Glos_MR_2@s.glos_1_OA_U19@mobileApp@mobileDevice" order="1">
+                  <DistributionChannelType>mobileDevice</DistributionChannelType>
+                  <PaymentMethods>creditCard debitCard</PaymentMethods>
+                  <FulfilmentMethodRef version="1.0" ref="Fulfilment@mobileApp" />
+                </DistributionAssignment>
+              </distributionAssignments>
+              <salesOfferPackageElements>
+                <SalesOfferPackageElement version="1.0" id="SOP@pass@S_South_Glos_MR_2@s.glos_1_OA_U19@mobileApp@mobileApp" order="1">
+                  <TypeOfTravelDocumentRef version="1.0" ref="TravelDocument@mobileApp" />
+                  <PreassignedFareProductRef version="1.0" ref="pass@S_South_Glos_MR_2@s.glos_1_OA_U19" />
+                  <validityParameterAssignments>
+                    <GenericParameterAssignment version="1.0" id="SOP@pass@S_South_Glos_MR_2@s.glos_1_OA_U19@mobileApp@mobileApp" order="1">
+                      <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:can_purchase_when" />
+                      <limitations>
+                        <UsageValidityPeriod version="1.0" id="SOP@pass@S_South_Glos_MR_2@s.glos_1_OA_U19@mobileApp@mobileApp@hanging">
+                          <UsageTrigger>purchase</UsageTrigger>
+                          <UsageEnd>productExpiry</UsageEnd>
+                          <StandardDuration>P3M</StandardDuration>
+                          <EndTime>03:59:59</EndTime>
+                        </UsageValidityPeriod>
+                      </limitations>
+                    </GenericParameterAssignment>
+                  </validityParameterAssignments>
+                </SalesOfferPackageElement>
+              </salesOfferPackageElements>
+            </SalesOfferPackage>
+          </salesOfferPackages>
+        </FareFrame>
+        <FareFrame version="1.0" id="epd:UK:SCGL:FareFrame_UK_PI_FARE_NETWORK_PRICE:SCGL_products:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+          <Name>Prices for S South Glos MR 2</Name>
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_PRICE:FXCP" />
+          <FrameDefaults>
+            <DefaultCurrency>GBP</DefaultCurrency>
+          </FrameDefaults>
+          <prerequisites>
+            <FareFrameRef versionRef="1.0" ref="epd:UK:SCGL:FareFrame_UK_PI_FARE_PRODUCT:SCGL_products:op" />
+          </prerequisites>
+          <fareTables>
+            <FareTable version="1.0" id="fareTable@pass@S_South_Glos_MR_2@s.glos_1_OA_U19">
+              <Name>s.glos 1 OA U19</Name>
+              <pricesFor>
+                <PreassignedFareProductRef version="1.0" ref="pass@S_South_Glos_MR_2@s.glos_1_OA_U19" />
+                <SalesOfferPackageRef version="1.0" ref="SOP@pass@S_South_Glos_MR_2@s.glos_1_OA_U19@smartOnWeb" />
+                <SalesOfferPackageRef version="1.0" ref="SOP@pass@S_South_Glos_MR_2@s.glos_1_OA_U19@mobileApp" />
+                <UserProfileRef version="1.0" ref="Tariff@S_South_Glos_MR_2@s.glos_1_OA_U19@UP@youngPerson" />
+              </pricesFor>
+              <prices>
+                <DistanceMatrixElementPrice version="1.0" id="price@pass@S_South_Glos_MR_2@s.glos_1_OA_U19">
+                  <Amount>19.5</Amount>
+                </DistanceMatrixElementPrice>
+              </prices>
+            </FareTable>
+          </fareTables>
+        </FareFrame>
+      </frames>
+    </CompositeFrame>
+    <CompositeFrame version="1.0" id="epd:UK:SCGL:CompositeFrame_UK_PI_METADATA_OFFER::op" dataSourceRef="op:src" responsibilitySetRef="op:metadata">
+      <Name>Common resources for SCGL</Name>
+      <Description>Set of SCGL profile metadata.</Description>
+      <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_METADATA_OFFER:FXCP" />
+      <frames>
+        <FareFrame version="1.0" id="epd:UK:SCGL:FareFrame_UK_PI_METADATA:SCGL_products:op" dataSourceRef="op:src" responsibilitySetRef="op:metadata">
+          <fulfilmentMethods>
+            <FulfilmentMethod version="1.0" id="Fulfilment@mobileApp">
+              <Name>Mobile App</Name>
+              <FulfilmentMethodType>mobileApp</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod version="1.0" id="Fulfilment@onlinePropagation">
+              <Name>Online propagation</Name>
+              <FulfilmentMethodType>validator</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod version="1.0" id="Fulfilment@post">
+              <Name>Send ticket by post</Name>
+              <FulfilmentMethodType>post</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod version="1.0" id="Fulfilment@collectAtCounter">
+              <Name>Collect at counter</Name>
+              <FulfilmentMethodType>ticketOffice</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod version="1.0" id="Fulfilment@collectOnBoard">
+              <Name>Collect on board</Name>
+              <FulfilmentMethodType>conductor</FulfilmentMethodType>
+            </FulfilmentMethod>
+          </fulfilmentMethods>
+          <typesOfTravelDocuments>
+            <TypeOfTravelDocument version="1.0" id="TravelDocument@mobileApp">
+              <Name>Stored on your mobile phone as m-tickets</Name>
+              <MediaType>mobileApp</MediaType>
+              <MachineReadable>barCode</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument version="1.0" id="TravelDocument@smartCard">
+              <Name>Smart_Card_Ticket</Name>
+              <MediaType>smartCard</MediaType>
+              <MachineReadable>nfc</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument version="1.0" id="TravelDocument@paperTicket">
+              <Name>Printed Ticket</Name>
+              <MediaType>paperTicket</MediaType>
+            </TypeOfTravelDocument>
+          </typesOfTravelDocuments>
+        </FareFrame>
+      </frames>
+    </CompositeFrame>
+  </dataObjects>
+</PublicationDelivery>

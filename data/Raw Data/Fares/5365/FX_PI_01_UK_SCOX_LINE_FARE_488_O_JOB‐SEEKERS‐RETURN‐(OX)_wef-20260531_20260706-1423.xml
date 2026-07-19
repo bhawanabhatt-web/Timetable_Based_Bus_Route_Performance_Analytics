@@ -1,0 +1,1915 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PublicationDelivery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" version="1.1" xsi:schemaLocation="http://www.netex.org.uk/netex http://netex.uk/netex/schema/1.10/xsd/NeTEx_publication.xsd" xmlns="http://www.netex.org.uk/netex">
+  <PublicationTimestamp>2026-07-06T14:23:52.6686285Z</PublicationTimestamp>
+  <ParticipantRef>SCOX</ParticipantRef>
+  <PublicationRequest version="1.0">
+    <RequestTimestamp>2026-07-06T14:23:52.5955334Z</RequestTimestamp>
+    <Description>Request for SCOX bus fares for line 488</Description>
+    <topics>
+      <NetworkFrameTopic>
+        <selectionValidityConditions>
+          <AvailabilityCondition version="1.0" id="r1">
+            <FromDate>2026-05-31T03:00:00Z</FromDate>
+          </AvailabilityCondition>
+        </selectionValidityConditions>
+        <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_LINE_FARE_OFFER:FXCP" />
+        <NetworkFilterByValue>
+          <objectReferences>
+            <OperatorRef versionRef="1.0" ref="noc:SCOX">noc:137857</OperatorRef>
+            <LineRef versionRef="1.0" ref="SCOX:PH0005863:77:488" />
+            <BrandingRef versionRef="1.0" ref="op:SCOX@brand" />
+          </objectReferences>
+        </NetworkFilterByValue>
+      </NetworkFrameTopic>
+    </topics>
+    <RequestPolicy>
+      <RequestDetail>AllWithXref</RequestDetail>
+    </RequestPolicy>
+  </PublicationRequest>
+  <Description>SCOX bus fares for line 488</Description>
+  <dataObjects>
+    <CompositeFrame version="1.1" id="epd:UK:SCOX:CompositeFrame_UK_PI_LINE_FARE_OFFER:trip@SCOX:PH0005863:77:488:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+      <ValidBetween>
+        <FromDate>2026-05-31T03:00:00Z</FromDate>
+      </ValidBetween>
+      <Name>Fares for SCOX SCOX:PH0005863:77:488</Name>
+      <Description>SCOX SCOX:PH0005863:77:488 is accessible as a single trip fare. Prices are given zone to zone, where each zone is a linear group of stops, i.e. fare stage.</Description>
+      <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_LINE_FARE_OFFER:FXCP" />
+      <codespaces>
+        <CodespaceRef ref="epd_data" />
+        <CodespaceRef ref="fxc_metadata" />
+        <CodespaceRef ref="naptStop_data" />
+        <CodespaceRef ref="nptgLocality_data" />
+        <CodespaceRef ref="noc_data" />
+        <CodespaceRef ref="op_data" />
+      </codespaces>
+      <FrameDefaults>
+        <DefaultCodespaceRef ref="op_data" />
+        <DefaultDataSourceRef version="1.0" ref="op:src" />
+        <DefaultResponsibilitySetRef version="1.0" ref="op:tariff_data" />
+        <DefaultCurrency>GBP</DefaultCurrency>
+      </FrameDefaults>
+      <prerequisites>
+        <CompositeFrameRef versionRef="1.0" ref="epd:UK:SCOX:CompositeFrame_UK_PI_METADATA::op" />
+      </prerequisites>
+      <frames>
+        <ResourceFrame version="1.0" id="epd:UK:SCOX:ResourceFrame_UK_PI_COMMON:SCOX:PH0005863:77:488:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+          <Name>Operator specific common resources</Name>
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_COMMON:FXCP" />
+          <codespaces>
+            <Codespace id="epd_data">
+              <Xmlns>epd</Xmlns>
+              <XmlnsUrl>http://fnetex-cen.eu/epd</XmlnsUrl>
+              <Description>European Passenger Information profile data -use for UK frame names</Description>
+            </Codespace>
+            <Codespace id="fxc_metadata">
+              <Xmlns>fxc_metadata</Xmlns>
+              <XmlnsUrl>netex.org.uk/fxc</XmlnsUrl>
+              <Description>UK FareXChange Profile metadata</Description>
+            </Codespace>
+            <Codespace id="naptStop_data">
+              <Xmlns>naptStop</Xmlns>
+              <XmlnsUrl>http://www.naptan.org.uk/stops</XmlnsUrl>
+              <Description>UK National Public Transport Access Nodes: Stops.</Description>
+            </Codespace>
+            <Codespace id="noc_data">
+              <Xmlns>noc</Xmlns>
+              <XmlnsUrl>http://www.traveline.co.uk/noc</XmlnsUrl>
+              <Description>UK national operator codes</Description>
+            </Codespace>
+            <Codespace id="op_data">
+              <Xmlns>op</Xmlns>
+              <XmlnsUrl>http://www.stagecoachbus.com/regional-help-and-contact/oxfordshire</XmlnsUrl>
+              <Description>Operator Data</Description>
+            </Codespace>
+            <Codespace id="nptgLocality_data">
+              <Xmlns>nptgLocality</Xmlns>
+              <XmlnsUrl>http://nptg.org.uk/locations</XmlnsUrl>
+              <Description>National Public Transport gazetteer locations</Description>
+            </Codespace>
+          </codespaces>
+          <dataSources>
+            <DataSource version="1.0" id="op:src">
+              <Email>oxford.enquiries@stagecoachbus.com</Email>
+            </DataSource>
+          </dataSources>
+          <responsibilitySets>
+            <ResponsibilitySet version="1.0" id="op:tariff_data">
+              <Name>Operator Tariffs</Name>
+              <roles>
+                <ResponsibilityRoleAssignment version="1.0" id="op:tariff_data@creates">
+                  <DataRoleType>creates</DataRoleType>
+                  <StakeholderRoleType>FareManagement</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="1.0" ref="noc:SCOX" />
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+            <ResponsibilitySet version="1.0" id="op:network_data">
+              <Name>Operator Network data</Name>
+              <roles>
+                <ResponsibilityRoleAssignment version="1.0" id="op:network_data@creates">
+                  <DataRoleType>creates</DataRoleType>
+                  <StakeholderRoleType>Planning</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="1.0" ref="noc:SCOX" />
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+            <ResponsibilitySet version="1.0" id="op:metadata">
+              <Name>Operator Metadata</Name>
+              <roles>
+                <ResponsibilityRoleAssignment version="1.0" id="op:metadata@creates">
+                  <DataRoleType>creates</DataRoleType>
+                  <StakeholderRoleType>Planning</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="1.0" ref="noc:SCOX" />
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+          </responsibilitySets>
+          <typesOfValue>
+            <ValueSet version="1.0" id="op:Branding" classOfValues="Branding">
+              <Name>Operator Branding</Name>
+              <values>
+                <Branding version="1.0" id="op:SCOX@brand">
+                  <Name>Stagecoach Oxfordshire</Name>
+                  <Url>http://www.stagecoachbus.com/regional-help-and-contact/oxfordshire</Url>
+                </Branding>
+              </values>
+            </ValueSet>
+          </typesOfValue>
+          <organisations>
+            <Operator version="1.0" id="noc:SCOX">
+              <PublicCode>SCOX</PublicCode>
+              <PrivateCode>137857</PrivateCode>
+              <Name>Stagecoach Oxford</Name>
+              <ShortName>Stagecoach Oxfordshire</ShortName>
+              <TradingName>Thames Transit Ltd</TradingName>
+              <ContactDetails>
+                <Phone>03452418000</Phone>
+                <Url>http://www.stagecoachbus.com/regional-help-and-contact/oxfordshire</Url>
+              </ContactDetails>
+              <OrganisationType>operator</OrganisationType>
+              <Address>
+                <Street>Horspath Road, Cowley, Oxford OX4 2RY</Street>
+              </Address>
+              <PrimaryMode>bus</PrimaryMode>
+              <CustomerServiceContactDetails>
+                <Email>oxford.enquiries@stagecoachbus.com</Email>
+              </CustomerServiceContactDetails>
+            </Operator>
+          </organisations>
+        </ResourceFrame>
+        <ServiceFrame version="1.0" id="epd:UK:SCOX:ServiceFrame_UK_PI_NETWORK:SCOX:PH0005863:77:488:op" dataSourceRef="op:src" responsibilitySetRef="op:network_data">
+          <Description>This frame contains the stop and line definitions for the service. It could also be exchanged separately.</Description>
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_NETWORK:FXCP" />
+          <lines>
+            <Line version="1.0" id="SCOX:PH0005863:77:488">
+              <Name>Banbury Town Centre Bus Station (Bay 7) - Chipping Norton Churchill House</Name>
+              <PublicCode>488</PublicCode>
+              <PrivateCode type="txc:Line@id">488</PrivateCode>
+              <OperatorRef versionRef="1.0" ref="noc:SCOX">noc:137857</OperatorRef>
+            </Line>
+          </lines>
+          <scheduledStopPoints>
+            <ScheduledStopPoint version="1.0" id="atco:340000072BS">
+              <Name>Bus Station</Name>
+              <NameSuffix>Bay 7</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077111" />
+                <Name>Banbury Town Centre</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340000880STN">
+              <Name>Banbury Railway Station</Name>
+              <NameSuffix>Main Entrance</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0020676" />
+                <Name>Banbury</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340025012SOU">
+              <Name>Samuelson House</Name>
+              <NameSuffix>near</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0020676" />
+                <Name>Banbury</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340003165CNR">
+              <Name>Western Crescent</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0071985" />
+                <Name>Calthorpe</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340003166CNR">
+              <Name>Hightown Gardens for Hospital</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0071985" />
+                <Name>Calthorpe</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340003143OPP">
+              <Name>Easington Road</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0020692" />
+                <Name>Easington</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001762WGO">
+              <Name>Wykham Gardens</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0020692" />
+                <Name>Easington</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340004135OUT">
+              <Name>Lansdown Close</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0020692" />
+                <Name>Easington</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340004136OPP">
+              <Name>Parsons Piece</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0020692" />
+                <Name>Easington</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001122CNR">
+              <Name>Chipperfield Park Road</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050257" />
+                <Name>Bloxham</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001757CNR">
+              <Name>Strawberry Terrace</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050257" />
+                <Name>Bloxham</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001758WES">
+              <Name>High Street</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050257" />
+                <Name>Bloxham</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340002006OUT">
+              <Name>Church</Name>
+              <NameSuffix>o/s</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050257" />
+                <Name>Bloxham</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340003193OPP">
+              <Name>Kings Road</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050257" />
+                <Name>Bloxham</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001752OPP">
+              <Name>Milcombe Hall</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050294" />
+                <Name>Milcombe</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340000540CHU">
+              <Name>New Road Stores</Name>
+              <NameSuffix>o/s</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050294" />
+                <Name>Milcombe</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340000540OPP">
+              <Name>New Road Stores</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050294" />
+                <Name>Milcombe</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001762OUT">
+              <Name>Village Hall</Name>
+              <NameSuffix>o/s</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050294" />
+                <Name>Milcombe</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001763OPP">
+              <Name>The Green</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050294" />
+                <Name>Milcombe</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001751AUS">
+              <Name>Austins Way</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050282" />
+                <Name>Hook Norton</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001750WES">
+              <Name>The Green</Name>
+              <NameSuffix>o/s</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050282" />
+                <Name>Hook Norton</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340000408OPP">
+              <Name>Church</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050282" />
+                <Name>Hook Norton</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001324OPT">
+              <Name>The Pear Tree Inn</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050282" />
+                <Name>Hook Norton</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340000360V">
+              <Name>The Green</Name>
+              <NameSuffix>o/s</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0021049" />
+                <Name>Great Rollright</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340003332OPP">
+              <Name>Over Norton Turn</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050542" />
+                <Name>Over Norton</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340000597OPP">
+              <Name>Fountain Memorial</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050542" />
+                <Name>Over Norton</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001748CNR">
+              <Name>Park Road</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050502" />
+                <Name>Chipping Norton</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340003194OPP">
+              <Name>Spring Street</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050502" />
+                <Name>Chipping Norton</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340000201WSB">
+              <Name>West Street</Name>
+              <NameSuffix>Stop B</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050502" />
+                <Name>Chipping Norton</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340003321SCH">
+              <Name>Chipping Norton School</Name>
+              <NameSuffix>inside</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050502" />
+                <Name>Chipping Norton</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001826OPH">
+              <Name>Walterbush Road</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050502" />
+                <Name>Chipping Norton</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001880HAI">
+              <Name>Hailey Crescent</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050502" />
+                <Name>Chipping Norton</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001827HAI">
+              <Name>Hailey Avenue</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050502" />
+                <Name>Chipping Norton</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001827OPL">
+              <Name>Churchill House</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050502" />
+                <Name>Chipping Norton</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+          </scheduledStopPoints>
+        </ServiceFrame>
+        <ServiceCalendarFrame version="1.0" id="epd:UK:SCOX:ServiceCalendarFrame_UK_PI_CALENDAR:SCOX:PH0005863:77:488:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+          <dayTypes>
+            <DayType version="1.0" id="day_type@Public_Holiday">
+              <Name>Public Holiday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <HolidayTypes>AnyHoliday</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@Christmas_Day">
+              <Name>Christmas Day</Name>
+              <properties>
+                <PropertyOfDay>
+                  <HolidayTypes>AnyHoliday</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@Monday-Thursday">
+              <Name>Monday-Thursday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Monday Tuesday Wednesday Thursday</DaysOfWeek>
+                  <HolidayTypes>WorkingDay</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@Saturday">
+              <Name>Saturday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Saturday</DaysOfWeek>
+                  <HolidayTypes>NotWorkingDay</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@Sunday">
+              <Name>Sunday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Sunday</DaysOfWeek>
+                  <HolidayTypes>NotWorkingDay</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@Friday">
+              <Name>Friday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Friday</DaysOfWeek>
+                  <HolidayTypes>WorkingDay</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+          </dayTypes>
+          <dayTypeAssignments>
+            <DayTypeAssignment version="1.0" id="day_type@Christmas_Day@12/27/2027@2027-12-27" order="1">
+              <Name>12/27/2027</Name>
+              <Date>2027-12-27</Date>
+              <DayTypeRef version="1.0" ref="day_type@Christmas_Day" />
+            </DayTypeAssignment>
+          </dayTypeAssignments>
+        </ServiceCalendarFrame>
+        <FareFrame version="1.0" id="epd:UK:SCOX:FareFrame_UK_PI_FARE_NETWORK:SCOX:PH0005863:77:488:op" dataSourceRef="op:src" responsibilitySetRef="op:network_data">
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_FARE_NETWORK:FXCP" />
+          <fareZones>
+            <FareZone version="1.0" id="zone@1@0@boarding">
+              <Name>Banbury</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000072BS">Bus Station</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@1@0@alighting">
+              <Name>Banbury</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000072BS">Bus Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000072BS">Bus Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000072BS">Bus Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000072BS">Bus Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000072BS">Bus Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000072BS">Bus Station</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@2@1@boarding">
+              <Name>Banbury Rail Stn</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000880STN">Banbury Railway Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340025012SOU">Samuelson House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003165CNR">Western Crescent</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@2@1@alighting">
+              <Name>Banbury Rail Stn</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000880STN">Banbury Railway Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000880STN">Banbury Railway Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000880STN">Banbury Railway Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000880STN">Banbury Railway Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000880STN">Banbury Railway Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000880STN">Banbury Railway Station</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@3@2@boarding">
+              <Name>Horton Hospital</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003166CNR">Hightown Gardens for Hospital</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003143OPP">Easington Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001762WGO">Wykham Gardens</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@3@2@alighting">
+              <Name>Horton Hospital</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340025012SOU">Samuelson House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003165CNR">Western Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003166CNR">Hightown Gardens for Hospital</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340025012SOU">Samuelson House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003165CNR">Western Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003166CNR">Hightown Gardens for Hospital</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340025012SOU">Samuelson House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003165CNR">Western Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003166CNR">Hightown Gardens for Hospital</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340025012SOU">Samuelson House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003165CNR">Western Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003166CNR">Hightown Gardens for Hospital</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340025012SOU">Samuelson House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003165CNR">Western Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003166CNR">Hightown Gardens for Hospital</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340025012SOU">Samuelson House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003165CNR">Western Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003166CNR">Hightown Gardens for Hospital</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@4@3@boarding">
+              <Name>Browning Rd</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340004135OUT">Lansdown Close</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@4@3@alighting">
+              <Name>Browning Rd</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003143OPP">Easington Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001762WGO">Wykham Gardens</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340004135OUT">Lansdown Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003143OPP">Easington Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001762WGO">Wykham Gardens</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340004135OUT">Lansdown Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003143OPP">Easington Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001762WGO">Wykham Gardens</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340004135OUT">Lansdown Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003143OPP">Easington Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001762WGO">Wykham Gardens</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340004135OUT">Lansdown Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003143OPP">Easington Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001762WGO">Wykham Gardens</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340004135OUT">Lansdown Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003143OPP">Easington Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001762WGO">Wykham Gardens</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340004135OUT">Lansdown Close</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@5@4@boarding">
+              <Name>Wykham Xrds</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340004136OPP">Parsons Piece</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@5@4@alighting">
+              <Name>Wykham Xrds</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340004136OPP">Parsons Piece</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340004136OPP">Parsons Piece</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340004136OPP">Parsons Piece</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340004136OPP">Parsons Piece</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340004136OPP">Parsons Piece</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340004136OPP">Parsons Piece</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@6@5@boarding">
+              <Name>Bloxham</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001122CNR">Chipperfield Park Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001757CNR">Strawberry Terrace</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001758WES">High Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002006OUT">Church</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003193OPP">Kings Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001752OPP">Milcombe Hall</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@6@5@alighting">
+              <Name>Bloxham</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001122CNR">Chipperfield Park Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001757CNR">Strawberry Terrace</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001758WES">High Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002006OUT">Church</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003193OPP">Kings Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001122CNR">Chipperfield Park Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001757CNR">Strawberry Terrace</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001758WES">High Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002006OUT">Church</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003193OPP">Kings Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001122CNR">Chipperfield Park Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001757CNR">Strawberry Terrace</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001758WES">High Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002006OUT">Church</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003193OPP">Kings Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001122CNR">Chipperfield Park Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001757CNR">Strawberry Terrace</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001758WES">High Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002006OUT">Church</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003193OPP">Kings Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001122CNR">Chipperfield Park Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001757CNR">Strawberry Terrace</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001758WES">High Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002006OUT">Church</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003193OPP">Kings Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001122CNR">Chipperfield Park Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001757CNR">Strawberry Terrace</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001758WES">High Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002006OUT">Church</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003193OPP">Kings Road</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@7@6@boarding">
+              <Name>Milcombe</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000540CHU">New Road Stores</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000540OPP">New Road Stores</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001762OUT">Village Hall</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001763OPP">The Green</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@7@6@alighting">
+              <Name>Milcombe</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001752OPP">Milcombe Hall</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000540CHU">New Road Stores</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000540OPP">New Road Stores</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001762OUT">Village Hall</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001763OPP">The Green</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001752OPP">Milcombe Hall</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000540CHU">New Road Stores</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000540OPP">New Road Stores</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001762OUT">Village Hall</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001763OPP">The Green</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001752OPP">Milcombe Hall</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000540CHU">New Road Stores</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000540OPP">New Road Stores</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001762OUT">Village Hall</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001763OPP">The Green</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001752OPP">Milcombe Hall</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000540CHU">New Road Stores</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000540OPP">New Road Stores</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001762OUT">Village Hall</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001763OPP">The Green</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001752OPP">Milcombe Hall</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000540CHU">New Road Stores</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000540OPP">New Road Stores</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001762OUT">Village Hall</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001763OPP">The Green</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001752OPP">Milcombe Hall</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000540CHU">New Road Stores</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000540OPP">New Road Stores</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001762OUT">Village Hall</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001763OPP">The Green</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@8@7@boarding">
+              <Name>Hook Norton</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001751AUS">Austins Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001750WES">The Green</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000408OPP">Church</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001324OPT">The Pear Tree Inn</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@8@7@alighting">
+              <Name>Hook Norton</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001751AUS">Austins Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001751AUS">Austins Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001751AUS">Austins Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001751AUS">Austins Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001751AUS">Austins Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001751AUS">Austins Way</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@9@8@boarding">
+              <Name>Great Rollright</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000360V">The Green</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@9@8@alighting">
+              <Name>Great Rollright</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001750WES">The Green</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000408OPP">Church</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001324OPT">The Pear Tree Inn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000360V">The Green</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001750WES">The Green</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000408OPP">Church</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001324OPT">The Pear Tree Inn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000360V">The Green</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001750WES">The Green</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000408OPP">Church</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001324OPT">The Pear Tree Inn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000360V">The Green</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001750WES">The Green</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000408OPP">Church</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001324OPT">The Pear Tree Inn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000360V">The Green</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001750WES">The Green</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000408OPP">Church</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001324OPT">The Pear Tree Inn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000360V">The Green</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001750WES">The Green</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000408OPP">Church</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001324OPT">The Pear Tree Inn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000360V">The Green</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@10@9@boarding">
+              <Name>Shipston Rd</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003332OPP">Over Norton Turn</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@10@9@alighting">
+              <Name>Shipston Rd</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003332OPP">Over Norton Turn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003332OPP">Over Norton Turn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003332OPP">Over Norton Turn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003332OPP">Over Norton Turn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003332OPP">Over Norton Turn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003332OPP">Over Norton Turn</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@11@10@boarding">
+              <Name>Over Norton</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000597OPP">Fountain Memorial</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001748CNR">Park Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003194OPP">Spring Street</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@11@10@alighting">
+              <Name>Over Norton</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000597OPP">Fountain Memorial</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000597OPP">Fountain Memorial</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000597OPP">Fountain Memorial</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000597OPP">Fountain Memorial</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000597OPP">Fountain Memorial</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000597OPP">Fountain Memorial</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@12@11@boarding">
+              <Name>CN West St</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000201WSB">West Street</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@12@11@alighting">
+              <Name>CN West St</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001748CNR">Park Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003194OPP">Spring Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000201WSB">West Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001748CNR">Park Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003194OPP">Spring Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000201WSB">West Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001748CNR">Park Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003194OPP">Spring Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000201WSB">West Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001748CNR">Park Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003194OPP">Spring Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000201WSB">West Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001748CNR">Park Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003194OPP">Spring Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000201WSB">West Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001748CNR">Park Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003194OPP">Spring Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000201WSB">West Street</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@13@12@boarding">
+              <Name>CN Cornish Rd</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003321SCH">Chipping Norton School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001826OPH">Walterbush Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001880HAI">Hailey Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001827HAI">Hailey Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001827OPL">Churchill House</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@13@12@alighting">
+              <Name>CN Cornish Rd</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003321SCH">Chipping Norton School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001826OPH">Walterbush Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001880HAI">Hailey Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001827HAI">Hailey Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001827OPL">Churchill House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003321SCH">Chipping Norton School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001826OPH">Walterbush Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001880HAI">Hailey Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001827HAI">Hailey Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001827OPL">Churchill House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003321SCH">Chipping Norton School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001826OPH">Walterbush Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001880HAI">Hailey Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001827HAI">Hailey Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001827OPL">Churchill House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003321SCH">Chipping Norton School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001826OPH">Walterbush Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001880HAI">Hailey Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001827HAI">Hailey Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001827OPL">Churchill House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003321SCH">Chipping Norton School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001826OPH">Walterbush Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001880HAI">Hailey Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001827HAI">Hailey Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001827OPL">Churchill House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003321SCH">Chipping Norton School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001826OPH">Walterbush Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001880HAI">Hailey Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001827HAI">Hailey Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001827OPL">Churchill House</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+          </fareZones>
+        </FareFrame>
+        <FareFrame version="1.0" id="epd:UK:SCOX:FareFrame_UK_PI_FARE_PRODUCT:SCOX:PH0005863:77:488:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+          <Name>Fare products</Name>
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_FARE_PRODUCT:FXCP" />
+          <tariffs>
+            <Tariff version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)">
+              <validityConditions>
+                <ValidBetween>
+                  <FromDate>2026-05-31T03:00:00Z</FromDate>
+                </ValidBetween>
+              </validityConditions>
+              <Name>Tariff for Jobseeker Return</Name>
+              <OperatorRef versionRef="1.0" ref="noc:SCOX">noc:137857</OperatorRef>
+              <LineRef versionRef="1.0" ref="SCOX:PH0005863:77:488" />
+              <TypeOfTariffRef versionRef="fxc:v1.0" ref="fxc:zone_to_zone" />
+              <TariffBasis>zoneToZone</TariffBasis>
+              <qualityStructureFactors>
+                <FareDemandFactor version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Demand">
+                  <validityConditions>
+                    <AvailabilityCondition version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Condition@day_type@Monday-Thursday">
+                      <IsAvailable>true</IsAvailable>
+                      <dayTypes>
+                        <DayTypeRef version="1.0" ref="day_type@Monday-Thursday" />
+                      </dayTypes>
+                    </AvailabilityCondition>
+                    <AvailabilityCondition version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Condition@day_type@Saturday">
+                      <IsAvailable>true</IsAvailable>
+                      <dayTypes>
+                        <DayTypeRef version="1.0" ref="day_type@Saturday" />
+                      </dayTypes>
+                    </AvailabilityCondition>
+                    <AvailabilityCondition version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Condition@day_type@Sunday">
+                      <IsAvailable>true</IsAvailable>
+                      <dayTypes>
+                        <DayTypeRef version="1.0" ref="day_type@Sunday" />
+                      </dayTypes>
+                    </AvailabilityCondition>
+                    <AvailabilityCondition version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Condition@day_type@Public_Holiday">
+                      <IsAvailable>true</IsAvailable>
+                      <dayTypes>
+                        <DayTypeRef version="1.0" ref="day_type@Public_Holiday" />
+                      </dayTypes>
+                    </AvailabilityCondition>
+                    <AvailabilityCondition version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Condition@day_type@Friday">
+                      <IsAvailable>true</IsAvailable>
+                      <dayTypes>
+                        <DayTypeRef version="1.0" ref="day_type@Friday" />
+                      </dayTypes>
+                    </AvailabilityCondition>
+                  </validityConditions>
+                </FareDemandFactor>
+              </qualityStructureFactors>
+              <fareStructureElements>
+                <FareStructureElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Conditions_of_travel@Outbound">
+                  <Name>Conditions of travel</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:travel_conditions" />
+                  <GenericParameterAssignment version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Conditions_of_travel@Outbound" order="1">
+                    <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:condition_of_use" />
+                    <LimitationGroupingType>AND</LimitationGroupingType>
+                    <limitations>
+                      <Transferability version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Conditions_of_travel@Outbound@Transferability">
+                        <Name>Ticket is not transferable</Name>
+                        <CanTransfer>false</CanTransfer>
+                      </Transferability>
+                      <RoundTrip version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Conditions_of_travel@Outbound@Trip">
+                        <Name>Return Trip</Name>
+                        <TripType>returnOut</TripType>
+                      </RoundTrip>
+                      <FrequencyOfUse version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Conditions_of_travel@Outbound@Frequency">
+                        <Name>One trip no transfers</Name>
+                        <FrequencyOfUseType>none</FrequencyOfUseType>
+                      </FrequencyOfUse>
+                      <UsageValidityPeriod version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Conditions_of_travel@Outbound@Validity">
+                        <UsageTrigger>startOutboundRide</UsageTrigger>
+                        <UsageEnd>endOfRide</UsageEnd>
+                      </UsageValidityPeriod>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Conditions_of_travel@Inbound">
+                  <Name>Conditions of travel</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:travel_conditions" />
+                  <GenericParameterAssignment version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Conditions_of_travel@Inbound" order="1">
+                    <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:condition_of_use" />
+                    <LimitationGroupingType>AND</LimitationGroupingType>
+                    <limitations>
+                      <Transferability version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Conditions_of_travel@Inbound@Transferability">
+                        <Name>Ticket is not transferable</Name>
+                        <CanTransfer>false</CanTransfer>
+                      </Transferability>
+                      <RoundTrip version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Conditions_of_travel@Inbound@Trip">
+                        <Name>Return Trip</Name>
+                        <TripType>returnBack</TripType>
+                      </RoundTrip>
+                      <FrequencyOfUse version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Conditions_of_travel@Inbound@Frequency">
+                        <Name>One trip no transfers</Name>
+                        <FrequencyOfUseType>none</FrequencyOfUseType>
+                      </FrequencyOfUse>
+                      <UsageValidityPeriod version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Conditions_of_travel@Inbound@Validity">
+                        <UsageTrigger>startOutboundRide</UsageTrigger>
+                        <UsageEnd>endOfFareDay</UsageEnd>
+                        <EndTime>03:59:59</EndTime>
+                      </UsageValidityPeriod>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Availability">
+                  <Name>Timebands for travel</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:access_when" />
+                  <qualityStructureFactors>
+                    <FareDemandFactorRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Demand" />
+                  </qualityStructureFactors>
+                </FareStructureElement>
+                <FareStructureElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Eligibility">
+                  <Name>Eligible user types</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:eligibility" />
+                  <GenericParameterAssignment version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Eligibility" order="1">
+                    <Name>Eligibility to purchase</Name>
+                    <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:eligible" />
+                    <limitations>
+                      <UserProfile version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@UP@adult">
+                        <Name>Adult</Name>
+                        <TypeOfConcessionRef versionRef="fxc:v1.0" ref="fxc:adult" />
+                        <UserType>adult</UserType>
+                      </UserProfile>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Access_Lines">
+                  <Name>Available lines</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:access" />
+                  <distanceMatrixElements>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+1@0">
+                      <Name>Banbury to Banbury</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@1@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@1@0@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+2@1">
+                      <Name>Banbury to Banbury Rail Stn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@1@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@2@1@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+3@2">
+                      <Name>Banbury to Horton Hospital</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@1@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@3@2@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+4@3">
+                      <Name>Banbury to Browning Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@1@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@4@3@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+5@4">
+                      <Name>Banbury to Wykham Xrds</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@1@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@5@4@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+6@5">
+                      <Name>Banbury to Bloxham</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@1@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@6@5@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+7@6">
+                      <Name>Banbury to Milcombe</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@1@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@7@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+8@7">
+                      <Name>Banbury to Hook Norton</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@1@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@8@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+9@8">
+                      <Name>Banbury to Great Rollright</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@1@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@9@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+10@9">
+                      <Name>Banbury to Shipston Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@1@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@10@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+11@10">
+                      <Name>Banbury to Over Norton</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@1@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@11@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+12@11">
+                      <Name>Banbury to CN West St</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@1@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@12@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+13@12">
+                      <Name>Banbury to CN Cornish Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@1@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@13@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+2@1">
+                      <Name>Banbury Rail Stn to Banbury Rail Stn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@2@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@2@1@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+3@2">
+                      <Name>Banbury Rail Stn to Horton Hospital</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@2@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@3@2@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+4@3">
+                      <Name>Banbury Rail Stn to Browning Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@2@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@4@3@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+5@4">
+                      <Name>Banbury Rail Stn to Wykham Xrds</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@2@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@5@4@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+6@5">
+                      <Name>Banbury Rail Stn to Bloxham</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@2@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@6@5@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+7@6">
+                      <Name>Banbury Rail Stn to Milcombe</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@2@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@7@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+8@7">
+                      <Name>Banbury Rail Stn to Hook Norton</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@2@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@8@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+9@8">
+                      <Name>Banbury Rail Stn to Great Rollright</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@2@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@9@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+10@9">
+                      <Name>Banbury Rail Stn to Shipston Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@2@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@10@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+11@10">
+                      <Name>Banbury Rail Stn to Over Norton</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@2@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@11@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+12@11">
+                      <Name>Banbury Rail Stn to CN West St</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@2@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@12@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+13@12">
+                      <Name>Banbury Rail Stn to CN Cornish Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@2@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@13@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+3@2">
+                      <Name>Horton Hospital to Horton Hospital</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@3@2@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@3@2@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+4@3">
+                      <Name>Horton Hospital to Browning Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@3@2@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@4@3@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+5@4">
+                      <Name>Horton Hospital to Wykham Xrds</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@3@2@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@5@4@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+6@5">
+                      <Name>Horton Hospital to Bloxham</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@3@2@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@6@5@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+7@6">
+                      <Name>Horton Hospital to Milcombe</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@3@2@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@7@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+8@7">
+                      <Name>Horton Hospital to Hook Norton</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@3@2@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@8@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+9@8">
+                      <Name>Horton Hospital to Great Rollright</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@3@2@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@9@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+10@9">
+                      <Name>Horton Hospital to Shipston Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@3@2@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@10@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+11@10">
+                      <Name>Horton Hospital to Over Norton</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@3@2@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@11@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+12@11">
+                      <Name>Horton Hospital to CN West St</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@3@2@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@12@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+13@12">
+                      <Name>Horton Hospital to CN Cornish Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@3@2@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@13@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@4@3+4@3">
+                      <Name>Browning Rd to Browning Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@4@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@4@3@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@4@3+5@4">
+                      <Name>Browning Rd to Wykham Xrds</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@4@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@5@4@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@4@3+6@5">
+                      <Name>Browning Rd to Bloxham</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@4@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@6@5@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@4@3+7@6">
+                      <Name>Browning Rd to Milcombe</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@4@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@7@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@4@3+8@7">
+                      <Name>Browning Rd to Hook Norton</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@4@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@8@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@4@3+9@8">
+                      <Name>Browning Rd to Great Rollright</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@4@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@9@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@4@3+10@9">
+                      <Name>Browning Rd to Shipston Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@4@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@10@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@4@3+11@10">
+                      <Name>Browning Rd to Over Norton</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@4@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@11@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@4@3+12@11">
+                      <Name>Browning Rd to CN West St</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@4@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@12@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@4@3+13@12">
+                      <Name>Browning Rd to CN Cornish Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@4@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@13@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@5@4+5@4">
+                      <Name>Wykham Xrds to Wykham Xrds</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@5@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@5@4@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@5@4+6@5">
+                      <Name>Wykham Xrds to Bloxham</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@5@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@6@5@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@5@4+7@6">
+                      <Name>Wykham Xrds to Milcombe</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@5@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@7@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@5@4+8@7">
+                      <Name>Wykham Xrds to Hook Norton</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@5@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@8@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@5@4+9@8">
+                      <Name>Wykham Xrds to Great Rollright</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@5@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@9@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@5@4+10@9">
+                      <Name>Wykham Xrds to Shipston Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@5@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@10@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@5@4+11@10">
+                      <Name>Wykham Xrds to Over Norton</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@5@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@11@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@5@4+12@11">
+                      <Name>Wykham Xrds to CN West St</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@5@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@12@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@5@4+13@12">
+                      <Name>Wykham Xrds to CN Cornish Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@5@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@13@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@6@5+6@5">
+                      <Name>Bloxham to Bloxham</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@6@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@6@5@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@6@5+7@6">
+                      <Name>Bloxham to Milcombe</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@6@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@7@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@6@5+8@7">
+                      <Name>Bloxham to Hook Norton</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@6@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@8@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@6@5+9@8">
+                      <Name>Bloxham to Great Rollright</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@6@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@9@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@6@5+10@9">
+                      <Name>Bloxham to Shipston Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@6@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@10@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@6@5+11@10">
+                      <Name>Bloxham to Over Norton</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@6@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@11@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@6@5+12@11">
+                      <Name>Bloxham to CN West St</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@6@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@12@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@6@5+13@12">
+                      <Name>Bloxham to CN Cornish Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@6@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@13@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@7@6+7@6">
+                      <Name>Milcombe to Milcombe</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@7@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@7@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@7@6+8@7">
+                      <Name>Milcombe to Hook Norton</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@7@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@8@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@7@6+9@8">
+                      <Name>Milcombe to Great Rollright</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@7@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@9@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@7@6+10@9">
+                      <Name>Milcombe to Shipston Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@7@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@10@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@7@6+11@10">
+                      <Name>Milcombe to Over Norton</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@7@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@11@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@7@6+12@11">
+                      <Name>Milcombe to CN West St</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@7@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@12@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@7@6+13@12">
+                      <Name>Milcombe to CN Cornish Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@7@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@13@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@8@7+8@7">
+                      <Name>Hook Norton to Hook Norton</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@8@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@8@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@8@7+9@8">
+                      <Name>Hook Norton to Great Rollright</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@8@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@9@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@8@7+10@9">
+                      <Name>Hook Norton to Shipston Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@8@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@10@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@8@7+11@10">
+                      <Name>Hook Norton to Over Norton</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@8@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@11@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@8@7+12@11">
+                      <Name>Hook Norton to CN West St</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@8@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@12@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@8@7+13@12">
+                      <Name>Hook Norton to CN Cornish Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@8@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@13@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@9@8+9@8">
+                      <Name>Great Rollright to Great Rollright</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@9@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@9@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@9@8+10@9">
+                      <Name>Great Rollright to Shipston Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@9@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@10@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@9@8+11@10">
+                      <Name>Great Rollright to Over Norton</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@9@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@11@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@9@8+12@11">
+                      <Name>Great Rollright to CN West St</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@9@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@12@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@9@8+13@12">
+                      <Name>Great Rollright to CN Cornish Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@9@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@13@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@10@9+10@9">
+                      <Name>Shipston Rd to Shipston Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@10@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@10@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@10@9+11@10">
+                      <Name>Shipston Rd to Over Norton</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@10@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@11@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@10@9+12@11">
+                      <Name>Shipston Rd to CN West St</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@10@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@12@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@10@9+13@12">
+                      <Name>Shipston Rd to CN Cornish Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@10@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@13@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@11@10+11@10">
+                      <Name>Over Norton to Over Norton</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@11@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@11@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@11@10+12@11">
+                      <Name>Over Norton to CN West St</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@11@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@12@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@11@10+13@12">
+                      <Name>Over Norton to CN Cornish Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@11@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@13@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@12@11+12@11">
+                      <Name>CN West St to CN West St</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@12@11@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@12@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@12@11+13@12">
+                      <Name>CN West St to CN Cornish Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@12@11@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@13@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@13@12+13@12">
+                      <Name>CN Cornish Rd to CN Cornish Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@13@12@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@13@12@alighting" />
+                    </DistanceMatrixElement>
+                  </distanceMatrixElements>
+                  <GenericParameterAssignment version="1.0" id="Tariff@JOB_SEEKERS_RETURN_(OX)@Access_Lines" order="1">
+                    <Name>Lines</Name>
+                    <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:can_access" />
+                    <ValidityParameterAssignmentType>EQ</ValidityParameterAssignmentType>
+                    <validityParameters>
+                      <LineRef versionRef="1.0" ref="SCOX:PH0005863:77:488" />
+                    </validityParameters>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+              </fareStructureElements>
+            </Tariff>
+          </tariffs>
+          <fareProducts>
+            <PreassignedFareProduct version="1.0" id="trip@JOB_SEEKERS_RETURN_(OX)">
+              <Name>Jobseeker Return</Name>
+              <Description>Valid for a return journey. Available to Jobcentre Plus Travel Discount Card holders.</Description>
+              <ChargingMomentRef versionRef="fxc:v1.0" ref="fxc:prepayment" />
+              <ChargingMomentType>beforeTravel</ChargingMomentType>
+              <TypeOfFareProductRef versionRef="fxc:v1.0" ref="fxc:standard_product@trip@day_return" />
+              <OperatorRef version="1.0" ref="noc:SCOX">noc:137857</OperatorRef>
+              <validableElements>
+                <ValidableElement version="1.0" id="trip@JOB_SEEKERS_RETURN_(OX)@Access@Outbound">
+                  <Name>Outbound Ride</Name>
+                  <fareStructureElements>
+                    <FareStructureElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Eligibility" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Conditions_of_travel@Outbound" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Access_Lines" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Availability" />
+                  </fareStructureElements>
+                </ValidableElement>
+                <ValidableElement version="1.0" id="trip@JOB_SEEKERS_RETURN_(OX)@Access@Inbound">
+                  <Name>Return Ride</Name>
+                  <fareStructureElements>
+                    <FareStructureElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Eligibility" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Conditions_of_travel@Inbound" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Access_Lines" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Availability" />
+                  </fareStructureElements>
+                </ValidableElement>
+              </validableElements>
+              <accessRightsInProduct>
+                <AccessRightInProduct version="1.0" id="trip@JOB_SEEKERS_RETURN_(OX)@Outbound" order="1">
+                  <ValidableElementRef version="1.0" ref="trip@JOB_SEEKERS_RETURN_(OX)@Access@Outbound" />
+                </AccessRightInProduct>
+                <AccessRightInProduct version="1.0" id="trip@JOB_SEEKERS_RETURN_(OX)@Inbound" order="2">
+                  <ValidableElementRef version="1.0" ref="trip@JOB_SEEKERS_RETURN_(OX)@Access@Inbound" />
+                </AccessRightInProduct>
+              </accessRightsInProduct>
+              <ProductType>dayReturnTrip</ProductType>
+            </PreassignedFareProduct>
+          </fareProducts>
+          <salesOfferPackages>
+            <SalesOfferPackage version="1.0" id="SOP@trip@JOB_SEEKERS_RETURN_(OX)@paperOnBus">
+              <Name>Jobseeker Return - Onboard (paper ticket)</Name>
+              <distributionAssignments>
+                <DistributionAssignment version="1.0" id="SOP@trip@JOB_SEEKERS_RETURN_(OX)@paperOnBus@onBoard" order="1">
+                  <DistributionChannelType>onBoard</DistributionChannelType>
+                  <PaymentMethods>cash contactlessPaymentCard</PaymentMethods>
+                  <FulfilmentMethodRef version="1.0" ref="Fulfilment@collectOnBoard" />
+                </DistributionAssignment>
+              </distributionAssignments>
+              <salesOfferPackageElements>
+                <SalesOfferPackageElement version="1.0" id="SOP@trip@JOB_SEEKERS_RETURN_(OX)@paperOnBus@paperTicket" order="1">
+                  <TypeOfTravelDocumentRef version="1.0" ref="TravelDocument@paperTicket" />
+                  <PreassignedFareProductRef version="1.0" ref="trip@JOB_SEEKERS_RETURN_(OX)" />
+                </SalesOfferPackageElement>
+              </salesOfferPackageElements>
+            </SalesOfferPackage>
+          </salesOfferPackages>
+        </FareFrame>
+        <FareFrame version="1.0" id="epd:UK:SCOX:FareFrame_UK_PI_FARE_NETWORK_PRICE:SCOX:PH0005863:77:488:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+          <Name>Prices for JOB SEEKERS RETURN (OX)</Name>
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_PRICE:FXCP" />
+          <FrameDefaults>
+            <DefaultCurrency>GBP</DefaultCurrency>
+          </FrameDefaults>
+          <prerequisites>
+            <FareFrameRef versionRef="1.0" ref="epd:UK:SCOX:FareFrame_UK_PI_FARE_PRODUCT:SCOX:PH0005863:77:488:op" />
+          </prerequisites>
+          <fareTables>
+            <FareTable version="1.0" id="fareTable@SCOX:PH0005863:77:488@trip@JOB_SEEKERS_RETURN_(OX)">
+              <Name>CN v Hook N - JOB SEEKERS RETURN (OX)</Name>
+              <pricesFor>
+                <PreassignedFareProductRef version="1.0" ref="trip@JOB_SEEKERS_RETURN_(OX)" />
+                <SalesOfferPackageRef version="1.0" ref="SOP@trip@JOB_SEEKERS_RETURN_(OX)@paperOnBus" />
+                <UserProfileRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@UP@adult" />
+              </pricesFor>
+              <specifics>
+                <LineRef versionRef="1.0" ref="SCOX:PH0005863:77:488" />
+              </specifics>
+              <prices>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+5@4@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>2.65</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+5@4" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+6@5@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>3.35</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+6@5" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+7@6@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+7@6" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+8@7@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+8@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+9@8@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.25</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+9@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+10@9@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.25</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+10@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+11@10@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.25</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+11@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+12@11@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.25</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+12@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+13@12@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.25</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@1@0+13@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+5@4@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>2.65</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+5@4" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+6@5@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>3.35</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+6@5" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+7@6@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+7@6" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+8@7@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+8@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+9@8@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+9@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+10@9@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+10@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+11@10@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+11@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+12@11@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+12@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+13@12@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@2@1+13@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+5@4@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>2.65</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+5@4" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+6@5@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>3.35</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+6@5" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+7@6@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+7@6" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+8@7@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+8@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+9@8@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.25</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+9@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+10@9@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.25</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+10@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+11@10@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.25</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+11@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+12@11@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.25</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+12@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+13@12@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.25</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@3@2+13@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@4@3+5@4@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>2.65</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@4@3+5@4" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@4@3+6@5@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>3.35</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@4@3+6@5" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@4@3+7@6@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>3.35</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@4@3+7@6" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@4@3+8@7@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@4@3+8@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@4@3+9@8@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.25</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@4@3+9@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@4@3+10@9@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.25</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@4@3+10@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@4@3+11@10@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.25</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@4@3+11@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@4@3+12@11@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.25</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@4@3+12@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@4@3+13@12@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.25</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@4@3+13@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@5@4+6@5@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>2.65</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@5@4+6@5" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@5@4+7@6@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>3.35</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@5@4+7@6" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@5@4+8@7@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@5@4+8@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@5@4+9@8@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.25</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@5@4+9@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@5@4+10@9@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.25</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@5@4+10@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@5@4+11@10@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.25</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@5@4+11@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@5@4+12@11@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.25</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@5@4+12@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@5@4+13@12@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.25</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@5@4+13@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@6@5+6@5@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>2.65</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@6@5+6@5" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@6@5+7@6@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>2.65</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@6@5+7@6" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@6@5+8@7@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@6@5+8@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@6@5+9@8@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@6@5+9@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@6@5+10@9@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.25</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@6@5+10@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@6@5+11@10@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.25</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@6@5+11@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@6@5+12@11@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.25</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@6@5+12@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@6@5+13@12@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.25</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@6@5+13@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@7@6+7@6@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>2.65</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@7@6+7@6" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@7@6+8@7@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@7@6+8@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@7@6+9@8@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@7@6+9@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@7@6+10@9@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.25</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@7@6+10@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@7@6+11@10@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.25</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@7@6+11@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@7@6+12@11@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.25</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@7@6+12@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@7@6+13@12@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.25</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@7@6+13@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@8@7+8@7@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>2.65</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@8@7+8@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@8@7+9@8@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>3.35</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@8@7+9@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@8@7+10@9@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@8@7+10@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@8@7+11@10@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@8@7+11@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@8@7+12@11@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@8@7+12@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@8@7+13@12@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>4.2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@8@7+13@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@9@8+10@9@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>2.65</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@9@8+10@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@9@8+11@10@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>2.65</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@9@8+11@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@9@8+12@11@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>2.65</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@9@8+12@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@9@8+13@12@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>2.65</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@9@8+13@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@10@9+11@10@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>2.65</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@10@9+11@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@10@9+12@11@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>2.65</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@10@9+12@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@10@9+13@12@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>2.65</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@10@9+13@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@11@10+12@11@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>2.65</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@11@10+12@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@11@10+13@12@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>2.65</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@11@10+13@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@12@11+13@12@trip@JOB_SEEKERS_RETURN_(OX)">
+                  <Amount>2</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_RETURN_(OX)@Distance@12@11+13@12" />
+                </DistanceMatrixElementPrice>
+              </prices>
+            </FareTable>
+          </fareTables>
+        </FareFrame>
+      </frames>
+    </CompositeFrame>
+    <CompositeFrame version="1.0" id="epd:UK:SCOX:CompositeFrame_UK_PI_METADATA_OFFER::op" dataSourceRef="op:src" responsibilitySetRef="op:metadata">
+      <Name>Common resources for SCOX</Name>
+      <Description>Set of SCOX profile metadata.</Description>
+      <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_METADATA_OFFER:FXCP" />
+      <frames>
+        <FareFrame version="1.0" id="epd:UK:SCOX:FareFrame_UK_PI_METADATA:SCOX:PH0005863:77:488:op" dataSourceRef="op:src" responsibilitySetRef="op:metadata">
+          <fulfilmentMethods>
+            <FulfilmentMethod version="1.0" id="Fulfilment@mobileApp">
+              <Name>Mobile App</Name>
+              <FulfilmentMethodType>mobileApp</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod version="1.0" id="Fulfilment@onlinePropagation">
+              <Name>Online propagation</Name>
+              <FulfilmentMethodType>validator</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod version="1.0" id="Fulfilment@post">
+              <Name>Send ticket by post</Name>
+              <FulfilmentMethodType>post</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod version="1.0" id="Fulfilment@collectAtCounter">
+              <Name>Collect at counter</Name>
+              <FulfilmentMethodType>ticketOffice</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod version="1.0" id="Fulfilment@collectOnBoard">
+              <Name>Collect on board</Name>
+              <FulfilmentMethodType>conductor</FulfilmentMethodType>
+            </FulfilmentMethod>
+          </fulfilmentMethods>
+          <typesOfTravelDocuments>
+            <TypeOfTravelDocument version="1.0" id="TravelDocument@mobileApp">
+              <Name>Stored on your mobile phone as m-tickets</Name>
+              <MediaType>mobileApp</MediaType>
+              <MachineReadable>barCode</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument version="1.0" id="TravelDocument@smartCard">
+              <Name>Smart_Card_Ticket</Name>
+              <MediaType>smartCard</MediaType>
+              <MachineReadable>nfc</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument version="1.0" id="TravelDocument@paperTicket">
+              <Name>Printed Ticket</Name>
+              <MediaType>paperTicket</MediaType>
+            </TypeOfTravelDocument>
+          </typesOfTravelDocuments>
+        </FareFrame>
+      </frames>
+    </CompositeFrame>
+  </dataObjects>
+</PublicationDelivery>

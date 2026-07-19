@@ -1,0 +1,989 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PublicationDelivery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" version="1.1" xsi:schemaLocation="http://www.netex.org.uk/netex http://netex.uk/netex/schema/1.10/xsd/NeTEx_publication.xsd" xmlns="http://www.netex.org.uk/netex">
+  <PublicationTimestamp>2026-07-06T14:23:52.6686285Z</PublicationTimestamp>
+  <ParticipantRef>SCOX</ParticipantRef>
+  <PublicationRequest version="1.0">
+    <RequestTimestamp>2026-07-06T14:23:52.5955334Z</RequestTimestamp>
+    <Description>Request for SCOX bus fares for line B3</Description>
+    <topics>
+      <NetworkFrameTopic>
+        <selectionValidityConditions>
+          <AvailabilityCondition version="1.0" id="r1">
+            <FromDate>2026-05-31T03:00:00Z</FromDate>
+          </AvailabilityCondition>
+        </selectionValidityConditions>
+        <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_LINE_FARE_OFFER:FXCP" />
+        <NetworkFilterByValue>
+          <objectReferences>
+            <OperatorRef versionRef="1.0" ref="noc:SCOX">noc:137857</OperatorRef>
+            <LineRef versionRef="1.0" ref="SCOX:PH0005863:80:B3" />
+            <BrandingRef versionRef="1.0" ref="op:SCOX@brand" />
+          </objectReferences>
+        </NetworkFilterByValue>
+      </NetworkFrameTopic>
+    </topics>
+    <RequestPolicy>
+      <RequestDetail>AllWithXref</RequestDetail>
+    </RequestPolicy>
+  </PublicationRequest>
+  <Description>SCOX bus fares for line B3</Description>
+  <dataObjects>
+    <CompositeFrame version="1.1" id="epd:UK:SCOX:CompositeFrame_UK_PI_LINE_FARE_OFFER:trip@SCOX:PH0005863:80:B3:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+      <ValidBetween>
+        <FromDate>2026-05-31T03:00:00Z</FromDate>
+      </ValidBetween>
+      <Name>Fares for SCOX SCOX:PH0005863:80:B3</Name>
+      <Description>SCOX SCOX:PH0005863:80:B3 is accessible as a single trip fare. Prices are given zone to zone, where each zone is a linear group of stops, i.e. fare stage.</Description>
+      <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_LINE_FARE_OFFER:FXCP" />
+      <codespaces>
+        <CodespaceRef ref="epd_data" />
+        <CodespaceRef ref="fxc_metadata" />
+        <CodespaceRef ref="naptStop_data" />
+        <CodespaceRef ref="nptgLocality_data" />
+        <CodespaceRef ref="noc_data" />
+        <CodespaceRef ref="op_data" />
+      </codespaces>
+      <FrameDefaults>
+        <DefaultCodespaceRef ref="op_data" />
+        <DefaultDataSourceRef version="1.0" ref="op:src" />
+        <DefaultResponsibilitySetRef version="1.0" ref="op:tariff_data" />
+        <DefaultCurrency>GBP</DefaultCurrency>
+      </FrameDefaults>
+      <prerequisites>
+        <CompositeFrameRef versionRef="1.0" ref="epd:UK:SCOX:CompositeFrame_UK_PI_METADATA::op" />
+      </prerequisites>
+      <frames>
+        <ResourceFrame version="1.0" id="epd:UK:SCOX:ResourceFrame_UK_PI_COMMON:SCOX:PH0005863:80:B3:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+          <Name>Operator specific common resources</Name>
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_COMMON:FXCP" />
+          <codespaces>
+            <Codespace id="epd_data">
+              <Xmlns>epd</Xmlns>
+              <XmlnsUrl>http://fnetex-cen.eu/epd</XmlnsUrl>
+              <Description>European Passenger Information profile data -use for UK frame names</Description>
+            </Codespace>
+            <Codespace id="fxc_metadata">
+              <Xmlns>fxc_metadata</Xmlns>
+              <XmlnsUrl>netex.org.uk/fxc</XmlnsUrl>
+              <Description>UK FareXChange Profile metadata</Description>
+            </Codespace>
+            <Codespace id="naptStop_data">
+              <Xmlns>naptStop</Xmlns>
+              <XmlnsUrl>http://www.naptan.org.uk/stops</XmlnsUrl>
+              <Description>UK National Public Transport Access Nodes: Stops.</Description>
+            </Codespace>
+            <Codespace id="noc_data">
+              <Xmlns>noc</Xmlns>
+              <XmlnsUrl>http://www.traveline.co.uk/noc</XmlnsUrl>
+              <Description>UK national operator codes</Description>
+            </Codespace>
+            <Codespace id="op_data">
+              <Xmlns>op</Xmlns>
+              <XmlnsUrl>http://www.stagecoachbus.com/regional-help-and-contact/oxfordshire</XmlnsUrl>
+              <Description>Operator Data</Description>
+            </Codespace>
+            <Codespace id="nptgLocality_data">
+              <Xmlns>nptgLocality</Xmlns>
+              <XmlnsUrl>http://nptg.org.uk/locations</XmlnsUrl>
+              <Description>National Public Transport gazetteer locations</Description>
+            </Codespace>
+          </codespaces>
+          <dataSources>
+            <DataSource version="1.0" id="op:src">
+              <Email>oxford.enquiries@stagecoachbus.com</Email>
+            </DataSource>
+          </dataSources>
+          <responsibilitySets>
+            <ResponsibilitySet version="1.0" id="op:tariff_data">
+              <Name>Operator Tariffs</Name>
+              <roles>
+                <ResponsibilityRoleAssignment version="1.0" id="op:tariff_data@creates">
+                  <DataRoleType>creates</DataRoleType>
+                  <StakeholderRoleType>FareManagement</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="1.0" ref="noc:SCOX" />
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+            <ResponsibilitySet version="1.0" id="op:network_data">
+              <Name>Operator Network data</Name>
+              <roles>
+                <ResponsibilityRoleAssignment version="1.0" id="op:network_data@creates">
+                  <DataRoleType>creates</DataRoleType>
+                  <StakeholderRoleType>Planning</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="1.0" ref="noc:SCOX" />
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+            <ResponsibilitySet version="1.0" id="op:metadata">
+              <Name>Operator Metadata</Name>
+              <roles>
+                <ResponsibilityRoleAssignment version="1.0" id="op:metadata@creates">
+                  <DataRoleType>creates</DataRoleType>
+                  <StakeholderRoleType>Planning</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="1.0" ref="noc:SCOX" />
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+          </responsibilitySets>
+          <typesOfValue>
+            <ValueSet version="1.0" id="op:Branding" classOfValues="Branding">
+              <Name>Operator Branding</Name>
+              <values>
+                <Branding version="1.0" id="op:SCOX@brand">
+                  <Name>Stagecoach Oxfordshire</Name>
+                  <Url>http://www.stagecoachbus.com/regional-help-and-contact/oxfordshire</Url>
+                </Branding>
+              </values>
+            </ValueSet>
+          </typesOfValue>
+          <organisations>
+            <Operator version="1.0" id="noc:SCOX">
+              <PublicCode>SCOX</PublicCode>
+              <PrivateCode>137857</PrivateCode>
+              <Name>Stagecoach Oxford</Name>
+              <ShortName>Stagecoach Oxfordshire</ShortName>
+              <TradingName>Thames Transit Ltd</TradingName>
+              <ContactDetails>
+                <Phone>03452418000</Phone>
+                <Url>http://www.stagecoachbus.com/regional-help-and-contact/oxfordshire</Url>
+              </ContactDetails>
+              <OrganisationType>operator</OrganisationType>
+              <Address>
+                <Street>Horspath Road, Cowley, Oxford OX4 2RY</Street>
+              </Address>
+              <PrimaryMode>bus</PrimaryMode>
+              <CustomerServiceContactDetails>
+                <Email>oxford.enquiries@stagecoachbus.com</Email>
+              </CustomerServiceContactDetails>
+            </Operator>
+          </organisations>
+        </ResourceFrame>
+        <ServiceFrame version="1.0" id="epd:UK:SCOX:ServiceFrame_UK_PI_NETWORK:SCOX:PH0005863:80:B3:op" dataSourceRef="op:src" responsibilitySetRef="op:network_data">
+          <Description>This frame contains the stop and line definitions for the service. It could also be exchanged separately.</Description>
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_NETWORK:FXCP" />
+          <lines>
+            <Line version="1.0" id="SCOX:PH0005863:80:B3">
+              <Name>Bodicote Bodicote House - Banbury Town Centre Bridge Street (5)</Name>
+              <PublicCode>B3</PublicCode>
+              <PrivateCode type="txc:Line@id">B3</PrivateCode>
+              <OperatorRef versionRef="1.0" ref="noc:SCOX">noc:137857</OperatorRef>
+            </Line>
+          </lines>
+          <scheduledStopPoints>
+            <ScheduledStopPoint version="1.0" id="atco:340001397CNR">
+              <Name>Elton Road</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0076654" />
+                <Name>Cherwell Heights</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001394OPP">
+              <Name>Blenheim Road</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0076654" />
+                <Name>Cherwell Heights</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001401CNR">
+              <Name>Whimbrel Way</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0076654" />
+                <Name>Cherwell Heights</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340017101NOR">
+              <Name>Wren Crescent</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050258" />
+                <Name>Bodicote</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340017102OPP">
+              <Name>Primary School</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050258" />
+                <Name>Bodicote</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340017103ROS">
+              <Name>Rose Way</Name>
+              <NameSuffix>nr</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050258" />
+                <Name>Bodicote</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340017104YAR">
+              <Name>Yarrow Road</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050258" />
+                <Name>Bodicote</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340004128OUT">
+              <Name>Bodicote House</Name>
+              <NameSuffix>o/s</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050258" />
+                <Name>Bodicote</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340000114OPP">
+              <Name>Old Horse and Jockey</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050258" />
+                <Name>Bodicote</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001798DFC">
+              <Name>Town Furlong</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050258" />
+                <Name>Bodicote</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001798CNR">
+              <Name>Freemans Road</Name>
+              <NameSuffix>NE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050258" />
+                <Name>Bodicote</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001596OUT">
+              <Name>Post Office</Name>
+              <NameSuffix>o/s</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050258" />
+                <Name>Bodicote</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001597CNR">
+              <Name>Red House Road</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050258" />
+                <Name>Bodicote</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340017105EAS">
+              <Name>Blackwood Place</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050258" />
+                <Name>Bodicote</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001398OPP">
+              <Name>Kedlestone Rise</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0076654" />
+                <Name>Cherwell Heights</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001393CNR">
+              <Name>Farm Way</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0076654" />
+                <Name>Cherwell Heights</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001396CNR">
+              <Name>Coppice Close</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0076654" />
+                <Name>Cherwell Heights</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001400NEW">
+              <Name>Newbold Close</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0076654" />
+                <Name>Cherwell Heights</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340025012NOR">
+              <Name>Samuelson House</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0020676" />
+                <Name>Banbury</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340000880OPP">
+              <Name>Banbury Railway Station</Name>
+              <NameSuffix>opp Main Entrance</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0020676" />
+                <Name>Banbury</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340000879E">
+              <Name>Bridge Street</Name>
+              <NameSuffix>Stop 5</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077111" />
+                <Name>Banbury Town Centre</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+          </scheduledStopPoints>
+        </ServiceFrame>
+        <ServiceCalendarFrame version="1.0" id="epd:UK:SCOX:ServiceCalendarFrame_UK_PI_CALENDAR:SCOX:PH0005863:80:B3:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+          <dayTypes>
+            <DayType version="1.0" id="day_type@Public_Holiday">
+              <Name>Public Holiday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <HolidayTypes>AnyHoliday</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@Christmas_Day">
+              <Name>Christmas Day</Name>
+              <properties>
+                <PropertyOfDay>
+                  <HolidayTypes>AnyHoliday</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@Monday-Thursday">
+              <Name>Monday-Thursday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Monday Tuesday Wednesday Thursday</DaysOfWeek>
+                  <HolidayTypes>WorkingDay</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@Saturday">
+              <Name>Saturday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Saturday</DaysOfWeek>
+                  <HolidayTypes>NotWorkingDay</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@Sunday">
+              <Name>Sunday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Sunday</DaysOfWeek>
+                  <HolidayTypes>NotWorkingDay</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@Friday">
+              <Name>Friday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Friday</DaysOfWeek>
+                  <HolidayTypes>WorkingDay</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+          </dayTypes>
+          <dayTypeAssignments>
+            <DayTypeAssignment version="1.0" id="day_type@Christmas_Day@12/27/2027@2027-12-27" order="1">
+              <Name>12/27/2027</Name>
+              <Date>2027-12-27</Date>
+              <DayTypeRef version="1.0" ref="day_type@Christmas_Day" />
+            </DayTypeAssignment>
+          </dayTypeAssignments>
+        </ServiceCalendarFrame>
+        <FareFrame version="1.0" id="epd:UK:SCOX:FareFrame_UK_PI_FARE_NETWORK:SCOX:PH0005863:80:B3:op" dataSourceRef="op:src" responsibilitySetRef="op:network_data">
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_FARE_NETWORK:FXCP" />
+          <fareZones>
+            <FareZone version="1.0" id="zone@7@9@boarding">
+              <Name>Bodicote</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001397CNR">Elton Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001394OPP">Blenheim Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001401CNR">Whimbrel Way</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@7@9@alighting">
+              <Name>Bodicote</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001397CNR">Elton Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001394OPP">Blenheim Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001397CNR">Elton Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001394OPP">Blenheim Road</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@6@10@boarding">
+              <Name>Longford Park</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340017101NOR">Wren Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340017102OPP">Primary School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340017103ROS">Rose Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340017104YAR">Yarrow Road</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@6@10@alighting">
+              <Name>Longford Park</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001401CNR">Whimbrel Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340017101NOR">Wren Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001401CNR">Whimbrel Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340017101NOR">Wren Crescent</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@5@11@boarding">
+              <Name>Bodicote</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340004128OUT">Bodicote House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000114OPP">Old Horse and Jockey</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001798DFC">Town Furlong</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001798CNR">Freemans Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001596OUT">Post Office</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001597CNR">Red House Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340017105EAS">Blackwood Place</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@5@11@alighting">
+              <Name>Bodicote</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340017102OPP">Primary School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340017103ROS">Rose Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340017104YAR">Yarrow Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340004128OUT">Bodicote House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340017102OPP">Primary School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340017103ROS">Rose Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340017104YAR">Yarrow Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340004128OUT">Bodicote House</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@4@12@boarding">
+              <Name>Chatsworth Drive</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001398OPP">Kedlestone Rise</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001393CNR">Farm Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001396CNR">Coppice Close</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@4@12@alighting">
+              <Name>Chatsworth Drive</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000114OPP">Old Horse and Jockey</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001798DFC">Town Furlong</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001798CNR">Freemans Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001596OUT">Post Office</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001597CNR">Red House Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340017105EAS">Blackwood Place</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001398OPP">Kedlestone Rise</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000114OPP">Old Horse and Jockey</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001798DFC">Town Furlong</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001798CNR">Freemans Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001596OUT">Post Office</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001597CNR">Red House Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340017105EAS">Blackwood Place</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001398OPP">Kedlestone Rise</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@3@13@boarding">
+              <Name>Bankside</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001400NEW">Newbold Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340025012NOR">Samuelson House</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@3@13@alighting">
+              <Name>Bankside</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001393CNR">Farm Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001396CNR">Coppice Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001400NEW">Newbold Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001393CNR">Farm Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001396CNR">Coppice Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001400NEW">Newbold Close</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@2@14@boarding">
+              <Name>Banbury Rail Stn</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000880OPP">Banbury Railway Station</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@2@14@alighting">
+              <Name>Banbury Rail Stn</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340025012NOR">Samuelson House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000880OPP">Banbury Railway Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340025012NOR">Samuelson House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000880OPP">Banbury Railway Station</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@1@15@boarding">
+              <Name>Banbury</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000879E">Bridge Street</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@1@15@alighting">
+              <Name>Banbury</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000879E">Bridge Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000879E">Bridge Street</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+          </fareZones>
+        </FareFrame>
+        <FareFrame version="1.0" id="epd:UK:SCOX:FareFrame_UK_PI_FARE_PRODUCT:SCOX:PH0005863:80:B3:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+          <Name>Fare products</Name>
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_FARE_PRODUCT:FXCP" />
+          <tariffs>
+            <Tariff version="1.0" id="Tariff@CHILD_SINGLE">
+              <validityConditions>
+                <ValidBetween>
+                  <FromDate>2026-05-31T03:00:00Z</FromDate>
+                </ValidBetween>
+              </validityConditions>
+              <Name>Tariff for Single</Name>
+              <OperatorRef versionRef="1.0" ref="noc:SCOX">noc:137857</OperatorRef>
+              <LineRef versionRef="1.0" ref="SCOX:PH0005863:80:B3" />
+              <TypeOfTariffRef versionRef="fxc:v1.0" ref="fxc:zone_to_zone" />
+              <TariffBasis>zoneToZone</TariffBasis>
+              <fareStructureElements>
+                <FareStructureElement version="1.0" id="Tariff@CHILD_SINGLE@Conditions_of_travel">
+                  <Name>Conditions of travel</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:travel_conditions" />
+                  <GenericParameterAssignment version="1.0" id="Tariff@CHILD_SINGLE@Conditions_of_travel" order="1">
+                    <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:condition_of_use" />
+                    <LimitationGroupingType>AND</LimitationGroupingType>
+                    <limitations>
+                      <Transferability version="1.0" id="Tariff@CHILD_SINGLE@Conditions_of_travel@Transferability">
+                        <Name>Ticket is not transferable</Name>
+                        <CanTransfer>false</CanTransfer>
+                      </Transferability>
+                      <RoundTrip version="1.0" id="Tariff@CHILD_SINGLE@Conditions_of_travel@Trip">
+                        <Name>Single Trip</Name>
+                        <TripType>single</TripType>
+                      </RoundTrip>
+                      <FrequencyOfUse version="1.0" id="Tariff@CHILD_SINGLE@Conditions_of_travel@Frequency">
+                        <Name>One trip no transfers</Name>
+                        <FrequencyOfUseType>none</FrequencyOfUseType>
+                        <MaximalFrequency>1</MaximalFrequency>
+                      </FrequencyOfUse>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement version="1.0" id="Tariff@CHILD_SINGLE@Eligibility">
+                  <Name>Eligible user types</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:eligibility" />
+                  <GenericParameterAssignment version="1.0" id="Tariff@CHILD_SINGLE@Eligibility" order="1">
+                    <Name>Eligibility to purchase</Name>
+                    <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:eligible" />
+                    <limitations>
+                      <UserProfile version="1.0" id="Tariff@CHILD_SINGLE@UP@child">
+                        <Name>Child</Name>
+                        <TypeOfConcessionRef versionRef="fxc:v1.0" ref="fxc:child" />
+                        <UserType>child</UserType>
+                      </UserProfile>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement version="1.0" id="Tariff@CHILD_SINGLE@Access_Lines">
+                  <Name>Available lines</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:access" />
+                  <distanceMatrixElements>
+                    <DistanceMatrixElement version="1.0" id="Tariff@CHILD_SINGLE@Distance@7@9+7@9">
+                      <Name>Bodicote to Bodicote</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@7@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@7@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@CHILD_SINGLE@Distance@7@9+6@10">
+                      <Name>Bodicote to Longford Park</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@7@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@6@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@CHILD_SINGLE@Distance@7@9+5@11">
+                      <Name>Bodicote to Bodicote</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@7@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@5@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@CHILD_SINGLE@Distance@7@9+4@12">
+                      <Name>Bodicote to Chatsworth Drive</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@7@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@4@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@CHILD_SINGLE@Distance@7@9+3@13">
+                      <Name>Bodicote to Bankside</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@7@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@3@13@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@CHILD_SINGLE@Distance@7@9+2@14">
+                      <Name>Bodicote to Banbury Rail Stn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@7@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@2@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@CHILD_SINGLE@Distance@7@9+1@15">
+                      <Name>Bodicote to Banbury</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@7@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@1@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@CHILD_SINGLE@Distance@6@10+6@10">
+                      <Name>Longford Park to Longford Park</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@6@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@6@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@CHILD_SINGLE@Distance@6@10+5@11">
+                      <Name>Longford Park to Bodicote</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@6@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@5@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@CHILD_SINGLE@Distance@6@10+4@12">
+                      <Name>Longford Park to Chatsworth Drive</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@6@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@4@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@CHILD_SINGLE@Distance@6@10+3@13">
+                      <Name>Longford Park to Bankside</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@6@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@3@13@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@CHILD_SINGLE@Distance@6@10+2@14">
+                      <Name>Longford Park to Banbury Rail Stn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@6@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@2@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@CHILD_SINGLE@Distance@6@10+1@15">
+                      <Name>Longford Park to Banbury</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@6@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@1@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@CHILD_SINGLE@Distance@5@11+5@11">
+                      <Name>Bodicote to Bodicote</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@5@11@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@5@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@CHILD_SINGLE@Distance@5@11+4@12">
+                      <Name>Bodicote to Chatsworth Drive</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@5@11@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@4@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@CHILD_SINGLE@Distance@5@11+3@13">
+                      <Name>Bodicote to Bankside</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@5@11@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@3@13@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@CHILD_SINGLE@Distance@5@11+2@14">
+                      <Name>Bodicote to Banbury Rail Stn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@5@11@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@2@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@CHILD_SINGLE@Distance@5@11+1@15">
+                      <Name>Bodicote to Banbury</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@5@11@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@1@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@CHILD_SINGLE@Distance@4@12+4@12">
+                      <Name>Chatsworth Drive to Chatsworth Drive</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@4@12@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@4@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@CHILD_SINGLE@Distance@4@12+3@13">
+                      <Name>Chatsworth Drive to Bankside</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@4@12@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@3@13@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@CHILD_SINGLE@Distance@4@12+2@14">
+                      <Name>Chatsworth Drive to Banbury Rail Stn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@4@12@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@2@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@CHILD_SINGLE@Distance@4@12+1@15">
+                      <Name>Chatsworth Drive to Banbury</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@4@12@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@1@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@CHILD_SINGLE@Distance@3@13+3@13">
+                      <Name>Bankside to Bankside</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@3@13@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@3@13@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@CHILD_SINGLE@Distance@3@13+2@14">
+                      <Name>Bankside to Banbury Rail Stn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@3@13@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@2@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@CHILD_SINGLE@Distance@3@13+1@15">
+                      <Name>Bankside to Banbury</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@3@13@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@1@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@CHILD_SINGLE@Distance@2@14+2@14">
+                      <Name>Banbury Rail Stn to Banbury Rail Stn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@2@14@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@2@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@CHILD_SINGLE@Distance@2@14+1@15">
+                      <Name>Banbury Rail Stn to Banbury</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@2@14@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@1@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@CHILD_SINGLE@Distance@1@15+1@15">
+                      <Name>Banbury to Banbury</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@1@15@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@1@15@alighting" />
+                    </DistanceMatrixElement>
+                  </distanceMatrixElements>
+                  <GenericParameterAssignment version="1.0" id="Tariff@CHILD_SINGLE@Access_Lines" order="1">
+                    <Name>Lines</Name>
+                    <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:can_access" />
+                    <ValidityParameterAssignmentType>EQ</ValidityParameterAssignmentType>
+                    <validityParameters>
+                      <LineRef versionRef="1.0" ref="SCOX:PH0005863:80:B3" />
+                    </validityParameters>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+              </fareStructureElements>
+            </Tariff>
+          </tariffs>
+          <fareProducts>
+            <PreassignedFareProduct version="1.0" id="trip@CHILD_SINGLE">
+              <Name>Single</Name>
+              <Description>Valid for a single journey between two specific points on services operated by Stagecoach</Description>
+              <ChargingMomentRef versionRef="fxc:v1.0" ref="fxc:prepayment" />
+              <ChargingMomentType>beforeTravel</ChargingMomentType>
+              <TypeOfFareProductRef versionRef="fxc:v1.0" ref="fxc:standard_product@trip@single" />
+              <OperatorRef version="1.0" ref="noc:SCOX">noc:137857</OperatorRef>
+              <validableElements>
+                <ValidableElement version="1.0" id="trip@CHILD_SINGLE@Access">
+                  <Name>Single Ride</Name>
+                  <fareStructureElements>
+                    <FareStructureElementRef version="1.0" ref="Tariff@CHILD_SINGLE@Eligibility" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@CHILD_SINGLE@Conditions_of_travel" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@CHILD_SINGLE@Access_Lines" />
+                  </fareStructureElements>
+                </ValidableElement>
+              </validableElements>
+              <accessRightsInProduct>
+                <AccessRightInProduct version="1.0" id="trip@CHILD_SINGLE" order="1">
+                  <ValidableElementRef version="1.0" ref="trip@CHILD_SINGLE@Access" />
+                </AccessRightInProduct>
+              </accessRightsInProduct>
+              <ProductType>singleTrip</ProductType>
+            </PreassignedFareProduct>
+          </fareProducts>
+          <salesOfferPackages>
+            <SalesOfferPackage version="1.0" id="SOP@trip@CHILD_SINGLE@paperOnBus">
+              <Name>Single - Onboard (paper ticket)</Name>
+              <distributionAssignments>
+                <DistributionAssignment version="1.0" id="SOP@trip@CHILD_SINGLE@paperOnBus@onBoard" order="1">
+                  <DistributionChannelType>onBoard</DistributionChannelType>
+                  <PaymentMethods>cash contactlessPaymentCard</PaymentMethods>
+                  <FulfilmentMethodRef version="1.0" ref="Fulfilment@collectOnBoard" />
+                </DistributionAssignment>
+              </distributionAssignments>
+              <salesOfferPackageElements>
+                <SalesOfferPackageElement version="1.0" id="SOP@trip@CHILD_SINGLE@paperOnBus@paperTicket" order="1">
+                  <TypeOfTravelDocumentRef version="1.0" ref="TravelDocument@paperTicket" />
+                  <PreassignedFareProductRef version="1.0" ref="trip@CHILD_SINGLE" />
+                </SalesOfferPackageElement>
+              </salesOfferPackageElements>
+            </SalesOfferPackage>
+            <SalesOfferPackage version="1.0" id="SOP@trip@CHILD_SINGLE@mobileApp">
+              <Name>Single - Mobile App</Name>
+              <distributionAssignments>
+                <DistributionAssignment version="1.0" id="SOP@trip@CHILD_SINGLE@mobileApp@mobileDevice" order="1">
+                  <DistributionChannelType>mobileDevice</DistributionChannelType>
+                  <PaymentMethods>creditCard debitCard</PaymentMethods>
+                  <FulfilmentMethodRef version="1.0" ref="Fulfilment@mobileApp" />
+                </DistributionAssignment>
+              </distributionAssignments>
+              <salesOfferPackageElements>
+                <SalesOfferPackageElement version="1.0" id="SOP@trip@CHILD_SINGLE@mobileApp@mobileApp" order="1">
+                  <TypeOfTravelDocumentRef version="1.0" ref="TravelDocument@mobileApp" />
+                  <PreassignedFareProductRef version="1.0" ref="trip@CHILD_SINGLE" />
+                  <validityParameterAssignments>
+                    <GenericParameterAssignment version="1.0" id="SOP@trip@CHILD_SINGLE@mobileApp@mobileApp" order="1">
+                      <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:can_purchase_when" />
+                      <limitations>
+                        <UsageValidityPeriod version="1.0" id="SOP@trip@CHILD_SINGLE@mobileApp@mobileApp@hanging">
+                          <UsageTrigger>purchase</UsageTrigger>
+                          <UsageEnd>productExpiry</UsageEnd>
+                          <StandardDuration>P3M</StandardDuration>
+                          <EndTime>03:59:59</EndTime>
+                        </UsageValidityPeriod>
+                      </limitations>
+                    </GenericParameterAssignment>
+                  </validityParameterAssignments>
+                </SalesOfferPackageElement>
+              </salesOfferPackageElements>
+            </SalesOfferPackage>
+          </salesOfferPackages>
+        </FareFrame>
+        <FareFrame version="1.0" id="epd:UK:SCOX:FareFrame_UK_PI_FARE_NETWORK_PRICE:SCOX:PH0005863:80:B3:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+          <Name>Prices for CHILD SINGLE</Name>
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_PRICE:FXCP" />
+          <FrameDefaults>
+            <DefaultCurrency>GBP</DefaultCurrency>
+          </FrameDefaults>
+          <prerequisites>
+            <FareFrameRef versionRef="1.0" ref="epd:UK:SCOX:FareFrame_UK_PI_FARE_PRODUCT:SCOX:PH0005863:80:B3:op" />
+          </prerequisites>
+          <fareTables>
+            <FareTable version="1.0" id="fareTable@SCOX:PH0005863:80:B3@trip@CHILD_SINGLE">
+              <Name>Longford Park - CHILD SINGLE</Name>
+              <pricesFor>
+                <PreassignedFareProductRef version="1.0" ref="trip@CHILD_SINGLE" />
+                <SalesOfferPackageRef version="1.0" ref="SOP@trip@CHILD_SINGLE@paperOnBus" />
+                <SalesOfferPackageRef version="1.0" ref="SOP@trip@CHILD_SINGLE@mobileApp" />
+                <UserProfileRef version="1.0" ref="Tariff@CHILD_SINGLE@UP@child" />
+              </pricesFor>
+              <specifics>
+                <LineRef versionRef="1.0" ref="SCOX:PH0005863:80:B3" />
+              </specifics>
+              <prices>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@CHILD_SINGLE@Distance@7@9+6@10@trip@CHILD_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@CHILD_SINGLE@Distance@7@9+6@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@CHILD_SINGLE@Distance@7@9+5@11@trip@CHILD_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@CHILD_SINGLE@Distance@7@9+5@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@CHILD_SINGLE@Distance@7@9+4@12@trip@CHILD_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@CHILD_SINGLE@Distance@7@9+4@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@CHILD_SINGLE@Distance@7@9+3@13@trip@CHILD_SINGLE">
+                  <Amount>1.8</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@CHILD_SINGLE@Distance@7@9+3@13" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@CHILD_SINGLE@Distance@7@9+2@14@trip@CHILD_SINGLE">
+                  <Amount>1.8</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@CHILD_SINGLE@Distance@7@9+2@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@CHILD_SINGLE@Distance@7@9+1@15@trip@CHILD_SINGLE">
+                  <Amount>1.8</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@CHILD_SINGLE@Distance@7@9+1@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@CHILD_SINGLE@Distance@6@10+5@11@trip@CHILD_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@CHILD_SINGLE@Distance@6@10+5@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@CHILD_SINGLE@Distance@6@10+4@12@trip@CHILD_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@CHILD_SINGLE@Distance@6@10+4@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@CHILD_SINGLE@Distance@6@10+3@13@trip@CHILD_SINGLE">
+                  <Amount>1.8</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@CHILD_SINGLE@Distance@6@10+3@13" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@CHILD_SINGLE@Distance@6@10+2@14@trip@CHILD_SINGLE">
+                  <Amount>1.8</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@CHILD_SINGLE@Distance@6@10+2@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@CHILD_SINGLE@Distance@6@10+1@15@trip@CHILD_SINGLE">
+                  <Amount>1.8</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@CHILD_SINGLE@Distance@6@10+1@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@CHILD_SINGLE@Distance@5@11+4@12@trip@CHILD_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@CHILD_SINGLE@Distance@5@11+4@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@CHILD_SINGLE@Distance@5@11+3@13@trip@CHILD_SINGLE">
+                  <Amount>1.8</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@CHILD_SINGLE@Distance@5@11+3@13" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@CHILD_SINGLE@Distance@5@11+2@14@trip@CHILD_SINGLE">
+                  <Amount>1.8</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@CHILD_SINGLE@Distance@5@11+2@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@CHILD_SINGLE@Distance@5@11+1@15@trip@CHILD_SINGLE">
+                  <Amount>1.8</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@CHILD_SINGLE@Distance@5@11+1@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@CHILD_SINGLE@Distance@4@12+3@13@trip@CHILD_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@CHILD_SINGLE@Distance@4@12+3@13" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@CHILD_SINGLE@Distance@4@12+2@14@trip@CHILD_SINGLE">
+                  <Amount>1.8</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@CHILD_SINGLE@Distance@4@12+2@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@CHILD_SINGLE@Distance@4@12+1@15@trip@CHILD_SINGLE">
+                  <Amount>1.8</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@CHILD_SINGLE@Distance@4@12+1@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@CHILD_SINGLE@Distance@3@13+2@14@trip@CHILD_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@CHILD_SINGLE@Distance@3@13+2@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@CHILD_SINGLE@Distance@3@13+1@15@trip@CHILD_SINGLE">
+                  <Amount>1.8</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@CHILD_SINGLE@Distance@3@13+1@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@CHILD_SINGLE@Distance@2@14+1@15@trip@CHILD_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@CHILD_SINGLE@Distance@2@14+1@15" />
+                </DistanceMatrixElementPrice>
+              </prices>
+            </FareTable>
+          </fareTables>
+        </FareFrame>
+      </frames>
+    </CompositeFrame>
+    <CompositeFrame version="1.0" id="epd:UK:SCOX:CompositeFrame_UK_PI_METADATA_OFFER::op" dataSourceRef="op:src" responsibilitySetRef="op:metadata">
+      <Name>Common resources for SCOX</Name>
+      <Description>Set of SCOX profile metadata.</Description>
+      <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_METADATA_OFFER:FXCP" />
+      <frames>
+        <FareFrame version="1.0" id="epd:UK:SCOX:FareFrame_UK_PI_METADATA:SCOX:PH0005863:80:B3:op" dataSourceRef="op:src" responsibilitySetRef="op:metadata">
+          <fulfilmentMethods>
+            <FulfilmentMethod version="1.0" id="Fulfilment@mobileApp">
+              <Name>Mobile App</Name>
+              <FulfilmentMethodType>mobileApp</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod version="1.0" id="Fulfilment@onlinePropagation">
+              <Name>Online propagation</Name>
+              <FulfilmentMethodType>validator</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod version="1.0" id="Fulfilment@post">
+              <Name>Send ticket by post</Name>
+              <FulfilmentMethodType>post</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod version="1.0" id="Fulfilment@collectAtCounter">
+              <Name>Collect at counter</Name>
+              <FulfilmentMethodType>ticketOffice</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod version="1.0" id="Fulfilment@collectOnBoard">
+              <Name>Collect on board</Name>
+              <FulfilmentMethodType>conductor</FulfilmentMethodType>
+            </FulfilmentMethod>
+          </fulfilmentMethods>
+          <typesOfTravelDocuments>
+            <TypeOfTravelDocument version="1.0" id="TravelDocument@mobileApp">
+              <Name>Stored on your mobile phone as m-tickets</Name>
+              <MediaType>mobileApp</MediaType>
+              <MachineReadable>barCode</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument version="1.0" id="TravelDocument@smartCard">
+              <Name>Smart_Card_Ticket</Name>
+              <MediaType>smartCard</MediaType>
+              <MachineReadable>nfc</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument version="1.0" id="TravelDocument@paperTicket">
+              <Name>Printed Ticket</Name>
+              <MediaType>paperTicket</MediaType>
+            </TypeOfTravelDocument>
+          </typesOfTravelDocuments>
+        </FareFrame>
+      </frames>
+    </CompositeFrame>
+  </dataObjects>
+</PublicationDelivery>

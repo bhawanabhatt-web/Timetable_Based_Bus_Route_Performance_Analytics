@@ -1,0 +1,2323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PublicationDelivery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" version="1.1" xsi:schemaLocation="http://www.netex.org.uk/netex http://netex.uk/netex/schema/1.10/xsd/NeTEx_publication.xsd" xmlns="http://www.netex.org.uk/netex">
+  <PublicationTimestamp>2026-07-06T14:23:52.6686285Z</PublicationTimestamp>
+  <ParticipantRef>SCOX</ParticipantRef>
+  <PublicationRequest version="1.0">
+    <RequestTimestamp>2026-07-06T14:23:52.5955334Z</RequestTimestamp>
+    <Description>Request for SCOX bus fares for line 500</Description>
+    <topics>
+      <NetworkFrameTopic>
+        <selectionValidityConditions>
+          <AvailabilityCondition version="1.0" id="r1">
+            <FromDate>2026-05-31T03:00:00Z</FromDate>
+          </AvailabilityCondition>
+        </selectionValidityConditions>
+        <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_LINE_FARE_OFFER:FXCP" />
+        <NetworkFilterByValue>
+          <objectReferences>
+            <OperatorRef versionRef="1.0" ref="noc:SCOX">noc:137857</OperatorRef>
+            <LineRef versionRef="1.0" ref="SCOX:PH0005863:78:500" />
+            <BrandingRef versionRef="1.0" ref="op:SCOX@brand" />
+          </objectReferences>
+        </NetworkFilterByValue>
+      </NetworkFrameTopic>
+    </topics>
+    <RequestPolicy>
+      <RequestDetail>AllWithXref</RequestDetail>
+    </RequestPolicy>
+  </PublicationRequest>
+  <Description>SCOX bus fares for line 500</Description>
+  <dataObjects>
+    <CompositeFrame version="1.1" id="epd:UK:SCOX:CompositeFrame_UK_PI_LINE_FARE_OFFER:trip@SCOX:PH0005863:78:500:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+      <ValidBetween>
+        <FromDate>2026-05-31T03:00:00Z</FromDate>
+      </ValidBetween>
+      <Name>Fares for SCOX SCOX:PH0005863:78:500</Name>
+      <Description>SCOX SCOX:PH0005863:78:500 is accessible as a single trip fare. Prices are given zone to zone, where each zone is a linear group of stops, i.e. fare stage.</Description>
+      <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_LINE_FARE_OFFER:FXCP" />
+      <codespaces>
+        <CodespaceRef ref="epd_data" />
+        <CodespaceRef ref="fxc_metadata" />
+        <CodespaceRef ref="naptStop_data" />
+        <CodespaceRef ref="nptgLocality_data" />
+        <CodespaceRef ref="noc_data" />
+        <CodespaceRef ref="op_data" />
+      </codespaces>
+      <FrameDefaults>
+        <DefaultCodespaceRef ref="op_data" />
+        <DefaultDataSourceRef version="1.0" ref="op:src" />
+        <DefaultResponsibilitySetRef version="1.0" ref="op:tariff_data" />
+        <DefaultCurrency>GBP</DefaultCurrency>
+      </FrameDefaults>
+      <prerequisites>
+        <CompositeFrameRef versionRef="1.0" ref="epd:UK:SCOX:CompositeFrame_UK_PI_METADATA::op" />
+      </prerequisites>
+      <frames>
+        <ResourceFrame version="1.0" id="epd:UK:SCOX:ResourceFrame_UK_PI_COMMON:SCOX:PH0005863:78:500:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+          <Name>Operator specific common resources</Name>
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_COMMON:FXCP" />
+          <codespaces>
+            <Codespace id="epd_data">
+              <Xmlns>epd</Xmlns>
+              <XmlnsUrl>http://fnetex-cen.eu/epd</XmlnsUrl>
+              <Description>European Passenger Information profile data -use for UK frame names</Description>
+            </Codespace>
+            <Codespace id="fxc_metadata">
+              <Xmlns>fxc_metadata</Xmlns>
+              <XmlnsUrl>netex.org.uk/fxc</XmlnsUrl>
+              <Description>UK FareXChange Profile metadata</Description>
+            </Codespace>
+            <Codespace id="naptStop_data">
+              <Xmlns>naptStop</Xmlns>
+              <XmlnsUrl>http://www.naptan.org.uk/stops</XmlnsUrl>
+              <Description>UK National Public Transport Access Nodes: Stops.</Description>
+            </Codespace>
+            <Codespace id="noc_data">
+              <Xmlns>noc</Xmlns>
+              <XmlnsUrl>http://www.traveline.co.uk/noc</XmlnsUrl>
+              <Description>UK national operator codes</Description>
+            </Codespace>
+            <Codespace id="op_data">
+              <Xmlns>op</Xmlns>
+              <XmlnsUrl>http://www.stagecoachbus.com/regional-help-and-contact/oxfordshire</XmlnsUrl>
+              <Description>Operator Data</Description>
+            </Codespace>
+            <Codespace id="nptgLocality_data">
+              <Xmlns>nptgLocality</Xmlns>
+              <XmlnsUrl>http://nptg.org.uk/locations</XmlnsUrl>
+              <Description>National Public Transport gazetteer locations</Description>
+            </Codespace>
+          </codespaces>
+          <dataSources>
+            <DataSource version="1.0" id="op:src">
+              <Email>oxford.enquiries@stagecoachbus.com</Email>
+            </DataSource>
+          </dataSources>
+          <responsibilitySets>
+            <ResponsibilitySet version="1.0" id="op:tariff_data">
+              <Name>Operator Tariffs</Name>
+              <roles>
+                <ResponsibilityRoleAssignment version="1.0" id="op:tariff_data@creates">
+                  <DataRoleType>creates</DataRoleType>
+                  <StakeholderRoleType>FareManagement</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="1.0" ref="noc:SCOX" />
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+            <ResponsibilitySet version="1.0" id="op:network_data">
+              <Name>Operator Network data</Name>
+              <roles>
+                <ResponsibilityRoleAssignment version="1.0" id="op:network_data@creates">
+                  <DataRoleType>creates</DataRoleType>
+                  <StakeholderRoleType>Planning</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="1.0" ref="noc:SCOX" />
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+            <ResponsibilitySet version="1.0" id="op:metadata">
+              <Name>Operator Metadata</Name>
+              <roles>
+                <ResponsibilityRoleAssignment version="1.0" id="op:metadata@creates">
+                  <DataRoleType>creates</DataRoleType>
+                  <StakeholderRoleType>Planning</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="1.0" ref="noc:SCOX" />
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+          </responsibilitySets>
+          <typesOfValue>
+            <ValueSet version="1.0" id="op:Branding" classOfValues="Branding">
+              <Name>Operator Branding</Name>
+              <values>
+                <Branding version="1.0" id="op:SCOX@brand">
+                  <Name>Stagecoach Oxfordshire</Name>
+                  <Url>http://www.stagecoachbus.com/regional-help-and-contact/oxfordshire</Url>
+                </Branding>
+              </values>
+            </ValueSet>
+          </typesOfValue>
+          <organisations>
+            <Operator version="1.0" id="noc:SCOX">
+              <PublicCode>SCOX</PublicCode>
+              <PrivateCode>137857</PrivateCode>
+              <Name>Stagecoach Oxford</Name>
+              <ShortName>Stagecoach Oxfordshire</ShortName>
+              <TradingName>Thames Transit Ltd</TradingName>
+              <ContactDetails>
+                <Phone>03452418000</Phone>
+                <Url>http://www.stagecoachbus.com/regional-help-and-contact/oxfordshire</Url>
+              </ContactDetails>
+              <OrganisationType>operator</OrganisationType>
+              <Address>
+                <Street>Horspath Road, Cowley, Oxford OX4 2RY</Street>
+              </Address>
+              <PrimaryMode>bus</PrimaryMode>
+              <CustomerServiceContactDetails>
+                <Email>oxford.enquiries@stagecoachbus.com</Email>
+              </CustomerServiceContactDetails>
+            </Operator>
+          </organisations>
+        </ResourceFrame>
+        <ServiceFrame version="1.0" id="epd:UK:SCOX:ServiceFrame_UK_PI_NETWORK:SCOX:PH0005863:78:500:op" dataSourceRef="op:src" responsibilitySetRef="op:network_data">
+          <Description>This frame contains the stop and line definitions for the service. It could also be exchanged separately.</Description>
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_NETWORK:FXCP" />
+          <lines>
+            <Line version="1.0" id="SCOX:PH0005863:78:500">
+              <Name>Banbury Town Centre Bus Station (5) - Bicester Bicester Village Station</Name>
+              <PublicCode>500</PublicCode>
+              <PrivateCode type="txc:Line@id">500</PrivateCode>
+              <OperatorRef versionRef="1.0" ref="noc:SCOX">noc:137857</OperatorRef>
+            </Line>
+          </lines>
+          <scheduledStopPoints>
+            <ScheduledStopPoint version="1.0" id="atco:3400000725">
+              <Name>Bus Station</Name>
+              <NameSuffix>Bay 5</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077111" />
+                <Name>Banbury Town Centre</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001414MR">
+              <Name>McKeevor Place</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0020701" />
+                <Name>Grimsbury</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001415OUT">
+              <Name>Tesco</Name>
+              <NameSuffix>o/s</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0020701" />
+                <Name>Grimsbury</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001623OPP">
+              <Name>Priory Vale Road</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0020701" />
+                <Name>Grimsbury</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001461EAS">
+              <Name>Stroud Park</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0020701" />
+                <Name>Grimsbury</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001461GRP">
+              <Name>Gateway Retail Park</Name>
+              <NameSuffix>in</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0020676" />
+                <Name>Banbury</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340024012NOR">
+              <Name>Frontier Park</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0020676" />
+                <Name>Banbury</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000534TH">
+              <Name>Banbury Road</Name>
+              <NameSuffix>o/s 12</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049775" />
+                <Name>Chacombe</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000534TL">
+              <Name>Middleton Road</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049775" />
+                <Name>Chacombe</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000614CM">
+              <Name>Banbury Lane Crossroads</Name>
+              <NameSuffix>SE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049805" />
+                <Name>Middleton Cheney</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000614SD">
+              <Name>Stanwell Drive</Name>
+              <NameSuffix>near</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049805" />
+                <Name>Middleton Cheney</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000614CC">
+              <Name>Rectory Lane</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049805" />
+                <Name>Middleton Cheney</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000614RL">
+              <Name>Red Lion PH</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049805" />
+                <Name>Middleton Cheney</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000614L">
+              <Name>Library</Name>
+              <NameSuffix>o/s</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049805" />
+                <Name>Middleton Cheney</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000614G">
+              <Name>The Green</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049805" />
+                <Name>Middleton Cheney</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000614ON">
+              <Name>New Inn</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049805" />
+                <Name>Middleton Cheney</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000614LG">
+              <Name>Washle Drive</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049805" />
+                <Name>Middleton Cheney</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000615C">
+              <Name>St Michael's Church</Name>
+              <NameSuffix>o/s</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049789" />
+                <Name>Farthinghoe</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000615AL">
+              <Name>Almshouses</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049789" />
+                <Name>Farthinghoe</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000037WD">
+              <Name>Woods Court</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049770" />
+                <Name>Brackley</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000037BR">
+              <Name>Stuart Road</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049770" />
+                <Name>Brackley</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000037PO">
+              <Name>Tudor Way</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049770" />
+                <Name>Brackley</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000037SW">
+              <Name>Springfield Way</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049770" />
+                <Name>Brackley</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000037PM">
+              <Name>Bracken Leas School</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049770" />
+                <Name>Brackley</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000037DM">
+              <Name>Magdalen Meadows</Name>
+              <NameSuffix>near</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049770" />
+                <Name>Brackley</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000037PW">
+              <Name>De Montfort Court</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049770" />
+                <Name>Brackley</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000037HC">
+              <Name>Cemetery Entrance</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049770" />
+                <Name>Brackley</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000037L">
+              <Name>Local Centre</Name>
+              <NameSuffix>o/s</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049770" />
+                <Name>Brackley</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000037JO">
+              <Name>Juno Crescent</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049770" />
+                <Name>Brackley</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000037JD">
+              <Name>Jutland Drive</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049770" />
+                <Name>Brackley</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000037NS">
+              <Name>Northampton Road</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049770" />
+                <Name>Brackley</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000037BU">
+              <Name>Top Station Road</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049770" />
+                <Name>Brackley</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000037VR">
+              <Name>Valley Road</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049770" />
+                <Name>Brackley</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000037H">
+              <Name>Church Road</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049770" />
+                <Name>Brackley</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000037OS">
+              <Name>Winchester House</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049770" />
+                <Name>Brackley</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000037MT">
+              <Name>Market Place</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049770" />
+                <Name>Brackley</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000037CW">
+              <Name>Churchill Way</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049770" />
+                <Name>Brackley</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:300000037OO">
+              <Name>St James Road</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0049770" />
+                <Name>Brackley</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340002358SOU">
+              <Name>Braeburn Avenue</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0080953" />
+                <Name>Elmsbrook</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340002357SCH">
+              <Name>Gagle Brook School</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0080953" />
+                <Name>Elmsbrook</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340002357ELM">
+              <Name>Business Centre</Name>
+              <NameSuffix>o/s</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0080953" />
+                <Name>Elmsbrook</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340002357SOU">
+              <Name>Banbury Road Roundabout</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050254" />
+                <Name>Bicester</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340003256OPP">
+              <Name>Barberry Place Shops</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050254" />
+                <Name>Bicester</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340003255CNR">
+              <Name>Blake Road</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050254" />
+                <Name>Bicester</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340003254OPP">
+              <Name>Rowan Road</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0020706" />
+                <Name>Highfield</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340000093BP5">
+              <Name>Pioneer Square</Name>
+              <NameSuffix>Stand 5</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077439" />
+                <Name>Bicester Town Centre</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001734APP">
+              <Name>Bicester Village Station</Name>
+              <NameSuffix>Main Entrance</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050254" />
+                <Name>Bicester</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+          </scheduledStopPoints>
+        </ServiceFrame>
+        <ServiceCalendarFrame version="1.0" id="epd:UK:SCOX:ServiceCalendarFrame_UK_PI_CALENDAR:SCOX:PH0005863:78:500:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+          <dayTypes>
+            <DayType version="1.0" id="day_type@Public_Holiday">
+              <Name>Public Holiday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <HolidayTypes>AnyHoliday</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@Christmas_Day">
+              <Name>Christmas Day</Name>
+              <properties>
+                <PropertyOfDay>
+                  <HolidayTypes>AnyHoliday</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@Monday-Thursday">
+              <Name>Monday-Thursday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Monday Tuesday Wednesday Thursday</DaysOfWeek>
+                  <HolidayTypes>WorkingDay</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@Saturday">
+              <Name>Saturday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Saturday</DaysOfWeek>
+                  <HolidayTypes>NotWorkingDay</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@Sunday">
+              <Name>Sunday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Sunday</DaysOfWeek>
+                  <HolidayTypes>NotWorkingDay</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@Friday">
+              <Name>Friday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Friday</DaysOfWeek>
+                  <HolidayTypes>WorkingDay</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+          </dayTypes>
+          <dayTypeAssignments>
+            <DayTypeAssignment version="1.0" id="day_type@Christmas_Day@12/27/2027@2027-12-27" order="1">
+              <Name>12/27/2027</Name>
+              <Date>2027-12-27</Date>
+              <DayTypeRef version="1.0" ref="day_type@Christmas_Day" />
+            </DayTypeAssignment>
+          </dayTypeAssignments>
+        </ServiceCalendarFrame>
+        <FareFrame version="1.0" id="epd:UK:SCOX:FareFrame_UK_PI_FARE_NETWORK:SCOX:PH0005863:78:500:op" dataSourceRef="op:src" responsibilitySetRef="op:network_data">
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_FARE_NETWORK:FXCP" />
+          <fareZones>
+            <FareZone version="1.0" id="zone@101@1@boarding">
+              <Name>Banbury</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:3400000725">Bus Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001414MR">McKeevor Place</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@101@1@alighting">
+              <Name>Banbury</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:3400000725">Bus Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:3400000725">Bus Station</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@102@2@boarding">
+              <Name>Tesco Express</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001415OUT">Tesco</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001623OPP">Priory Vale Road</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@102@2@alighting">
+              <Name>Tesco Express</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001414MR">McKeevor Place</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001415OUT">Tesco</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001414MR">McKeevor Place</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001415OUT">Tesco</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@103@3@boarding">
+              <Name>Hennef Way Rbt</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001461EAS">Stroud Park</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@103@3@alighting">
+              <Name>Hennef Way Rbt</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001623OPP">Priory Vale Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001461EAS">Stroud Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001623OPP">Priory Vale Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001461EAS">Stroud Park</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@104@4@boarding">
+              <Name>Ban Gateway</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001461GRP">Gateway Retail Park</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@104@4@alighting">
+              <Name>Ban Gateway</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001461GRP">Gateway Retail Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001461GRP">Gateway Retail Park</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@116@5@boarding">
+              <Name>Frontier Park</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340024012NOR">Frontier Park</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@116@5@alighting">
+              <Name>Frontier Park</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340024012NOR">Frontier Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340024012NOR">Frontier Park</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@105@6@boarding">
+              <Name>Chacombe</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000534TH">Banbury Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000534TL">Middleton Road</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@105@6@alighting">
+              <Name>Chacombe</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000534TH">Banbury Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000534TH">Banbury Road</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@106@7@boarding">
+              <Name>Middleton Cheney</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000614CM">Banbury Lane Crossroads</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000614SD">Stanwell Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000614CC">Rectory Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000614RL">Red Lion PH</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000614L">Library</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000614G">The Green</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000614ON">New Inn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000614LG">Washle Drive</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@106@7@alighting">
+              <Name>Middleton Cheney</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000534TL">Middleton Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000614CM">Banbury Lane Crossroads</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000614SD">Stanwell Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000614CC">Rectory Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000614RL">Red Lion PH</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000614L">Library</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000614G">The Green</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000614ON">New Inn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000614LG">Washle Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000534TL">Middleton Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000614CM">Banbury Lane Crossroads</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000614SD">Stanwell Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000614CC">Rectory Lane</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000614RL">Red Lion PH</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000614L">Library</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000614G">The Green</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000614ON">New Inn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000614LG">Washle Drive</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@107@8@boarding">
+              <Name>Farthinghoe</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000615C">St Michael's Church</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000615AL">Almshouses</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@107@8@alighting">
+              <Name>Farthinghoe</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000615C">St Michael's Church</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000615C">St Michael's Church</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@108@9@boarding">
+              <Name>Brackley P Way</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037WD">Woods Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037BR">Stuart Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037PO">Tudor Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037SW">Springfield Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037PM">Bracken Leas School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037DM">Magdalen Meadows</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037PW">De Montfort Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037HC">Cemetery Entrance</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@108@9@alighting">
+              <Name>Brackley P Way</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000615AL">Almshouses</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037WD">Woods Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000615AL">Almshouses</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037WD">Woods Court</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@109@10@boarding">
+              <Name>Brackley R Fld</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037L">Local Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037JO">Juno Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037JD">Jutland Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037NS">Northampton Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037BU">Top Station Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037VR">Valley Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037H">Church Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037OS">Winchester House</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@109@10@alighting">
+              <Name>Brackley R Fld</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037BR">Stuart Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037PO">Tudor Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037SW">Springfield Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037PM">Bracken Leas School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037DM">Magdalen Meadows</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037PW">De Montfort Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037HC">Cemetery Entrance</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037L">Local Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037BR">Stuart Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037PO">Tudor Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037SW">Springfield Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037PM">Bracken Leas School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037DM">Magdalen Meadows</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037PW">De Montfort Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037HC">Cemetery Entrance</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037L">Local Centre</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@110@11@boarding">
+              <Name>Brackley Market</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037MT">Market Place</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037CW">Churchill Way</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@110@11@alighting">
+              <Name>Brackley Market</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037JO">Juno Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037JD">Jutland Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037NS">Northampton Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037BU">Top Station Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037VR">Valley Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037H">Church Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037OS">Winchester House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037MT">Market Place</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037JO">Juno Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037JD">Jutland Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037NS">Northampton Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037BU">Top Station Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037VR">Valley Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037H">Church Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037OS">Winchester House</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037MT">Market Place</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@111@12@boarding">
+              <Name>Brackley Tesco</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037OO">St James Road</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@111@12@alighting">
+              <Name>Brackley Tesco</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037CW">Churchill Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037OO">St James Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037CW">Churchill Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:300000037OO">St James Road</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@112@13@boarding">
+              <Name>Elmsbrook</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002358SOU">Braeburn Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002357SCH">Gagle Brook School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002357ELM">Business Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002357SOU">Banbury Road Roundabout</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003256OPP">Barberry Place Shops</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003255CNR">Blake Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003254OPP">Rowan Road</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@112@13@alighting">
+              <Name>Elmsbrook</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002358SOU">Braeburn Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002358SOU">Braeburn Avenue</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@113@14@alighting">
+              <Name>Rowan Road</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002357SCH">Gagle Brook School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002357ELM">Business Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002357SOU">Banbury Road Roundabout</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003256OPP">Barberry Place Shops</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003255CNR">Blake Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003254OPP">Rowan Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002357SCH">Gagle Brook School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002357ELM">Business Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002357SOU">Banbury Road Roundabout</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003256OPP">Barberry Place Shops</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003255CNR">Blake Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003254OPP">Rowan Road</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@114@15@boarding">
+              <Name>Pioneer Sq</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000093BP5">Pioneer Square</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@114@15@alighting">
+              <Name>Pioneer Sq</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000093BP5">Pioneer Square</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000093BP5">Pioneer Square</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@115@16@boarding">
+              <Name>Bicester Village</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001734APP">Bicester Village Station</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@115@16@alighting">
+              <Name>Bicester Village</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001734APP">Bicester Village Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001734APP">Bicester Village Station</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+          </fareZones>
+        </FareFrame>
+        <FareFrame version="1.0" id="epd:UK:SCOX:FareFrame_UK_PI_FARE_PRODUCT:SCOX:PH0005863:78:500:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+          <Name>Fare products</Name>
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_FARE_PRODUCT:FXCP" />
+          <tariffs>
+            <Tariff version="1.0" id="Tariff@ADULT_RETURN_(OX)">
+              <validityConditions>
+                <ValidBetween>
+                  <FromDate>2026-05-31T03:00:00Z</FromDate>
+                </ValidBetween>
+              </validityConditions>
+              <Name>Tariff for Return</Name>
+              <OperatorRef versionRef="1.0" ref="noc:SCOX">noc:137857</OperatorRef>
+              <LineRef versionRef="1.0" ref="SCOX:PH0005863:78:500" />
+              <TypeOfTariffRef versionRef="fxc:v1.0" ref="fxc:zone_to_zone" />
+              <TariffBasis>zoneToZone</TariffBasis>
+              <qualityStructureFactors>
+                <FareDemandFactor version="1.0" id="Tariff@ADULT_RETURN_(OX)@Demand">
+                  <validityConditions>
+                    <AvailabilityCondition version="1.0" id="Tariff@ADULT_RETURN_(OX)@Condition@day_type@Monday-Thursday">
+                      <IsAvailable>true</IsAvailable>
+                      <dayTypes>
+                        <DayTypeRef version="1.0" ref="day_type@Monday-Thursday" />
+                      </dayTypes>
+                    </AvailabilityCondition>
+                    <AvailabilityCondition version="1.0" id="Tariff@ADULT_RETURN_(OX)@Condition@day_type@Saturday">
+                      <IsAvailable>true</IsAvailable>
+                      <dayTypes>
+                        <DayTypeRef version="1.0" ref="day_type@Saturday" />
+                      </dayTypes>
+                    </AvailabilityCondition>
+                    <AvailabilityCondition version="1.0" id="Tariff@ADULT_RETURN_(OX)@Condition@day_type@Sunday">
+                      <IsAvailable>true</IsAvailable>
+                      <dayTypes>
+                        <DayTypeRef version="1.0" ref="day_type@Sunday" />
+                      </dayTypes>
+                    </AvailabilityCondition>
+                    <AvailabilityCondition version="1.0" id="Tariff@ADULT_RETURN_(OX)@Condition@day_type@Public_Holiday">
+                      <IsAvailable>true</IsAvailable>
+                      <dayTypes>
+                        <DayTypeRef version="1.0" ref="day_type@Public_Holiday" />
+                      </dayTypes>
+                    </AvailabilityCondition>
+                    <AvailabilityCondition version="1.0" id="Tariff@ADULT_RETURN_(OX)@Condition@day_type@Friday">
+                      <IsAvailable>true</IsAvailable>
+                      <dayTypes>
+                        <DayTypeRef version="1.0" ref="day_type@Friday" />
+                      </dayTypes>
+                    </AvailabilityCondition>
+                  </validityConditions>
+                </FareDemandFactor>
+              </qualityStructureFactors>
+              <fareStructureElements>
+                <FareStructureElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Conditions_of_travel@Outbound">
+                  <Name>Conditions of travel</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:travel_conditions" />
+                  <GenericParameterAssignment version="1.0" id="Tariff@ADULT_RETURN_(OX)@Conditions_of_travel@Outbound" order="1">
+                    <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:condition_of_use" />
+                    <LimitationGroupingType>AND</LimitationGroupingType>
+                    <limitations>
+                      <Transferability version="1.0" id="Tariff@ADULT_RETURN_(OX)@Conditions_of_travel@Outbound@Transferability">
+                        <Name>Ticket is not transferable</Name>
+                        <CanTransfer>false</CanTransfer>
+                      </Transferability>
+                      <RoundTrip version="1.0" id="Tariff@ADULT_RETURN_(OX)@Conditions_of_travel@Outbound@Trip">
+                        <Name>Return Trip</Name>
+                        <TripType>returnOut</TripType>
+                      </RoundTrip>
+                      <FrequencyOfUse version="1.0" id="Tariff@ADULT_RETURN_(OX)@Conditions_of_travel@Outbound@Frequency">
+                        <Name>One trip no transfers</Name>
+                        <FrequencyOfUseType>none</FrequencyOfUseType>
+                      </FrequencyOfUse>
+                      <UsageValidityPeriod version="1.0" id="Tariff@ADULT_RETURN_(OX)@Conditions_of_travel@Outbound@Validity">
+                        <UsageTrigger>startOutboundRide</UsageTrigger>
+                        <UsageEnd>endOfRide</UsageEnd>
+                      </UsageValidityPeriod>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Conditions_of_travel@Inbound">
+                  <Name>Conditions of travel</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:travel_conditions" />
+                  <GenericParameterAssignment version="1.0" id="Tariff@ADULT_RETURN_(OX)@Conditions_of_travel@Inbound" order="1">
+                    <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:condition_of_use" />
+                    <LimitationGroupingType>AND</LimitationGroupingType>
+                    <limitations>
+                      <Transferability version="1.0" id="Tariff@ADULT_RETURN_(OX)@Conditions_of_travel@Inbound@Transferability">
+                        <Name>Ticket is not transferable</Name>
+                        <CanTransfer>false</CanTransfer>
+                      </Transferability>
+                      <RoundTrip version="1.0" id="Tariff@ADULT_RETURN_(OX)@Conditions_of_travel@Inbound@Trip">
+                        <Name>Return Trip</Name>
+                        <TripType>returnBack</TripType>
+                      </RoundTrip>
+                      <FrequencyOfUse version="1.0" id="Tariff@ADULT_RETURN_(OX)@Conditions_of_travel@Inbound@Frequency">
+                        <Name>One trip no transfers</Name>
+                        <FrequencyOfUseType>none</FrequencyOfUseType>
+                      </FrequencyOfUse>
+                      <UsageValidityPeriod version="1.0" id="Tariff@ADULT_RETURN_(OX)@Conditions_of_travel@Inbound@Validity">
+                        <UsageTrigger>startOutboundRide</UsageTrigger>
+                        <UsageEnd>endOfFareDay</UsageEnd>
+                        <EndTime>03:59:59</EndTime>
+                      </UsageValidityPeriod>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Availability">
+                  <Name>Timebands for travel</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:access_when" />
+                  <qualityStructureFactors>
+                    <FareDemandFactorRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Demand" />
+                  </qualityStructureFactors>
+                </FareStructureElement>
+                <FareStructureElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Eligibility">
+                  <Name>Eligible user types</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:eligibility" />
+                  <GenericParameterAssignment version="1.0" id="Tariff@ADULT_RETURN_(OX)@Eligibility" order="1">
+                    <Name>Eligibility to purchase</Name>
+                    <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:eligible" />
+                    <limitations>
+                      <UserProfile version="1.0" id="Tariff@ADULT_RETURN_(OX)@UP@adult">
+                        <Name>Adult</Name>
+                        <TypeOfConcessionRef versionRef="fxc:v1.0" ref="fxc:adult" />
+                        <UserType>adult</UserType>
+                      </UserProfile>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Access_Lines">
+                  <Name>Available lines</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:access" />
+                  <distanceMatrixElements>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@101@1+101@1">
+                      <Name>Banbury to Banbury</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@101@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@101@1@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@101@1+102@2">
+                      <Name>Banbury to Tesco Express</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@101@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@102@2@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@101@1+103@3">
+                      <Name>Banbury to Hennef Way Rbt</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@101@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@103@3@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@101@1+104@4">
+                      <Name>Banbury to Ban Gateway</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@101@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@104@4@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@101@1+116@5">
+                      <Name>Banbury to Frontier Park</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@101@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@116@5@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@101@1+105@6">
+                      <Name>Banbury to Chacombe</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@101@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@105@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@101@1+106@7">
+                      <Name>Banbury to Middleton Cheney</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@101@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@106@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@101@1+107@8">
+                      <Name>Banbury to Farthinghoe</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@101@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@107@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@101@1+108@9">
+                      <Name>Banbury to Brackley P Way</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@101@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@108@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@101@1+109@10">
+                      <Name>Banbury to Brackley R Fld</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@101@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@109@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@101@1+110@11">
+                      <Name>Banbury to Brackley Market</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@101@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@110@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@101@1+111@12">
+                      <Name>Banbury to Brackley Tesco</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@101@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@111@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@101@1+112@13">
+                      <Name>Banbury to Elmsbrook</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@101@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@112@13@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@101@1+113@14">
+                      <Name>Banbury to Rowan Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@101@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@113@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@101@1+114@15">
+                      <Name>Banbury to Pioneer Sq</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@101@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@114@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@101@1+115@16">
+                      <Name>Banbury to Bicester Village</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@101@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@115@16@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@102@2+102@2">
+                      <Name>Tesco Express to Tesco Express</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@102@2@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@102@2@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@102@2+103@3">
+                      <Name>Tesco Express to Hennef Way Rbt</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@102@2@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@103@3@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@102@2+104@4">
+                      <Name>Tesco Express to Ban Gateway</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@102@2@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@104@4@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@102@2+116@5">
+                      <Name>Tesco Express to Frontier Park</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@102@2@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@116@5@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@102@2+105@6">
+                      <Name>Tesco Express to Chacombe</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@102@2@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@105@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@102@2+106@7">
+                      <Name>Tesco Express to Middleton Cheney</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@102@2@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@106@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@102@2+107@8">
+                      <Name>Tesco Express to Farthinghoe</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@102@2@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@107@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@102@2+108@9">
+                      <Name>Tesco Express to Brackley P Way</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@102@2@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@108@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@102@2+109@10">
+                      <Name>Tesco Express to Brackley R Fld</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@102@2@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@109@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@102@2+110@11">
+                      <Name>Tesco Express to Brackley Market</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@102@2@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@110@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@102@2+111@12">
+                      <Name>Tesco Express to Brackley Tesco</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@102@2@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@111@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@102@2+112@13">
+                      <Name>Tesco Express to Elmsbrook</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@102@2@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@112@13@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@102@2+113@14">
+                      <Name>Tesco Express to Rowan Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@102@2@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@113@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@102@2+114@15">
+                      <Name>Tesco Express to Pioneer Sq</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@102@2@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@114@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@102@2+115@16">
+                      <Name>Tesco Express to Bicester Village</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@102@2@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@115@16@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@103@3+103@3">
+                      <Name>Hennef Way Rbt to Hennef Way Rbt</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@103@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@103@3@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@103@3+104@4">
+                      <Name>Hennef Way Rbt to Ban Gateway</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@103@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@104@4@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@103@3+116@5">
+                      <Name>Hennef Way Rbt to Frontier Park</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@103@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@116@5@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@103@3+105@6">
+                      <Name>Hennef Way Rbt to Chacombe</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@103@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@105@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@103@3+106@7">
+                      <Name>Hennef Way Rbt to Middleton Cheney</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@103@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@106@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@103@3+107@8">
+                      <Name>Hennef Way Rbt to Farthinghoe</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@103@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@107@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@103@3+108@9">
+                      <Name>Hennef Way Rbt to Brackley P Way</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@103@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@108@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@103@3+109@10">
+                      <Name>Hennef Way Rbt to Brackley R Fld</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@103@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@109@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@103@3+110@11">
+                      <Name>Hennef Way Rbt to Brackley Market</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@103@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@110@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@103@3+111@12">
+                      <Name>Hennef Way Rbt to Brackley Tesco</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@103@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@111@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@103@3+112@13">
+                      <Name>Hennef Way Rbt to Elmsbrook</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@103@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@112@13@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@103@3+113@14">
+                      <Name>Hennef Way Rbt to Rowan Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@103@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@113@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@103@3+114@15">
+                      <Name>Hennef Way Rbt to Pioneer Sq</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@103@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@114@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@103@3+115@16">
+                      <Name>Hennef Way Rbt to Bicester Village</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@103@3@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@115@16@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@104@4+104@4">
+                      <Name>Ban Gateway to Ban Gateway</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@104@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@104@4@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@104@4+116@5">
+                      <Name>Ban Gateway to Frontier Park</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@104@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@116@5@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@104@4+105@6">
+                      <Name>Ban Gateway to Chacombe</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@104@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@105@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@104@4+106@7">
+                      <Name>Ban Gateway to Middleton Cheney</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@104@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@106@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@104@4+107@8">
+                      <Name>Ban Gateway to Farthinghoe</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@104@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@107@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@104@4+108@9">
+                      <Name>Ban Gateway to Brackley P Way</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@104@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@108@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@104@4+109@10">
+                      <Name>Ban Gateway to Brackley R Fld</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@104@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@109@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@104@4+110@11">
+                      <Name>Ban Gateway to Brackley Market</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@104@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@110@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@104@4+111@12">
+                      <Name>Ban Gateway to Brackley Tesco</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@104@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@111@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@104@4+112@13">
+                      <Name>Ban Gateway to Elmsbrook</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@104@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@112@13@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@104@4+113@14">
+                      <Name>Ban Gateway to Rowan Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@104@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@113@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@104@4+114@15">
+                      <Name>Ban Gateway to Pioneer Sq</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@104@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@114@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@104@4+115@16">
+                      <Name>Ban Gateway to Bicester Village</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@104@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@115@16@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@116@5+116@5">
+                      <Name>Frontier Park to Frontier Park</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@116@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@116@5@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@116@5+105@6">
+                      <Name>Frontier Park to Chacombe</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@116@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@105@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@116@5+106@7">
+                      <Name>Frontier Park to Middleton Cheney</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@116@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@106@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@116@5+107@8">
+                      <Name>Frontier Park to Farthinghoe</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@116@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@107@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@116@5+108@9">
+                      <Name>Frontier Park to Brackley P Way</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@116@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@108@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@116@5+109@10">
+                      <Name>Frontier Park to Brackley R Fld</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@116@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@109@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@116@5+110@11">
+                      <Name>Frontier Park to Brackley Market</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@116@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@110@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@116@5+111@12">
+                      <Name>Frontier Park to Brackley Tesco</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@116@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@111@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@116@5+112@13">
+                      <Name>Frontier Park to Elmsbrook</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@116@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@112@13@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@116@5+113@14">
+                      <Name>Frontier Park to Rowan Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@116@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@113@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@116@5+114@15">
+                      <Name>Frontier Park to Pioneer Sq</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@116@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@114@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@116@5+115@16">
+                      <Name>Frontier Park to Bicester Village</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@116@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@115@16@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@105@6+105@6">
+                      <Name>Chacombe to Chacombe</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@105@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@105@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@105@6+106@7">
+                      <Name>Chacombe to Middleton Cheney</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@105@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@106@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@105@6+107@8">
+                      <Name>Chacombe to Farthinghoe</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@105@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@107@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@105@6+108@9">
+                      <Name>Chacombe to Brackley P Way</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@105@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@108@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@105@6+109@10">
+                      <Name>Chacombe to Brackley R Fld</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@105@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@109@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@105@6+110@11">
+                      <Name>Chacombe to Brackley Market</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@105@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@110@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@105@6+111@12">
+                      <Name>Chacombe to Brackley Tesco</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@105@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@111@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@105@6+112@13">
+                      <Name>Chacombe to Elmsbrook</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@105@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@112@13@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@105@6+113@14">
+                      <Name>Chacombe to Rowan Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@105@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@113@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@105@6+114@15">
+                      <Name>Chacombe to Pioneer Sq</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@105@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@114@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@105@6+115@16">
+                      <Name>Chacombe to Bicester Village</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@105@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@115@16@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@106@7+106@7">
+                      <Name>Middleton Cheney to Middleton Cheney</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@106@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@106@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@106@7+107@8">
+                      <Name>Middleton Cheney to Farthinghoe</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@106@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@107@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@106@7+108@9">
+                      <Name>Middleton Cheney to Brackley P Way</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@106@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@108@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@106@7+109@10">
+                      <Name>Middleton Cheney to Brackley R Fld</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@106@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@109@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@106@7+110@11">
+                      <Name>Middleton Cheney to Brackley Market</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@106@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@110@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@106@7+111@12">
+                      <Name>Middleton Cheney to Brackley Tesco</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@106@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@111@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@106@7+112@13">
+                      <Name>Middleton Cheney to Elmsbrook</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@106@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@112@13@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@106@7+113@14">
+                      <Name>Middleton Cheney to Rowan Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@106@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@113@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@106@7+114@15">
+                      <Name>Middleton Cheney to Pioneer Sq</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@106@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@114@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@106@7+115@16">
+                      <Name>Middleton Cheney to Bicester Village</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@106@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@115@16@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@107@8+107@8">
+                      <Name>Farthinghoe to Farthinghoe</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@107@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@107@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@107@8+108@9">
+                      <Name>Farthinghoe to Brackley P Way</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@107@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@108@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@107@8+109@10">
+                      <Name>Farthinghoe to Brackley R Fld</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@107@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@109@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@107@8+110@11">
+                      <Name>Farthinghoe to Brackley Market</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@107@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@110@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@107@8+111@12">
+                      <Name>Farthinghoe to Brackley Tesco</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@107@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@111@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@107@8+112@13">
+                      <Name>Farthinghoe to Elmsbrook</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@107@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@112@13@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@107@8+113@14">
+                      <Name>Farthinghoe to Rowan Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@107@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@113@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@107@8+114@15">
+                      <Name>Farthinghoe to Pioneer Sq</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@107@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@114@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@107@8+115@16">
+                      <Name>Farthinghoe to Bicester Village</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@107@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@115@16@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@108@9+108@9">
+                      <Name>Brackley P Way to Brackley P Way</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@108@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@108@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@108@9+109@10">
+                      <Name>Brackley P Way to Brackley R Fld</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@108@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@109@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@108@9+110@11">
+                      <Name>Brackley P Way to Brackley Market</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@108@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@110@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@108@9+111@12">
+                      <Name>Brackley P Way to Brackley Tesco</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@108@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@111@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@108@9+112@13">
+                      <Name>Brackley P Way to Elmsbrook</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@108@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@112@13@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@108@9+113@14">
+                      <Name>Brackley P Way to Rowan Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@108@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@113@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@108@9+114@15">
+                      <Name>Brackley P Way to Pioneer Sq</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@108@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@114@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@108@9+115@16">
+                      <Name>Brackley P Way to Bicester Village</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@108@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@115@16@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@109@10+109@10">
+                      <Name>Brackley R Fld to Brackley R Fld</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@109@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@109@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@109@10+110@11">
+                      <Name>Brackley R Fld to Brackley Market</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@109@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@110@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@109@10+111@12">
+                      <Name>Brackley R Fld to Brackley Tesco</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@109@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@111@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@109@10+112@13">
+                      <Name>Brackley R Fld to Elmsbrook</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@109@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@112@13@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@109@10+113@14">
+                      <Name>Brackley R Fld to Rowan Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@109@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@113@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@109@10+114@15">
+                      <Name>Brackley R Fld to Pioneer Sq</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@109@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@114@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@109@10+115@16">
+                      <Name>Brackley R Fld to Bicester Village</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@109@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@115@16@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@110@11+110@11">
+                      <Name>Brackley Market to Brackley Market</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@110@11@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@110@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@110@11+111@12">
+                      <Name>Brackley Market to Brackley Tesco</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@110@11@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@111@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@110@11+112@13">
+                      <Name>Brackley Market to Elmsbrook</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@110@11@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@112@13@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@110@11+113@14">
+                      <Name>Brackley Market to Rowan Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@110@11@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@113@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@110@11+114@15">
+                      <Name>Brackley Market to Pioneer Sq</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@110@11@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@114@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@110@11+115@16">
+                      <Name>Brackley Market to Bicester Village</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@110@11@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@115@16@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@111@12+111@12">
+                      <Name>Brackley Tesco to Brackley Tesco</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@111@12@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@111@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@111@12+112@13">
+                      <Name>Brackley Tesco to Elmsbrook</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@111@12@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@112@13@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@111@12+113@14">
+                      <Name>Brackley Tesco to Rowan Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@111@12@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@113@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@111@12+114@15">
+                      <Name>Brackley Tesco to Pioneer Sq</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@111@12@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@114@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@111@12+115@16">
+                      <Name>Brackley Tesco to Bicester Village</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@111@12@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@115@16@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@112@13+112@13">
+                      <Name>Elmsbrook to Elmsbrook</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@112@13@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@112@13@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@112@13+113@14">
+                      <Name>Elmsbrook to Rowan Road</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@112@13@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@113@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@112@13+114@15">
+                      <Name>Elmsbrook to Pioneer Sq</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@112@13@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@114@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@112@13+115@16">
+                      <Name>Elmsbrook to Bicester Village</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@112@13@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@115@16@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@114@15+114@15">
+                      <Name>Pioneer Sq to Pioneer Sq</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@114@15@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@114@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@114@15+115@16">
+                      <Name>Pioneer Sq to Bicester Village</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@114@15@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@115@16@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@ADULT_RETURN_(OX)@Distance@115@16+115@16">
+                      <Name>Bicester Village to Bicester Village</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@115@16@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@115@16@alighting" />
+                    </DistanceMatrixElement>
+                  </distanceMatrixElements>
+                  <GenericParameterAssignment version="1.0" id="Tariff@ADULT_RETURN_(OX)@Access_Lines" order="1">
+                    <Name>Lines</Name>
+                    <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:can_access" />
+                    <ValidityParameterAssignmentType>EQ</ValidityParameterAssignmentType>
+                    <validityParameters>
+                      <LineRef versionRef="1.0" ref="SCOX:PH0005863:78:500" />
+                    </validityParameters>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+              </fareStructureElements>
+            </Tariff>
+          </tariffs>
+          <fareProducts>
+            <PreassignedFareProduct version="1.0" id="trip@ADULT_RETURN_(OX)">
+              <Name>Return</Name>
+              <Description>valid for a return trip between two specific points</Description>
+              <ChargingMomentRef versionRef="fxc:v1.0" ref="fxc:prepayment" />
+              <ChargingMomentType>beforeTravel</ChargingMomentType>
+              <TypeOfFareProductRef versionRef="fxc:v1.0" ref="fxc:standard_product@trip@day_return" />
+              <OperatorRef version="1.0" ref="noc:SCOX">noc:137857</OperatorRef>
+              <validableElements>
+                <ValidableElement version="1.0" id="trip@ADULT_RETURN_(OX)@Access@Outbound">
+                  <Name>Outbound Ride</Name>
+                  <fareStructureElements>
+                    <FareStructureElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Eligibility" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Conditions_of_travel@Outbound" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Access_Lines" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Availability" />
+                  </fareStructureElements>
+                </ValidableElement>
+                <ValidableElement version="1.0" id="trip@ADULT_RETURN_(OX)@Access@Inbound">
+                  <Name>Return Ride</Name>
+                  <fareStructureElements>
+                    <FareStructureElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Eligibility" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Conditions_of_travel@Inbound" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Access_Lines" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Availability" />
+                  </fareStructureElements>
+                </ValidableElement>
+              </validableElements>
+              <accessRightsInProduct>
+                <AccessRightInProduct version="1.0" id="trip@ADULT_RETURN_(OX)@Outbound" order="1">
+                  <ValidableElementRef version="1.0" ref="trip@ADULT_RETURN_(OX)@Access@Outbound" />
+                </AccessRightInProduct>
+                <AccessRightInProduct version="1.0" id="trip@ADULT_RETURN_(OX)@Inbound" order="2">
+                  <ValidableElementRef version="1.0" ref="trip@ADULT_RETURN_(OX)@Access@Inbound" />
+                </AccessRightInProduct>
+              </accessRightsInProduct>
+              <ProductType>dayReturnTrip</ProductType>
+            </PreassignedFareProduct>
+          </fareProducts>
+          <salesOfferPackages>
+            <SalesOfferPackage version="1.0" id="SOP@trip@ADULT_RETURN_(OX)@paperOnBus">
+              <Name>Return - Onboard (paper ticket)</Name>
+              <distributionAssignments>
+                <DistributionAssignment version="1.0" id="SOP@trip@ADULT_RETURN_(OX)@paperOnBus@onBoard" order="1">
+                  <DistributionChannelType>onBoard</DistributionChannelType>
+                  <PaymentMethods>cash contactlessPaymentCard</PaymentMethods>
+                  <FulfilmentMethodRef version="1.0" ref="Fulfilment@collectOnBoard" />
+                </DistributionAssignment>
+              </distributionAssignments>
+              <salesOfferPackageElements>
+                <SalesOfferPackageElement version="1.0" id="SOP@trip@ADULT_RETURN_(OX)@paperOnBus@paperTicket" order="1">
+                  <TypeOfTravelDocumentRef version="1.0" ref="TravelDocument@paperTicket" />
+                  <PreassignedFareProductRef version="1.0" ref="trip@ADULT_RETURN_(OX)" />
+                </SalesOfferPackageElement>
+              </salesOfferPackageElements>
+            </SalesOfferPackage>
+            <SalesOfferPackage version="1.0" id="SOP@trip@ADULT_RETURN_(OX)@mobileApp">
+              <Name>Return - Mobile App</Name>
+              <distributionAssignments>
+                <DistributionAssignment version="1.0" id="SOP@trip@ADULT_RETURN_(OX)@mobileApp@mobileDevice" order="1">
+                  <DistributionChannelType>mobileDevice</DistributionChannelType>
+                  <PaymentMethods>creditCard debitCard</PaymentMethods>
+                  <FulfilmentMethodRef version="1.0" ref="Fulfilment@mobileApp" />
+                </DistributionAssignment>
+              </distributionAssignments>
+              <salesOfferPackageElements>
+                <SalesOfferPackageElement version="1.0" id="SOP@trip@ADULT_RETURN_(OX)@mobileApp@mobileApp" order="1">
+                  <TypeOfTravelDocumentRef version="1.0" ref="TravelDocument@mobileApp" />
+                  <PreassignedFareProductRef version="1.0" ref="trip@ADULT_RETURN_(OX)" />
+                  <validityParameterAssignments>
+                    <GenericParameterAssignment version="1.0" id="SOP@trip@ADULT_RETURN_(OX)@mobileApp@mobileApp" order="1">
+                      <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:can_purchase_when" />
+                      <limitations>
+                        <UsageValidityPeriod version="1.0" id="SOP@trip@ADULT_RETURN_(OX)@mobileApp@mobileApp@hanging">
+                          <UsageTrigger>purchase</UsageTrigger>
+                          <UsageEnd>productExpiry</UsageEnd>
+                          <StandardDuration>P1M</StandardDuration>
+                          <EndTime>03:59:59</EndTime>
+                        </UsageValidityPeriod>
+                      </limitations>
+                    </GenericParameterAssignment>
+                  </validityParameterAssignments>
+                </SalesOfferPackageElement>
+              </salesOfferPackageElements>
+            </SalesOfferPackage>
+          </salesOfferPackages>
+        </FareFrame>
+        <FareFrame version="1.0" id="epd:UK:SCOX:FareFrame_UK_PI_FARE_NETWORK_PRICE:SCOX:PH0005863:78:500:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+          <Name>Prices for ADULT RETURN (OX)</Name>
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_PRICE:FXCP" />
+          <FrameDefaults>
+            <DefaultCurrency>GBP</DefaultCurrency>
+          </FrameDefaults>
+          <prerequisites>
+            <FareFrameRef versionRef="1.0" ref="epd:UK:SCOX:FareFrame_UK_PI_FARE_PRODUCT:SCOX:PH0005863:78:500:op" />
+          </prerequisites>
+          <fareTables>
+            <FareTable version="1.0" id="fareTable@SCOX:PH0005863:78:500@trip@ADULT_RETURN_(OX)">
+              <Name>Banbury - Bicester - ADULT RETURN (OX)</Name>
+              <pricesFor>
+                <PreassignedFareProductRef version="1.0" ref="trip@ADULT_RETURN_(OX)" />
+                <SalesOfferPackageRef version="1.0" ref="SOP@trip@ADULT_RETURN_(OX)@paperOnBus" />
+                <SalesOfferPackageRef version="1.0" ref="SOP@trip@ADULT_RETURN_(OX)@mobileApp" />
+                <UserProfileRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@UP@adult" />
+              </pricesFor>
+              <specifics>
+                <LineRef versionRef="1.0" ref="SCOX:PH0005863:78:500" />
+              </specifics>
+              <prices>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@101@1+105@6@trip@ADULT_RETURN_(OX)">
+                  <Amount>6.7</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@101@1+105@6" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@101@1+106@7@trip@ADULT_RETURN_(OX)">
+                  <Amount>6.7</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@101@1+106@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@101@1+107@8@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.4</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@101@1+107@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@101@1+108@9@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.4</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@101@1+108@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@101@1+109@10@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@101@1+109@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@101@1+110@11@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@101@1+110@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@101@1+111@12@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@101@1+111@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@101@1+112@13@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@101@1+112@13" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@101@1+113@14@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@101@1+113@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@101@1+114@15@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@101@1+114@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@101@1+115@16@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@101@1+115@16" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@102@2+105@6@trip@ADULT_RETURN_(OX)">
+                  <Amount>6.7</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@102@2+105@6" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@102@2+106@7@trip@ADULT_RETURN_(OX)">
+                  <Amount>6.7</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@102@2+106@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@102@2+107@8@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.4</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@102@2+107@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@102@2+108@9@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@102@2+108@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@102@2+109@10@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@102@2+109@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@102@2+110@11@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@102@2+110@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@102@2+111@12@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@102@2+111@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@102@2+112@13@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@102@2+112@13" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@102@2+113@14@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@102@2+113@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@102@2+114@15@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@102@2+114@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@102@2+115@16@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@102@2+115@16" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@103@3+105@6@trip@ADULT_RETURN_(OX)">
+                  <Amount>6.7</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@103@3+105@6" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@103@3+106@7@trip@ADULT_RETURN_(OX)">
+                  <Amount>6.7</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@103@3+106@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@103@3+107@8@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.4</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@103@3+107@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@103@3+108@9@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@103@3+108@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@103@3+109@10@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@103@3+109@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@103@3+110@11@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@103@3+110@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@103@3+111@12@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@103@3+111@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@103@3+112@13@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@103@3+112@13" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@103@3+113@14@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@103@3+113@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@103@3+114@15@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@103@3+114@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@103@3+115@16@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@103@3+115@16" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@104@4+105@6@trip@ADULT_RETURN_(OX)">
+                  <Amount>5.3</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@104@4+105@6" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@104@4+106@7@trip@ADULT_RETURN_(OX)">
+                  <Amount>6.7</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@104@4+106@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@104@4+107@8@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.4</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@104@4+107@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@104@4+108@9@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@104@4+108@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@104@4+109@10@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@104@4+109@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@104@4+110@11@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@104@4+110@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@104@4+111@12@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@104@4+111@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@104@4+112@13@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@104@4+112@13" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@104@4+113@14@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@104@4+113@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@104@4+114@15@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@104@4+114@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@104@4+115@16@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@104@4+115@16" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@116@5+105@6@trip@ADULT_RETURN_(OX)">
+                  <Amount>5.3</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@116@5+105@6" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@116@5+106@7@trip@ADULT_RETURN_(OX)">
+                  <Amount>5.3</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@116@5+106@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@116@5+107@8@trip@ADULT_RETURN_(OX)">
+                  <Amount>6.7</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@116@5+107@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@116@5+108@9@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.4</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@116@5+108@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@116@5+109@10@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@116@5+109@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@116@5+110@11@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@116@5+110@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@116@5+111@12@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@116@5+111@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@116@5+112@13@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@116@5+112@13" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@116@5+113@14@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@116@5+113@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@116@5+114@15@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@116@5+114@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@116@5+115@16@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@116@5+115@16" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@105@6+106@7@trip@ADULT_RETURN_(OX)">
+                  <Amount>5.3</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@105@6+106@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@105@6+107@8@trip@ADULT_RETURN_(OX)">
+                  <Amount>6.7</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@105@6+107@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@105@6+108@9@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.4</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@105@6+108@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@105@6+109@10@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@105@6+109@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@105@6+110@11@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@105@6+110@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@105@6+111@12@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@105@6+111@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@105@6+112@13@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@105@6+112@13" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@105@6+113@14@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@105@6+113@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@105@6+114@15@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@105@6+114@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@105@6+115@16@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@105@6+115@16" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@106@7+106@7@trip@ADULT_RETURN_(OX)">
+                  <Amount>4</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@106@7+106@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@106@7+107@8@trip@ADULT_RETURN_(OX)">
+                  <Amount>5.3</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@106@7+107@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@106@7+108@9@trip@ADULT_RETURN_(OX)">
+                  <Amount>6.7</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@106@7+108@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@106@7+109@10@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.4</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@106@7+109@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@106@7+110@11@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.4</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@106@7+110@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@106@7+111@12@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.4</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@106@7+111@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@106@7+112@13@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@106@7+112@13" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@106@7+113@14@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@106@7+113@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@106@7+114@15@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@106@7+114@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@106@7+115@16@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@106@7+115@16" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@107@8+108@9@trip@ADULT_RETURN_(OX)">
+                  <Amount>5.3</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@107@8+108@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@107@8+109@10@trip@ADULT_RETURN_(OX)">
+                  <Amount>6.7</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@107@8+109@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@107@8+110@11@trip@ADULT_RETURN_(OX)">
+                  <Amount>6.7</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@107@8+110@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@107@8+111@12@trip@ADULT_RETURN_(OX)">
+                  <Amount>6.7</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@107@8+111@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@107@8+112@13@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.4</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@107@8+112@13" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@107@8+113@14@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@107@8+113@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@107@8+114@15@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@107@8+114@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@107@8+115@16@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@107@8+115@16" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@108@9+109@10@trip@ADULT_RETURN_(OX)">
+                  <Amount>4</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@108@9+109@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@108@9+110@11@trip@ADULT_RETURN_(OX)">
+                  <Amount>4</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@108@9+110@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@108@9+111@12@trip@ADULT_RETURN_(OX)">
+                  <Amount>4</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@108@9+111@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@108@9+112@13@trip@ADULT_RETURN_(OX)">
+                  <Amount>6.7</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@108@9+112@13" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@108@9+113@14@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@108@9+113@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@108@9+114@15@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@108@9+114@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@108@9+115@16@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@108@9+115@16" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@109@10+110@11@trip@ADULT_RETURN_(OX)">
+                  <Amount>4</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@109@10+110@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@109@10+111@12@trip@ADULT_RETURN_(OX)">
+                  <Amount>4</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@109@10+111@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@109@10+112@13@trip@ADULT_RETURN_(OX)">
+                  <Amount>6.7</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@109@10+112@13" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@109@10+113@14@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.4</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@109@10+113@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@109@10+114@15@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@109@10+114@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@109@10+115@16@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@109@10+115@16" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@110@11+111@12@trip@ADULT_RETURN_(OX)">
+                  <Amount>4</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@110@11+111@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@110@11+112@13@trip@ADULT_RETURN_(OX)">
+                  <Amount>6.7</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@110@11+112@13" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@110@11+113@14@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.4</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@110@11+113@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@110@11+114@15@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@110@11+114@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@110@11+115@16@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@110@11+115@16" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@111@12+112@13@trip@ADULT_RETURN_(OX)">
+                  <Amount>6.7</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@111@12+112@13" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@111@12+113@14@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.4</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@111@12+113@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@111@12+114@15@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@111@12+114@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@111@12+115@16@trip@ADULT_RETURN_(OX)">
+                  <Amount>8.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@111@12+115@16" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@112@13+113@14@trip@ADULT_RETURN_(OX)">
+                  <Amount>4</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@112@13+113@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@112@13+114@15@trip@ADULT_RETURN_(OX)">
+                  <Amount>4</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@112@13+114@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@112@13+115@16@trip@ADULT_RETURN_(OX)">
+                  <Amount>4</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@112@13+115@16" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@ADULT_RETURN_(OX)@Distance@114@15+115@16@trip@ADULT_RETURN_(OX)">
+                  <Amount>4</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@ADULT_RETURN_(OX)@Distance@114@15+115@16" />
+                </DistanceMatrixElementPrice>
+              </prices>
+            </FareTable>
+          </fareTables>
+        </FareFrame>
+      </frames>
+    </CompositeFrame>
+    <CompositeFrame version="1.0" id="epd:UK:SCOX:CompositeFrame_UK_PI_METADATA_OFFER::op" dataSourceRef="op:src" responsibilitySetRef="op:metadata">
+      <Name>Common resources for SCOX</Name>
+      <Description>Set of SCOX profile metadata.</Description>
+      <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_METADATA_OFFER:FXCP" />
+      <frames>
+        <FareFrame version="1.0" id="epd:UK:SCOX:FareFrame_UK_PI_METADATA:SCOX:PH0005863:78:500:op" dataSourceRef="op:src" responsibilitySetRef="op:metadata">
+          <fulfilmentMethods>
+            <FulfilmentMethod version="1.0" id="Fulfilment@mobileApp">
+              <Name>Mobile App</Name>
+              <FulfilmentMethodType>mobileApp</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod version="1.0" id="Fulfilment@onlinePropagation">
+              <Name>Online propagation</Name>
+              <FulfilmentMethodType>validator</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod version="1.0" id="Fulfilment@post">
+              <Name>Send ticket by post</Name>
+              <FulfilmentMethodType>post</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod version="1.0" id="Fulfilment@collectAtCounter">
+              <Name>Collect at counter</Name>
+              <FulfilmentMethodType>ticketOffice</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod version="1.0" id="Fulfilment@collectOnBoard">
+              <Name>Collect on board</Name>
+              <FulfilmentMethodType>conductor</FulfilmentMethodType>
+            </FulfilmentMethod>
+          </fulfilmentMethods>
+          <typesOfTravelDocuments>
+            <TypeOfTravelDocument version="1.0" id="TravelDocument@mobileApp">
+              <Name>Stored on your mobile phone as m-tickets</Name>
+              <MediaType>mobileApp</MediaType>
+              <MachineReadable>barCode</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument version="1.0" id="TravelDocument@smartCard">
+              <Name>Smart_Card_Ticket</Name>
+              <MediaType>smartCard</MediaType>
+              <MachineReadable>nfc</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument version="1.0" id="TravelDocument@paperTicket">
+              <Name>Printed Ticket</Name>
+              <MediaType>paperTicket</MediaType>
+            </TypeOfTravelDocument>
+          </typesOfTravelDocuments>
+        </FareFrame>
+      </frames>
+    </CompositeFrame>
+  </dataObjects>
+</PublicationDelivery>

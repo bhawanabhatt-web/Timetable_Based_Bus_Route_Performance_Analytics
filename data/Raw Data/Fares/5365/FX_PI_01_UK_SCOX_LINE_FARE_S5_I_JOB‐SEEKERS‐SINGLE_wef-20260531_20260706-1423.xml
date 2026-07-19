@@ -1,0 +1,2355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PublicationDelivery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" xmlns:gml="http://www.opengis.net/gml/3.2" version="1.1" xsi:schemaLocation="http://www.netex.org.uk/netex http://netex.uk/netex/schema/1.10/xsd/NeTEx_publication.xsd" xmlns="http://www.netex.org.uk/netex">
+  <PublicationTimestamp>2026-07-06T14:23:52.6686285Z</PublicationTimestamp>
+  <ParticipantRef>SCOX</ParticipantRef>
+  <PublicationRequest version="1.0">
+    <RequestTimestamp>2026-07-06T14:23:52.5955334Z</RequestTimestamp>
+    <Description>Request for SCOX bus fares for line S5</Description>
+    <topics>
+      <NetworkFrameTopic>
+        <selectionValidityConditions>
+          <AvailabilityCondition version="1.0" id="r1">
+            <FromDate>2026-05-31T03:00:00Z</FromDate>
+          </AvailabilityCondition>
+        </selectionValidityConditions>
+        <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_LINE_FARE_OFFER:FXCP" />
+        <NetworkFilterByValue>
+          <objectReferences>
+            <OperatorRef versionRef="1.0" ref="noc:SCOX">noc:137857</OperatorRef>
+            <LineRef versionRef="1.0" ref="SCOX:PH0005863:19:S5" />
+            <BrandingRef versionRef="1.0" ref="op:SCOX@brand" />
+          </objectReferences>
+        </NetworkFilterByValue>
+      </NetworkFrameTopic>
+    </topics>
+    <RequestPolicy>
+      <RequestDetail>AllWithXref</RequestDetail>
+    </RequestPolicy>
+  </PublicationRequest>
+  <Description>SCOX bus fares for line S5</Description>
+  <dataObjects>
+    <CompositeFrame version="1.1" id="epd:UK:SCOX:CompositeFrame_UK_PI_LINE_FARE_OFFER:trip@SCOX:PH0005863:19:S5:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+      <ValidBetween>
+        <FromDate>2026-05-31T03:00:00Z</FromDate>
+      </ValidBetween>
+      <Name>Fares for SCOX SCOX:PH0005863:19:S5</Name>
+      <Description>SCOX SCOX:PH0005863:19:S5 is accessible as a single trip fare. Prices are given zone to zone, where each zone is a linear group of stops, i.e. fare stage.</Description>
+      <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_LINE_FARE_OFFER:FXCP" />
+      <codespaces>
+        <CodespaceRef ref="epd_data" />
+        <CodespaceRef ref="fxc_metadata" />
+        <CodespaceRef ref="naptStop_data" />
+        <CodespaceRef ref="nptgLocality_data" />
+        <CodespaceRef ref="noc_data" />
+        <CodespaceRef ref="op_data" />
+      </codespaces>
+      <FrameDefaults>
+        <DefaultCodespaceRef ref="op_data" />
+        <DefaultDataSourceRef version="1.0" ref="op:src" />
+        <DefaultResponsibilitySetRef version="1.0" ref="op:tariff_data" />
+        <DefaultCurrency>GBP</DefaultCurrency>
+      </FrameDefaults>
+      <prerequisites>
+        <CompositeFrameRef versionRef="1.0" ref="epd:UK:SCOX:CompositeFrame_UK_PI_METADATA::op" />
+      </prerequisites>
+      <frames>
+        <ResourceFrame version="1.0" id="epd:UK:SCOX:ResourceFrame_UK_PI_COMMON:SCOX:PH0005863:19:S5:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+          <Name>Operator specific common resources</Name>
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_COMMON:FXCP" />
+          <codespaces>
+            <Codespace id="epd_data">
+              <Xmlns>epd</Xmlns>
+              <XmlnsUrl>http://fnetex-cen.eu/epd</XmlnsUrl>
+              <Description>European Passenger Information profile data -use for UK frame names</Description>
+            </Codespace>
+            <Codespace id="fxc_metadata">
+              <Xmlns>fxc_metadata</Xmlns>
+              <XmlnsUrl>netex.org.uk/fxc</XmlnsUrl>
+              <Description>UK FareXChange Profile metadata</Description>
+            </Codespace>
+            <Codespace id="naptStop_data">
+              <Xmlns>naptStop</Xmlns>
+              <XmlnsUrl>http://www.naptan.org.uk/stops</XmlnsUrl>
+              <Description>UK National Public Transport Access Nodes: Stops.</Description>
+            </Codespace>
+            <Codespace id="noc_data">
+              <Xmlns>noc</Xmlns>
+              <XmlnsUrl>http://www.traveline.co.uk/noc</XmlnsUrl>
+              <Description>UK national operator codes</Description>
+            </Codespace>
+            <Codespace id="op_data">
+              <Xmlns>op</Xmlns>
+              <XmlnsUrl>http://www.stagecoachbus.com/regional-help-and-contact/oxfordshire</XmlnsUrl>
+              <Description>Operator Data</Description>
+            </Codespace>
+            <Codespace id="nptgLocality_data">
+              <Xmlns>nptgLocality</Xmlns>
+              <XmlnsUrl>http://nptg.org.uk/locations</XmlnsUrl>
+              <Description>National Public Transport gazetteer locations</Description>
+            </Codespace>
+          </codespaces>
+          <dataSources>
+            <DataSource version="1.0" id="op:src">
+              <Email>oxford.enquiries@stagecoachbus.com</Email>
+            </DataSource>
+          </dataSources>
+          <responsibilitySets>
+            <ResponsibilitySet version="1.0" id="op:tariff_data">
+              <Name>Operator Tariffs</Name>
+              <roles>
+                <ResponsibilityRoleAssignment version="1.0" id="op:tariff_data@creates">
+                  <DataRoleType>creates</DataRoleType>
+                  <StakeholderRoleType>FareManagement</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="1.0" ref="noc:SCOX" />
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+            <ResponsibilitySet version="1.0" id="op:network_data">
+              <Name>Operator Network data</Name>
+              <roles>
+                <ResponsibilityRoleAssignment version="1.0" id="op:network_data@creates">
+                  <DataRoleType>creates</DataRoleType>
+                  <StakeholderRoleType>Planning</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="1.0" ref="noc:SCOX" />
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+            <ResponsibilitySet version="1.0" id="op:metadata">
+              <Name>Operator Metadata</Name>
+              <roles>
+                <ResponsibilityRoleAssignment version="1.0" id="op:metadata@creates">
+                  <DataRoleType>creates</DataRoleType>
+                  <StakeholderRoleType>Planning</StakeholderRoleType>
+                  <ResponsibleOrganisationRef version="1.0" ref="noc:SCOX" />
+                </ResponsibilityRoleAssignment>
+              </roles>
+            </ResponsibilitySet>
+          </responsibilitySets>
+          <typesOfValue>
+            <ValueSet version="1.0" id="op:Branding" classOfValues="Branding">
+              <Name>Operator Branding</Name>
+              <values>
+                <Branding version="1.0" id="op:SCOX@brand">
+                  <Name>Stagecoach Oxfordshire</Name>
+                  <Url>http://www.stagecoachbus.com/regional-help-and-contact/oxfordshire</Url>
+                </Branding>
+              </values>
+            </ValueSet>
+          </typesOfValue>
+          <organisations>
+            <Operator version="1.0" id="noc:SCOX">
+              <PublicCode>SCOX</PublicCode>
+              <PrivateCode>137857</PrivateCode>
+              <Name>Stagecoach Oxford</Name>
+              <ShortName>Stagecoach Oxfordshire</ShortName>
+              <TradingName>Thames Transit Ltd</TradingName>
+              <ContactDetails>
+                <Phone>03452418000</Phone>
+                <Url>http://www.stagecoachbus.com/regional-help-and-contact/oxfordshire</Url>
+              </ContactDetails>
+              <OrganisationType>operator</OrganisationType>
+              <Address>
+                <Street>Horspath Road, Cowley, Oxford OX4 2RY</Street>
+              </Address>
+              <PrimaryMode>bus</PrimaryMode>
+              <CustomerServiceContactDetails>
+                <Email>oxford.enquiries@stagecoachbus.com</Email>
+              </CustomerServiceContactDetails>
+            </Operator>
+          </organisations>
+        </ResourceFrame>
+        <ServiceFrame version="1.0" id="epd:UK:SCOX:ServiceFrame_UK_PI_NETWORK:SCOX:PH0005863:19:S5:op" dataSourceRef="op:src" responsibilitySetRef="op:network_data">
+          <Description>This frame contains the stop and line definitions for the service. It could also be exchanged separately.</Description>
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_NETWORK:FXCP" />
+          <lines>
+            <Line version="1.0" id="SCOX:PH0005863:19:S5">
+              <Name>Bicester Town Centre Pioneer Sq - Magdalen Street</Name>
+              <PublicCode>S5</PublicCode>
+              <PrivateCode type="txc:Line@id">S5</PrivateCode>
+              <OperatorRef versionRef="1.0" ref="noc:SCOX">noc:137857</OperatorRef>
+            </Line>
+          </lines>
+          <scheduledStopPoints>
+            <ScheduledStopPoint version="1.0" id="atco:340000093BP2">
+              <Name>Pioneer Square</Name>
+              <NameSuffix>Stand 2</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077439" />
+                <Name>Bicester Town Centre</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340002344CNE">
+              <Name>Clifton Close</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050254" />
+                <Name>Bicester</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340002346NE1">
+              <Name>Granville Way</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050254" />
+                <Name>Bicester</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340002347NE1">
+              <Name>Retail Park</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050254" />
+                <Name>Bicester</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001073OPP">
+              <Name>Scampton Close</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077440" />
+                <Name>Glory Farm</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340003090OPP">
+              <Name>Benson Close</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077440" />
+                <Name>Glory Farm</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340003089OPP">
+              <Name>Fulmar Court</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077440" />
+                <Name>Glory Farm</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001571OUT">
+              <Name>Duxford Close</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077440" />
+                <Name>Glory Farm</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340003088OPP">
+              <Name>Curtiss Close</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077440" />
+                <Name>Glory Farm</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340003087ORG">
+              <Name>Rochford Gardens</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077440" />
+                <Name>Glory Farm</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340000697OLC">
+              <Name>Lincoln Close</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077440" />
+                <Name>Glory Farm</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001572CNR">
+              <Name>Whitley Crescent</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077440" />
+                <Name>Glory Farm</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001882OPP">
+              <Name>Bristol Road</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077440" />
+                <Name>Glory Farm</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001570CNR">
+              <Name>Ruskin Walk</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077440" />
+                <Name>Glory Farm</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001564OPP">
+              <Name>St Peters Crescent</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077440" />
+                <Name>Glory Farm</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001544CNR">
+              <Name>Buckingham Crescent</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050254" />
+                <Name>Bicester</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001543CNR">
+              <Name>Bicester North Station</Name>
+              <NameSuffix>o/s</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050254" />
+                <Name>Bicester</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340000093BP3">
+              <Name>Pioneer Square</Name>
+              <NameSuffix>Stand 3</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077439" />
+                <Name>Bicester Town Centre</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340003076OUT">
+              <Name>Brookside School</Name>
+              <NameSuffix>o/s</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0020706" />
+                <Name>Highfield</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001563HUD">
+              <Name>The Approach</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0020706" />
+                <Name>Highfield</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340003086GEO">
+              <Name>George Street</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0020706" />
+                <Name>Highfield</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:3400001552CN">
+              <Name>Bicester Village</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050254" />
+                <Name>Bicester</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340003094LDS">
+              <Name>Lakeview Drive</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050254" />
+                <Name>Bicester</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340003094SW">
+              <Name>Vendee Drive</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050254" />
+                <Name>Bicester</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340003083OPP">
+              <Name>Blenheim Drive</Name>
+              <NameSuffix>W-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0020706" />
+                <Name>Highfield</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340003080OPP">
+              <Name>Greenwood Drive</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0020706" />
+                <Name>Highfield</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340003081OPP">
+              <Name>Bowmont Square</Name>
+              <NameSuffix>opp</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0020706" />
+                <Name>Highfield</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001955WRS">
+              <Name>Wear Road</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0020706" />
+                <Name>Highfield</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340002014KNS">
+              <Name>Whitelands Way North</Name>
+              <NameSuffix>SE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0080476" />
+                <Name>Kingsmere</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340002014KCS">
+              <Name>Kingsmere Centre</Name>
+              <NameSuffix>SE-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0080476" />
+                <Name>Kingsmere</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340002014KSS">
+              <Name>Whitelands Way South</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0080476" />
+                <Name>Kingsmere</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001797QUA">
+              <Name>Queens Avenue</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0020709" />
+                <Name>Kings End</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001554ENT">
+              <Name>Community Hospital</Name>
+              <NameSuffix>o/s</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0020709" />
+                <Name>Kings End</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340002015BPA">
+              <Name>Bicester Park and Ride</Name>
+              <NameSuffix>Stop A</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0080476" />
+                <Name>Kingsmere</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340003095SOU">
+              <Name>Wendlebury Turn</Name>
+              <NameSuffix>SW-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0050320" />
+                <Name>Wendlebury</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340000032V">
+              <Name>Bramley Close</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0071931" />
+                <Name>Gosford</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340000358OPP">
+              <Name>Bicester Road</Name>
+              <NameSuffix>S-bound</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0020698" />
+                <Name>Garden City</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001903PWD">
+              <Name>Oxford Parkway Railway Station</Name>
+              <NameSuffix>Stop D</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0071932" />
+                <Name>Water Eaton</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001053SPD">
+              <Name>Summertown Shops</Name>
+              <NameSuffix>Stop C</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0020767" />
+                <Name>Summertown</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340001060CNR">
+              <Name>Keble Road</Name>
+              <NameSuffix>adj</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:E0056504" />
+                <Name>Oxford</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+            <ScheduledStopPoint version="1.0" id="atco:340000005T1">
+              <Name>Magdalen Street East</Name>
+              <NameSuffix>Stop C6</NameSuffix>
+              <TopographicPlaceView>
+                <TopographicPlaceRef ref="nptgLocality:N0077115" />
+                <Name>Oxford City Centre</Name>
+              </TopographicPlaceView>
+            </ScheduledStopPoint>
+          </scheduledStopPoints>
+        </ServiceFrame>
+        <ServiceCalendarFrame version="1.0" id="epd:UK:SCOX:ServiceCalendarFrame_UK_PI_CALENDAR:SCOX:PH0005863:19:S5:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+          <dayTypes>
+            <DayType version="1.0" id="day_type@Public_Holiday">
+              <Name>Public Holiday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <HolidayTypes>AnyHoliday</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@Christmas_Day">
+              <Name>Christmas Day</Name>
+              <properties>
+                <PropertyOfDay>
+                  <HolidayTypes>AnyHoliday</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@Monday-Thursday">
+              <Name>Monday-Thursday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Monday Tuesday Wednesday Thursday</DaysOfWeek>
+                  <HolidayTypes>WorkingDay</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@Saturday">
+              <Name>Saturday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Saturday</DaysOfWeek>
+                  <HolidayTypes>NotWorkingDay</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@Sunday">
+              <Name>Sunday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Sunday</DaysOfWeek>
+                  <HolidayTypes>NotWorkingDay</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+            <DayType version="1.0" id="day_type@Friday">
+              <Name>Friday</Name>
+              <properties>
+                <PropertyOfDay>
+                  <DaysOfWeek>Friday</DaysOfWeek>
+                  <HolidayTypes>WorkingDay</HolidayTypes>
+                </PropertyOfDay>
+              </properties>
+            </DayType>
+          </dayTypes>
+          <dayTypeAssignments>
+            <DayTypeAssignment version="1.0" id="day_type@Christmas_Day@12/27/2027@2027-12-27" order="1">
+              <Name>12/27/2027</Name>
+              <Date>2027-12-27</Date>
+              <DayTypeRef version="1.0" ref="day_type@Christmas_Day" />
+            </DayTypeAssignment>
+          </dayTypeAssignments>
+        </ServiceCalendarFrame>
+        <FareFrame version="1.0" id="epd:UK:SCOX:FareFrame_UK_PI_FARE_NETWORK:SCOX:PH0005863:19:S5:op" dataSourceRef="op:src" responsibilitySetRef="op:network_data">
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_FARE_NETWORK:FXCP" />
+          <fareZones>
+            <FareZone version="1.0" id="zone@19@0@boarding">
+              <Name>Pioneer Sq</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000093BP2">Pioneer Square</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002344CNE">Clifton Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002346NE1">Granville Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002347NE1">Retail Park</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@19@0@alighting">
+              <Name>Pioneer Sq</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000093BP2">Pioneer Square</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000093BP2">Pioneer Square</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000093BP2">Pioneer Square</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000093BP2">Pioneer Square</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000093BP2">Pioneer Square</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@20@1@boarding">
+              <Name>Glory Farm</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001073OPP">Scampton Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003090OPP">Benson Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003089OPP">Fulmar Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001571OUT">Duxford Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003088OPP">Curtiss Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003087ORG">Rochford Gardens</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000697OLC">Lincoln Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001572CNR">Whitley Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001882OPP">Bristol Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001570CNR">Ruskin Walk</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001564OPP">St Peters Crescent</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@20@1@alighting">
+              <Name>Glory Farm</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002344CNE">Clifton Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002346NE1">Granville Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002347NE1">Retail Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001073OPP">Scampton Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003090OPP">Benson Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003089OPP">Fulmar Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001571OUT">Duxford Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003088OPP">Curtiss Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003087ORG">Rochford Gardens</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000697OLC">Lincoln Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001572CNR">Whitley Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001882OPP">Bristol Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002344CNE">Clifton Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002346NE1">Granville Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002347NE1">Retail Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001073OPP">Scampton Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003090OPP">Benson Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003089OPP">Fulmar Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001571OUT">Duxford Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003088OPP">Curtiss Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003087ORG">Rochford Gardens</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000697OLC">Lincoln Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001572CNR">Whitley Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001882OPP">Bristol Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002344CNE">Clifton Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002346NE1">Granville Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002347NE1">Retail Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001073OPP">Scampton Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003090OPP">Benson Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003089OPP">Fulmar Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001571OUT">Duxford Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003088OPP">Curtiss Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003087ORG">Rochford Gardens</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000697OLC">Lincoln Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001572CNR">Whitley Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001882OPP">Bristol Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002344CNE">Clifton Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002346NE1">Granville Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002347NE1">Retail Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001073OPP">Scampton Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003090OPP">Benson Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003089OPP">Fulmar Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001571OUT">Duxford Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003088OPP">Curtiss Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003087ORG">Rochford Gardens</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000697OLC">Lincoln Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001572CNR">Whitley Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001882OPP">Bristol Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002344CNE">Clifton Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002346NE1">Granville Way</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002347NE1">Retail Park</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001073OPP">Scampton Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003090OPP">Benson Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003089OPP">Fulmar Court</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001571OUT">Duxford Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003088OPP">Curtiss Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003087ORG">Rochford Gardens</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000697OLC">Lincoln Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001572CNR">Whitley Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001882OPP">Bristol Road</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@21@2@alighting">
+              <Name>Buckingham Cres</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001570CNR">Ruskin Walk</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001564OPP">St Peters Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001570CNR">Ruskin Walk</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001564OPP">St Peters Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001570CNR">Ruskin Walk</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001564OPP">St Peters Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001570CNR">Ruskin Walk</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001564OPP">St Peters Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001570CNR">Ruskin Walk</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001564OPP">St Peters Crescent</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@23@4@boarding">
+              <Name>Buckingham Cres</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001544CNR">Buckingham Crescent</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@23@4@alighting">
+              <Name>Buckingham Cres</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001544CNR">Buckingham Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001544CNR">Buckingham Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001544CNR">Buckingham Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001544CNR">Buckingham Crescent</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001544CNR">Buckingham Crescent</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@24@5@boarding">
+              <Name>Glory Farm</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001543CNR">Bicester North Station</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@24@5@alighting">
+              <Name>Glory Farm</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001543CNR">Bicester North Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001543CNR">Bicester North Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001543CNR">Bicester North Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001543CNR">Bicester North Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001543CNR">Bicester North Station</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@25@6@boarding">
+              <Name>Pioneer Sq</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000093BP3">Pioneer Square</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003076OUT">Brookside School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001563HUD">The Approach</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003086GEO">George Street</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@25@6@alighting">
+              <Name>Pioneer Sq</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000093BP3">Pioneer Square</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000093BP3">Pioneer Square</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000093BP3">Pioneer Square</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000093BP3">Pioneer Square</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000093BP3">Pioneer Square</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@26@7@boarding">
+              <Name>Kings End</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:3400001552CN">Bicester Village</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003094LDS">Lakeview Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003094SW">Vendee Drive</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@26@7@alighting">
+              <Name>Kings End</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003076OUT">Brookside School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001563HUD">The Approach</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003086GEO">George Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:3400001552CN">Bicester Village</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003076OUT">Brookside School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001563HUD">The Approach</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003086GEO">George Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:3400001552CN">Bicester Village</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003076OUT">Brookside School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001563HUD">The Approach</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003086GEO">George Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:3400001552CN">Bicester Village</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003076OUT">Brookside School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001563HUD">The Approach</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003086GEO">George Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:3400001552CN">Bicester Village</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003076OUT">Brookside School</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001563HUD">The Approach</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003086GEO">George Street</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:3400001552CN">Bicester Village</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@27@8@boarding">
+              <Name>Blenheim Drive</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003083OPP">Blenheim Drive</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@27@8@alighting">
+              <Name>Blenheim Drive</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003094LDS">Lakeview Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003094SW">Vendee Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003083OPP">Blenheim Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003094LDS">Lakeview Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003094SW">Vendee Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003083OPP">Blenheim Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003094LDS">Lakeview Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003094SW">Vendee Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003083OPP">Blenheim Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003094LDS">Lakeview Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003094SW">Vendee Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003083OPP">Blenheim Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003094LDS">Lakeview Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003094SW">Vendee Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003083OPP">Blenheim Drive</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@28@9@boarding">
+              <Name>Greenwood Est</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003080OPP">Greenwood Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003081OPP">Bowmont Square</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001955WRS">Wear Road</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@28@9@alighting">
+              <Name>Greenwood Est</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003080OPP">Greenwood Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003080OPP">Greenwood Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003080OPP">Greenwood Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003080OPP">Greenwood Drive</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003080OPP">Greenwood Drive</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@29@10@boarding">
+              <Name>Kingsmere</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002014KNS">Whitelands Way North</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002014KCS">Kingsmere Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002014KSS">Whitelands Way South</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001797QUA">Queens Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001554ENT">Community Hospital</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@29@10@alighting">
+              <Name>Kingsmere</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003081OPP">Bowmont Square</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001955WRS">Wear Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002014KNS">Whitelands Way North</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003081OPP">Bowmont Square</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001955WRS">Wear Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002014KNS">Whitelands Way North</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003081OPP">Bowmont Square</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001955WRS">Wear Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002014KNS">Whitelands Way North</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003081OPP">Bowmont Square</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001955WRS">Wear Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002014KNS">Whitelands Way North</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003081OPP">Bowmont Square</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001955WRS">Wear Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002014KNS">Whitelands Way North</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@30@11@boarding">
+              <Name>Bicester P&amp;R</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002015BPA">Bicester Park and Ride</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@30@11@alighting">
+              <Name>Bicester P&amp;R</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002014KCS">Kingsmere Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002014KSS">Whitelands Way South</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001797QUA">Queens Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001554ENT">Community Hospital</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002015BPA">Bicester Park and Ride</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002014KCS">Kingsmere Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002014KSS">Whitelands Way South</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001797QUA">Queens Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001554ENT">Community Hospital</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002015BPA">Bicester Park and Ride</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002014KCS">Kingsmere Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002014KSS">Whitelands Way South</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001797QUA">Queens Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001554ENT">Community Hospital</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002015BPA">Bicester Park and Ride</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002014KCS">Kingsmere Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002014KSS">Whitelands Way South</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001797QUA">Queens Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001554ENT">Community Hospital</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002015BPA">Bicester Park and Ride</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002014KCS">Kingsmere Centre</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002014KSS">Whitelands Way South</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001797QUA">Queens Avenue</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001554ENT">Community Hospital</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340002015BPA">Bicester Park and Ride</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@32@12@boarding">
+              <Name>Wendlebury Tn</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003095SOU">Wendlebury Turn</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@32@12@alighting">
+              <Name>Wendlebury Tn</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003095SOU">Wendlebury Turn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003095SOU">Wendlebury Turn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003095SOU">Wendlebury Turn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003095SOU">Wendlebury Turn</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340003095SOU">Wendlebury Turn</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@43@14@boarding">
+              <Name>Kid Sainsbury</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000032V">Bramley Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000358OPP">Bicester Road</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@43@14@alighting">
+              <Name>Kid Sainsbury</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000032V">Bramley Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000032V">Bramley Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000032V">Bramley Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000032V">Bramley Close</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000032V">Bramley Close</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@144@15@boarding">
+              <Name>Oxf Parkway</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001903PWD">Oxford Parkway Railway Station</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@144@15@alighting">
+              <Name>Oxf Parkway</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000358OPP">Bicester Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001903PWD">Oxford Parkway Railway Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000358OPP">Bicester Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001903PWD">Oxford Parkway Railway Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000358OPP">Bicester Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001903PWD">Oxford Parkway Railway Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000358OPP">Bicester Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001903PWD">Oxford Parkway Railway Station</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000358OPP">Bicester Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001903PWD">Oxford Parkway Railway Station</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@47@18@boarding">
+              <Name>Summertown</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001053SPD">Summertown Shops</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@47@18@alighting">
+              <Name>Summertown</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001053SPD">Summertown Shops</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001053SPD">Summertown Shops</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001053SPD">Summertown Shops</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001053SPD">Summertown Shops</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001053SPD">Summertown Shops</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@49@20@boarding">
+              <Name>Keble Rd</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001060CNR">Keble Road</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@49@20@alighting">
+              <Name>Keble Rd</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001060CNR">Keble Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001060CNR">Keble Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001060CNR">Keble Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001060CNR">Keble Road</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340001060CNR">Keble Road</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@50@21@boarding">
+              <Name>Oxford City</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000005T1">Magdalen Street East</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+            <FareZone version="1.0" id="zone@50@21@alighting">
+              <Name>Oxford City</Name>
+              <members>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000005T1">Magdalen Street East</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000005T1">Magdalen Street East</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000005T1">Magdalen Street East</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000005T1">Magdalen Street East</ScheduledStopPointRef>
+                <ScheduledStopPointRef versionRef="1.0" ref="atco:340000005T1">Magdalen Street East</ScheduledStopPointRef>
+              </members>
+            </FareZone>
+          </fareZones>
+        </FareFrame>
+        <FareFrame version="1.0" id="epd:UK:SCOX:FareFrame_UK_PI_FARE_PRODUCT:SCOX:PH0005863:19:S5:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+          <Name>Fare products</Name>
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_FARE_PRODUCT:FXCP" />
+          <tariffs>
+            <Tariff version="1.0" id="Tariff@JOB_SEEKERS_SINGLE">
+              <validityConditions>
+                <ValidBetween>
+                  <FromDate>2026-05-31T03:00:00Z</FromDate>
+                </ValidBetween>
+              </validityConditions>
+              <Name>Tariff for Jobseeker Single</Name>
+              <OperatorRef versionRef="1.0" ref="noc:SCOX">noc:137857</OperatorRef>
+              <LineRef versionRef="1.0" ref="SCOX:PH0005863:19:S5" />
+              <TypeOfTariffRef versionRef="fxc:v1.0" ref="fxc:zone_to_zone" />
+              <TariffBasis>zoneToZone</TariffBasis>
+              <fareStructureElements>
+                <FareStructureElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Conditions_of_travel">
+                  <Name>Conditions of travel</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:travel_conditions" />
+                  <GenericParameterAssignment version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Conditions_of_travel" order="1">
+                    <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:condition_of_use" />
+                    <LimitationGroupingType>AND</LimitationGroupingType>
+                    <limitations>
+                      <Transferability version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Conditions_of_travel@Transferability">
+                        <Name>Ticket is not transferable</Name>
+                        <CanTransfer>false</CanTransfer>
+                      </Transferability>
+                      <RoundTrip version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Conditions_of_travel@Trip">
+                        <Name>Single Trip</Name>
+                        <TripType>single</TripType>
+                      </RoundTrip>
+                      <FrequencyOfUse version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Conditions_of_travel@Frequency">
+                        <Name>One trip no transfers</Name>
+                        <FrequencyOfUseType>none</FrequencyOfUseType>
+                        <MaximalFrequency>1</MaximalFrequency>
+                      </FrequencyOfUse>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Eligibility">
+                  <Name>Eligible user types</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:eligibility" />
+                  <GenericParameterAssignment version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Eligibility" order="1">
+                    <Name>Eligibility to purchase</Name>
+                    <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:eligible" />
+                    <limitations>
+                      <UserProfile version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@UP@adult">
+                        <Name>Adult</Name>
+                        <TypeOfConcessionRef versionRef="fxc:v1.0" ref="fxc:adult" />
+                        <UserType>adult</UserType>
+                      </UserProfile>
+                    </limitations>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+                <FareStructureElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Access_Lines">
+                  <Name>Available lines</Name>
+                  <TypeOfFareStructureElementRef versionRef="fxc:v1.0" ref="fxc:access" />
+                  <distanceMatrixElements>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+19@0">
+                      <Name>Pioneer Sq to Pioneer Sq</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@19@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@19@0@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+20@1">
+                      <Name>Pioneer Sq to Glory Farm</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@19@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@20@1@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+21@2">
+                      <Name>Pioneer Sq to Buckingham Cres</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@19@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@21@2@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+23@4">
+                      <Name>Pioneer Sq to Buckingham Cres</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@19@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@23@4@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+24@5">
+                      <Name>Pioneer Sq to Glory Farm</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@19@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@24@5@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+25@6">
+                      <Name>Pioneer Sq to Pioneer Sq</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@19@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@25@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+26@7">
+                      <Name>Pioneer Sq to Kings End</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@19@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@26@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+27@8">
+                      <Name>Pioneer Sq to Blenheim Drive</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@19@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@27@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+28@9">
+                      <Name>Pioneer Sq to Greenwood Est</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@19@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@28@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+29@10">
+                      <Name>Pioneer Sq to Kingsmere</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@19@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@29@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+30@11">
+                      <Name>Pioneer Sq to Bicester P&amp;R</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@19@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@30@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+32@12">
+                      <Name>Pioneer Sq to Wendlebury Tn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@19@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@32@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+43@14">
+                      <Name>Pioneer Sq to Kid Sainsbury</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@19@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@43@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+144@15">
+                      <Name>Pioneer Sq to Oxf Parkway</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@19@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@144@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+47@18">
+                      <Name>Pioneer Sq to Summertown</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@19@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@47@18@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+49@20">
+                      <Name>Pioneer Sq to Keble Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@19@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@49@20@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+50@21">
+                      <Name>Pioneer Sq to Oxford City</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@19@0@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@50@21@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+20@1">
+                      <Name>Glory Farm to Glory Farm</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@20@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@20@1@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+21@2">
+                      <Name>Glory Farm to Buckingham Cres</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@20@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@21@2@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+23@4">
+                      <Name>Glory Farm to Buckingham Cres</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@20@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@23@4@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+24@5">
+                      <Name>Glory Farm to Glory Farm</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@20@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@24@5@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+25@6">
+                      <Name>Glory Farm to Pioneer Sq</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@20@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@25@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+26@7">
+                      <Name>Glory Farm to Kings End</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@20@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@26@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+27@8">
+                      <Name>Glory Farm to Blenheim Drive</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@20@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@27@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+28@9">
+                      <Name>Glory Farm to Greenwood Est</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@20@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@28@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+29@10">
+                      <Name>Glory Farm to Kingsmere</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@20@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@29@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+30@11">
+                      <Name>Glory Farm to Bicester P&amp;R</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@20@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@30@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+32@12">
+                      <Name>Glory Farm to Wendlebury Tn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@20@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@32@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+43@14">
+                      <Name>Glory Farm to Kid Sainsbury</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@20@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@43@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+144@15">
+                      <Name>Glory Farm to Oxf Parkway</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@20@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@144@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+47@18">
+                      <Name>Glory Farm to Summertown</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@20@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@47@18@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+49@20">
+                      <Name>Glory Farm to Keble Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@20@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@49@20@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+50@21">
+                      <Name>Glory Farm to Oxford City</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@20@1@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@50@21@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+23@4">
+                      <Name>Buckingham Cres to Buckingham Cres</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@23@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@23@4@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+24@5">
+                      <Name>Buckingham Cres to Glory Farm</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@23@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@24@5@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+25@6">
+                      <Name>Buckingham Cres to Pioneer Sq</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@23@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@25@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+26@7">
+                      <Name>Buckingham Cres to Kings End</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@23@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@26@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+27@8">
+                      <Name>Buckingham Cres to Blenheim Drive</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@23@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@27@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+28@9">
+                      <Name>Buckingham Cres to Greenwood Est</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@23@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@28@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+29@10">
+                      <Name>Buckingham Cres to Kingsmere</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@23@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@29@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+30@11">
+                      <Name>Buckingham Cres to Bicester P&amp;R</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@23@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@30@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+32@12">
+                      <Name>Buckingham Cres to Wendlebury Tn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@23@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@32@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+43@14">
+                      <Name>Buckingham Cres to Kid Sainsbury</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@23@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@43@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+144@15">
+                      <Name>Buckingham Cres to Oxf Parkway</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@23@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@144@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+47@18">
+                      <Name>Buckingham Cres to Summertown</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@23@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@47@18@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+49@20">
+                      <Name>Buckingham Cres to Keble Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@23@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@49@20@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+50@21">
+                      <Name>Buckingham Cres to Oxford City</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@23@4@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@50@21@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+24@5">
+                      <Name>Glory Farm to Glory Farm</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@24@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@24@5@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+25@6">
+                      <Name>Glory Farm to Pioneer Sq</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@24@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@25@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+26@7">
+                      <Name>Glory Farm to Kings End</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@24@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@26@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+27@8">
+                      <Name>Glory Farm to Blenheim Drive</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@24@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@27@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+28@9">
+                      <Name>Glory Farm to Greenwood Est</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@24@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@28@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+29@10">
+                      <Name>Glory Farm to Kingsmere</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@24@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@29@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+30@11">
+                      <Name>Glory Farm to Bicester P&amp;R</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@24@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@30@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+32@12">
+                      <Name>Glory Farm to Wendlebury Tn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@24@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@32@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+43@14">
+                      <Name>Glory Farm to Kid Sainsbury</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@24@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@43@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+144@15">
+                      <Name>Glory Farm to Oxf Parkway</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@24@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@144@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+47@18">
+                      <Name>Glory Farm to Summertown</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@24@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@47@18@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+49@20">
+                      <Name>Glory Farm to Keble Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@24@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@49@20@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+50@21">
+                      <Name>Glory Farm to Oxford City</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@24@5@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@50@21@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+25@6">
+                      <Name>Pioneer Sq to Pioneer Sq</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@25@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@25@6@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+26@7">
+                      <Name>Pioneer Sq to Kings End</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@25@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@26@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+27@8">
+                      <Name>Pioneer Sq to Blenheim Drive</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@25@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@27@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+28@9">
+                      <Name>Pioneer Sq to Greenwood Est</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@25@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@28@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+29@10">
+                      <Name>Pioneer Sq to Kingsmere</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@25@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@29@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+30@11">
+                      <Name>Pioneer Sq to Bicester P&amp;R</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@25@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@30@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+32@12">
+                      <Name>Pioneer Sq to Wendlebury Tn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@25@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@32@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+43@14">
+                      <Name>Pioneer Sq to Kid Sainsbury</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@25@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@43@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+144@15">
+                      <Name>Pioneer Sq to Oxf Parkway</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@25@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@144@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+47@18">
+                      <Name>Pioneer Sq to Summertown</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@25@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@47@18@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+49@20">
+                      <Name>Pioneer Sq to Keble Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@25@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@49@20@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+50@21">
+                      <Name>Pioneer Sq to Oxford City</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@25@6@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@50@21@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+26@7">
+                      <Name>Kings End to Kings End</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@26@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@26@7@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+27@8">
+                      <Name>Kings End to Blenheim Drive</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@26@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@27@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+28@9">
+                      <Name>Kings End to Greenwood Est</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@26@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@28@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+29@10">
+                      <Name>Kings End to Kingsmere</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@26@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@29@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+30@11">
+                      <Name>Kings End to Bicester P&amp;R</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@26@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@30@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+32@12">
+                      <Name>Kings End to Wendlebury Tn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@26@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@32@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+43@14">
+                      <Name>Kings End to Kid Sainsbury</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@26@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@43@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+144@15">
+                      <Name>Kings End to Oxf Parkway</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@26@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@144@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+47@18">
+                      <Name>Kings End to Summertown</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@26@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@47@18@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+49@20">
+                      <Name>Kings End to Keble Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@26@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@49@20@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+50@21">
+                      <Name>Kings End to Oxford City</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@26@7@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@50@21@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@27@8+27@8">
+                      <Name>Blenheim Drive to Blenheim Drive</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@27@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@27@8@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@27@8+28@9">
+                      <Name>Blenheim Drive to Greenwood Est</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@27@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@28@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@27@8+29@10">
+                      <Name>Blenheim Drive to Kingsmere</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@27@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@29@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@27@8+30@11">
+                      <Name>Blenheim Drive to Bicester P&amp;R</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@27@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@30@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@27@8+32@12">
+                      <Name>Blenheim Drive to Wendlebury Tn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@27@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@32@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@27@8+43@14">
+                      <Name>Blenheim Drive to Kid Sainsbury</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@27@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@43@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@27@8+144@15">
+                      <Name>Blenheim Drive to Oxf Parkway</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@27@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@144@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@27@8+47@18">
+                      <Name>Blenheim Drive to Summertown</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@27@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@47@18@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@27@8+49@20">
+                      <Name>Blenheim Drive to Keble Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@27@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@49@20@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@27@8+50@21">
+                      <Name>Blenheim Drive to Oxford City</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@27@8@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@50@21@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@28@9+28@9">
+                      <Name>Greenwood Est to Greenwood Est</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@28@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@28@9@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@28@9+29@10">
+                      <Name>Greenwood Est to Kingsmere</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@28@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@29@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@28@9+30@11">
+                      <Name>Greenwood Est to Bicester P&amp;R</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@28@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@30@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@28@9+32@12">
+                      <Name>Greenwood Est to Wendlebury Tn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@28@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@32@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@28@9+43@14">
+                      <Name>Greenwood Est to Kid Sainsbury</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@28@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@43@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@28@9+144@15">
+                      <Name>Greenwood Est to Oxf Parkway</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@28@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@144@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@28@9+47@18">
+                      <Name>Greenwood Est to Summertown</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@28@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@47@18@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@28@9+49@20">
+                      <Name>Greenwood Est to Keble Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@28@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@49@20@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@28@9+50@21">
+                      <Name>Greenwood Est to Oxford City</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@28@9@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@50@21@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@29@10+29@10">
+                      <Name>Kingsmere to Kingsmere</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@29@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@29@10@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@29@10+30@11">
+                      <Name>Kingsmere to Bicester P&amp;R</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@29@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@30@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@29@10+32@12">
+                      <Name>Kingsmere to Wendlebury Tn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@29@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@32@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@29@10+43@14">
+                      <Name>Kingsmere to Kid Sainsbury</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@29@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@43@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@29@10+144@15">
+                      <Name>Kingsmere to Oxf Parkway</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@29@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@144@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@29@10+47@18">
+                      <Name>Kingsmere to Summertown</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@29@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@47@18@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@29@10+49@20">
+                      <Name>Kingsmere to Keble Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@29@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@49@20@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@29@10+50@21">
+                      <Name>Kingsmere to Oxford City</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@29@10@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@50@21@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@30@11+30@11">
+                      <Name>Bicester P&amp;R to Bicester P&amp;R</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@30@11@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@30@11@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@30@11+32@12">
+                      <Name>Bicester P&amp;R to Wendlebury Tn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@30@11@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@32@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@30@11+43@14">
+                      <Name>Bicester P&amp;R to Kid Sainsbury</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@30@11@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@43@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@30@11+144@15">
+                      <Name>Bicester P&amp;R to Oxf Parkway</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@30@11@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@144@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@30@11+47@18">
+                      <Name>Bicester P&amp;R to Summertown</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@30@11@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@47@18@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@30@11+49@20">
+                      <Name>Bicester P&amp;R to Keble Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@30@11@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@49@20@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@30@11+50@21">
+                      <Name>Bicester P&amp;R to Oxford City</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@30@11@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@50@21@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@32@12+32@12">
+                      <Name>Wendlebury Tn to Wendlebury Tn</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@32@12@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@32@12@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@32@12+43@14">
+                      <Name>Wendlebury Tn to Kid Sainsbury</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@32@12@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@43@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@32@12+144@15">
+                      <Name>Wendlebury Tn to Oxf Parkway</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@32@12@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@144@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@32@12+47@18">
+                      <Name>Wendlebury Tn to Summertown</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@32@12@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@47@18@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@32@12+49@20">
+                      <Name>Wendlebury Tn to Keble Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@32@12@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@49@20@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@32@12+50@21">
+                      <Name>Wendlebury Tn to Oxford City</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@32@12@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@50@21@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@43@14+43@14">
+                      <Name>Kid Sainsbury to Kid Sainsbury</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@43@14@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@43@14@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@43@14+144@15">
+                      <Name>Kid Sainsbury to Oxf Parkway</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@43@14@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@144@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@43@14+47@18">
+                      <Name>Kid Sainsbury to Summertown</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@43@14@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@47@18@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@43@14+49@20">
+                      <Name>Kid Sainsbury to Keble Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@43@14@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@49@20@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@43@14+50@21">
+                      <Name>Kid Sainsbury to Oxford City</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@43@14@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@50@21@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@144@15+144@15">
+                      <Name>Oxf Parkway to Oxf Parkway</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@144@15@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@144@15@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@144@15+47@18">
+                      <Name>Oxf Parkway to Summertown</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@144@15@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@47@18@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@144@15+49@20">
+                      <Name>Oxf Parkway to Keble Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@144@15@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@49@20@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@144@15+50@21">
+                      <Name>Oxf Parkway to Oxford City</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@144@15@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@50@21@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@47@18+47@18">
+                      <Name>Summertown to Summertown</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@47@18@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@47@18@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@47@18+49@20">
+                      <Name>Summertown to Keble Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@47@18@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@49@20@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@47@18+50@21">
+                      <Name>Summertown to Oxford City</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@47@18@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@50@21@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@49@20+49@20">
+                      <Name>Keble Rd to Keble Rd</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@49@20@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@49@20@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@49@20+50@21">
+                      <Name>Keble Rd to Oxford City</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@49@20@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@50@21@alighting" />
+                    </DistanceMatrixElement>
+                    <DistanceMatrixElement version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Distance@50@21+50@21">
+                      <Name>Oxford City to Oxford City</Name>
+                      <StartTariffZoneRef version="1.0" ref="zone@50@21@boarding" />
+                      <EndTariffZoneRef version="1.0" ref="zone@50@21@alighting" />
+                    </DistanceMatrixElement>
+                  </distanceMatrixElements>
+                  <GenericParameterAssignment version="1.0" id="Tariff@JOB_SEEKERS_SINGLE@Access_Lines" order="1">
+                    <Name>Lines</Name>
+                    <TypeOfAccessRightAssignmentRef versionRef="fxc:v1.0" ref="fxc:can_access" />
+                    <ValidityParameterAssignmentType>EQ</ValidityParameterAssignmentType>
+                    <validityParameters>
+                      <LineRef versionRef="1.0" ref="SCOX:PH0005863:19:S5" />
+                    </validityParameters>
+                  </GenericParameterAssignment>
+                </FareStructureElement>
+              </fareStructureElements>
+            </Tariff>
+          </tariffs>
+          <fareProducts>
+            <PreassignedFareProduct version="1.0" id="trip@JOB_SEEKERS_SINGLE">
+              <Name>Jobseeker Single</Name>
+              <Description>Valid for a single journey. Available to Jobcentre Plus Travel Discount Card holders.</Description>
+              <ChargingMomentRef versionRef="fxc:v1.0" ref="fxc:prepayment" />
+              <ChargingMomentType>beforeTravel</ChargingMomentType>
+              <TypeOfFareProductRef versionRef="fxc:v1.0" ref="fxc:standard_product@trip@single" />
+              <OperatorRef version="1.0" ref="noc:SCOX">noc:137857</OperatorRef>
+              <validableElements>
+                <ValidableElement version="1.0" id="trip@JOB_SEEKERS_SINGLE@Access">
+                  <Name>Single Ride</Name>
+                  <fareStructureElements>
+                    <FareStructureElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Eligibility" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Conditions_of_travel" />
+                    <FareStructureElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Access_Lines" />
+                  </fareStructureElements>
+                </ValidableElement>
+              </validableElements>
+              <accessRightsInProduct>
+                <AccessRightInProduct version="1.0" id="trip@JOB_SEEKERS_SINGLE" order="1">
+                  <ValidableElementRef version="1.0" ref="trip@JOB_SEEKERS_SINGLE@Access" />
+                </AccessRightInProduct>
+              </accessRightsInProduct>
+              <ProductType>singleTrip</ProductType>
+            </PreassignedFareProduct>
+          </fareProducts>
+          <salesOfferPackages>
+            <SalesOfferPackage version="1.0" id="SOP@trip@JOB_SEEKERS_SINGLE@paperOnBus">
+              <Name>Jobseeker Single - Onboard (paper ticket)</Name>
+              <distributionAssignments>
+                <DistributionAssignment version="1.0" id="SOP@trip@JOB_SEEKERS_SINGLE@paperOnBus@onBoard" order="1">
+                  <DistributionChannelType>onBoard</DistributionChannelType>
+                  <PaymentMethods>cash contactlessPaymentCard</PaymentMethods>
+                  <FulfilmentMethodRef version="1.0" ref="Fulfilment@collectOnBoard" />
+                </DistributionAssignment>
+              </distributionAssignments>
+              <salesOfferPackageElements>
+                <SalesOfferPackageElement version="1.0" id="SOP@trip@JOB_SEEKERS_SINGLE@paperOnBus@paperTicket" order="1">
+                  <TypeOfTravelDocumentRef version="1.0" ref="TravelDocument@paperTicket" />
+                  <PreassignedFareProductRef version="1.0" ref="trip@JOB_SEEKERS_SINGLE" />
+                </SalesOfferPackageElement>
+              </salesOfferPackageElements>
+            </SalesOfferPackage>
+          </salesOfferPackages>
+        </FareFrame>
+        <FareFrame version="1.0" id="epd:UK:SCOX:FareFrame_UK_PI_FARE_NETWORK_PRICE:SCOX:PH0005863:19:S5:op" dataSourceRef="op:src" responsibilitySetRef="op:tariff_data">
+          <Name>Prices for JOB SEEKERS SINGLE</Name>
+          <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_PRICE:FXCP" />
+          <FrameDefaults>
+            <DefaultCurrency>GBP</DefaultCurrency>
+          </FrameDefaults>
+          <prerequisites>
+            <FareFrameRef versionRef="1.0" ref="epd:UK:SCOX:FareFrame_UK_PI_FARE_PRODUCT:SCOX:PH0005863:19:S5:op" />
+          </prerequisites>
+          <fareTables>
+            <FareTable version="1.0" id="fareTable@SCOX:PH0005863:19:S5@trip@JOB_SEEKERS_SINGLE">
+              <Name>Oxf - Bicester - JOB SEEKERS SINGLE</Name>
+              <pricesFor>
+                <PreassignedFareProductRef version="1.0" ref="trip@JOB_SEEKERS_SINGLE" />
+                <SalesOfferPackageRef version="1.0" ref="SOP@trip@JOB_SEEKERS_SINGLE@paperOnBus" />
+                <UserProfileRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@UP@adult" />
+              </pricesFor>
+              <specifics>
+                <LineRef versionRef="1.0" ref="SCOX:PH0005863:19:S5" />
+              </specifics>
+              <prices>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+20@1@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+20@1" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+21@2@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+21@2" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+23@4@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+23@4" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+24@5@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+24@5" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+25@6@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+25@6" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+26@7@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+26@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+27@8@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+27@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+28@9@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+28@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+29@10@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+29@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+30@11@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+30@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+32@12@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+32@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+43@14@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+43@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+144@15@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+144@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+47@18@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+47@18" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+49@20@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+49@20" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+50@21@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@19@0+50@21" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+21@2@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+21@2" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+23@4@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+23@4" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+24@5@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+24@5" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+25@6@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+25@6" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+26@7@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+26@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+27@8@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+27@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+28@9@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+28@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+29@10@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+29@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+30@11@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+30@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+32@12@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+32@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+43@14@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+43@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+144@15@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+144@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+47@18@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+47@18" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+49@20@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+49@20" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+50@21@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@20@1+50@21" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+24@5@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+24@5" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+25@6@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+25@6" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+26@7@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+26@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+27@8@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+27@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+28@9@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+28@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+29@10@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+29@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+30@11@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+30@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+32@12@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+32@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+43@14@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+43@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+144@15@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+144@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+47@18@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+47@18" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+49@20@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+49@20" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+50@21@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@23@4+50@21" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+25@6@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+25@6" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+26@7@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+26@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+27@8@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+27@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+28@9@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+28@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+29@10@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+29@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+30@11@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+30@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+32@12@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+32@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+43@14@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+43@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+144@15@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+144@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+47@18@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+47@18" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+49@20@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+49@20" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+50@21@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@24@5+50@21" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+26@7@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+26@7" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+27@8@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+27@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+28@9@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+28@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+29@10@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+29@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+30@11@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+30@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+32@12@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+32@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+43@14@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+43@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+144@15@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+144@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+47@18@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+47@18" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+49@20@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+49@20" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+50@21@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@25@6+50@21" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+27@8@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+27@8" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+28@9@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+28@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+29@10@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+29@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+30@11@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+30@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+32@12@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+32@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+43@14@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+43@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+144@15@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+144@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+47@18@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+47@18" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+49@20@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+49@20" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+50@21@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@26@7+50@21" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@27@8+28@9@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@27@8+28@9" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@27@8+29@10@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@27@8+29@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@27@8+30@11@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@27@8+30@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@27@8+32@12@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@27@8+32@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@27@8+43@14@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@27@8+43@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@27@8+144@15@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@27@8+144@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@27@8+47@18@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@27@8+47@18" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@27@8+49@20@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@27@8+49@20" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@27@8+50@21@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@27@8+50@21" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@28@9+29@10@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@28@9+29@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@28@9+30@11@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@28@9+30@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@28@9+32@12@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@28@9+32@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@28@9+43@14@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@28@9+43@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@28@9+144@15@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@28@9+144@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@28@9+47@18@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@28@9+47@18" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@28@9+49@20@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@28@9+49@20" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@28@9+50@21@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@28@9+50@21" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@29@10+29@10@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@29@10+29@10" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@29@10+30@11@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.15</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@29@10+30@11" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@29@10+32@12@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@29@10+32@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@29@10+43@14@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@29@10+43@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@29@10+144@15@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@29@10+144@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@29@10+47@18@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@29@10+47@18" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@29@10+49@20@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@29@10+49@20" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@29@10+50@21@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@29@10+50@21" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@30@11+32@12@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@30@11+32@12" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@30@11+43@14@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@30@11+43@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@30@11+144@15@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@30@11+144@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@30@11+47@18@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@30@11+47@18" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@30@11+49@20@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@30@11+49@20" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@30@11+50@21@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@30@11+50@21" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@32@12+43@14@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@32@12+43@14" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@32@12+144@15@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@32@12+144@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@32@12+47@18@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@32@12+47@18" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@32@12+49@20@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@32@12+49@20" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@32@12+50@21@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.5</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@32@12+50@21" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@43@14+144@15@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>0.8</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@43@14+144@15" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@43@14+47@18@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.35</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@43@14+47@18" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@43@14+49@20@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.35</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@43@14+49@20" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@43@14+50@21@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.35</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@43@14+50@21" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@144@15+47@18@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.35</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@144@15+47@18" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@144@15+49@20@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.35</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@144@15+49@20" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@144@15+50@21@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.35</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@144@15+50@21" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@47@18+49@20@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.35</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@47@18+49@20" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@47@18+50@21@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>1.35</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@47@18+50@21" />
+                </DistanceMatrixElementPrice>
+                <DistanceMatrixElementPrice version="1.0" id="price@Tariff@JOB_SEEKERS_SINGLE@Distance@49@20+50@21@trip@JOB_SEEKERS_SINGLE">
+                  <Amount>0.8</Amount>
+                  <DistanceMatrixElementRef version="1.0" ref="Tariff@JOB_SEEKERS_SINGLE@Distance@49@20+50@21" />
+                </DistanceMatrixElementPrice>
+              </prices>
+            </FareTable>
+          </fareTables>
+        </FareFrame>
+      </frames>
+    </CompositeFrame>
+    <CompositeFrame version="1.0" id="epd:UK:SCOX:CompositeFrame_UK_PI_METADATA_OFFER::op" dataSourceRef="op:src" responsibilitySetRef="op:metadata">
+      <Name>Common resources for SCOX</Name>
+      <Description>Set of SCOX profile metadata.</Description>
+      <TypeOfFrameRef versionRef="fxc:v1.0" ref="fxc:UK:DFT:TypeOfFrame_UK_PI_METADATA_OFFER:FXCP" />
+      <frames>
+        <FareFrame version="1.0" id="epd:UK:SCOX:FareFrame_UK_PI_METADATA:SCOX:PH0005863:19:S5:op" dataSourceRef="op:src" responsibilitySetRef="op:metadata">
+          <fulfilmentMethods>
+            <FulfilmentMethod version="1.0" id="Fulfilment@mobileApp">
+              <Name>Mobile App</Name>
+              <FulfilmentMethodType>mobileApp</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod version="1.0" id="Fulfilment@onlinePropagation">
+              <Name>Online propagation</Name>
+              <FulfilmentMethodType>validator</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod version="1.0" id="Fulfilment@post">
+              <Name>Send ticket by post</Name>
+              <FulfilmentMethodType>post</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod version="1.0" id="Fulfilment@collectAtCounter">
+              <Name>Collect at counter</Name>
+              <FulfilmentMethodType>ticketOffice</FulfilmentMethodType>
+            </FulfilmentMethod>
+            <FulfilmentMethod version="1.0" id="Fulfilment@collectOnBoard">
+              <Name>Collect on board</Name>
+              <FulfilmentMethodType>conductor</FulfilmentMethodType>
+            </FulfilmentMethod>
+          </fulfilmentMethods>
+          <typesOfTravelDocuments>
+            <TypeOfTravelDocument version="1.0" id="TravelDocument@mobileApp">
+              <Name>Stored on your mobile phone as m-tickets</Name>
+              <MediaType>mobileApp</MediaType>
+              <MachineReadable>barCode</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument version="1.0" id="TravelDocument@smartCard">
+              <Name>Smart_Card_Ticket</Name>
+              <MediaType>smartCard</MediaType>
+              <MachineReadable>nfc</MachineReadable>
+            </TypeOfTravelDocument>
+            <TypeOfTravelDocument version="1.0" id="TravelDocument@paperTicket">
+              <Name>Printed Ticket</Name>
+              <MediaType>paperTicket</MediaType>
+            </TypeOfTravelDocument>
+          </typesOfTravelDocuments>
+        </FareFrame>
+      </frames>
+    </CompositeFrame>
+  </dataObjects>
+</PublicationDelivery>
