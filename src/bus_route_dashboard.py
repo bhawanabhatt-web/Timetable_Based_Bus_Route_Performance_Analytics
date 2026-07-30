@@ -1,43 +1,3 @@
-"""
-Bus Route Performance Analytics -- Complete Dashboard (v2, corrected)
-=========================================================================
-Timetable-Based Bus Route Performance Analytics
-
-Rebuilt to match your ACTUAL saved file structures (read directly from
-your notebooks' output cells), not assumed ones:
-
-  model_comparison.csv   -- Model, Training Time (s), accuracy,
-                             weightedPrecision, weightedRecall, f1
-  feature_importance.json -- {
-        "assembler_inputs": [...],                 # parallel to importances
-        "label_names": ["High","Low","Medium"],
-        "tree_importances": {"Decision Tree":[...], "Random Forest":[...]},
-        "lr_coefficients": {"High":[...], "Low":[...], "Medium":[...]},
-    }
-  cv_results.json        -- FLAT LIST of
-        {"model": ..., "params": {...}, "avg_f1": ...}   (4 runs/model)
-  eval_predictions/*.parquet -- per-model row-level label/prediction/
-        probability_array, read here with plain pandas (no Spark needed)
-        to rebuild the same confusion matrices & ROC curves as Notebook 06.
-
-Tabs:
-    1. Overview            -- dataset summary                 (no Spark)
-    2. Model Comparison     -- accuracy/precision/recall/F1
-                               + training time, on separate scales (no Spark)
-    3. Confusion Matrices   -- rebuilt from eval_predictions    (no Spark)
-    4. ROC Curves           -- rebuilt from eval_predictions    (no Spark)
-    5. Feature Importance   -- tree importances + LR coefficients (no Spark)
-    6. Cross-Validation     -- all hyperparameter runs per model (no Spark)
-    7. Predict Route        -- your REAL best_model/ PipelineModel (Spark,
-                               only starts when this tab is opened)
-
-Run with:
-    python bus_route_dashboard.py
-
-Requirements:
-    pyspark, matplotlib, pandas, pyarrow, scikit-learn
-"""
-
 import json
 import os
 import threading
@@ -104,8 +64,7 @@ class DashboardApp(tk.Tk):
         apply_theme(self)
 
         self.banner = AnimatedBanner(
-            self, "Bus Route Performance Analytics",
-            "Timetable-Based Bus Route Performance Analytics ",
+            self, "Bus Route Performance Analytics"
         )
         self.banner.pack(fill="x")
 

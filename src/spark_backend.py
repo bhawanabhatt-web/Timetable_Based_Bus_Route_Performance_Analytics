@@ -1,9 +1,3 @@
-"""
-spark_backend.py -- loads your real best_model/ PipelineModel and serves
-predictions. Shared by route_popularity_gui_spark.py (standalone) and
-bus_route_dashboard.py (merged dashboard).
-"""
-
 import json
 import os
 from pathlib import Path

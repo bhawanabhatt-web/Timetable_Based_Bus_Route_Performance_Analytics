@@ -1,34 +1,11 @@
-"""
-ui_theme.py -- Shared visual theme for the project's tkinter apps
-====================================================================
-Timetable-Based Bus Route Performance Analytics
-
-Provides:
-  - apply_theme(root): a consistent navy/steel-blue ttk theme
-  - AnimatedBanner: a gradient header with a small bus travelling along a
-    dashed route line, leaving a fading trail of "data ping" dots behind
-    it -- themed on the project (GPS-tracked bus data), not a generic
-    UI effect.
-  - Card(parent): a padded, titled container frame for grouping widgets.
-  - ScrollableFrame(parent): a vertically scrollable container -- put your
-    widgets inside `.body`. Call bind_wheel()/unbind_wheel() to control
-    which instance responds to the mouse wheel (see note below).
-
-Scrolling note: mouse-wheel binding is controlled by which tab is
-currently selected (via the owning app's <<NotebookTabChanged>> handler),
-NOT by mouse hover. Hover-based binding breaks as soon as the cursor moves
-over an embedded matplotlib chart (a separate child widget), which is
-exactly where users need to scroll -- so this version avoids that.
-"""
-
 import tkinter as tk
 from tkinter import ttk
 
 # --------------------------------------------------------------------------
 # Palette
 # --------------------------------------------------------------------------
-NAVY_DARK = (10, 25, 66)      # #0a1942
-STEEL_BLUE = (21, 96, 189)    # #1560bd
+NAVY_DARK = (10, 25, 66)      
+STEEL_BLUE = (21, 96, 189)   
 BG_APP = "#0f1b33"            # window background
 BG_CARD = "#16294d"           # card background
 BG_INPUT = "#1c2f57"          # entry/combobox background
