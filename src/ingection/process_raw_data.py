@@ -214,17 +214,14 @@ def process_disruptions(raw_dir: Path, out_dir: Path):
     print("\n[Disruptions] parsing SIRI-SX files...")
     folder = raw_dir / "Disruptions"
     rows = []
-
     for xml_path in iter_xml_files(folder):
         try:
             root = etree.parse(str(xml_path)).getroot()
         except etree.XMLSyntaxError as e:
             print(f"  ! XML parse error in {xml_path.name}: {e}")
             continue
-
         ns = detect_namespace(root)
         p = "ns:" if ns else ""
-
         for sit in root.findall(f".//{p}PtSituationElement", ns):
             rows.append({
                 "source_file": xml_path.name,
@@ -239,7 +236,6 @@ def process_disruptions(raw_dir: Path, out_dir: Path):
                 "summary": _text(sit, "Summary", ns, p),
                 "description": _text(sit, "Description", ns, p),
             })
-
     write_csv(rows, out_dir / "disruptions.csv",
               ["source_file", "situation_number", "creation_time",
                "participant_ref", "version", "progress", "misc_reason",
@@ -278,8 +274,6 @@ def process_fares(raw_dir: Path, out_dir: Path):
         from_date_el = root.find(f".//{p}AvailabilityCondition/{p}FromDate", ns)
         if from_date_el is not None:
             from_date = from_date_el.text
-        # Description appears more than once in a NeTEx file; take the one
-        # inside PublicationRequest (a short human-readable summary).
         desc_el = root.find(f".//{p}PublicationRequest/{p}Description", ns)
         description = desc_el.text if desc_el is not None else None
 
