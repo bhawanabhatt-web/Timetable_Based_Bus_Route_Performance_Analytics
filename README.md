@@ -13,11 +13,11 @@ stored in **MySQL** and surfaced through an interactive prediction dashboard.
 ## Repository Structure
 Timetable_Based_Bus_Route_Performance_Analytics/
 ├── data/
-│   ├── raw/                     # Original downloaded XML files from BODS
-│   ├── raw_data_csv/             # XML -> CSV converted raw files
-│   └── cleaned_parquet/          # Cleaned, validated Parquet datasets
+│   ├── raw/                    
+│   ├── raw_data_csv/           
+│   └── cleaned_parquet/         
 ├── docs/
-│   ├── Bhawana_Kumari_Bhatta_240620.pdf   # Final coursework report
+│   ├── Bhawana_Kumari_Bhatta_240620.pdf   
 │   ├── architecture diagram.png
 │   ├── data source.png
 │   ├── er.png
@@ -30,19 +30,18 @@ Timetable_Based_Bus_Route_Performance_Analytics/
 │   
 │   
 │   
-├── jdbc/                          # MySQL JDBC connector jar for Spark
-├── notebooks/                     # Jupyter notebooks: data cleaning, feature
-│                                   # engineering, model training, evaluation
-├── output/                        # Final parquet/CSV outputs, CV results,
-│                                   # feature importances, per-model predictions
+├── jdbc/                        
+├── notebooks/                    
+│                                 
+├── output/                       
+│                                  
 ├── src/
 │   ├── ingestion/
-│   │   ├── poll_locations.py      # BODS location-ping ingestion
-│   │   └── process_raw_data.py    # XML -> CSV parser
-│   ├── spark_backend.py           # PySpark session, model loading, prediction logic
-│   ├── bus_route_dashboard.py     # Dashboard application entry point
-│   └── ui_theme.py                # Dashboard styling
-├                        
+│   │   ├── poll_locations.py      
+│   │   └── process_raw_data.py    
+│   ├── spark_backend.py          
+│   ├── bus_route_dashboard.py    
+├── .env                    
 ├── .gitignore
 ├── requirements.txt
 └── README.md
