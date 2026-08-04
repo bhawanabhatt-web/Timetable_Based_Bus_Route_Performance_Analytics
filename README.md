@@ -11,38 +11,43 @@ stored in **MySQL** and surfaced through an interactive prediction dashboard.
 - **Best model:** Random Forest (Accuracy 69.98%, F1-score 69.91%)
 
 ## Repository Structure
-```
-.
+Timetable_Based_Bus_Route_Performance_Analytics/
 ├── data/
-│   ├── raw_data_csv/           # XML→CSV converted raw files
-│   └── cleaned/                # Cleaned Parquet/CSV per dataset
-├── output/
-│   ├── final_schedule.parquet  # Final merged + feature-engineered dataset
-│   ├── final_feature_dataset.csv
-│   ├── feature_metadata.json
-│   ├── cv_results.json         # Cross-validation results per model
-│   ├── feature_importance.json
-│   └── eval_predictions/       # Per-model test-set predictions
-├── database/
-│   ├── schema.sql              # Full MySQL schema (DDL)
-│   ├── bus_performance_analytics_dump.sql  # Full data dump
-│   └── sample_queries.sql      # Example analytical queries
-├── notebooks/                  # Jupyter notebooks (01_ingestion → 06_dashboard)
-├── src/
-│   ├── process_raw_data.py     # XML → CSV parser
-│   ├── data_cleaning.py
-│   ├── feature_engineering.py
-│   ├── model_training.py       # Logistic Regression / Decision Tree / Random Forest
-│   ├── mysql_writer.py         # Parameterised MySQL persistence
-│   └── dashboard.py            # Prediction dashboard
+│   ├── raw/                     # Original downloaded XML files from BODS
+│   ├── raw_data_csv/             # XML -> CSV converted raw files
+│   └── cleaned_parquet/          # Cleaned, validated Parquet datasets
 ├── docs/
-│   ├── architecture_diagram.png
-│   ├── er_diagram.png
-│   └── report.pdf              # Final coursework report
+│   ├── Bhawana_Kumari_Bhatta_240620.pdf   # Final coursework report
+│   ├── architecture diagram.png
+│   ├── data source.png
+│   ├── er.png
+│   ├── spark1.png
+│   ├── spark2.png
+│   ├── userinterface1.png
+│   ├── userinterface2.png
+│   └── user interface3.png
+|
+│   
+│   
+│   
+├── jdbc/                          # MySQL JDBC connector jar for Spark
+├── notebooks/                     # Jupyter notebooks: data cleaning, feature
+│                                   # engineering, model training, evaluation
+├── output/                        # Final parquet/CSV outputs, CV results,
+│                                   # feature importances, per-model predictions
+├── src/
+│   ├── ingestion/
+│   │   ├── poll_locations.py      # BODS location-ping ingestion
+│   │   └── process_raw_data.py    # XML -> CSV parser
+│   ├── spark_backend.py           # PySpark session, model loading, prediction logic
+│   ├── bus_route_dashboard.py     # Dashboard application entry point
+│   └── ui_theme.py                # Dashboard styling
+├                        
+├── .gitignore
 ├── requirements.txt
-├── .env.example                # Environment variable template (no real credentials)
 └── README.md
-```
+
+
 
 ## Setup Instructions
 
@@ -63,29 +68,8 @@ source venv/bin/activate        # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 4. Configure environment variables
-Copy `.env.example` to `.env` and fill in your own values — **never commit real credentials**:
-```
-MYSQL_HOST=localhost
-MYSQL_PORT=3306
-MYSQL_USER=root
-MYSQL_PASSWORD=your_password_here
-MYSQL_DATABASE=bus_performance_analytics
-SPARK_CORES=8
-SPARK_DRIVER_MEMORY=4g
-RAW_CSV_DIR=data/raw_data_csv
-CLEANED_DIR=data/cleaned
-OUTPUT_DIR=output
-MYSQL_JDBC_JAR=jdbc/mysql-connector-j-9.7.0.jar
-```
 
-### 5. Set up MySQL
-```bash
-mysql -u root -p < database/schema.sql
-mysql -u root -p bus_performance_analytics < database/bus_performance_analytics_dump.sql
-```
-
-### 6. Run the pipeline (in order)
+### 4. Run the pipeline (in order)
 ```bash
 python src/process_raw_data.py        # XML -> CSV
 python src/data_cleaning.py           # Clean + validate (PySpark)
